@@ -1,0 +1,19 @@
+---
+layout: post
+title: "For the Craftsman in You"
+date: "2013-11-3 11:50:00 -0600"
+author: Blind3y3Design
+categories: [projects]
+tags: [aisleRocket]
+excerpt: A large portion of the work we do is creating maintaining and updating content on client sites like this one.
+---
+
+<div>
+	<a href="http://www.craftsman.com" title="Craftsman">
+		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/Craftsman_Homepage-475x1024.jpg" alt="Craftsman Image">
+	</a>
+</div>
+
+[Craftsman](http://www.craftsman.com)
+
+A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.

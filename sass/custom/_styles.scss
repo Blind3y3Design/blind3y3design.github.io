@@ -1,2 +1,91 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+// Resume styles
+.resume{
+	width: 100%;
+	@include clearfix;
+
+	* {
+		box-sizing: border-box;
+	}
+}
+h3 {
+	font-family: $header-title-font-family;
+	border-bottom: 1px dotted darken($main-bg, 20%);
+	padding-bottom: 0.5rem;
+}
+.wrapper {
+	float: left;
+	width: calc(100% - 2rem);
+	padding: 1rem;
+	margin: 1rem;
+	border: 1px solid darken($main-bg, 10%);
+
+	transition: all .5s ease;
+
+	&:hover, &:focus {
+		background: lighten($main-bg, 10%);
+	}
+}
+.wrapper--education {
+	width: calc(50% - 2rem);
+
+	h4 {
+		margin-bottom: 0.5em;
+	}
+}
+.wrapper--skills {
+	width: calc(50% - 2rem);
+}
+.column {
+	width: 100%;
+	float: left;
+
+	h4{
+
+		span {
+			display: block;
+			width: 100%;
+		}
+	}
+	h6 {
+		margin: 0.2em 0 0;
+	}
+	section {
+		margin-bottom: 1rem; 
+	}
+	li {
+		margin: 0.5rem 0 0.5rem 2rem;
+	}
+	p {
+		margin: 0;
+	}
+}
+.column--half {
+	width: 50%;
+	padding: 1em;
+}
+.education-details {
+	font-size: 0.8em;
+	line-height: 1.4em;
+	color: #333333;
+	margin: 0;
+}
+.example-details {
+	@extend .education-details;
+
+	font-size: 0.7em;
+}
+
+//Custom Homepage Styles
+
+.blog-index {
+
+	a {
+		text-decoration: none;
+	}
+	img {
+		width: 20%;
+	}
+}

@@ -19,3 +19,18 @@
 //$sidebar-pad-medium: 15px;
 //$sidebar-pad-wide: 20px;
 //$sidebar-width-wide: 300px;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+ul {
+	list-style-position: outside;
+}
+p, li {
+	font-family: $sans;
+	font-size: 1rem;
+}
