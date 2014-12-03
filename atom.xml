@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Blind3y3Design Blog]]></title>
+  <link href="http://blind3y3design.github.io/atom.xml" rel="self"/>
+  <link href="http://blind3y3design.github.io/"/>
+  <updated>2014-12-03T00:37:23-05:00</updated>
+  <id>http://blind3y3design.github.io/</id>
+  <author>
+    <name><![CDATA[Adam Sedwick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Scrum and the Agile Philosophy]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/06/12/Scrum-And-The-Agile-Philosophy/"/>
+    <updated>2014-06-12T06:44:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/06/12/Scrum-And-The-Agile-Philosophy</id>
+    <content type="html"><![CDATA[<p>Developing our own Agile process is something that we should take pride in. We can take bits and pieces from frameworks and create something that works for our team. The point is not to go whole hog in to a single framework and force the team to work inside the constraints predefined for a different team.</p>
+
+<!--more-->
+
+
+<h2>The Origin of Agile</h2>
+
+<p>When most people hear the term Agile Development they instantly think of something specific. Unfortunately this is an issue of implicit vs explicit meaning. In it&rsquo;s very nature Agile Development is nothing more than a way of thinking. The philosophy was originally developed in 2001 by a group of programmers who believed the current way of working (the traditional waterfall) was flawed and that there had to be a better solution. This group came together and wrote the Agile Manifesto.</p>
+
+<h3>The Principles of Agile</h3>
+
+<ul>
+<li>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.</li>
+<li>Welcome changing requirements, even late in development. Agile processes harness change for  the customer&rsquo;s competitive advantage.</li>
+<li>Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.</li>
+<li>Business people and developers must work together daily throughout the project.</li>
+<li>Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.</li>
+<li>The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.</li>
+<li>Working software is the primary measure of progress.</li>
+<li>Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.</li>
+<li>Continuous attention to technical excellence and good design enhances agility.</li>
+<li>Simplicity&ndash;the art of maximizing the amount of work not done&ndash;is essential.</li>
+<li>The best architectures, requirements, and designs emerge from self-organizing teams.</li>
+<li>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.</li>
+</ul>
+
+
+<h2>The Definition of Scrum</h2>
+
+<blockquote><p>Scrum (n): A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.</p></blockquote>
+
+<p>Scrum is:
++ Lightweight
++ Simple to understand
++ Difficult to master</p>
+
+<p>Scrum is a process framework that has been used to manage complex product development since the early 1990s. Scrum is not a process or a technique for building products; rather, it is a framework within which you can employ various processes and techniques. Scrum makes clear the relative efficacy of your product management and development practices so that you can improve.</p>
+
+<p>The Scrum framework consists of Scrum Teams and their associated roles, events, artifacts, and rules. Each component within the framework serves a specific purpose and is essential to Scrum’s success and usage.</p>
+
+<p>The rules of Scrum bind together the events, roles, and artifacts, governing the relationships and interaction between them.</p>
+
+<h2>Creating our own Agile Process</h2>
+
+<p>Developing our own Agile process is something that we should take pride in. We can take bits and pieces from frameworks and create something that works for our team. The point is not to go whole hog in to a single framework and force the team to work inside the constraints predefined for a different team.</p>
+
+<p>Normally the first step I would suggest is to begin planning on a smaller scale; fortunately we already do this. The weekly &ldquo;resourcing&rdquo; that we do lends itself well to the Agile philosophy. In most cases a sprint is defined as a one to two week period of time that has been scoped out and a roadmap has been set for the team. This is where the wheels fall off of our wagon.</p>
+
+<h3>- Resourcing:</h3>
+
+<p>The current way we do resourcing is by assigning someone &ldquo;x&rdquo; hours for project &ldquo;y&rdquo;. In order for us to move forward as a team this has to change. All scoping and planning for sprints should be task based. Task &ldquo;x, y and z&rdquo; need to be completed for project &ldquo;q&rdquo; this week. This allows the team to focus on concrete goals for completion and gives a much needed sense of accomplishment to the developers. Resourcing and progress tracking based on tasks also allows for more accurate status updates. If someone is resourced 10 hours on a project and runs into a particularly stubborn issue they may take 20 hours for that project, but what actually got done? It&rsquo;s much more clear is that person is resourced task &ldquo;x, y and z&rdquo;, that way if they complete task &ldquo;x&rdquo; and get stuck on task &ldquo;y&rdquo; we can see the progress that was made. If any tasks from the current sprint are not completed it is much easier to understand why; it also sets the groundwork for the next sprint, all unfinished tasks are rolled over and set as priority one for the next sprint.</p>
+
+<h3>- Progress Tracking:</h3>
+
+<p>Now that we&rsquo;ve covered resourcing we can move on to the next step. This is also something that we have implemented to some degree. That is the standup; our version of the Daily Scrum.</p>
+
+<p>The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize activities and create a plan for the next 24 hours. This is done by inspecting the work since the last Daily Scrum and forecasting the work that could be done before the next one. The Daily Scrum is held at the same time and place each day to reduce complexity. During the meeting, the Development Team members explain:</p>
+
+<ul>
+<li>What did I do yesterday that helped the Development Team meet the Sprint Goal?</li>
+<li>What will I do today to help the Development Team meet the Sprint Goal?</li>
+<li>Do I see any impediment that prevents me or the Development Team from meeting the Sprint Goal?</li>
+</ul>
+
+
+<p>With the implementation of proper sprints we will easily be able to talk about the progress towards the Spring Goal.</p>
+
+<h3>- Review and Retrospective:</h3>
+
+<p>Something that we do not really focus on as a team is a review of our progress. Much of this can be attributed to the fact that we don&rsquo;t track our progress in a good way. By implementing the tools mentioned above we can improve upon this and it will enable us to review the progress we have made and talk about adapting the process in order to become more efficient.</p>
+
+<h3>- The Sprint Review:</h3>
+
+<p>A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed. During the Sprint Review, the Scrum Team and stakeholders collaborate about what was done in the Sprint. Based on that and any changes to the Product Backlog during the Sprint, attendees collaborate on the next things that could be done to optimize value. This is an informal meeting, not a status meeting, and the presentation of the Increment is intended to elicit feedback and foster collaboration.</p>
+
+<h3>- The Sprint Retrospective:</h3>
+
+<p>The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning. This is a three-hour time-boxed meeting for one-month Sprints. For shorter Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and that attendants understand its purpose. The Scrum Master teaches all to keep it within the time-box. The Scrum Master participates as a peer team member in the meeting from the accountability over the Scrum process.</p>
+
+<p>The goal of the Reviews and Retrospectives is to:</p>
+
+<p>Look back at the previous scrum and go over what has been completed. (Rev)
+Look back at the previous scrum and go over what has not been completed. (Rev)
+Discuss any issues that the team ran in to trying to reach the Sprint Goals. (Rev)
+Display the completed items from the previous sprint and answer any questions from the stakeholders. (Rev)
+Collaborate on what should be done in the next sprint, providing a baseline for the next sprint planing session. (Rev)
+Review the timeline, budget, and potential capabilities for the project. (Rev)
+Inspect how the last Sprint went with regards to people, relationships, process, and tools. (Retro)
+Identify and order the major items that went well and potential improvements. (Retro)
+Create a plan for implementing improvements to the way the Scrum Team does its work. (Retro)</p>
+
+<h2>Conclusion</h2>
+
+<p>I believe that by implementing, adapting and iterating on the processes listed above that our team will grow and become much more successful in the future. With a better process we will be able to develop our products more quickly and be able to take on larger projects. We will also be able to onboard new team members in a smoother fashion so that they can understand what we are doing and what is expected of them.</p>
+
+<p>As always feedback is always appreciated and encouraged.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Designing a Workflow and Team Dynamic.]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/06/08/Designing-A-Team-Dynamic-And-Workflow/"/>
+    <updated>2014-06-08T12:06:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/06/08/Designing-A-Team-Dynamic-And-Workflow</id>
+    <content type="html"><![CDATA[<p>The idea behind designing a single workflow is that at any time someone else should be able to jump in to your workflow and know where in the process you are and pick up after you in needed.</p>
+
+<!--more-->
+
+
+<p>In our current development cycle this is imperative because we have people being added to and moved from one project to another on a regular basis. Ideally this would not be the case, but until we can fix that issue we can at lease alleviate some of the stress by setting up a unified workflow.</p>
+
+<p>In order to do this we re going to set up some standards and best practices. One of these items is the standard operating procedure and it will be visable for anyone who has access to confluence. We will define these standards together as a collaborative effort so that they best fit the needs of the team as a whole.</p>
+
+<p>A large portion of the new workflow will be the use of JIRA and CONFLUENCE as tools to enhance our productivity. We will use JIRA to outline all tasks to be done whether it is a bug or a new feature to be added. If you are doing something it should be associated with a ticket in JIRA. Confluence is a giant knowledge base. We will use it to hold all sort of useful information, from who is the tech load for a specific client to setting up a new environment or even just simple links to an useful or interesting article.</p>
+
+<p>Atlassian an also has a product called hip chat that I will be looking into in the coming days. It works much like instant messaging and irc combined in to one. There is 1to1 chat and persistent group chat. This will be a great way for the teams to communicate with each other as well as allowing instant communication with another team member without the need to traverse the maze of desks.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gladiator GarageWorks Sale Page]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Sale/"/>
+    <updated>2014-04-02T11:58:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Sale</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html" title="Gladiator">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/gladiatorProductSale.png" alt="Gladiator Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html">Gladiator</a></p>
+
+<p>The gladiator sale page takes data from a JSON file and transforms it in to a massive listing of all the products on sale.</p>
+
+<!--more-->
+
+
+<p>This page had to be build from the ground up. The layout was fairly basic. The content of the page is where the work really began.</p>
+
+<p>When we build large pages containing a list of products we generally use underscore templates because of their ease of use and flexability. With underscore you define the template inside a script tag.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='HTML'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;template&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="c1">//You put your template data here</span>
+</span><span class='line'>  <span class="o">&lt;%=</span> <span class="nx">Variable</span> <span class="o">%&gt;</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We would then generate JSON files and reference them inside the templates. We have a well written module that we use so that we are not writing new code every time.</p>
+
+<p>However, we discovered that due to the way IBM&rsquo;s TeamSite platform handles script tags this was not an option. The TeamSite installs that we have to use has a strange behavior where it comments out all code inside of the script and style tags. This commenting out caused the template to fail. Because of this we ended up building the templade in plain javascript.</p>
+
+<p>We ended up using an AJAX call in order to retrieve the json file. On success of the file we ran an .each() loop and for each JSON object we ran the data through the template.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span class='line'>      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://bab4f2fa8b2db81b2242-4d0fcbb069fff5c8ea5214991fa0d577.r83.cf1.rackcdn.com/productSaleJSON/gladiatorSaleProducts.json?callback=?&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">jsonpCallback</span><span class="o">:</span> <span class="s1">&#39;jsonp_sale_products&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+</span><span class='line'>          <span class="c1">// console.log(&#39;success&#39;);</span>
+</span><span class='line'>          <span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">){</span>
+</span><span class='line'>              <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>              <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">products</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                  <span class="c1">// console.log(p.ModelNumber);</span>
+</span><span class='line'>                  <span class="nx">html</span> <span class="o">+=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>    <span class="s1">&#39;&lt;li id=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ModelNumber</span> <span class="o">+</span> <span class="s1">&#39;&quot; class=&quot;product &#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">Category</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>        <span class="s1">&#39;&lt;a class=&quot;product-image&quot; href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">PDPURL</span> <span class="o">+</span> <span class="s1">&#39;&quot; title=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ProductName</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>  <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ModelNumber</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>            <span class="s1">&#39;&lt;img class=&quot;lazy&quot; alt=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ProductName</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ModelNumber</span> <span class="o">+</span> <span class="s1">&#39;&quot; src=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ImageURL</span> <span class="o">+</span> <span class="s1">&#39;&quot; width=&quot;144&quot;/&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>        <span class="s1">&#39;&lt;/a&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>        <span class="s1">&#39;&lt;div class=&quot;product-information&quot;&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>            <span class="s1">&#39;&lt;a class=&quot;product-title&quot; alt=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ProductName</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ModelNumber</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ProductName</span> <span class="o">+</span> <span class="s1">&#39;&lt;/a&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>            <span class="s1">&#39;&lt;p&gt;Model # &#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ModelNumber</span> <span class="o">+</span> <span class="s1">&#39;&lt;/p&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>            <span class="s1">&#39;&lt;div class=&quot;product-prices&quot;&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>                <span class="s1">&#39;&lt;div class=&quot;product-sale-price&quot;&gt;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">SalePrice</span> <span class="o">+</span> <span class="s1">&#39;&lt;/div&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>                <span class="s1">&#39;&lt;div class=&quot;product-regular-price&quot;&gt;was &#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">MSRPPrice</span> <span class="o">+</span> <span class="s1">&#39;&lt;/div&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>            <span class="s1">&#39;&lt;/div&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>        <span class="s1">&#39;&lt;/div&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>        <span class="s1">&#39;&lt;div class=&quot;addContainer&quot;&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>            <span class="s1">&#39;&lt;a class=&quot;addLink&quot; href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">PDPURL</span> <span class="o">+</span> <span class="s1">&#39;&quot; title=&quot;Add to tool set | &#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ProductName</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">ModelNumber</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;View&lt;/a&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>        <span class="s1">&#39;&lt;/div&gt;&#39;</span>
+</span><span class='line'>                      <span class="o">+</span>    <span class="s1">&#39;&lt;/li&gt;&#39;</span>
+</span><span class='line'>                  <span class="p">);</span>
+</span><span class='line'>              <span class="p">});</span>
+</span><span class='line'>              <span class="c1">// console.log(html);</span>
+</span><span class='line'>              <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.prodWrapper&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="c1">// console.log(&#39;template success&#39;);</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// console.log(&#39;FAIL!&#39;);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Every Garage Deserves a Gladiator]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Ecommerce/"/>
+    <updated>2014-04-02T11:50:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Ecommerce</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.gladiatorgarageworks.com/" title="Gladiator">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Gladiator_fullSize.png" alt="Gladiator Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.gladiatorgarageworks.com/">Gladiator</a></p>
+
+<p>A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vine Lights: Inorganic Life Series]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/01/11/Vine-Lights/"/>
+    <updated>2014-01-11T21:23:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/01/11/Vine-Lights</id>
+    <content type="html"><![CDATA[<div>
+    <img src="http://blind3y3design.github.io/images/personal/Lights_Bottom_View.jpg" alt="Vine Lights Image">
+</div>
+
+
+<p>The work Vine Lights was an experimental piece in a series of works called &ldquo;Inorganic Life.&rdquo; The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.</p>
+
+<!--more-->
+
+
+<p>The original idea behind the work was the concept of touch. Not so much the sensation of touching something but the deeper meanings and concepts of the word. How do we touch? How to living organisms interact with themselves and their environment? How does the inanimate dictate the shape or the path of a living organism? The piece was designed to explore these ideas.</p>
+
+<p>Vine Lights is a simple light and wire sculpture that could simply just be plugged into a space and turned on as a series of beautiful lights. The piece would still be pleasant to look at but as far as my concept was concerned it would not complete the idea of touch; nor would it fulfill the duty to be a representation of a life form.</p>
+
+<p>The piece has a series of sonar sensors built into it so that it can interact with those observing it. When left alone the piece will slowly fade in and out in such a way as to be breathing, or representing a pulse. When the viewers move in closer to investigate, the piece will react to their presence by dimming most of the lights and leaving a single string of lights fading as a warning that it recognizes your presence If the viewers continue to investigate the piece closer because of intrigue or simply to test the &ldquo;creature&rdquo; the piece will flash violently at them; mimicking the defense mechanisms of actual animals such as the porcupine or blow fish.</p>
+
+<p>Below is part of the code used to create the piece.</p>
+
+<pre class="full">
+    <code>
+        #define NR_OF_LIGHTS 6
+            int pins[NR_OF_LIGHTS] = { 3, 5, 6, 9, 10, 11 };
+            int values[NR_OF_LIGHTS];
+            int steps[NR_OF_LIGHTS];
+
+        #define NR_OF_FADESTEPS 4
+            int fadesteps[NR_OF_FADESTEPS] = { 192, 128, 64, 0 };
+            int fade_delay = 30; // millisec
+            int fade_cycles = 1000;
+
+            int nr_of_blinks = 2;
+            int blink_delay = 400; //millisec
+
+            int effect = 1;
+
+            int randomlights[NR_OF_LIGHTS];
+            bool chosenlights[NR_OF_LIGHTS];
+
+        /****/
+        void setup() {
+            randomSeed(analogRead(0));
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                values[i] = (int)random(230) + 13; // start values between ‘max min’ and ‘min max’
+                steps[i] = (int)random(4) + 1; // steps between 1 and 4
+            }
+        }
+
+        /****/
+        void loop() {
+            for (int j = 0; j < fade_cycles; j++) {
+                for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                    fadingLight(i);
+                }
+                delay(fade_delay);
+            }
+            if (effect == 1) {
+                blinkAll();
+                effect = 2;
+            }
+            else if (effect == 2) {
+                runningLight(0);
+                effect = 3;
+            }
+            else if (effect == 3) {
+                runningLight(255);
+                effect = 1;
+            }
+        }
+
+        /****/
+        void fadingLight(int i) {
+            int minvalue = (NR_OF_FADESTEPS * abs(steps[i])) + 1;
+            int maxvalue = 255 – minvalue;
+            int fs = NR_OF_FADESTEPS;
+            for (int j = 0; fs > 0; fs–, j++) {
+                if (values[i] > fadesteps[j]) {
+                    break;
+                }
+            }
+            values[i] += fs * steps[i];
+            if (values[i] > maxvalue  ||  values[i] < minvalue) {
+                steps[i] *= -1;
+            }
+            analogWrite(pins[i], values[i]);
+        }
+
+        /****/
+        void setAllLights(int value) {
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                analogWrite(pins[i], value);
+            }
+        }
+
+        /****/
+        void blinkAll() {
+            for (int i = 0; i < nr_of_blinks; i++) {
+                setAllLights(255);
+                delay(blink_delay);
+                setAllLights(0);
+                delay(blink_delay);
+            }
+        }
+
+        /****/
+        void runningLight(int startvalue) {
+            setAllLights(startvalue);
+            for (int j = 0; j < 2; j++) {
+                randomize();
+                for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                    analogWrite(pins[randomlights[i]], 255 – startvalue);
+                    delay(200);
+                    analogWrite(pins[randomlights[i]], startvalue);
+                }
+            }
+        }
+
+        /****/
+        void randomize() {
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                chosenlights[i] = false;
+            }
+            //first one always ok
+                int r = (int)random(NR_OF_LIGHTS);
+                randomlights[0] = r;
+                chosenlights[r] = true;
+            //next 4
+                for (int i = 1; i < 5; i++) {
+                while (true) {
+                    r = (int)random(NR_OF_LIGHTS);
+                    if (chosenlights[r] == false) {
+                        break;
+                    }
+                }
+                randomlights[i] = r;
+                chosenlights[r] = true;
+            }
+            //last one
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                if (chosenlights[i] == false) {
+                    randomlights[5] = i;
+                    break;
+                }
+            }
+        }
+    </code>
+</pre>
+
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright &copy; 2014 Adam Sedwick, Blind3y3Design.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blind3y3Design Version 0.0.1]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/01/08/Blind3y3Design-Is-Live/"/>
+    <updated>2014-01-08T22:07:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/01/08/Blind3y3Design-Is-Live</id>
+    <content type="html"><![CDATA[<p>Yay! We&rsquo;re up and running using <a href="http://jekyllrb.com/">Jekyll</a>. It took some time and has quite a learning curve, but if you&rsquo;re even remotely comfortable with the command line and you want to create a &ldquo;simple, blog-aware static site&rdquo; then it could be the thing for you.</p>
+
+<!--more-->
+
+
+<p>I am by no means a command line guru, and before Jekyll I had never used any markdown language. In just two days I got up and running using Jekyll to set this up. The biggest thing that drew me to using Jekyll was that I wanted to set up a workflow using <a href="http://nodejs.org/">node</a>, <a href="http://gruntjs.com/">grunt</a>, and <a href="http://sass-lang.com/">sass</a>. Once I installed ruby and set up my grunt stack I realized that it would take more work to version my site before I could push it through FTP to my web host. With Jekyll I could set up a site on <a href="http://pages.github.com/">Github Pages</a> and my version control would be built in to site contruction and deployment.</p>
+
+<p>I have had quite a lot of fun setting everything up and learning more about the command line and how to use these new technologies.</p>
+
+<p>Big thanks to the creators of <a href="http://jekyllrb.com/">Jekyll</a> <a href="https://github.com/qrush">@Nick Quaranto</a> and <a href="https://github.com/mojombo">@Tom Preston-Werner</a></p>
+
+<p>Thanks for reading!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Working With Cookmore]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Working-With-Cookmore/"/>
+    <updated>2013-11-03T15:12:55-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Working-With-Cookmore</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.cookmore.com" title="cookmore">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Cookmore_Homepage-653x1024.jpg" alt="Cookmore Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.cookmore.com">Cookmore</a></p>
+
+<p>During my time at Aisle Rocket Studios I have had the immense pleasure of working on the site Cookmore.com. Cookmore is a community based cooking site. Regular people, as well as professional chefs can post recipes on the site.</p>
+
+<!--more-->
+
+
+<p>Much like the inspiration blog, Cookmore is built on a completely custom Wordpress install. Unlike the Inspiration Blog, Cookmore is a much more complex site using multiple custom built plug-ins and custom Back-end development in order to create the many function of the site.</p>
+
+<p>Cookmore also has the ability to hold contests on the site, collecting information and storing it in a database for use when the contest is over. I personally worked on the 100-Year Anniversary contest. Creating custom pages, elements, and forms all in a dynamic fashion, working with a designer every step of the way and evolving the page when new events or content needed to be added.</p>
+
+<p>Cookmore was the first site that I worked on that was truly a responsive site. The design of the site and the construction of elements was well thought out before development began so that there was no need to fit the design to the device. The design was made for the device you viewed it on.</p>
+
+<p>It was also my first experience working with a team of Front-end and Back-end devs using SVN for version control. I has to learn a lot of new information and I had to pick up on it quickly. The development cycle for any given project could range from as small as a week to a couple months.</p>
+
+<p>While the development on Cookmore has slowed for the moment I look forward to what other projects or features may be added in the future.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Inspirational Blogging]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Inspiration-Blog/"/>
+    <updated>2013-11-03T13:33:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Inspiration-Blog</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://inspiration.kenmore.com" title="Inpiration Blog">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Kenmore_Blog-693x1024.jpg" alt="Inspiration Image">
+    </a>
+</div>
+
+
+<p><a href="http://inspiration.kenmore.com">Inspiration</a></p>
+
+<p>The Kenmore Ispiration Blog is a community site that collects posts from across the web and combines them with posts by Kenmore and Cookmore. The blog is a community where people can share, post, and learn about all things Kenmore related.</p>
+
+<p>Inspiration is build on a highly customized WordPress installation that is continually being built and improved upon. We recently set up new pages for contests like the “Couponista” challenge. This page followed 3 bloggers in their competition to be the greatest couponer.</p>
+
+<p>We set up custom abilities for the blog so that the posts by the bloggers would not display on any page unless it has the Couponista qualifier set on the page. This allowed for the blog homepage to remain community based while if someone wanted to find information about the Couponista event they could get all of the aggregated posts on a single page.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping Something Small]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Kenco-Small-Parcel/"/>
+    <updated>2013-11-03T13:00:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Kenco-Small-Parcel</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.www.kencotrans.com/small-parcel" title="Kenco">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Kenco-_Small_Parcel-605x1024.jpg" alt="Kenco Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.kencotrans.com/small-parcel">Small Parcel</a></p>
+
+<p>The Small Parcel page on Kenco was a unique project when I got to work on it. It was my first experience usning the ExpressionEngine CMS. This page is build by creating a page template and once the templace is set and attached to a page we begin loading content on to it.</p>
+
+<!--more-->
+
+
+<p>The content can was uploaded one of two ways.</p>
+
+<p>If we were creating a navigation section or a subsection that would be used on multiple pages we would create an ExpressionEngine snippet; a chunk of code that could be called anywhere on a page and could be edited once and dynamically update across all pages it is on.</p>
+
+<p>If it was content specific to one single page we would create an entry in ExpressionEngine known as a block. Blocks are groups of code that can be given a specific category and called to a page much like a snippet; however they tend to be used for single use and not template level design.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[For the Craftsman in You]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Craftsman-Ecommerce/"/>
+    <updated>2013-11-03T12:50:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Craftsman-Ecommerce</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.craftsman.com" title="Craftsman">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Craftsman_Homepage-475x1024.jpg" alt="Craftsman Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.craftsman.com">Craftsman</a></p>
+
+<p>A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tested for Living]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Ecommerce/"/>
+    <updated>2013-11-03T12:38:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Ecommerce</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.kenmore.com" title="Kenmore">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Kenmore_Homepage-321x1024.jpg" alt="Kenmore Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.kenmore.com">Kenmore</a></p>
+
+<p>A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Brand Names at Outlet Prices]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Whirlpool-Outlet/"/>
+    <updated>2013-11-03T01:36:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Whirlpool-Outlet</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://outlet.whirlpool.com" title="Whirlpool Outlet">
+        <img class="thumbnail" src="http://blind3y3design.github.io/images/aisleRocket/Outlet_Homepage-1024x936.png" alt="Outlet Image">
+    </a>
+</div>
+
+
+<p><a href="http://outlet.whirlpool.com">Whirlpool Outlet</a></p>
+
+<p>Most of the work done was largely edits to the CSS files that control the look of the site. We also edited and moved some of the HTML structure in order to better the document flow and user experience.</p>
+
+<p>We recently Added a pop up modal to the homepage which uses an ajax request and API call to send and receive information from another web server. We solved some issues with IE8 by using the XMLHttpRequest function for IE.</p>
+]]></content>
+  </entry>
+  
+</feed>
