@@ -24,7 +24,7 @@ This page had to be build from the ground up. The layout was fairly basic. The c
 
 When we build large pages containing a list of products we generally use underscore templates because of their ease of use and flexability. With underscore you define the template inside a script tag. 
 
-```
+``` HTML
 	<script type="template">
 		//You put your template data here
 		<%= Variable %>
@@ -37,7 +37,7 @@ However, we discovered that due to the way IBM's TeamSite platform handles scrip
 
 We ended up using an AJAX call in order to retrieve the json file. On success of the file we ran an .each() loop and for each JSON object we ran the data through the template.
 
-``` 
+``` Javascript
 	<script type="text/javascript">
 		$.ajax({
 		    url: 'http://bab4f2fa8b2db81b2242-4d0fcbb069fff5c8ea5214991fa0d577.r83.cf1.rackcdn.com/productSaleJSON/gladiatorSaleProducts.json?callback=?',

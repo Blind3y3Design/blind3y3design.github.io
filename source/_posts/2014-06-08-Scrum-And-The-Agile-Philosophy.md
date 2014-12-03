@@ -54,11 +54,11 @@ Developing our own Agile process is something that we should take pride in. We c
 
 Normally the first step I would suggest is to begin planning on a smaller scale; fortunately we already do this. The weekly "resourcing" that we do lends itself well to the Agile philosophy. In most cases a sprint is defined as a one to two week period of time that has been scoped out and a roadmap has been set for the team. This is where the wheels fall off of our wagon.
 
-### + Resourcing:
+### - Resourcing:
 
 The current way we do resourcing is by assigning someone "x" hours for project "y". In order for us to move forward as a team this has to change. All scoping and planning for sprints should be task based. Task "x, y and z" need to be completed for project "q" this week. This allows the team to focus on concrete goals for completion and gives a much needed sense of accomplishment to the developers. Resourcing and progress tracking based on tasks also allows for more accurate status updates. If someone is resourced 10 hours on a project and runs into a particularly stubborn issue they may take 20 hours for that project, but what actually got done? It's much more clear is that person is resourced task "x, y and z", that way if they complete task "x" and get stuck on task "y" we can see the progress that was made. If any tasks from the current sprint are not completed it is much easier to understand why; it also sets the groundwork for the next sprint, all unfinished tasks are rolled over and set as priority one for the next sprint.
 
-### + Progress Tracking:
+### - Progress Tracking:
 
 Now that we've covered resourcing we can move on to the next step. This is also something that we have implemented to some degree. That is the standup; our version of the Daily Scrum.
 
@@ -70,15 +70,15 @@ The Daily Scrum is a 15-minute time-boxed event for the Development Team to sync
 
 With the implementation of proper sprints we will easily be able to talk about the progress towards the Spring Goal.
 
-### + Review and Retrospective:
+### - Review and Retrospective:
 
 Something that we do not really focus on as a team is a review of our progress. Much of this can be attributed to the fact that we don't track our progress in a good way. By implementing the tools mentioned above we can improve upon this and it will enable us to review the progress we have made and talk about adapting the process in order to become more efficient.
 
-### + The Sprint Review:
+### - The Sprint Review:
 
 A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed. During the Sprint Review, the Scrum Team and stakeholders collaborate about what was done in the Sprint. Based on that and any changes to the Product Backlog during the Sprint, attendees collaborate on the next things that could be done to optimize value. This is an informal meeting, not a status meeting, and the presentation of the Increment is intended to elicit feedback and foster collaboration.
 
-### + The Sprint Retrospective:
+### - The Sprint Retrospective:
 
 The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning. This is a three-hour time-boxed meeting for one-month Sprints. For shorter Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and that attendants understand its purpose. The Scrum Master teaches all to keep it within the time-box. The Scrum Master participates as a peer team member in the meeting from the accountability over the Scrum process.
 
