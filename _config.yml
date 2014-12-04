@@ -40,7 +40,8 @@ rdiscount:
     - autolink
     - footnotes
     - smart
-highlighter: pygments # default python pygments have been replaced by pygments.rb
+# highlighter: pygments # default python pygments have been replaced by pygments.rb
+highlighter: rogue # default python pygments have been replaced by pygments.rb
 
 paginate: 4          # Posts per page on the blog index
 paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
