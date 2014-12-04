@@ -111,7 +111,7 @@
 
 <p>When we build large pages containing a list of products we generally use underscore templates because of their ease of use and flexability. With underscore you define the template inside a script tag.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>example template</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -128,7 +128,7 @@
 
 <p>We ended up using an AJAX call in order to retrieve the json file. On success of the file we ran an .each() loop and for each JSON object we ran the data through the template.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>ajax template</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -170,7 +170,7 @@
 <span class='line-number'>40</span>
 <span class='line-number'>41</span>
 <span class='line-number'>42</span>
-</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='HTML'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
 </span><span class='line'>      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://bab4f2fa8b2db81b2242-4d0fcbb069fff5c8ea5214991fa0d577.r83.cf1.rackcdn.com/productSaleJSON/gladiatorSaleProducts.json?callback=?&#39;</span><span class="p">,</span>
 </span><span class='line'>      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
@@ -211,7 +211,7 @@
 </span><span class='line'>          <span class="c1">// console.log(&#39;FAIL!&#39;);</span>
 </span><span class='line'>      <span class="p">}</span>
 </span><span class='line'>  <span class="p">});</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>

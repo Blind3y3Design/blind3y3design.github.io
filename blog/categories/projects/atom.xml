@@ -4,7 +4,7 @@
   <title><![CDATA[Projects | Blind3y3Design Blog]]></title>
   <link href="http://blind3y3design.github.io/blog/categories/projects/atom.xml" rel="self"/>
   <link href="http://blind3y3design.github.io/"/>
-  <updated>2014-12-03T01:10:36-05:00</updated>
+  <updated>2014-12-03T22:34:27-05:00</updated>
   <id>http://blind3y3design.github.io/</id>
   <author>
     <name><![CDATA[Adam Sedwick]]></name>
@@ -36,7 +36,7 @@
 
 <p>When we build large pages containing a list of products we generally use underscore templates because of their ease of use and flexability. With underscore you define the template inside a script tag.</p>
 
-<pre><code class="HTML">    &lt;script type="template"&gt;
+<pre><code class="HTML example template">    &lt;script type="template"&gt;
         //You put your template data here
         &lt;%= Variable %&gt;
     &lt;/script&gt;
@@ -48,7 +48,7 @@
 
 <p>We ended up using an AJAX call in order to retrieve the json file. On success of the file we ran an .each() loop and for each JSON object we ran the data through the template.</p>
 
-<pre><code class="Javascript">    &lt;script type="text/javascript"&gt;
+<pre><code class="HTML ajax template">    &lt;script type="text/javascript"&gt;
         $.ajax({
             url: 'http://bab4f2fa8b2db81b2242-4d0fcbb069fff5c8ea5214991fa0d577.r83.cf1.rackcdn.com/productSaleJSON/gladiatorSaleProducts.json?callback=?',
             type: 'GET',
