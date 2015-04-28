@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Projects | Blind3y3Design]]></title>
+  <link href="http://blind3y3design.github.io/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://blind3y3design.github.io/"/>
+  <updated>2015-04-25T22:57:49-04:00</updated>
+  <id>http://blind3y3design.github.io/</id>
+  <author>
+    <name><![CDATA[Adam Sedwick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gladiator GarageWorks Sale Page]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Sale/"/>
+    <updated>2014-04-02T11:58:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Sale</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html" title="Gladiator">
+        <img class="thumbnail" src="/images/aisleRocket/gladiatorProductSale.png" alt="Gladiator Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html">Gladiator</a></p>
+
+<p>The gladiator sale page takes data from a JSON file and transforms it in to a massive listing of all the products on sale.</p>
+
+<!--more-->
+
+
+<p>This page had to be build from the ground up. The layout was fairly basic. The content of the page is where the work really began.</p>
+
+<p>When we build large pages containing a list of products we generally use underscore templates because of their ease of use and flexability. With underscore you define the template inside a script tag.</p>
+
+<pre><code class="HTML example template">    &lt;script type="template"&gt;
+        //You put your template data here
+        &lt;%= Variable %&gt;
+    &lt;/script&gt;
+</code></pre>
+
+<p>We would then generate JSON files and reference them inside the templates. We have a well written module that we use so that we are not writing new code every time.</p>
+
+<p>However, we discovered that due to the way IBM&rsquo;s TeamSite platform handles script tags this was not an option. The TeamSite installs that we have to use has a strange behavior where it comments out all code inside of the script and style tags. This commenting out caused the template to fail. Because of this we ended up building the templade in plain javascript.</p>
+
+<p>We ended up using an AJAX call in order to retrieve the json file. On success of the file we ran an .each() loop and for each JSON object we ran the data through the template.</p>
+
+<pre><code class="HTML ajax template">    &lt;script type="text/javascript"&gt;
+        $.ajax({
+            url: 'http://bab4f2fa8b2db81b2242-4d0fcbb069fff5c8ea5214991fa0d577.r83.cf1.rackcdn.com/productSaleJSON/gladiatorSaleProducts.json?callback=?',
+            type: 'GET',
+            crossDomain: true,
+            dataType: 'jsonp',
+            jsonpCallback: 'jsonp_sale_products',
+            success: function(data){
+                // console.log('success');
+                if(data.products.length &gt; 4){
+                    var html = '';
+                    $.each(data.products, function (i, p) {
+                        // console.log(p.ModelNumber);
+                        html += (''
+                            +   '&lt;li id="' + p.ModelNumber + '" class="product ' + p.Category + '"&gt;'
+                            +       '&lt;a class="product-image" href="' + p.PDPURL + '" title="' + p.ProductName + '|'  + p.ModelNumber + '"&gt;'
+                            +           '&lt;img class="lazy" alt="' + p.ProductName + '|' + p.ModelNumber + '" src="' + p.ImageURL + '" width="144"/&gt;'
+                            +       '&lt;/a&gt;'
+                            +       '&lt;div class="product-information"&gt;'
+                            +           '&lt;a class="product-title" alt="' + p.ProductName + '|' + p.ModelNumber + '"&gt;' + p.ProductName + '&lt;/a&gt;'
+                            +           '&lt;p&gt;Model # ' + p.ModelNumber + '&lt;/p&gt;'
+                            +           '&lt;div class="product-prices"&gt;'
+                            +               '&lt;div class="product-sale-price"&gt;' + p.SalePrice + '&lt;/div&gt;'
+                            +               '&lt;div class="product-regular-price"&gt;was ' + p.MSRPPrice + '&lt;/div&gt;'
+                            +           '&lt;/div&gt;'
+                            +       '&lt;/div&gt;'
+                            +       '&lt;div class="addContainer"&gt;'
+                            +           '&lt;a class="addLink" href="' + p.PDPURL + '" title="Add to tool set | ' + p.ProductName + '|' + p.ModelNumber + '"&gt;View&lt;/a&gt;'
+                            +       '&lt;/div&gt;'
+                            +   '&lt;/li&gt;'
+                        );
+                    });
+                    // console.log(html);
+                    $('.prodWrapper').html(html);
+                }
+                // console.log('template success');
+            },
+            error: function (data) {
+                // console.log('FAIL!');
+            }
+        });
+    &lt;/script&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Every Garage Deserves a Gladiator]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Ecommerce/"/>
+    <updated>2014-04-02T11:50:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Ecommerce</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.gladiatorgarageworks.com/" title="Gladiator">
+        <img class="thumbnail" src="/images/aisleRocket/Gladiator_fullSize.png" alt="Gladiator Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.gladiatorgarageworks.com/">Gladiator</a></p>
+
+<p>A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vine Lights: Inorganic Life Series]]></title>
+    <link href="http://blind3y3design.github.io/blog/2014/01/11/Vine-Lights/"/>
+    <updated>2014-01-11T21:23:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2014/01/11/Vine-Lights</id>
+    <content type="html"><![CDATA[<div>
+    <img src="/images/personal/Lights_Bottom_View.jpg" alt="Vine Lights Image">
+</div>
+
+
+<p>The work Vine Lights was an experimental piece in a series of works called &ldquo;Inorganic Life.&rdquo; The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.</p>
+
+<!--more-->
+
+
+<p>The original idea behind the work was the concept of touch. Not so much the sensation of touching something but the deeper meanings and concepts of the word. How do we touch? How to living organisms interact with themselves and their environment? How does the inanimate dictate the shape or the path of a living organism? The piece was designed to explore these ideas.</p>
+
+<p>Vine Lights is a simple light and wire sculpture that could simply just be plugged into a space and turned on as a series of beautiful lights. The piece would still be pleasant to look at but as far as my concept was concerned it would not complete the idea of touch; nor would it fulfill the duty to be a representation of a life form.</p>
+
+<p>The piece has a series of sonar sensors built into it so that it can interact with those observing it. When left alone the piece will slowly fade in and out in such a way as to be breathing, or representing a pulse. When the viewers move in closer to investigate, the piece will react to their presence by dimming most of the lights and leaving a single string of lights fading as a warning that it recognizes your presence If the viewers continue to investigate the piece closer because of intrigue or simply to test the &ldquo;creature&rdquo; the piece will flash violently at them; mimicking the defense mechanisms of actual animals such as the porcupine or blow fish.</p>
+
+<p>Below is part of the code used to create the piece.</p>
+
+<pre class="full">
+    <code>
+        #define NR_OF_LIGHTS 6
+            int pins[NR_OF_LIGHTS] = { 3, 5, 6, 9, 10, 11 };
+            int values[NR_OF_LIGHTS];
+            int steps[NR_OF_LIGHTS];
+
+        #define NR_OF_FADESTEPS 4
+            int fadesteps[NR_OF_FADESTEPS] = { 192, 128, 64, 0 };
+            int fade_delay = 30; // millisec
+            int fade_cycles = 1000;
+
+            int nr_of_blinks = 2;
+            int blink_delay = 400; //millisec
+
+            int effect = 1;
+
+            int randomlights[NR_OF_LIGHTS];
+            bool chosenlights[NR_OF_LIGHTS];
+
+        /****/
+        void setup() {
+            randomSeed(analogRead(0));
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                values[i] = (int)random(230) + 13; // start values between ‘max min’ and ‘min max’
+                steps[i] = (int)random(4) + 1; // steps between 1 and 4
+            }
+        }
+
+        /****/
+        void loop() {
+            for (int j = 0; j < fade_cycles; j++) {
+                for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                    fadingLight(i);
+                }
+                delay(fade_delay);
+            }
+            if (effect == 1) {
+                blinkAll();
+                effect = 2;
+            }
+            else if (effect == 2) {
+                runningLight(0);
+                effect = 3;
+            }
+            else if (effect == 3) {
+                runningLight(255);
+                effect = 1;
+            }
+        }
+
+        /****/
+        void fadingLight(int i) {
+            int minvalue = (NR_OF_FADESTEPS * abs(steps[i])) + 1;
+            int maxvalue = 255 – minvalue;
+            int fs = NR_OF_FADESTEPS;
+            for (int j = 0; fs > 0; fs–, j++) {
+                if (values[i] > fadesteps[j]) {
+                    break;
+                }
+            }
+            values[i] += fs * steps[i];
+            if (values[i] > maxvalue  ||  values[i] < minvalue) {
+                steps[i] *= -1;
+            }
+            analogWrite(pins[i], values[i]);
+        }
+
+        /****/
+        void setAllLights(int value) {
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                analogWrite(pins[i], value);
+            }
+        }
+
+        /****/
+        void blinkAll() {
+            for (int i = 0; i < nr_of_blinks; i++) {
+                setAllLights(255);
+                delay(blink_delay);
+                setAllLights(0);
+                delay(blink_delay);
+            }
+        }
+
+        /****/
+        void runningLight(int startvalue) {
+            setAllLights(startvalue);
+            for (int j = 0; j < 2; j++) {
+                randomize();
+                for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                    analogWrite(pins[randomlights[i]], 255 – startvalue);
+                    delay(200);
+                    analogWrite(pins[randomlights[i]], startvalue);
+                }
+            }
+        }
+
+        /****/
+        void randomize() {
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                chosenlights[i] = false;
+            }
+            //first one always ok
+                int r = (int)random(NR_OF_LIGHTS);
+                randomlights[0] = r;
+                chosenlights[r] = true;
+            //next 4
+                for (int i = 1; i < 5; i++) {
+                while (true) {
+                    r = (int)random(NR_OF_LIGHTS);
+                    if (chosenlights[r] == false) {
+                        break;
+                    }
+                }
+                randomlights[i] = r;
+                chosenlights[r] = true;
+            }
+            //last one
+            for (int i = 0; i < NR_OF_LIGHTS; i++) {
+                if (chosenlights[i] == false) {
+                    randomlights[5] = i;
+                    break;
+                }
+            }
+        }
+    </code>
+</pre>
+
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright &copy; 2014 Adam Sedwick, Blind3y3Design.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Working With Cookmore]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Working-With-Cookmore/"/>
+    <updated>2013-11-03T15:12:55-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Working-With-Cookmore</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://www.cookmore.com" title="cookmore">
+        <img class="thumbnail" src="/images/aisleRocket/Cookmore_Homepage-653x1024.jpg" alt="Cookmore Image">
+    </a>
+</div>
+
+
+<p><a href="http://www.cookmore.com">Cookmore</a></p>
+
+<p>During my time at Aisle Rocket Studios I have had the immense pleasure of working on the site Cookmore.com. Cookmore is a community based cooking site. Regular people, as well as professional chefs can post recipes on the site.</p>
+
+<!--more-->
+
+
+<p>Much like the inspiration blog, Cookmore is built on a completely custom Wordpress install. Unlike the Inspiration Blog, Cookmore is a much more complex site using multiple custom built plug-ins and custom Back-end development in order to create the many function of the site.</p>
+
+<p>Cookmore also has the ability to hold contests on the site, collecting information and storing it in a database for use when the contest is over. I personally worked on the 100-Year Anniversary contest. Creating custom pages, elements, and forms all in a dynamic fashion, working with a designer every step of the way and evolving the page when new events or content needed to be added.</p>
+
+<p>Cookmore was the first site that I worked on that was truly a responsive site. The design of the site and the construction of elements was well thought out before development began so that there was no need to fit the design to the device. The design was made for the device you viewed it on.</p>
+
+<p>It was also my first experience working with a team of Front-end and Back-end devs using SVN for version control. I has to learn a lot of new information and I had to pick up on it quickly. The development cycle for any given project could range from as small as a week to a couple months.</p>
+
+<p>While the development on Cookmore has slowed for the moment I look forward to what other projects or features may be added in the future.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Inspirational Blogging]]></title>
+    <link href="http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Inspiration-Blog/"/>
+    <updated>2013-11-03T13:33:00-05:00</updated>
+    <id>http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Inspiration-Blog</id>
+    <content type="html"><![CDATA[<div>
+    <a href="http://inspiration.kenmore.com" title="Inpiration Blog">
+        <img class="thumbnail" src="/images/aisleRocket/Kenmore_Blog-693x1024.jpg" alt="Inspiration Image">
+    </a>
+</div>
+
+
+<p><a href="http://inspiration.kenmore.com">Inspiration</a></p>
+
+<p>The Kenmore Ispiration Blog is a community site that collects posts from across the web and combines them with posts by Kenmore and Cookmore. The blog is a community where people can share, post, and learn about all things Kenmore related.</p>
+
+<p>Inspiration is build on a highly customized WordPress installation that is continually being built and improved upon. We recently set up new pages for contests like the “Couponista” challenge. This page followed 3 bloggers in their competition to be the greatest couponer.</p>
+
+<p>We set up custom abilities for the blog so that the posts by the bloggers would not display on any page unless it has the Couponista qualifier set on the page. This allowed for the blog homepage to remain community based while if someone wanted to find information about the Couponista event they could get all of the aggregated posts on a single page.</p>
+]]></content>
+  </entry>
+  
+</feed>
