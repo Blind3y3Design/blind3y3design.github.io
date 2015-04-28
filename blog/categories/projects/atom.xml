@@ -4,7 +4,7 @@
   <title><![CDATA[Projects | Blind3y3Design]]></title>
   <link href="http://blind3y3design.github.io/blog/categories/projects/atom.xml" rel="self"/>
   <link href="http://blind3y3design.github.io/"/>
-  <updated>2015-04-25T22:57:49-04:00</updated>
+  <updated>2015-04-28T01:46:11-04:00</updated>
   <id>http://blind3y3design.github.io/</id>
   <author>
     <name><![CDATA[Adam Sedwick]]></name>
@@ -18,14 +18,7 @@
     <link href="http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Sale/"/>
     <updated>2014-04-02T11:58:00-04:00</updated>
     <id>http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Sale</id>
-    <content type="html"><![CDATA[<div>
-    <a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html" title="Gladiator">
-        <img class="thumbnail" src="/images/aisleRocket/gladiatorProductSale.png" alt="Gladiator Image">
-    </a>
-</div>
-
-
-<p><a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html">Gladiator</a></p>
+    <content type="html"><![CDATA[<p><a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html">Gladiator</a></p>
 
 <p>The gladiator sale page takes data from a JSON file and transforms it in to a massive listing of all the products on sale.</p>
 
@@ -99,14 +92,7 @@
     <link href="http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Ecommerce/"/>
     <updated>2014-04-02T11:50:00-04:00</updated>
     <id>http://blind3y3design.github.io/blog/2014/04/02/Gladiator-Ecommerce</id>
-    <content type="html"><![CDATA[<div>
-    <a href="http://www.gladiatorgarageworks.com/" title="Gladiator">
-        <img class="thumbnail" src="/images/aisleRocket/Gladiator_fullSize.png" alt="Gladiator Image">
-    </a>
-</div>
-
-
-<p><a href="http://www.gladiatorgarageworks.com/">Gladiator</a></p>
+    <content type="html"><![CDATA[<p><a href="http://www.gladiatorgarageworks.com/">Gladiator</a></p>
 
 <p>A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</p>
 ]]></content>
@@ -276,14 +262,7 @@
     <link href="http://blind3y3design.github.io/blog/2013/11/03/Working-With-Cookmore/"/>
     <updated>2013-11-03T15:12:55-05:00</updated>
     <id>http://blind3y3design.github.io/blog/2013/11/03/Working-With-Cookmore</id>
-    <content type="html"><![CDATA[<div>
-    <a href="http://www.cookmore.com" title="cookmore">
-        <img class="thumbnail" src="/images/aisleRocket/Cookmore_Homepage-653x1024.jpg" alt="Cookmore Image">
-    </a>
-</div>
-
-
-<p><a href="http://www.cookmore.com">Cookmore</a></p>
+    <content type="html"><![CDATA[<p><a href="http://www.cookmore.com">Cookmore</a></p>
 
 <p>During my time at Aisle Rocket Studios I have had the immense pleasure of working on the site Cookmore.com. Cookmore is a community based cooking site. Regular people, as well as professional chefs can post recipes on the site.</p>
 
@@ -307,14 +286,7 @@
     <link href="http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Inspiration-Blog/"/>
     <updated>2013-11-03T13:33:00-05:00</updated>
     <id>http://blind3y3design.github.io/blog/2013/11/03/Kenmore-Inspiration-Blog</id>
-    <content type="html"><![CDATA[<div>
-    <a href="http://inspiration.kenmore.com" title="Inpiration Blog">
-        <img class="thumbnail" src="/images/aisleRocket/Kenmore_Blog-693x1024.jpg" alt="Inspiration Image">
-    </a>
-</div>
-
-
-<p><a href="http://inspiration.kenmore.com">Inspiration</a></p>
+    <content type="html"><![CDATA[<p><a href="http://inspiration.kenmore.com">Inspiration</a></p>
 
 <p>The Kenmore Ispiration Blog is a community site that collects posts from across the web and combines them with posts by Kenmore and Cookmore. The blog is a community where people can share, post, and learn about all things Kenmore related.</p>
 
