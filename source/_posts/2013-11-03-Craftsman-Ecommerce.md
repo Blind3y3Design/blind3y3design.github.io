@@ -5,14 +5,13 @@ date: "2013-11-3 11:50:00 -0600"
 author: Blind3y3Design
 categories: [projects]
 tags: [aisleRocket]
-excerpt: A large portion of the work we do is creating maintaining and updating content on client sites like this one.
----
 
-<div>
-	<a href="http://www.craftsman.com" title="Craftsman">
-		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/Craftsman_Homepage-475x1024.jpg" alt="Craftsman Image">
-	</a>
-</div>
+# Custom Metadata
+exampleLink: http://www.craftsman.com/
+fullImage: /images/aisleRocket/craftsman_homepage.jpg
+thumbnail: /images/aisleRocket/thumbnails/craftsman_homepage.jpg
+
+---
 
 [Craftsman](http://www.craftsman.com)
 

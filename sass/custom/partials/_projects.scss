@@ -1,0 +1,49 @@
+/* --------------------
+
+Custom Resume Styles
+
+-------------------- */
+
+
+.project {
+  min-height: 320px;
+  box-sizing: border-box;
+  padding: 1em;
+  margin-bottom: 1.5em;
+
+  // background-color:$primary-color;
+  box-shadow: 0 0 10px $primary-light-color;
+}
+.project-thumbnail {
+  @extend %clearfix;
+
+  max-height: 185px;
+  width: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid $primary-dark-color;
+
+  a {
+    display: block;
+    text-decoration: none;
+    line-height: 0;
+  }
+}
+.project-description {
+  display: inline-block;
+  margin-top: 1em;
+
+  font-size: 0.8em;
+  font-family: $sans;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.project-headline {
+  margin-bottom: 0;
+
+  border:none;
+  line-height: 1.4;
+}
+.project-date {
+  margin: 1em 0 0;
+}

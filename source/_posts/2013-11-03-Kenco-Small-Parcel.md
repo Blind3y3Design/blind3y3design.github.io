@@ -5,14 +5,13 @@ date: "2013-11-3 12:00:00 -0600"
 author: Blind3y3Design
 categories: [projects]
 tags: [aisleRocket]
-excerpt: The Small Parcel page on Kenco was a unique project when I got to work on it. It was my first experience usning the ExpressionEngine CMS. This page is build by creating a page template and once the templace is set and attached to a page we begin loading content on to it.
----
 
-<div>
-	<a href="http://www.www.kencotrans.com/small-parcel" title="Kenco">
-		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/Kenco-_Small_Parcel-605x1024.jpg" alt="Kenco Image">
-	</a>
-</div>
+# Custom Metadata
+exampleLink: http://www.kencotrans.com/small-parcel/
+fullImage: /images/aisleRocket/kenco_parcel.jpg
+thumbnail: /images/aisleRocket/thumbnails/kenco_parcel.jpg
+
+---
 
 [Small Parcel](http://www.kencotrans.com/small-parcel)
 

@@ -1,14 +1,17 @@
 ---
-layout: default
-single: true
----
+ layout: default
+ single: true
+ sidebar: false
+ ---
 
-<div>
-<article class="hentry" role="article">
-  {% include article.html %}
-  <footer>
-    <p class="meta">
-      {% include post/author.html %} &mdash; <span class="date">{{ page.date | date: '%b %d %Y' }}</span>
+ <div>
+ <article class="hentry" role="article">
+  {% include project-file.html %}
+   <footer>
+     <p class="meta">
+       {% include post/author.html %}
+      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+      {% include post/categories.html %}
     </p>
     {% unless page.sharing == false %}
       {% include post/sharing.html %}

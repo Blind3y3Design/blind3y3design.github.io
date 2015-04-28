@@ -5,14 +5,13 @@ date: "2014-04-2 10:58:00 -0500"
 author: Blind3y3Design
 categories: [projects]
 tags: [aisleRocket]
-excerpt: The gladiator sale page takes data from a JSON file and transforms it in to a massive listing of all the products on sale.
----
 
-<div>
-	<a href="http://www.gladiatorgarageworks.com/global_Product-Sale.content.html" title="Gladiator">
-		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/gladiatorProductSale.png" alt="Gladiator Image">
-	</a>
-</div>
+# Custom Metadata
+exampleLink: http://www.gladiatorgarageworks.com/
+fullImage: /images/aisleRocket/gladiator_product.jpg
+thumbnail: /images/aisleRocket/thumbnails/gladiator_product.jpg
+
+---
 
 [Gladiator](http://www.gladiatorgarageworks.com/global_Product-Sale.content.html)
 

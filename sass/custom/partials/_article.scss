@@ -1,0 +1,25 @@
+/* --------------------
+
+Custom Resume Styles
+
+-------------------- */
+
+
+.article-image {
+  @extend %clearfix;
+
+  a {
+    display: block;
+    text-decoration: none;
+    line-height: 0;
+  }
+}
+.article-headline {
+  margin-bottom: 0;
+
+  border:none;
+  line-height: 1.4;
+}
+.article-date {
+  margin: 1em 0 0;
+}

@@ -25,18 +25,5 @@
     </footer>
   {% endif %}
 {% else %}
-<div class="entry-content">
-  {% if page.fullImage %}
-    <div class="article-image">
-      {% if page.exampleLink %}
-        <a href="{{ root_url }}{{ page.url }}">
-          <img border=0 alt="{{ page.title }}" src="{{ page.fullImage }}" align="left">
-        </a>
-      {% else %}
-        <img border=0 alt="{{ page.title }}" src="{{ page.fullImage }}" align="left">
-      {% endif %}
-    </div>
-  {% endif %}
-  {{content}}
-</div>
+<div class="entry-content">{{ content }}</div>
 {% endif %}

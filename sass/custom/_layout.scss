@@ -27,6 +27,19 @@
     clear: both;
   }
 }
+
+a {
+	color: $primary-link-color;
+	text-decoration: none;
+
+	&:hover {
+		color: primary-link-hover-color;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: $primary-link-color;
+	}
+}
 ul {
 	list-style-position: outside;
 }

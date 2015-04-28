@@ -43,3 +43,21 @@
 //$pre-color: $base1;
 
 $main-bg: #f8f8f8 !default;
+
+/* --------------------
+
+	Color Scheme
+
+-------------------- */
+$primary-color: #607d8b;
+$primary-dark-color: #455a64;
+$primary-light-color: #cfd8dc;
+$accent-color: #ffc107;
+$primary-text-color: #212121;
+$secondary-text-color: #727272;
+$icon-color: #fff;
+$divider-color: #b6b6b6;
+// Link Colors
+$primary-link-color: $accent-color;
+$primary-link-hover-color: darken($accent-color, 5);
+

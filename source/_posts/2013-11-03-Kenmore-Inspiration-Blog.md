@@ -5,14 +5,13 @@ date: "2013-11-3 12:33:00 -0600"
 author: Blind3y3Design
 categories: [projects]
 tags: [aisleRocket]
-excerpt: The Kenmore Ispiration Blog is a community site that collects posts from across the web and combines them with posts by Kenmore and Cookmore. The blog is a community where people can share, post, and learn about all things Kenmore related.
----
 
-<div>
-	<a href="http://inspiration.kenmore.com" title="Inpiration Blog">
-		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/Kenmore_Blog-693x1024.jpg" alt="Inspiration Image">
-	</a>
-</div>
+# Custom Metadata
+exampleLink: http://inspiration.kenmore.com
+fullImage: /images/aisleRocket/kenmore_blog.jpg
+thumbnail: /images/aisleRocket/thumbnails/kenmore_blog.jpg
+
+---
 
 [Inspiration](http://inspiration.kenmore.com)
 

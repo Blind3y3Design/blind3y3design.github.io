@@ -5,14 +5,13 @@ date: "2013-11-3 14:12:55 -0600"
 author: Blind3y3Design
 categories: [projects]
 tags: [aisleRocket]
-excerpt: During my time at Aisle Rocket Studios I have had the immense pleasure of working on the site Cookmore.com. Cookmore is a community based cooking site. Regular people, as well as professional chefs can post recipes on the site.
----
 
-<div>
-	<a href="http://www.cookmore.com" title="cookmore">
-		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/Cookmore_Homepage-653x1024.jpg" alt="Cookmore Image">
-	</a>
-</div>
+# Custom Metadata
+exampleLink: http://www.cookmore.com/
+fullImage: /images/aisleRocket/cookmore_homepage.jpg
+thumbnail: /images/aisleRocket/thumbnails/cookmore_homepage.jpg
+
+---
 
 [Cookmore](http://www.cookmore.com)
 

@@ -5,14 +5,13 @@ date: "2014-04-2 10:50:00 -0500"
 author: Blind3y3Design
 categories: [projects]
 tags: [aisleRocket]
-excerpt: When you need quality you choose Gladiator GarageWorks.
----
 
-<div>
-	<a href="http://www.gladiatorgarageworks.com/" title="Gladiator">
-		<img class="thumbnail" src="{{site.baseurl}}/images/aisleRocket/Gladiator_fullSize.png" alt="Gladiator Image">
-	</a>
-</div>
+# Custom Metadata
+exampleLink: http://www.gladiatorgarageworks.com/
+fullImage: /images/aisleRocket/gladiator_homepage.jpg
+thumbnail: /images/aisleRocket/thumbnails/gladiator_homepage.jpg
+
+---
 
 [Gladiator](http://www.gladiatorgarageworks.com/)
 
