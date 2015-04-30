@@ -6,11 +6,12 @@ author: Blind3y3Design
 categories: [projects]
 tags: [personal]
 excerpt: The work Vine Lights was an experimental piece in a series of works called "Inorganic Life." The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.
----
 
-<div>
-	<img src="{{site.baseurl}}/images/personal/Lights_Bottom_View.jpg" alt="Vine Lights Image">
-</div>
+# Custom Metadata
+fullImage: /images/personal/Lights_Bottom_View.jpg
+thumbnail: /images/personal/Lights_Bottom_View.jpg
+
+---
 
 The work Vine Lights was an experimental piece in a series of works called "Inorganic Life." The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.
 
