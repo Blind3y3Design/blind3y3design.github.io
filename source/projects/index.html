@@ -16,11 +16,13 @@ sidebar: false
     {% for post in site.categories[page.category] %}
       <article class="project col_3">
         {% if post.thumbnail %}
+        <div class="project-thumb-wrapper">
           <div class="project-thumbnail">
             <a href="{{ root_url }}{{ post.url }}">
               <img border=0 alt="{{ post.title }}" src="{{ post.thumbnail }}" align="left">
             </a>
           </div>
+        </div>
           <a href="{{ root_url }}{{ post.url }}" class="project-description">
               {{ post.title }}
             </a>

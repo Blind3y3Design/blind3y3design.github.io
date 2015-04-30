@@ -14,10 +14,14 @@ Custom Resume Styles
   // background-color:$primary-color;
   box-shadow: 0 0 10px $primary-light-color;
 }
+.project-thumb-wrapper {
+  min-height: 182px;
+}
 .project-thumbnail {
   @extend %clearfix;
 
-  max-height: 185px;
+  box-sizing: border-box;
+  max-height: 182px;
   width: 150px;
   margin: 0 auto;
   overflow: hidden;
