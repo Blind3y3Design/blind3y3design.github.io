@@ -4,7 +4,7 @@
   <title><![CDATA[Blog | Blind3y3Design]]></title>
   <link href="http://blind3y3design.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://blind3y3design.github.io/"/>
-  <updated>2015-04-29T21:34:01-04:00</updated>
+  <updated>2015-05-07T19:46:06-04:00</updated>
   <id>http://blind3y3design.github.io/</id>
   <author>
     <name><![CDATA[Adam Sedwick]]></name>
@@ -14,18 +14,50 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The #Talkpay Hashtag]]></title>
+    <link href="http://blind3y3design.github.io/blog/2015/05/03/building-a-better-team/"/>
+    <updated>2015-05-03T22:55:00-04:00</updated>
+    <id>http://blind3y3design.github.io/blog/2015/05/03/building-a-better-team</id>
+    <content type="html"><![CDATA[<p>Something interesting happened on twitter this week. The #Talkpay hastag went viral. This sparked a number of conversations I had with my peers. On the <a href="http://www.designerhangout.co/">User Experience Design</a> Slack channel we spent a good while talking about the idea, and it&rsquo;s potential ramifications or benefits to the community. So, let&rsquo;s #Talkpay.</p>
+
+<!--more-->
+
+
+<p>So what exactly is #Talkpay all about? I&rsquo;ll let the woman behind the hashtag describe.</p>
+
+<blockquote><p>Pay inequality is an oft-discussed topic. There are measurable pay discrepancies between groups when looking at race and gender which are further exacerbated when someone is a member of multiple minorities. One need only look at the statistics that show black women making $0.64 to white men’s $1.00 and Latinas making $0.53. <a href="http://www.newrepublic.com/article/121530/women-color-make-far-less-78-cents-mans-dollar">These discrepancies exist in a very profound and measurable way</a> across all manner of fields and experiences.</p>
+
+<p> -Lauren Voswinkel | <a href="https://modelviewculture.com/news/lets-talk-about-pay">Lets Talk About Pay</a></p></blockquote>
+
+<p>If you want more information I would advise going and reading Lauren&rsquo;s full article. The idea behind the hashtag was to bring awareness to the issue of pay discrepancy and try to begin an open conversation about the issue. As I said before the issue blossomed very quickly among the tech community I call myself part of. I was amazed at just how open people were about this and how most of us seemed to have the same opinion.</p>
+
+<p>I have personally been on both sides of the wage gap. My first job out of college was working as a barista at a Starbucks in my college town. It still amazes me how people seem to think that just because you work an hourly job that you&rsquo;re a lesser person. For this reason I still believe that everyone should spend at least some time working an hourly job; preferably some form of customer service. My first &ldquo;real&rdquo; job was as a Jr. Front-End developer at an advertising agancy. As someone pretty fresh out of school I was amazed at the amount of money that I was making. More than enough to pay bills and student loans while living under my parent roof.</p>
+
+<p>I had an idea of what my coworkers were making and due to their experience I felt the pay differnce was justified. It was not until I moved out to New York City that I truly experienced the ugly side of the pay gap. My first job in New York was as a Front-End Engineer at an enterprise software company. I was only making slightly more than I had been before, but now I was living on my own and in one of the most expensive cities in the US. I was still making enough to get by, but now I had to begin thinking about budgets and expenses. My fiance on the otherhand was working 40 hours a week on a minimum wage salary, barely making enough to cover half of the rent each month.</p>
+
+<p>I&rsquo;ve also worked had the pleasure of working with some amazing women in my field, one being a very dear friend of mine. While looking for new positions we began to discuss our compensation. She had been with the company three years, while i&rsquo;d been there only 9 months. We were making about the same amount. There was even a meeting that took place where we were told she deserved a promotion, but they didn&rsquo;t want to give it to her because she might use it to find work elsewhere.</p>
+
+<p>The reason I&rsquo;m writing about all of this is because I think this is a real and undeniable issue in the work force. Part of the solution is to have a discussion about these issues and bring awareness to the wage gap. I also think that having more open and available salary information is part of the solution. Making the discussion of salaries taboo only serves to protect companies that are paying less based on discriminatory grounds. If you think that open salaries is an opening for chaos to take control all you have to do is reaserch the topic a bit to see thats not what happens. There is a wonderfull <a href="http://www.ted.com/talks/ricardo_semler_radical_wisdom_for_a_company_a_school_a_life?embed=true">TED Talk</a> about it that was featured on NPR&rsquo;s <a href="http://www.npr.org/2015/04/24/401742828/what-happens-when-you-run-a-company-with-almost-no-rules">TED Radio Hour</a>.</p>
+
+<p>I feel very lucky to be where I am in my career now. I know that I&rsquo;ve gotten amazing opportunities in my life, I just want to see everyone else get those opportunities too. Maybe one day everyone will be on an even playing ground, but until then we need to at least be aware of the issues and try to avoid making these mistakes ourselves.</p>
+
+<p>Keep building better.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[The Great Divide]]></title>
     <link href="http://blind3y3design.github.io/blog/2015/04/25/Bridging-the-Gap/"/>
     <updated>2015-04-25T23:40:00-04:00</updated>
     <id>http://blind3y3design.github.io/blog/2015/04/25/Bridging-the-Gap</id>
     <content type="html"><![CDATA[<h2>Bridging the ‘Handoff’</h2>
 
-<p>[uxreactions.com]
+<p><a href="http://uxreactions.com">uxreactions.com</a>
 While I appreciate a lot of what is on the site, I must say; seeing the number of developer complaints make me very sad. I also noticed this trend at a recent meetup I attended. A large number of designers; UX, visual, IxD, voiced a number of complaints about developers. I’ve heard the same from developers about designers. I think this is an artifact of traditional waterfall approaches and the ‘hand off’.<!--more--> If we want to grow as teams and communities I think we need to stop complaining about each other and finding ways to bridge the gap. Sometimes an overly decorative design really does affect performance, and a slow experience is a poor experience.</p>
 
-<p>One of the worst offenders of this point of view is the [clients from hell] blog. More often than not, the issue is not the client. It’s the designer not providing clear instruction and having a feeling of entitlement that puts them above the client.</p>
+<p>One of the worst offenders of this point of view is the <a href="http://clientsfromhell.net/">clients from hell</a> blog. More often than not, the issue is not the client. It’s the designer not providing clear instruction and having a feeling of entitlement that puts them above the client.</p>
 
-<p>I’ve also noticed that a number of thought leaders in this area have found their success by getting their teams to work together. Ethan Marcotte and Karen McGrane; the host of the[responsive web design] podcast, interview team members to often speak very highly of their counterparts, be it design or development.</p>
+<p>I’ve also noticed that a number of thought leaders in this area have found their success by getting their teams to work together. Ethan Marcotte and Karen McGrane; the host of the<a href="http://responsivewebdesign.com/podcast/">responsive web design</a> podcast, interview team members to often speak very highly of their counterparts, be it design or development.</p>
 
 <p>Some of the best teams I’ve gotten to experience work in a very close manner. I believe the popular term form them teams right now is a ‘lean’ team. These teams work together to produce the best product, the design team understand the underlying structure of how the web works. Developers can not only give input on design decisions but are often invited into design reviews. In my experience this cooperation produces better results and happier teams.</p>
 
