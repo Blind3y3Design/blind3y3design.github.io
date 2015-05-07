@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Blind3y3Design]]></title>
   <link href="http://blind3y3design.github.io/atom.xml" rel="self"/>
   <link href="http://blind3y3design.github.io/"/>
-<<<<<<< HEAD
-  <updated>2014-11-12T00:47:48-05:00</updated>
-=======
-  <updated>2015-05-07T19:46:06-04:00</updated>
->>>>>>> origin/master
+  <updated>2015-05-07T19:58:03-04:00</updated>
   <id>http://blind3y3design.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Adam Sedwick]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-<<<<<<< HEAD
-=======
   <entry>
     <title type="html"><![CDATA[The #Talkpay Hashtag]]></title>
-    <link href="http://blind3y3design.github.io/blog/2015/05/03/building-a-better-team/"/>
+    <link href="http://blind3y3design.github.io/blog/2015/05/03/lets-talkpay/"/>
     <updated>2015-05-03T22:55:00-04:00</updated>
-    <id>http://blind3y3design.github.io/blog/2015/05/03/building-a-better-team</id>
+    <id>http://blind3y3design.github.io/blog/2015/05/03/lets-talkpay</id>
     <content type="html"><![CDATA[<p>Something interesting happened on twitter this week. The #Talkpay hastag went viral. This sparked a number of conversations I had with my peers. On the <a href="http://www.designerhangout.co/">User Experience Design</a> Slack channel we spent a good while talking about the idea, and it&rsquo;s potential ramifications or benefits to the community. So, let&rsquo;s #Talkpay.</p>
 
 <!--more-->
@@ -596,5 +590,4 @@ Create a plan for implementing improvements to the way the Scrum Team does its w
 ]]></content>
   </entry>
   
->>>>>>> origin/master
 </feed>
