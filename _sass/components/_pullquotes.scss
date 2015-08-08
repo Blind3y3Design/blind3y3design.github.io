@@ -1,0 +1,16 @@
+p[data-pullquote] {
+  display: block;
+
+  &:before {
+    content: attr(data-pullquote);
+    float: right;
+    width: 40%;
+    margin: 0 -1em 0.5em 1em;
+    font-size: 1.2em;
+    background-color: #f5f5f5;
+    padding: 0.5em;
+    box-sizing: border-box;
+    border-radius: 1em 1em 1em 0;
+    color: $pull-quote-color;
+  }
+}

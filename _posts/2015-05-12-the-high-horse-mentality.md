@@ -1,0 +1,31 @@
+---
+layout: post
+title: "The High Horse Mentality"
+date: 2015-05-03 22:55:00 -0400
+author: Blind3y3Design
+categories: [blog]
+tags: [Design, Development, Jobs, Programming, Certification, Superiority, Interview]
+---
+
+Spurred by [Lara Schenck](http://notlaura.com/)'s post on [CSS-Tricks](https://css-tricks.com/tales-of-a-non-unicorn-a-story-about-the-trouble-with-job-titles-and-descriptions/) I have decided to toss my two cents in to the bountiful fountain of knowledge.
+
+It seems the age of 'Unicorns' has spawned a number of people who wind up simply being pricks sitting on their high horses. I'm not saying that people who claim to be unicorns are those people, or that they're wholly guilt free either. It just seems the issue has bubbled to the surface more apparently in the recent past.
+<!--more-->
+
+After reading Lara's article and agreeing with pretty much every sentiment she expressed I decided to chase the article rabbit down the internet hole. There are two links they Lara shares in her article that caught my attention and elicited a strong reaction to their content. The first being about the [Illegal use of the 'Engineer' title](http://www.bizjournals.com/triad/stories/2004/04/12/focus3.html?page=all), and the second being [Why Can't Programmers... Program](http://blog.codinghorror.com/why-cant-programmers-program/).  My first issue with both articles is the apparent superiority expressed in both articles. To a certain extent I understand a mechanical or civil engineer being protective of their title; it takes a lot of work to get those positions. But to claim that the use of the term should be illegal to all others, whom have potentially gone through equally, if not different, amounts of work seems a bit eccessive. On whose authority was it deemed that knowing the different electrical resistances, or tensile strength of a material, is inherintly more valuable then understanding how all the parts of a software stack interact with eachother, of the determining factors of packet loss and performance?
+
+The superior mindset extends to CodingHorror's post and perhaps even exceeds the other. What defines a 'programmer'? How can we; both qualitatively and quantitatively, measure what makes one better than another? Code reviews and 'simple' programming tests can only go so far. At what point does willingness to learn outweigh inherent knowledge, particularly with entry level positions? Claiming that "... 199 out of 200 applicants for every programming job can't write code at all" is not only humorous, it's insulting. Again I'll ask, what is a "programming job" Is a typical 'Front-End Developer' a programmer? What about someone who develops entire web apps in Javascript? While I don't self describe as a programmer, I do believe that I can and do partake in the act of programming, if the project calls for it.
+
+For arguments sake lets look at a couple of definitions. Merriam-Webster defines **programming** as "*the act or job of creating computer programs*", and a **program** as "*a set of instructions that tell a computer what to do*". Pretty sure; by those definitions, writing a simple html page qualifies as programming. You're providing the computer a set of instruction on how to organize the content of the page. I also understand that in the context of the article the term "programmer" has a certain connotation that is not the dictionary definition, but the article itself is still encouraging a negative mentality that only furthers the issue.
+
+It would appear that the authors of those articles; and those they cite, are firmly seated on their high horses, and have forgotten that everyone has to start somewhere, and it is your job as a more senior member of the community to guide them and help them grow.
+
+Now Lara's article isn't about these articles, it's about her experience interviewing for a job. I feel that part of the "199 out of 200" problem is that we as an industry have vague and constantly changing job titles and descriptions. For continuity's sake we'll examine programmer again. Depending on where you look; god forbid a recruiter contact you, a programming position could range in requirements from "html, css, and js" to "c# expertise" and "sql mastery", even "swift experience a plus" if you're looking at app development. So now we have a job title that could fit pretty much anyone, and just as confusing a job description that reads like a page out of "Buzzwords for Idiots". Sprinkle in some form of "UX" and you have an entire company being listed under a single position. This results in people applying for; and ultimately interviewing for, a position that they expected to be one thing, and ended up being something completely different.
+
+I would never apply for a C# of Java position, but on any given day I could come across 2-5 "Front-End" listings that include those technologies under requirements. I've even seen UX positions that read like a senior developers job, and have no mention of any UX disciplines. When looking at a potential job listing I defer to something that people much smarter than myself have found useful; describing the actual job, describe a potential project role the new employee may be asked to fulfill. An interview should then be a series on conversations, in addition to gauging skill level it is also important to find cultural fit, willingness to learn, and leadership potential from the interviewee. 
+
+Titles are beginning to mean less and less in this new world that we are working in. Legacy organizational structures are going to be pain points. Innovation is already begging to emerge in this area, self sufficient agile teams and companies that follow the 'lean' methodology are proving that there is no need to adhere to the old way of doing things in order to produce exceptional products. In fact they tend to be able to iterate faster resulting in a better product faster.
+
+I don't have a proper conclusion, or a solution to these issues. What I have found works for me, and teams I've worked on is to approach organizational issues as we would any issue we might run in to; propose a solution, test, and iterate on the successes while learning from the missteps. There is no one solution, find what works for you, and keep working to improve it.
+
+As always, keep building better.

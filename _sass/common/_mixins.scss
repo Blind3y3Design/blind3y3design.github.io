@@ -1,0 +1,42 @@
+// Button Mixins
+@mixin button($color, $bg-color:transparent, $weight:normal, $size:1em) {
+  @include button-static;
+  color: $color;
+  background-color: $bg-color;
+  font-weight: $weight;
+  font-size: $size;
+  &:hover, &:focus {
+    background-color: darken($bg-color, 10)
+  }
+}
+@mixin ghost-button($color, $bg-color:transparent, $weight:normal, $size:1em) {
+  @include button-static;
+  color: $color;
+  background-color: transparent;
+  font-weight: $weight;
+  font-size: $size;
+  &:hover, &:focus {
+    background-color: $bg-color;
+    @if $bg-color == $white or $bg-color == $light-gray or $bg-color == $off-white {
+      color: $black;
+    } @else {
+      color: $white;
+    } 
+  }
+}
+@mixin button-static {
+  position: relative;
+  vertical-align: middle;
+  padding: 0.25em 0.5em;
+  line-height: 1em;
+  width: auto;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border-radius: 0.5em;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
