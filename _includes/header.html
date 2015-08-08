@@ -1,0 +1,17 @@
+<header class="masthead">
+  <div class="container">
+    <h3 class="masthead-title">
+      <a href="{{ site.baseurl }}/" title="Home" class="logo">{{ site.title }}</a>
+      <small>{{ site.tagline }}</small>
+    </h3>
+    <nav class="main-navigation">
+      <ul>
+        {% for page in site.pages_list %}
+          <li class="navigation-item">
+            <a href="{{ page[1]  }}" title="{{ page[0]  }}" class="btn--nav">{{ page[0] }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,19 @@
+$white: #ffffff;
+$black: #000000;
+$gray: #cccccc;
+$light-gray: #f5f5f5;
+$dark-gray: #333333;
+$off-white: #fafafa;
+
+$default-link-blue: #268bd2;
+$green: #b4da55;
+$blue: #00bdd1;
+
+$body-color: $dark-gray;
+
+$link-color: lighten($body-color, 50);
+$link-hover-color: $blue;
+$pagination-color: $blue;
+$pagination-active-color: $blue;
+$pull-quote-color: $blue;
+

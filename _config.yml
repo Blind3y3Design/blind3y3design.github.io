@@ -1,0 +1,46 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:            Blind3y3Design
+tagline:          'Thoughts and Lessons from a Front-End Architect'
+description:      'Thoughts and Lessons from a Front-End Architect'
+url:              http://blind3y3design.github.io
+paginate:         1
+baseurl:          ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:           'Adam Sedwick'
+  url:            https://twitter.com/blind3y3design
+  email:          asedwick@blind3y3design.com
+# Custom vars
+version:          0.1.0
+
+github:
+  repo:           https://github.com/blind3y3design/new-jekyll-site
+
+#Pages
+pages_list:       
+  # About: '/about'
+  Archive: '/archive'
+  Work: '/work'
+  Resume: '/resume'
+  # Feed: '/atom.xml'
+
+#Ignore Files
+exclude:
+  - jekyll_congig.sublime-project
+  - jekyll_congig.sublime-workspace
+  - gemfile
+  - Gemfile.lock

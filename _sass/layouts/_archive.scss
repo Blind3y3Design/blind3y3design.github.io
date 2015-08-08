@@ -1,0 +1,14 @@
+.archive-item {
+	list-style: none;
+	@extend %clearfix;
+}
+.archive-link {
+	color: $link-color;
+
+	&:hover, &:focus {
+		color: $link-hover-color;
+	}
+}
+.archive-time {
+	float: right;
+}
