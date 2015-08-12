@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: post
 title: The Hamburger Menu Is Not The Enemy
 date: 2015-08-11 21:58:29 -0400
 categories: [blog]
