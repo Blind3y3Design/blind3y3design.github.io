@@ -1,42 +1,11 @@
 ---
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
+# Don't add any css here.  This is just for concatenation and minification.
 ---
 
-//
-//                        ___
-//                       /\_ \
-//  _____     ___     ___\//\ \      __
-// /\ '__`\  / __`\  / __`\\ \ \   /'__`\
-// \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
-//  \ \ ,__/\ \____/\ \____//\____\ \____\
-//   \ \ \/  \/___/  \/___/ \/____/\/____/
-//    \ \_\
-//     \/_/
-//
-// Designed, built, and released under MIT license by @mdo. Learn more at
-// https://github.com/poole/poole.
+@import "poole";
+@import "syntax";
+@import "lanyon";
 
-// Load Common Files
-@import "common/variables";
-@import "common/placeholders";
-@import "common/mixins";
-@import "common/base";
 
-// Load Component Files
-@import "components/type";
-@import "components/syntax";
-@import "components/code";
-@import "components/buttons";
-@import "components/pullquotes";
-@import "components/navigation";
-
-// Load Layout Files
-@import "layouts/layout";
-@import "layouts/masthead";
-@import "layouts/posts";
-@import "layouts/pagination";
-@import "layouts/message";
-@import "layouts/archive";
-@import "layouts/work";
-@import "layouts/resume";
+// Custom CSS
+@import "custom";

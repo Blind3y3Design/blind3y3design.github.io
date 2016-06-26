@@ -3,30 +3,12 @@ layout: page
 title: About
 ---
 
-[Get in touch](https://github.com/Blind3y3Design/Contact/issues/new)
+## About Me
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+I have been developing modern standards-complians web sites for the past 6 years. Over the years, I have worked with many methodologies, frameworks, and architectures. I currently focus on performant, usable, and accessible web-based products. 
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+My first job in the web was for an e-commerce based advertising agency. In my time there we focused on providing a wide range of products and experiences for our clients. Our goal was to make performant and stable sites that allowed the users to easily and quickly purchase the products they desired.
 
-There are currently two themes built on Poole:
+In 2014, I was given the opportunity to work with an amazing team of developers on a small team that had the freedom to explore new technologies and ideas while still being backed by a stable and reliable company. It was at this company that I got to grow my management and User Experience skills. We had the ability to create our own internal teams and manage ourselves indepentently. This allowed for each team member to take on a larger role and have more of a sense of ownership over the final product(s). 
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+In the last few years I have had the privelege to work with a wide range of clients such as: <a href="https://www.qualcomm.com/" target="_blank">Qualcomm</a>, <a href="https://www.att.com/" target="_blank">AT&amp;T</a>, <a href="https://www.americanexpress.com/" target="_blank">American Express</a>, <a href="https://oneworldobservatory.com/" target="_blank">One World Observatory</a>, and some of Broadway&rsquo;s hit shows including <a href="http://schoolofrockthemusical.com/" target="_blank">School of Rock</a> and <a href="http://www.wickedthemusical.com/" target="_blank">Wicked</a>.

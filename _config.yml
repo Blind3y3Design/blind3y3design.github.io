@@ -1,46 +1,32 @@
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
 
 # Setup
-title:            Blind3y3Design
-tagline:          'Thoughts and Lessons from a Front-End Architect'
-description:      'Thoughts and Lessons from a Front-End Architect'
-url:              http://blind3y3design.github.io
-paginate:         1
-baseurl:          ""
+title:               Blind3y3Design
+tagline:             'Front-End Architect'
+description:         'Chicago based Front-End Architect focusing on delivering premium products through UX and Front-End expertise.'
+url:                 http://blind3y3design.github.io
+baseurl:             ''
+gems:                [jekyll-paginate]
+paginate:            1
+paginate_path:       "page:num"
+
+# Syntax Highlighting
+highlighter: rouge
 
 # Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
 sass:
   sass_dir:          _sass
   style:            :compressed
 
 # About/contact
 author:
-  name:           'Adam Sedwick'
-  url:            https://twitter.com/blind3y3design
-  email:          asedwick@blind3y3design.com
+  name:              Adam Sedwick
+  url:               https://twitter.com/blind3y3design
+  email:             asedwick@blind3y3design.com
+
 # Custom vars
-version:          0.1.0
+version:             4.0.0
+github:              https://github.com/Blind3y3Design
+medium:              https://medium.com/@blind3y3design
 
-github:
-  repo:           https://github.com/blind3y3design/new-jekyll-site
-
-#Pages
-pages_list:       
-  # About: '/about'
-  Archive: '/archive'
-  Work: '/work'
-  Resume: '/resume'
-  # Feed: '/atom.xml'
-
-#Ignore Files
-exclude:
-  - jekyll_congig.sublime-project
-  - jekyll_congig.sublime-workspace
-  - gemfile
-  - Gemfile.lock

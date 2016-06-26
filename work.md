@@ -4,7 +4,6 @@ title: Things I've Shipped
 ---
 
 <section id="work">
-  <!-- <h3>{{ site.time | date: '%Y' }}</h3> -->
   <ul>
   {% for post in site.categories.work %}
       {% if post.external-url %}
