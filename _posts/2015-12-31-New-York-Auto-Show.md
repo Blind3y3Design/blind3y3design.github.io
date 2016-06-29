@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "New York International Auto Show 2016"
 date: 2015-12-31 00:00:00 -0400
 author: Blind3y3Design

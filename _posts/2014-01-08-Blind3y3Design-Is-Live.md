@@ -4,6 +4,7 @@ title: "Blind3y3Design Version 1.0.0"
 date: "2014-01-08 21:07:0 -0600"
 author: Blind3y3Design
 categories: [blog, work]
+tags: [blind3y3design]
 ---
 
 Yay! We're up and running using [Jekyll][]. It took some time and has quite a learning curve, but if you're even remotely comfortable with the command line and you want to create a "simple, blog-aware static site" then it could be the thing for you.

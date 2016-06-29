@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "For the Craftsman in You"
 date: "2013-11-3 11:50:00 -0600"
 author: Blind3y3Design

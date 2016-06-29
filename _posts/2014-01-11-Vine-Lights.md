@@ -1,10 +1,11 @@
 ---
 layout: project
+hidden: true
 title: "Vine Lights: Inorganic Life Series"
 date: "2014-01-11 20:23:00 -0600"
 author: Blind3y3Design
 categories: [work]
-tags: [personal]
+tags: [blind3y3design]
 excerpt: The work Vine Lights was an experimental piece in a series of works called "Inorganic Life." The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.
 
 # Custom Metadata

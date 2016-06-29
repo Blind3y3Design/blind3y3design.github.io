@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "Gladiator GarageWorks Sale Page"
 date: "2014-04-2 10:58:00 -0500"
 author: Blind3y3Design

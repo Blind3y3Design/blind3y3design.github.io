@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "Brand Names at Outlet Prices"
 date: "2013-11-3 00:36:00 -0600"
 author: Blind3y3Design

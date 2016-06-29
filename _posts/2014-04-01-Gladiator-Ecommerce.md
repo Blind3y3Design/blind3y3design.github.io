@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "Every garage deserves a Gladiator"
 date: "2014-04-2 10:50:00 -0500"
 author: Blind3y3Design

@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "Broadway Collection"
 date: 2015-12-31 00:00:00 -0400
 author: Blind3y3Design

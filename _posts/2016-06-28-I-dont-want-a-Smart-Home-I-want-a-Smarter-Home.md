@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I dont want a “Smart” Home, I want a Smarter Home
-date: 2016-06-29 05:06:00 -0400
+date: 2016-06-28 05:06:00 -0400
 categories: [blog]
 tags: [Internet of Things, Smart Home, UX, Sensors, Gadgets, Automation]
 ---

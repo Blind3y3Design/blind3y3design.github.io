@@ -1,5 +1,6 @@
 ---
 layout: project
+hidden: true
 title: "Shipping Something Small"
 date: "2013-11-3 12:00:00 -0600"
 author: Blind3y3Design
