@@ -57,4 +57,4 @@ Special thanks to Designer Hangout users [@gene][2], [@birdsong][3], [@briancrum
 [2]: https://twitter.com/geneparcellano
 [3]: https://twitter.com/CloudforestCook
 [4]: https://twitter.com/briancrumley
-[5]: http://bridget_cohen/
+[5]:https://twitter.com/bridget_cohen/
