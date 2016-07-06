@@ -1,15 +1,15 @@
 ---
 layout: project
 hidden: true
-title: "JSON Resume"
-date: 2016-6-29 02:45:00 -0400
+title: "Angular Resume"
+date: 2016-07-06 06:00:00 -0400
 author: Blind3y3Design
 categories: [work]
 tags: [blind3y3design]
 
 # Custom Metadata
 exampleLink: https://blind3y3design.github.io/json-resume/
-external-url: https://github.com/Blind3y3Design/json-resume
+external-url: https://github.com/Blind3y3Design/angular-resume/tree/gh-pages
 
 ---
 
@@ -18,4 +18,8 @@ This project was inspired by the [JSON Resume](https://jsonresume.org/) project.
 
 I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types. I chose to go with [Orbit](http://themes.3rdwavemedia.com/website-templates/orbit-free-resume-cv-template-for-developers/) from #rd Wave Media because it was clean, responsive and had a number of differing data types and ways of displaying that data.
 
-In order to template out Orbit I chose to use [Handlebars](http://handlebarsjs.com/installation.html) because I am familiar with how it handles data and I like the felxibility it allows.
+In this version of the resume we used angular to build out the template instead of handlebars. I used a pre-existing angular setup from [AccioCode](https://www.youtube.com/user/CDPAdvertising "Accio Code on YouTube") in order to speed up the build process. 
+
+As with the [JSON Resume](https://blind3y3design.github.io/json-resume/) I pulled in all of the resume data from a single JSON file and then used angular to build out the page. Angular presented some challenges that were not present with handlebars. 
+- I had to create an angular filter in order to prevent the summary content from being escaped. 
+- I had to use `ng-class` and ternary operators in order to assign the icon classes for the social links in the sidebar.
