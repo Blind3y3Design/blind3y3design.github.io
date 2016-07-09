@@ -3,7 +3,7 @@ layout: post
 title: The Importance of UX and a Guided Introduction
 date: 2016-07-08 09:00:00 -0400
 categories: [blog]
-tags: [Game Design, UX, UX Design]
+tags: [Game Design, UX, UX Design, Pokemon, Gaming]
 ---
 
 ## Exploring the UX of Pokemon Go
@@ -33,7 +33,7 @@ The last item on the initial screen is the most frustrating one for a lot of pla
 
 > in-game screenshot of Nearby sub-menu
 
-The pop-up menu can display up to 9 total "nearby" Pokemon. If you have seen a Pokemon before it will display their image, otherwise you get a "Who's that Pokemon!?" style silhouette. There is also a secondary visual on this screen, the footprints. Nowhere in the game does it every explain to you what these footprints are. People have been resorting to googling and trial and error to discover what they mean. Turns out that they represent the distance a "nearby" Pokemon is to your current position. Each footprint represents 100 meters, up to a total of 3 footprints or 300 meters. You can select one of the pokemon in the "nearby" pop-up menu and it will "track" that pokemon, displaying only that single pokemon and a representation of the distance it is away.
+The pop-up menu can display up to 9 total "nearby" Pokemon. If you have seen a Pokemon before it will display their image, otherwise you get a "Who's that Pokemon!?" style silhouette. There is also a secondary visual on this screen, the footprints. Nowhere in the game does it every explain to you what these footprints are. People have been resorting to googling and trial and error to discover what they mean. Turns out that they represent the distance a "nearby" Pokemon is to your current position. Each footprint represents 100 meters, up to a total of 3 footprints or 300 meters. You can select one of the Pokemon in the "nearby" pop-up menu and it will "track" that Pokemon, displaying only that single Pokemon and a representation of the distance it is away.
 
 <img src="/images/pokemon-ux/pokemon_3.jpg" alt="">
 
@@ -41,7 +41,7 @@ The pop-up menu can display up to 9 total "nearby" Pokemon. If you have seen a P
 
 #### How do I know where the Pokemon are? Is it completely random encounters?
 
-As for finding Pokemon, this is where the game drops the ball again. It doesn't give you any insight into how to run into Pokemon. If you sit and stare at the screen for long enough you will notice little animations of rustled leaves. Through more googling a player can find out that these animations are showing a location with a higher change of discovering a Pokemon; however if you're tracking a specific Pokemon there is no gaurantee it'll be that one.
+As for finding Pokemon, this is where the game drops the ball again. It doesn't give you any insight into how to run into Pokemon. If you sit and stare at the screen for long enough you will notice little animations of rustled leaves. Through more googling a player can find out that these animations are showing a location with a higher change of discovering a Pokemon; however if you're tracking a specific Pokemon there is no guarantee it'll be that one.
 
 <img src="/images/pokemon-ux/pokemon_5.jpg" alt="">
 
