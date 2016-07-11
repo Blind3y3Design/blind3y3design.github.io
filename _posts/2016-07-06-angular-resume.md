@@ -8,8 +8,8 @@ categories: [work]
 tags: [blind3y3design]
 
 # Custom Metadata
-exampleLink: https://blind3y3design.github.io/json-resume/
-external-url: https://github.com/Blind3y3Design/angular-resume/tree/gh-pages
+exampleLink: https://github.com/Blind3y3Design/angular-resume/
+external-url: https://github.com/Blind3y3Design/angular-resume/
 
 ---
 

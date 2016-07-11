@@ -8,7 +8,7 @@ categories: [work]
 tags: [blind3y3design]
 
 # Custom Metadata
-exampleLink: https://blind3y3design.github.io/json-resume/
+exampleLink: https://github.com/Blind3y3Design/json-resume
 external-url: https://github.com/Blind3y3Design/json-resume
 
 ---
