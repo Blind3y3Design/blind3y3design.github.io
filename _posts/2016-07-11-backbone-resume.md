@@ -2,7 +2,7 @@
 layout: project
 hidden: true
 title: "Backbone Resume"
-date: 2016-07-11 24:00:00 -0400
+date: 2016-07-10 23:00:00 -0400
 author: Blind3y3Design
 categories: [work]
 tags: [blind3y3design]
