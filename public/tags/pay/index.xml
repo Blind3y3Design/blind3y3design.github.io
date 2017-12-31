@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pay on Black &amp; Light</title>
+    <link>/tags/pay/</link>
+    <description>Recent content in Pay on Black &amp; Light</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 May 2015 22:55:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/pay/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The #Talkpay Hashtag</title>
+      <link>/2015/05/03/lets-talkpay/</link>
+      <pubDate>Sun, 03 May 2015 22:55:00 +0000</pubDate>
+      
+      <guid>/2015/05/03/lets-talkpay/</guid>
+      <description>&lt;p&gt;Something interesting happened on twitter this week. The #Talkpay hastag went viral. This sparked a number of conversations I had with my peers. On the &lt;a href=&#34;http://www.designerhangout.co/&#34;&gt;User Experience Design&lt;/a&gt; Slack channel we spent a good while talking about the idea, and it&amp;rsquo;s potential ramifications or benefits to the community. So, let&amp;rsquo;s #Talkpay.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

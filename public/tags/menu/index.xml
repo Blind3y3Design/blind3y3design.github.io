@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Menu on Black &amp; Light</title>
+    <link>/tags/menu/</link>
+    <description>Recent content in Menu on Black &amp; Light</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Aug 2015 21:58:29 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/menu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Hamburger Menu Is Not The Enemy</title>
+      <link>/2015/08/11/the-hamburger-menu-is-not-the-enemy/</link>
+      <pubDate>Tue, 11 Aug 2015 21:58:29 +0000</pubDate>
+      
+      <guid>/2015/08/11/the-hamburger-menu-is-not-the-enemy/</guid>
+      <description>Another anti-hamburger menu article is making it&amp;rsquo;s rounds again. This time from deep.design. A simple google search returns a number of articles about how the design pattern is a &amp;ldquo;useless tool&amp;rdquo; and should be avoided at all costs. I&amp;rsquo;m going to argue that the ideas behind the design pattern are neither useless nor harmful.
+The issue most often brought up is that you can&amp;rsquo;t use what you can&amp;rsquo;t see; and that a user is not likely to go searching for an option they&amp;rsquo;re not even sure exists.</description>
+    </item>
+    
+  </channel>
+</rss>

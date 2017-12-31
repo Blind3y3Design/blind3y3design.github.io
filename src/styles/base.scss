@@ -1,0 +1,9 @@
+@supports (text-decoration-skip: ink) {
+    * {
+        text-decoration-skip: ink;
+    }
+}
+
+body {
+    margin: 0;
+}

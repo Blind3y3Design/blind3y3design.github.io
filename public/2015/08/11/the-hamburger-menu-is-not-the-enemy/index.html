@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         The Hamburger Menu Is Not The Enemy 
+      
+    </title>
+    <link rel="canonical" href="/2015/08/11/the-hamburger-menu-is-not-the-enemy/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+    text-decoration-skip: ink;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .left-justify {
+    float: left;
+  }
+
+  .right-justify {
+    float:right;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  .heading,.serif,h1,h2,h3 {
+    font-family:"Old Standard TT",serif;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="/">Blind3y3Design | Front-End Architect</a></h1>
+      <ul>
+        
+          <li><a href="/about">About</a></li>
+        
+          <li><a href="/projects">Projects</a></li>
+        
+          <li><a href="/resume">Resume</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> The Hamburger Menu Is Not The Enemy </h1>
+
+  <div id=sub-header>
+    August 2015 · 3 minute read
+  </div>
+
+  <div class="entry-content">
+    <p>Another anti-hamburger menu article is making it&rsquo;s rounds again. This time from <a href="http://deep.design/the-hamburger-menu/" title="Deep.Design Hamburger Menu">deep.design</a>. A simple google search returns a number of articles about how the design pattern is a &ldquo;useless tool&rdquo; and should be avoided at all costs. I&rsquo;m going to argue that the ideas behind the design pattern are neither useless nor harmful.</p>
+
+<p>The issue most often brought up is that you can&rsquo;t use what you can&rsquo;t see; and that a user is not likely to go searching for an option they&rsquo;re not even sure exists. While I agree with both of these points they&rsquo;re not the fault of the hamburger menu, they&rsquo;re the fault of poor lazy design. Case in point, the priority+ menu pattern works.</p>
+
+<p>The issue tends to stem from people not wanting to do the hard work of IA. Pick the thing your users will actually use and display those, when there’s more screen real estate you display more content. The hamburger menu isn’t a catch all. No menu will ever be a catch all. You have to deliberately decide what to show and what to hide.</p>
+
+<p>Designers like <a href="http://www.lukew.com/ff/entry.asp?1945" title="LukeW | Obvious Always Wins">Luke Wroblewski</a> do a good job of identifying the issues that come with the <em>standard</em> hamburger menu. I&rsquo;m arguing that hiding everyting inside of a single menu with no context the issue be it a hamburger or anything else.</p>
+
+<p>Part of a good design is a good underlying architectural pattern. Without a rock solid information architecture you&rsquo;re going to run in to any number of organizational and structural issues. Understanding this and setting up content structure is all part of the overall design. The hamburger menu removes any of the complicated hard work that comes with content strategy and information architecture, so people are drawn to it as the <em>easy</em> option.</p>
+
+<p>As the designer part of your job is educating your stakeholders on the most effective way for them to increase value based on their business metrics. Again, I feel like this step is overlooked because it&rsquo;s hard and dirty work that requires research and planning, it doesn&rsquo;t fit the idea that the designer goes away and comes back with the mythical perfect design.</p>
+
+<p><a href="http://www.theguardian.com/us" title="The Guardian">The Guardian</a> is the perfect example of this. It&rsquo;s a massive news site with a complex and sprawling taxonomy, but things are easy to find. The Guardian also happens to use the <a href="http://bradfrost.com/blog/post/revisiting-the-priority-pattern/" title="Priority+ Pattern">Priority+</a> navigation pattern. The navigation displays relevant options based on how much screen real estate is available. When you lose real estate you get less options and they&rsquo;re moved to the expandable menu, when you gain real estate you get more options. All of the key actions are readily available and it&rsquo;s clear by the design that anything else is in the menu. The Facebook app is another good example of this. While it utilizes a hamburger menu it also has the most used actions readily available in the bottom bar.</p>
+
+<p>Responsive Web Design turned the industry on it&rsquo;s head, there are a lot of challenging problems to deal with when your site can&rsquo;t be fixed to a single size and layout. Part of that work is creating a functional navigation; the hamburger menu was the first on the scene and people gravitated to it because it made a small portion of their job easier, while it&rsquo;s not the final solution it was a move towards better design at the time. We&rsquo;re constantly iterating over the rest of our designs, why have we stalled on this single pattern? We need to keep pushing forward and eventually we&rsquo;ll find better solutions and the hamburger menu will be a relic that we barely remeber.</p>
+
+<p>As always, keep building better.</p>
+
+<!-- Links -->
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="/2015/08/07/blind3y3design-30/">&laquo; Blind3y3Design 3.0</a>
+    
+    
+      <a class="basic-alignment left" href="/2015/12/31/see-forever/">See Forever - One World Observatory &raquo;</a>
+    
+  </div>
+</section>
+
+  
+</body>
+</html>
+
+
+
