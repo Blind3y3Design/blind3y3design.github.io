@@ -45,40 +45,40 @@ publishDir = "docs"
 	title = "facebook"
 	url = "https://www.facebook.com/nickname"
     icon = "fa-facebook-square"
-    footer = true
-    sharethis = true
+    footer = false
+    sharethis = false
     network = "facebook"
 [[params.social]]
 	title = "twitter"
-	url = "https://twitter.com/nickname"
+	url = "https://twitter.com/blind3y3design"
     icon = "fa-twitter-square"
     footer = true
     sharethis = true
     network = "twitter"
 [[params.social]]
 	title = "instagram"
-	url = "https://www.instagram.com/nickname"
+	url = "https://www.instagram.com/adamsedwick"
     icon = "fa-instagram"
     footer = true
     sharethis = false
     network = ""
 [[params.social]]
 	title = "linkedin"
-	url = "https://www.linkedin.com/in/nickname"
+	url = "https://www.linkedin.com/in/blind3y3design"
     icon = "fa-linkedin-square"
-    footer = false
+    footer = true
     sharethis = true
     network = "linkedin"
 [[params.social]]
 	title = "github"
-	url = "https://github.com/nickname"
+	url = "https://github.com/Blind3y3Design"
     icon = "fa-github"
     footer = true
     sharethis = false
     network = ""
 [[params.social]]
 	title = "email"
-	url = "mailto:some.email@somewhere.com"
+	url = "mailto:asedwick@blind3y3design.com"
     icon = "fa-envelope"
     footer = false
     sharethis = true
