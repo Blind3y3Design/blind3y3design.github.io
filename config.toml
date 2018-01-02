@@ -3,7 +3,7 @@ title = "Blind3y3Design"
 author = "Adam Sedwick"
 languagecode = "en-us"
 theme = "hugo-initio"
-publishDir = "docs"
+publishDir = "public"
 
 [params]
     name = "Adam Sedwick"
