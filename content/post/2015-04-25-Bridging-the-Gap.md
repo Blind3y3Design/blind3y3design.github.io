@@ -18,7 +18,7 @@ title: The Great Divide
 url: /2015/04/25/Bridging-the-Gap/
 ---
 
-##Bridging the ‘Handoff’
+## Bridging the ‘Handoff’
 
 [uxreactions.com](http://uxreactions.com)
 While I appreciate a lot of what is on the site, I must say; seeing the number of developer complaints make me very sad. I also noticed this trend at a recent meetup I attended. A large number of designers; UX, visual, IxD, voiced a number of complaints about developers. I’ve heard the same from developers about designers. I think this is an artifact of traditional waterfall approaches and the ‘hand off’.<!--more--> If we want to grow as teams and communities I think we need to stop complaining about each other and finding ways to bridge the gap. Sometimes an overly decorative design really does affect performance, and a slow experience is a poor experience.

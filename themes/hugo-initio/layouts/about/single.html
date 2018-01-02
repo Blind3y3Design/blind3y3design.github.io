@@ -1,31 +1,16 @@
 {{ partial "header.html" . }}
 
 <main id="main">
-
 	<div class="container">
-
-		<div class="row topspace">
-
-			<!-- Sidebar -->
-			<aside class="col-sm-4 sidebar sidebar-right">
-
-				<div class="nav text-right nav-side">
-					<li class="active"><a href="#">{{ .Title }}</a></li>
-				</div>
-
+		<section class="about">
+			<aside>
+				<h2 class="about__title">{{ .Title }}</h2>
 			</aside>
-			<!-- /Sidebar -->
-
-			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
+			<article>
                 {{ .Content }}
 			</article>
-			<!-- /Article -->
-
-
 		</div>
-	</div>	<!-- /container -->
-
+	</div>
 </main>
 
 {{ partial "footer.html" . }}

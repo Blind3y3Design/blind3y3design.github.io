@@ -5,14 +5,14 @@ type = "about"
 weight = 10
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.
+I have been developing modern standards-complians web sites for the past 8 years. Over the years, I have worked with many methodologies, frameworks, and architectures. I currently focus on performant, usable, and accessible web-based products.
 
-![about](../images/mac.jpg)
+{{< figure src="../images/mac.jpg"  >}}
 
-### Necessitatibus
+My first job in the web was for an e-commerce based advertising agency. In my time there we focused on providing a wide range of products and experiences for our clients. Our goal was to make performant and stable sites that allowed the users to easily and quickly purchase the products they desired.
 
-Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!
+In 2014, I was given the opportunity to work with an amazing team of developers on a small team that had the freedom to explore new technologies and ideas while still being backed by a stable and reliable company. It was at this company that I got to grow my management and User Experience skills. We had the ability to create our own internal teams and manage ourselves indepentently. This allowed for each team member to take on a larger role and have more of a sense of ownership over the final product(s).
 
-### Fugit, laboriosam
+I am currently working with Discovery Education in order to build and maintain enterprise-level educational applications as well as a design system that our properties utilize.
 
-Eum, quasi, est, vitae, ipsam nobis consectetur ea aspernatur ad eos voluptatibus fugiat nisi perferendis impedit. Quam, nulla, excepturi, voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?
+In the last few years I have had the privelege to work with a wide range of clients such as: Qualcomm, AT&T, American Express, One World Observatory, and some of Broadway’s hit shows including School of Rock and Wicked.

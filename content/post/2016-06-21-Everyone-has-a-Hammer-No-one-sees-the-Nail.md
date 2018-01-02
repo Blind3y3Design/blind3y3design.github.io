@@ -15,24 +15,23 @@ url: /2016/06/21/Everyone-has-a-Hammer-No-one-sees-the-Nail/
 
 There was a recent conversation in the UX Community on Slack [Designer Hangout][1] about getting developers to follow wireframes from a UX team. I’ve seen this question, and struggles come up hundreds of times in the last couple years.
 
-<img src="/images/hammer/ux-quote-1.jpg" alt="">
+{{<figure src="/images/hammer/ux-quote-1.jpg" alt="My ux team recently has been dealing with front-end developers deciding that they are designers &amp; that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux &amp; usability issues. Our front-end devs are not focused on the user but instead what they prefer. I’m wondering if anyone has had experience integrating developers into the design process. Has it helped prevent issues like these?">}}
 
->My ux team recently has been dealing with front-end developers deciding that they are designers & that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux & usability issues. Our front-end devs are not focused on the user but instead what they prefer. I’m wondering if anyone has had experience integrating developers into the design process. Has it helped prevent issues like these?
+> My ux team recently has been dealing with front-end developers deciding that they are designers &amp; that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux &amp; usability issues. Our front-end devs are not focused on the user but instead what they prefer. I’m wondering if anyone has had experience integrating developers into the design process. Has it helped prevent issues like these?
 
 Thankfully we’ve got lots of active and helpful users. Overwhelmingly the answer given was some form of “Involve the devs in the process sooner rather than later.”
 
-<img src="/images/hammer/ux-quote-3.jpg" alt="">
+{{<figure src="/images/hammer/ux-quote-3.jpg" alt="… gives more of a sense of ownership over the project as a whole instead of feeling like the last phase of a long established process">}}
 
->… gives more of a sense of ownership over the project as a whole instead of feeling like the last phase of a long established process
+> … gives more of a sense of ownership over the project as a whole instead of feeling like the last phase of a long established process
 
-<img src="/images/hammer/ux-quote-4.jpg" alt="">
+{{<figure src="/images/hammer/ux-quote-4.jpg" alt="… I try to include the development team in all design reviews, so their concerns can be heard, their input accepted, and their buy-in to design decisions pre-determined.">}}
 
->… I try to include the development team in all design reviews, so their concerns can be heard, their input accepted, and their buy-in to design decisions pre-determined.
+> … I try to include the development team in all design reviews, so their concerns can be heard, their input accepted, and their buy-in to design decisions pre-determined.
 
-<img src="/images/hammer/ux-quote-2.jpg" alt="">
+{{<figure src="/images/hammer/ux-quote-2.jpg" alt="Definitely talk to them to find out the reason why they didn’t follow the wires, sometimes there are good reasons …">}}
 
->Definitely talk to them to find out the reason why they didn’t follow the wires, sometimes there are good reasons …
-
+> Definitely talk to them to find out the reason why they didn’t follow the wires, sometimes there are good reasons …
 
 ## How does this translate to building a team?
 The basic principle that everyone is trying to get across here is that a silo’d work environment tends to create more problems than benefits. In an ideal world your teams will work closely together and all of the stakeholders (anyone responsible for the end product) are involved in the entire process from start to finish.

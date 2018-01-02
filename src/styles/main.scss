@@ -2,13 +2,24 @@
 // # Don't add any css here.  This is just for concatenation and minification.
 // ---
 
-@import 'variables';
-@import 'mixins';
+// Base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/typography';
+@import 'base/base';
 
-@import 'typography';
+// Components
+@import 'components/buttons';
+@import 'components/navigation';
+@import 'components/posts';
+@import 'components/footer';
 
-@import 'base';
+// Homepage
+@import 'pages/homepage/hero';
+@import 'pages/homepage/subhead';
+@import 'pages/homepage/services';
+@import 'pages/homepage/recent-work';
 
-@import 'hero';
-@import 'navigation';
-@import 'posts';
+// Pages
+@import 'pages/blog';
+@import 'pages/about';

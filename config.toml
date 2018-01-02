@@ -9,7 +9,7 @@ publishDir = "docs"
     name = "Adam Sedwick"
     description = "Front-End Architect"
     email = "asedwick@blind3y3design.com"
-    year = 2017
+    year = 2018
     background = ""
     favicon = "images/gt_favicon.png"
     DateForm = "January 2, 2006"
@@ -17,12 +17,12 @@ publishDir = "docs"
     showSubheader = true
     showServices = true
     showRecentWorks = true
-    showDownload = true
-    showClients = true
+    showDownload = false
+    showClients = false
 
     footerEnableContact = true
     footerEnableFollowme = true
-    footerEnableTextWidget = true
+    footerEnableTextWidget = false
     footerEnableFormWidget = false
 
 [[menu.main]]
@@ -44,42 +44,42 @@ publishDir = "docs"
 [[params.social]]
 	title = "facebook"
 	url = "https://www.facebook.com/nickname"
-    icon = "fa-facebook-square"
+    icon = "facebook"
     footer = false
     sharethis = false
     network = "facebook"
 [[params.social]]
 	title = "twitter"
 	url = "https://twitter.com/blind3y3design"
-    icon = "fa-twitter-square"
+    icon = "twitter"
     footer = true
     sharethis = true
     network = "twitter"
 [[params.social]]
 	title = "instagram"
 	url = "https://www.instagram.com/adamsedwick"
-    icon = "fa-instagram"
+    icon = "instagram"
     footer = true
     sharethis = false
     network = ""
 [[params.social]]
 	title = "linkedin"
 	url = "https://www.linkedin.com/in/blind3y3design"
-    icon = "fa-linkedin-square"
+    icon = "linkedin"
     footer = true
     sharethis = true
     network = "linkedin"
 [[params.social]]
 	title = "github"
 	url = "https://github.com/Blind3y3Design"
-    icon = "fa-github"
+    icon = "github"
     footer = true
     sharethis = false
     network = ""
 [[params.social]]
 	title = "email"
 	url = "mailto:asedwick@blind3y3design.com"
-    icon = "fa-envelope"
+    icon = "envelope"
     footer = false
     sharethis = true
     network = "email"

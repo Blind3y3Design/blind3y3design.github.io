@@ -1,26 +1,30 @@
-<div class="row section recentworks topspace">
+<section class="recent-work">
 
     <h2 class="section-title"><span>Recent Works</span></h2>
 
-    <div class="thumbnails recentworks">
+    <div class="recent-work-list">
         {{ range $index, $area := .Site.Data.recentworks }}
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <a class="thumbnail" href="{{ .url }}">
-                    <span class="img">
-                        <img src="{{ .image }}" alt="">
-                        <span class="cover"><span class="more">See details &rarr;</span></span>
-                    </span>
-                    <span class="title">{{ .name }}</span>
+            <article class="recent-work-list__item">
+                <a class="recent-work__link" href="{{ .url }}" aria-label="See Details about {{ .name }}">
+                    <div class="recent-work__thumbnail">
+                        <img src="{{ .image }}" alt="" class="recent-work__image">
+                        <div class="recent-work__cover">
+                            <div class="recent-work__more-flag">See Details</div>
+                        </div>
+                    </div>
+                    <p class="recent-work__title">{{ .name }}</p>
                 </a>
-                <span class="details">
-                    {{ $len := sub (len .items) 1 }}
-                    {{ range $i, $item := where .items "id" .index }}
-                        <a href="{{ .url }}">{{ .name }}</a>
-                        {{ if gt $len $i }} | {{ end }}
-                    {{ end }}
-                </span>
-            </div>
+                {{if .items}}
+                    <span class="details">
+                        {{ $len := sub (len .items) 1 }}
+                        {{ range $i, $item := where .items "id" .index }}
+                            <a href="{{ .url }}">{{ .name }}</a>
+                            {{ if gt $len $i }} | {{ end }}
+                        {{ end }}
+                    </span>
+                {{end}}
+            </article>
         {{ end }}
     </div>
 
-</div> <!-- /section -->
+</section> <!-- /section -->

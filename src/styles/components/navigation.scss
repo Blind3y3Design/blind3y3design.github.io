@@ -24,13 +24,14 @@
 
 .main-nav__link {
     border-bottom: 3px solid transparent;
-    transition: all .25s ease-in-out;
     position: relative;
     background: transparent;
     color: $text-color;
     padding: $space-default;
     text-transform: uppercase;
     text-decoration: none;
+
+    @include transition(all);
 
     &.main-nav__link--active {
         border-color: $link-color;
@@ -51,7 +52,8 @@
         visibility: none;
         opacity: 0;
         z-index: -1;
-        transition: all .25s ease-in-out;
+        
+        @include transition(all);
     }
 
     &:hover,

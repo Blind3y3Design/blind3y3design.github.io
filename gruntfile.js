@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			css: {
-			  files: ['src/styles/*.scss'],
+			  files: ['src/styles/**/*.scss'],
 			  tasks: ['sass'],
 			  options: {
 				spawn: false,
@@ -24,4 +24,5 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.registerTask('default', ['sass']);
+	grunt.registerTask('watch', ['watch']);
 }
