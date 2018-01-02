@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Black &amp; Light</title>
+    <link>/</link>
+    <description>Recent content on Black &amp; Light</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Jul 2016 23:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backbone Resume</title>
+      <link>/2016/07/11/backbone-resume/</link>
+      <pubDate>Mon, 11 Jul 2016 23:00:00 +0000</pubDate>
+      
+      <guid>/2016/07/11/backbone-resume/</guid>
+      <description>This project was inspired by the JSON Resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
+I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types.</description>
+    </item>
+    
+    <item>
+      <title>The Importance of UX and a Guided Introduction</title>
+      <link>/2016/07/08/pokemon-go-ux/</link>
+      <pubDate>Fri, 08 Jul 2016 09:00:00 +0000</pubDate>
+      
+      <guid>/2016/07/08/pokemon-go-ux/</guid>
+      <description>Exploring the UX of Pokemon Go As with everyone else I picked up Pokemon Go when it released in the US this Wednesday. After pouring more than a couple hours in to it, and talking with a lot of people I have a few thoughts on the UX of the app and how it could be improved.
+Guided Introduction Issues When you load up the game you&amp;rsquo;re dropped directly into the game (when the servers load, but that&amp;rsquo;s a whole different issue).</description>
+    </item>
+    
+    <item>
+      <title>Angular Resume</title>
+      <link>/2016/07/06/angular-resume/</link>
+      <pubDate>Wed, 06 Jul 2016 06:00:00 +0000</pubDate>
+      
+      <guid>/2016/07/06/angular-resume/</guid>
+      <description>This project was inspired by the JSON Resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
+I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types.</description>
+    </item>
+    
+    <item>
+      <title>JSON Resume</title>
+      <link>/2016/06/29/json-resume/</link>
+      <pubDate>Wed, 29 Jun 2016 02:45:00 +0000</pubDate>
+      
+      <guid>/2016/06/29/json-resume/</guid>
+      <description>This project was inspired by the JSON Resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
+I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types.</description>
+    </item>
+    
+    <item>
+      <title>I dont want a “Smart” Home, I want a Smarter Home</title>
+      <link>/2016/06/28/i-dont-want-a-smart-home-i-want-a-smarter-home/</link>
+      <pubDate>Tue, 28 Jun 2016 05:06:00 +0000</pubDate>
+      
+      <guid>/2016/06/28/i-dont-want-a-smart-home-i-want-a-smarter-home/</guid>
+      <description>Living a simple, usable, connected life Knocki, Amazon Echo, Google Home, Amazon Dash (and Button), the Ikea Smart Kitchen Concept. All of these products and ideas share one core value; making daily tasks available instantly and on demand. Putting what you need where you need it without any additional cognitive load. Each one of these products or concepts takes a different approach to the problem, but they are all essentially based on the idea of allowing you to do a task a little bit easier or faster.</description>
+    </item>
+    
+    <item>
+      <title>Everyone has a Hammer, No one sees the Nail</title>
+      <link>/2016/06/21/everyone-has-a-hammer-no-one-sees-the-nail/</link>
+      <pubDate>Tue, 21 Jun 2016 21:58:29 +0000</pubDate>
+      
+      <guid>/2016/06/21/everyone-has-a-hammer-no-one-sees-the-nail/</guid>
+      <description>Struggling with UX and Development There was a recent conversation in the UX Community on Slack Designer Hangout about getting developers to follow wireframes from a UX team. I’ve seen this question, and struggles come up hundreds of times in the last couple years.
+ My ux team recently has been dealing with front-end developers deciding that they are designers &amp;amp; that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux &amp;amp; usability issues.</description>
+    </item>
+    
+    <item>
+      <title>Broadway Collection</title>
+      <link>/2015/12/31/broadway-collection/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/12/31/broadway-collection/</guid>
+      <description>Broadway Collection
+The Broadway Collection site came with a unique set of problems we had to solve. First and foremost they had to be a neutral party in relation to all of the shows they feature on their site. Secondly, the site is translated into 5 different languages and is updated through a CMS.
+In order to solve the first issue we came up with a couple of ideas. The easiest was obviously to list all of the shows in alphabetical order.</description>
+    </item>
+    
+    <item>
+      <title>New York International Auto Show 2016</title>
+      <link>/2015/12/31/new-york-auto-show/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/12/31/new-york-auto-show/</guid>
+      <description>Auto Show
+The goal with the New York International Auto Show site for 2016 was to present an experience as modern and sleek as the cars that were being presented.
+We created a massive vehicle gallery for them, categorizing each vehicle by make and model. The pages were then dynamically generated based on information on the vehicles stores in JSON format. You could sort the vehicles by category, style, and manufacturer.</description>
+    </item>
+    
+    <item>
+      <title>See Forever - One World Observatory</title>
+      <link>/2015/12/31/see-forever/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/12/31/see-forever/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://oneworldobservatory.com/&#34;&gt;One World Observatory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;See Forever at the One World Observatory in New York City.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Hamburger Menu Is Not The Enemy</title>
+      <link>/2015/08/11/the-hamburger-menu-is-not-the-enemy/</link>
+      <pubDate>Tue, 11 Aug 2015 21:58:29 +0000</pubDate>
+      
+      <guid>/2015/08/11/the-hamburger-menu-is-not-the-enemy/</guid>
+      <description>Another anti-hamburger menu article is making it&amp;rsquo;s rounds again. This time from deep.design. A simple google search returns a number of articles about how the design pattern is a &amp;ldquo;useless tool&amp;rdquo; and should be avoided at all costs. I&amp;rsquo;m going to argue that the ideas behind the design pattern are neither useless nor harmful.
+The issue most often brought up is that you can&amp;rsquo;t use what you can&amp;rsquo;t see; and that a user is not likely to go searching for an option they&amp;rsquo;re not even sure exists.</description>
+    </item>
+    
+    <item>
+      <title>Blind3y3Design 3.0</title>
+      <link>/2015/08/07/blind3y3design-30/</link>
+      <pubDate>Fri, 07 Aug 2015 20:00:00 +0000</pubDate>
+      
+      <guid>/2015/08/07/blind3y3design-30/</guid>
+      <description>Welcome to the new Blind3y3Design! &amp;ldquo;3.0? What happened to 2.0?&amp;rdquo; you say? Here&amp;rsquo;s the deal; after about 4 months of this site being on vanilla Jekyll I decided to switch over to using Octopress. It was great and I didn&amp;rsquo;t have to change much to get it working. The one thing that kept nagging at me was the design. The layout and design of octopress is generally a good layout.</description>
+    </item>
+    
+    <item>
+      <title>The High Horse Mentality</title>
+      <link>/2015/05/12/the-high-horse-mentality/</link>
+      <pubDate>Tue, 12 May 2015 22:55:00 +0000</pubDate>
+      
+      <guid>/2015/05/12/the-high-horse-mentality/</guid>
+      <description>&lt;p&gt;Spurred by &lt;a href=&#34;http://notlaura.com/&#34;&gt;Lara Schenck&lt;/a&gt;&amp;rsquo;s post on &lt;a href=&#34;https://css-tricks.com/tales-of-a-non-unicorn-a-story-about-the-trouble-with-job-titles-and-descriptions/&#34;&gt;CSS-Tricks&lt;/a&gt; I have decided to toss my two cents in to the bountiful fountain of knowledge.&lt;/p&gt;
+
+&lt;p&gt;It seems the age of &amp;lsquo;Unicorns&amp;rsquo; has spawned a number of people who wind up simply being pricks sitting on their high horses. I&amp;rsquo;m not saying that people who claim to be unicorns are those people, or that they&amp;rsquo;re wholly guilt free either. It just seems the issue has bubbled to the surface more apparently in the recent past.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The #Talkpay Hashtag</title>
+      <link>/2015/05/03/lets-talkpay/</link>
+      <pubDate>Sun, 03 May 2015 22:55:00 +0000</pubDate>
+      
+      <guid>/2015/05/03/lets-talkpay/</guid>
+      <description>&lt;p&gt;Something interesting happened on twitter this week. The #Talkpay hastag went viral. This sparked a number of conversations I had with my peers. On the &lt;a href=&#34;http://www.designerhangout.co/&#34;&gt;User Experience Design&lt;/a&gt; Slack channel we spent a good while talking about the idea, and it&amp;rsquo;s potential ramifications or benefits to the community. So, let&amp;rsquo;s #Talkpay.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Great Divide</title>
+      <link>/2015/04/25/bridging-the-gap/</link>
+      <pubDate>Sat, 25 Apr 2015 22:40:00 +0000</pubDate>
+      
+      <guid>/2015/04/25/bridging-the-gap/</guid>
+      <description>&lt;p&gt;##Bridging the ‘Handoff’&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://uxreactions.com&#34;&gt;uxreactions.com&lt;/a&gt;
+While I appreciate a lot of what is on the site, I must say; seeing the number of developer complaints make me very sad. I also noticed this trend at a recent meetup I attended. A large number of designers; UX, visual, IxD, voiced a number of complaints about developers. I’ve heard the same from developers about designers. I think this is an artifact of traditional waterfall approaches and the ‘hand off’. If we want to grow as teams and communities I think we need to stop complaining about each other and finding ways to bridge the gap. Sometimes an overly decorative design really does affect performance, and a slow experience is a poor experience.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Designing a Workflow and Team Dynamic</title>
+      <link>/2014/06/08/designing-a-team-dynamic-and-workflow/</link>
+      <pubDate>Sun, 08 Jun 2014 11:06:00 +0000</pubDate>
+      
+      <guid>/2014/06/08/designing-a-team-dynamic-and-workflow/</guid>
+      <description>&lt;p&gt;The idea behind designing a single workflow is that at any time someone else should be able to jump in to your workflow and know where in the process you are and pick up after you in needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrum and the Agile Philosophy</title>
+      <link>/2014/06/08/scrum-and-the-agile-philosophy/</link>
+      <pubDate>Sun, 08 Jun 2014 05:44:00 +0000</pubDate>
+      
+      <guid>/2014/06/08/scrum-and-the-agile-philosophy/</guid>
+      <description>&lt;p&gt;Developing our own Agile process is something that we should take pride in. We can take bits and pieces from frameworks and create something that works for our team. The point is not to go whole hog in to a single framework and force the team to work inside the constraints predefined for a different team.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gladiator GarageWorks Sale Page</title>
+      <link>/2014/04/01/gladiator-sale/</link>
+      <pubDate>Tue, 01 Apr 2014 10:58:00 +0000</pubDate>
+      
+      <guid>/2014/04/01/gladiator-sale/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.gladiatorgarageworks.com/global_Product-Sale.content.html&#34;&gt;Gladiator&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The gladiator sale page takes data from a JSON file and transforms it in to a massive listing of all the products on sale.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Every garage deserves a Gladiator</title>
+      <link>/2014/04/01/gladiator-ecommerce/</link>
+      <pubDate>Tue, 01 Apr 2014 10:50:00 +0000</pubDate>
+      
+      <guid>/2014/04/01/gladiator-ecommerce/</guid>
+      <description>Gladiator
+A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</description>
+    </item>
+    
+    <item>
+      <title>Vine Lights: Inorganic Life Series</title>
+      <link>/2014/01/11/vine-lights/</link>
+      <pubDate>Sat, 11 Jan 2014 20:23:00 +0000</pubDate>
+      
+      <guid>/2014/01/11/vine-lights/</guid>
+      <description>&lt;p&gt;The work Vine Lights was an experimental piece in a series of works called &amp;ldquo;Inorganic Life.&amp;rdquo; The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blind3y3Design Version 1.0.0</title>
+      <link>/2014/01/08/blind3y3design-is-live/</link>
+      <pubDate>Wed, 08 Jan 2014 21:07:00 +0000</pubDate>
+      
+      <guid>/2014/01/08/blind3y3design-is-live/</guid>
+      <description>&lt;p&gt;Yay! We&amp;rsquo;re up and running using &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;. It took some time and has quite a learning curve, but if you&amp;rsquo;re even remotely comfortable with the command line and you want to create a &amp;ldquo;simple, blog-aware static site&amp;rdquo; then it could be the thing for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working with Cookmore</title>
+      <link>/2013/11/03/working-with-cookmore/</link>
+      <pubDate>Sun, 03 Nov 2013 14:12:55 +0000</pubDate>
+      
+      <guid>/2013/11/03/working-with-cookmore/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.cookmore.com&#34;&gt;Cookmore&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;During my time at Aisle Rocket Studios I have had the immense pleasure of working on the site Cookmore.com. Cookmore is a community based cooking site. Regular people, as well as professional chefs can post recipes on the site.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Inspirational Blogging</title>
+      <link>/2013/11/03/kenmore-inspiration-blog/</link>
+      <pubDate>Sun, 03 Nov 2013 12:33:00 +0000</pubDate>
+      
+      <guid>/2013/11/03/kenmore-inspiration-blog/</guid>
+      <description>Inspiration
+The Kenmore Ispiration Blog is a community site that collects posts from across the web and combines them with posts by Kenmore and Cookmore. The blog is a community where people can share, post, and learn about all things Kenmore related.
+Inspiration is build on a highly customized WordPress installation that is continually being built and improved upon. We recently set up new pages for contests like the “Couponista” challenge.</description>
+    </item>
+    
+    <item>
+      <title>Shipping Something Small</title>
+      <link>/2013/11/03/kenco-small-parcel/</link>
+      <pubDate>Sun, 03 Nov 2013 12:00:00 +0000</pubDate>
+      
+      <guid>/2013/11/03/kenco-small-parcel/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.kencotrans.com/small-parcel&#34;&gt;Small Parcel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Small Parcel page on Kenco was a unique project when I got to work on it. It was my first experience usning the ExpressionEngine CMS. This page is build by creating a page template and once the templace is set and attached to a page we begin loading content on to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>For the Craftsman in You</title>
+      <link>/2013/11/03/craftsman-ecommerce/</link>
+      <pubDate>Sun, 03 Nov 2013 11:50:00 +0000</pubDate>
+      
+      <guid>/2013/11/03/craftsman-ecommerce/</guid>
+      <description>Craftsman
+A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</description>
+    </item>
+    
+    <item>
+      <title>Tested for Living</title>
+      <link>/2013/11/03/kenmore-ecommerce/</link>
+      <pubDate>Sun, 03 Nov 2013 11:38:00 +0000</pubDate>
+      
+      <guid>/2013/11/03/kenmore-ecommerce/</guid>
+      <description>Kenmore
+A large portion of the work we do is creating maintaining and updating content on client sites like this one. Personal responsibilities can be anything from updating a JSON file to pull new ads or putting a product feed on a page, to creating completely new and custom pages for a specific product, event, or promotion.</description>
+    </item>
+    
+    <item>
+      <title>Brand Names at Outlet Prices</title>
+      <link>/2013/11/03/whirlpool-outlet/</link>
+      <pubDate>Sun, 03 Nov 2013 00:36:00 +0000</pubDate>
+      
+      <guid>/2013/11/03/whirlpool-outlet/</guid>
+      <description>Whirlpool Outlet
+Most of the work done was largely edits to the CSS files that control the look of the site. We also edited and moved some of the HTML structure in order to better the document flow and user experience.
+We recently Added a pop up modal to the homepage which uses an ajax request and API call to send and receive information from another web server. We solved some issues with IE8 by using the XMLHttpRequest function for IE.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,85 @@
+<footer class="footer">
+	<div class="container">
+		<div class="footer-widget-list">
+			{{ if .Site.Params.footerEnableContact }}
+			<div class="footer-widget">
+				<h3 class="footer-widget__title">Contact</h3>
+				<div class="footer-widget__body">
+					<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+				</div>
+			</div>
+			{{ end }}
+
+			{{ if .Site.Params.footerEnableFollowme }}
+			<div class="footer-widget">
+				<h3 class="footer-widget__title">Follow me</h3>
+				<div class="footer-widget__body">
+					{{ range .Site.Params.social }}
+						{{ if .footer }}
+							<a href="{{ .url }}" target="_blank" class="footer-widget__link" aria-label="Follow me on {{.title}}">
+								<svg class="footer-widget__icon" aria-hidden="true" focusable="false">
+									<use xlink:href="/icons/{{.title}}.svg#{{.title}}"></use>
+								</svg>
+							</a>
+						{{ end }}
+					{{ end }}
+				</div>
+			</div>
+			{{ end }}
+
+			{{ if .Site.Params.footerEnableTextWidget }}
+			<div class="footer-widget">
+				<h3 class="footer-widget__title">Text widget</h3>
+				<div class="footer-widget__body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+				</div>
+			</div>
+			{{ end }}
+
+			{{ if .Site.Params.footerEnableFormWidget }}
+			<div class="footer-widget">
+				<h3 class="footer-widget__title">Form widget</h3>
+				<div class="footer-widget__body">
+					<p>{{ .Site.Params.phone }}<br>
+						<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>
+						<br>
+                        {{ .Site.Params.address }}
+					</p>
+				</div>
+			</div>
+			{{ end }}
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer class="underfooter">
+	<div class="container">
+		<div class="underfooter__content">
+			<div class="footer-widget footer-widget--underfooter">
+				<div class="footer-widget__body">
+					<p>{{ .Site.Params.address }}</p>
+				</div>
+			</div>
+			<div class="footer-widget footer-widget--underfooter">
+				<div class="footer-widget__body">
+					<p class="text-right">
+						Copyright &copy; {{ .Site.Params.year }}, {{ .Site.Params.name }}<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="{{ .Site.BaseURL }}js/template.js"></script>
+<script id="dsq-count-scr" src="//{{ .Site.Params.disqus.site }}/count.js" async></script>
+{{ partial "analyticstracking.html" . }}
+</body>
+</html>

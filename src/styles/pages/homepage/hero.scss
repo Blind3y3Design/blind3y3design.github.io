@@ -1,0 +1,28 @@
+.hero {
+    background: #f4f4f4 url(../images/hero_background.jpg) top center;
+    background-size: cover;
+    padding: $space-xxxl;
+}
+.hero__inner {
+    text-align: center;
+
+}
+.hero__logo {
+    display: block;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border: 9px solid rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+}
+.hero__title {
+    color: $color-white;
+    font-size: 2.5rem;
+    margin: $space-s 0 $space-default;
+    font-family: 'Libre Baskerville';
+    text-shadow: -1px -1px 0 $color-neutral-15,  1px -1px 0 $color-neutral-15, -1px 1px 0 $color-neutral-15, 1px 1px 0 $color-neutral-15;
+}
+.hero__tagline {
+    color: $color-white;
+    text-shadow: -1px -1px 0 $color-neutral-15, 1px -1px 0 $color-neutral-15, -1px 1px 0 $color-neutral-15, 1px 1px 0 $color-neutral-15;
+}

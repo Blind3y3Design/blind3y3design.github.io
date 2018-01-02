@@ -1,0 +1,17 @@
+.about {
+    @media (min-width: $breakpoint-medium) {
+        display: grid;
+        grid-gap: $space-l;
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.about__title {
+    text-align: left;
+    margin-bottom: space-l;
+
+    @media (min-width: $breakpoint-medium) {
+        text-align: right;
+        margin: 0;
+    }
+}

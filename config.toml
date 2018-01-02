@@ -1,0 +1,85 @@
+baseurl = "/"
+title = "Blind3y3Design"
+author = "Adam Sedwick"
+languagecode = "en-us"
+theme = "hugo-initio"
+publishDir = "docs"
+
+[params]
+    name = "Adam Sedwick"
+    description = "Front-End Architect"
+    email = "asedwick@blind3y3design.com"
+    year = 2018
+    background = ""
+    favicon = "images/gt_favicon.png"
+    DateForm = "January 2, 2006"
+
+    showSubheader = true
+    showServices = true
+    showRecentWorks = true
+    showDownload = false
+    showClients = false
+
+    footerEnableContact = true
+    footerEnableFollowme = true
+    footerEnableTextWidget = false
+    footerEnableFormWidget = false
+
+[[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "blog"
+    url = "/post/"
+    weight = 5
+[[menu.main]]
+    name = "work"
+    url = "/work/"
+    weight = 6
+
+[params.google.analytics]
+    trackerID = "GA-000000000-0"
+
+[[params.social]]
+	title = "facebook"
+	url = "https://www.facebook.com/nickname"
+    icon = "facebook"
+    footer = false
+    sharethis = false
+    network = "facebook"
+[[params.social]]
+	title = "twitter"
+	url = "https://twitter.com/blind3y3design"
+    icon = "twitter"
+    footer = true
+    sharethis = true
+    network = "twitter"
+[[params.social]]
+	title = "instagram"
+	url = "https://www.instagram.com/adamsedwick"
+    icon = "instagram"
+    footer = true
+    sharethis = false
+    network = ""
+[[params.social]]
+	title = "linkedin"
+	url = "https://www.linkedin.com/in/blind3y3design"
+    icon = "linkedin"
+    footer = true
+    sharethis = true
+    network = "linkedin"
+[[params.social]]
+	title = "github"
+	url = "https://github.com/Blind3y3Design"
+    icon = "github"
+    footer = true
+    sharethis = false
+    network = ""
+[[params.social]]
+	title = "email"
+	url = "mailto:asedwick@blind3y3design.com"
+    icon = "envelope"
+    footer = false
+    sharethis = true
+    network = "email"

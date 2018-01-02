@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         Vine Lights: Inorganic Life Series 
+      
+    </title>
+    <link rel="canonical" href="/2014/01/11/vine-lights/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+    text-decoration-skip: ink;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .left-justify {
+    float: left;
+  }
+
+  .right-justify {
+    float:right;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  .heading,.serif,h1,h2,h3 {
+    font-family:"Old Standard TT",serif;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="/">Blind3y3Design | Front-End Architect</a></h1>
+      <ul>
+        
+          <li><a href="/about">About</a></li>
+        
+          <li><a href="/projects">Projects</a></li>
+        
+          <li><a href="/resume">Resume</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> Vine Lights: Inorganic Life Series </h1>
+
+  <div id=sub-header>
+    January 2014 · 4 minute read
+  </div>
+
+  <div class="entry-content">
+    <p>The work Vine Lights was an experimental piece in a series of works called &ldquo;Inorganic Life.&rdquo; The works themselves try to take things that are clearly inorganic in nature however when constructed in such a way they become in a sense a representation of life.</p>
+
+<p></p>
+
+<p>The original idea behind the work was the concept of touch. Not so much the sensation of touching something but the deeper meanings and concepts of the word. How do we touch? How to living organisms interact with themselves and their environment? How does the inanimate dictate the shape or the path of a living organism? The piece was designed to explore these ideas.</p>
+
+<p>Vine Lights is a simple light and wire sculpture that could simply just be plugged into a space and turned on as a series of beautiful lights. The piece would still be pleasant to look at but as far as my concept was concerned it would not complete the idea of touch; nor would it fulfill the duty to be a representation of a life form.</p>
+
+<p>The piece has a series of sonar sensors built into it so that it can interact with those observing it. When left alone the piece will slowly fade in and out in such a way as to be breathing, or representing a pulse. When the viewers move in closer to investigate, the piece will react to their presence by dimming most of the lights and leaving a single string of lights fading as a warning that it recognizes your presence If the viewers continue to investigate the piece closer because of intrigue or simply to test the &ldquo;creature&rdquo; the piece will flash violently at them; mimicking the defense mechanisms of actual animals such as the porcupine or blow fish.</p>
+
+<p>Below is part of the code used to create the piece.</p>
+
+<p>{{&lt; highlight c++ &gt;}}
+#define NR_OF_LIGHTS 6
+  int pins[NR_OF_LIGHTS] = { 3, 5, 6, 9, 10, 11 };
+  int values[NR_OF_LIGHTS];
+  int steps[NR_OF_LIGHTS];</p>
+
+<p>#define NR_OF_FADESTEPS 4
+  int fadesteps[NR_OF_FADESTEPS] = { 192, 128, 64, 0 };
+  int fade_delay = 30; // millisec
+  int fade_cycles = 1000;</p>
+
+<p>int nr_of_blinks = 2;
+  int blink_delay = 400; //millisec</p>
+
+<p>int effect = 1;</p>
+
+<p>int randomlights[NR_OF_LIGHTS];
+  bool chosenlights[NR_OF_LIGHTS];</p>
+
+<p>/****/
+void setup() {
+  randomSeed(analogRead(0));
+  for (int i = 0; i &lt; NR_OF_LIGHTS; i++) {
+    values[i] = (int)random(230) + 13; // start values between ‘max min’ and ‘min max’
+    steps[i] = (int)random(4) + 1; // steps between 1 and 4
+  }
+}</p>
+
+<p>/****/
+void loop() {
+  for (int j = 0; j &lt; fade_cycles; j++) {
+    for (int i = 0; i &lt; NR_OF_LIGHTS; i++) {
+      fadingLight(i);
+    }
+    delay(fade_delay);
+  }
+  if (effect == 1) {
+    blinkAll();
+    effect = 2;
+  }
+  else if (effect == 2) {
+    runningLight(0);
+    effect = 3;
+  }
+  else if (effect == 3) {
+    runningLight(255);
+    effect = 1;
+  }
+}</p>
+
+<p>/****/
+void fadingLight(int i) {
+  int minvalue = (NR_OF_FADESTEPS * abs(steps[i])) + 1;
+  int maxvalue = 255 – minvalue;
+  int fs = NR_OF_FADESTEPS;
+  for (int j = 0; fs &gt; 0; fs–, j++) {
+    if (values[i] &gt; fadesteps[j]) {
+      break;
+    }
+  }
+  values[i] += fs * steps[i];
+  if (values[i] &gt; maxvalue  ||  values[i] &lt; minvalue) {
+    steps[i] *= -1;
+  }
+  analogWrite(pins[i], values[i]);
+}</p>
+
+<p>/****/
+void setAllLights(int value) {
+  for (int i = 0; i &lt; NR_OF_LIGHTS; i++) {
+    analogWrite(pins[i], value);
+  }
+}</p>
+
+<p>/****/
+void blinkAll() {
+  for (int i = 0; i &lt; nr_of_blinks; i++) {
+    setAllLights(255);
+    delay(blink_delay);
+    setAllLights(0);
+    delay(blink_delay);
+  }
+}</p>
+
+<p>/****/
+void runningLight(int startvalue) {
+  setAllLights(startvalue);
+  for (int j = 0; j &lt; 2; j++) {
+    randomize();
+    for (int i = 0; i &lt; NR_OF_LIGHTS; i++) {
+      analogWrite(pins[randomlights[i]], 255 – startvalue);
+      delay(200);
+      analogWrite(pins[randomlights[i]], startvalue);
+    }
+  }
+}</p>
+
+<p>/****/
+void randomize() {
+  for (int i = 0; i &lt; NR_OF_LIGHTS; i++) {
+    chosenlights[i] = false;
+  }
+  //first one always ok
+    int r = (int)random(NR_OF_LIGHTS);
+    randomlights[0] = r;
+    chosenlights[r] = true;
+  //next 4
+    for (int i = 1; i &lt; 5; i++) {
+    while (true) {
+      r = (int)random(NR_OF_LIGHTS);
+      if (chosenlights[r] == false) {
+        break;
+      }
+    }
+    randomlights[i] = r;
+    chosenlights[r] = true;
+  }
+  //last one
+  for (int i = 0; i &lt; NR_OF_LIGHTS; i++) {
+    if (chosenlights[i] == false) {
+      randomlights[5] = i;
+      break;
+    }
+  }
+}
+{{&lt; / highlight &gt;}}</p>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright &copy; 2014 Adam Sedwick, Blind3y3Design.</p>
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="/2014/01/08/blind3y3design-is-live/">&laquo; Blind3y3Design Version 1.0.0</a>
+    
+    
+      <a class="basic-alignment left" href="/2014/04/01/gladiator-ecommerce/">Every garage deserves a Gladiator &raquo;</a>
+    
+  </div>
+</section>
+
+  
+</body>
+</html>
+
+
+

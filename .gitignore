@@ -1,43 +1,17 @@
-# Ignore docs files
-_gh_pages
-_site
-.ruby-version
-.sass-cache
+# Hugo default output directory
+/public
 
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.zip
-*.vi
-*~
-
-# OS or Editor folders
-.DS_Store
-._*
+## OS Files
+# Windows
 Thumbs.db
-.cache
-.project
-.settings
-.tmproj
-*.esproj
-nbproject
-*.sublime-project
-*.sublime-workspace
-.idea
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Komodo
-*.komodoproject
-.komodotools
+# OSX
+.DS_Store
 
-# grunt-html-validation
-validation-status.json
-validation-report.json
-
-# Folders to ignore
+# Node Files
 node_modules
-Gemfile.lock
+.npm-debug.log
+tmp

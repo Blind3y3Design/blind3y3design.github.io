@@ -1,0 +1,60 @@
+.post-list {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.post {
+
+    figure {
+        text-align: center;
+    }
+}
+
+.post--single {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.post-list--grid {
+    display: grid;
+    grid-gap: $space-l $space-default;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 100%;
+
+    .post-link {
+        text-decoration: none;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
+        @include transition(box-shadow);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+
+            .entry-title {
+                text-decoration: underline;
+                text-decoration-color: $link-color;
+            }
+        }
+    }
+
+    .post {
+        padding: $space-default;
+        color: $text-color;
+        height: 100%;
+
+        .entry-meta {
+            text-align: right;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        .entry-title {
+            @include post-card-header;
+        }
+
+        .entry-content {
+            margin: 0;
+        }
+    }
+}

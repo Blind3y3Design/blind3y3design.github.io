@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         Everyone has a Hammer, No one sees the Nail 
+      
+    </title>
+    <link rel="canonical" href="/2016/06/21/everyone-has-a-hammer-no-one-sees-the-nail/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+    text-decoration-skip: ink;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .left-justify {
+    float: left;
+  }
+
+  .right-justify {
+    float:right;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  .heading,.serif,h1,h2,h3 {
+    font-family:"Old Standard TT",serif;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="/">Blind3y3Design | Front-End Architect</a></h1>
+      <ul>
+        
+          <li><a href="/about">About</a></li>
+        
+          <li><a href="/projects">Projects</a></li>
+        
+          <li><a href="/resume">Resume</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> Everyone has a Hammer, No one sees the Nail </h1>
+
+  <div id=sub-header>
+    June 2016 · 4 minute read
+  </div>
+
+  <div class="entry-content">
+    
+
+<h2 id="struggling-with-ux-and-development">Struggling with UX and Development</h2>
+
+<p>There was a recent conversation in the UX Community on Slack <a href="https://www.designerhangout.co/" title="Designer Hangout">Designer Hangout</a> about getting developers to follow wireframes from a UX team. I’ve seen this question, and struggles come up hundreds of times in the last couple years.</p>
+
+<p><img src="/images/hammer/ux-quote-1.jpg" alt=""></p>
+
+<blockquote>
+<p>My ux team recently has been dealing with front-end developers deciding that they are designers &amp; that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux &amp; usability issues. Our front-end devs are not focused on the user but instead what they prefer. I’m wondering if anyone has had experience integrating developers into the design process. Has it helped prevent issues like these?</p>
+</blockquote>
+
+<p>Thankfully we’ve got lots of active and helpful users. Overwhelmingly the answer given was some form of “Involve the devs in the process sooner rather than later.”</p>
+
+<p><img src="/images/hammer/ux-quote-3.jpg" alt=""></p>
+
+<blockquote>
+<p>… gives more of a sense of ownership over the project as a whole instead of feeling like the last phase of a long established process</p>
+</blockquote>
+
+<p><img src="/images/hammer/ux-quote-4.jpg" alt=""></p>
+
+<blockquote>
+<p>… I try to include the development team in all design reviews, so their concerns can be heard, their input accepted, and their buy-in to design decisions pre-determined.</p>
+</blockquote>
+
+<p><img src="/images/hammer/ux-quote-2.jpg" alt=""></p>
+
+<blockquote>
+<p>Definitely talk to them to find out the reason why they didn’t follow the wires, sometimes there are good reasons …</p>
+</blockquote>
+
+<h2 id="how-does-this-translate-to-building-a-team">How does this translate to building a team?</h2>
+
+<p>The basic principle that everyone is trying to get across here is that a silo’d work environment tends to create more problems than benefits. In an ideal world your teams will work closely together and all of the stakeholders (anyone responsible for the end product) are involved in the entire process from start to finish.</p>
+
+<h3 id="the-problem">The Problem</h3>
+
+<p>When working in a silo’d environment it’s all to common and easy to fall into the “not my problem” mentality. A strategist comes up with the ideas, a designer creates wireframes or mockups, and a developer is responsible for executing the design in a way that fulfills the users and business’ needs. The problem with this team dynamic is that it’s very linear in practice and doesn’t allow for quick pivoting or taking constraints into consideration early on in the process.</p>
+
+<p>A strategist or designer is not expected to fully comprehend the constraints of a codebase or specific framework. Because of this their ideas and designs may be beyond the scope of capability. With the traditional silo’d waterfall approach these issues don’t come to light until the “final” designs reach a developer; typically after they’ve already gotten client sign-off, when it’s too late to make any large changes. This often results in a lot of internal turmoil, and ultimately a lesser product; for both the end-user and the business.</p>
+
+<p>There is also the issue of silo’d teams with separate leaderships and goals. A UX team may be focused on creating the best experience for the user. A Design team may be focused on creating beautiful and “innovative” designs. A Development team may be focused on code quality, accessibility, and performance. If these goals do not align you end up with frustration on all sides and no one taking blame because the “other” team(s) weren’t moving towards the same goals.</p>
+
+<h3 id="the-solution">The Solution</h3>
+
+<p>Unfortunately there is to one-size-fits-all solution to the problem. The truth is that solving the problem is hard work. The only way to solve these problems is communication. Communicating about potential issues with the design. Communicating about each teams separate goals and how to align them. Communicating about pain-points each team has and how to resolve them.</p>
+
+<p>The best way to solve existing issues is to sit down and have a conversation, it’s not pretty, it’s not an app, it’s people. People are messy, people have different opinions, people are responsible for the work you’re company puts out. It has to be the people who want to make things better. A client isn’t going to pay you to figure out your process; you can’t put a conversation in a portfolio, but these things are going to make your team more productive. A happy team is a productive team. If your teams work together, if there’s a real bond between employees there is a noticeable boost in moral and a noticeable boon in the quality of work being put out.</p>
+
+<p>People don’t put in long hours for a salaried paycheck. People put in long hours to help and support the people around them. The put in the hard work and the long hours because they believe in the work they’re doing.</p>
+
+<p>Special thanks to Designer Hangout users <a href="https://twitter.com/geneparcellano">@gene</a>, <a href="https://twitter.com/CloudforestCook">@birdsong</a>, <a href="https://twitter.com/briancrumley">@briancrumley</a>, and <a href="https://twitter.com/bridget_cohen/">@bridgetecohen</a></p>
+
+<!-- Link -->
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="/2015/12/31/broadway-collection/">&laquo; Broadway Collection</a>
+    
+    
+      <a class="basic-alignment left" href="/2016/06/28/i-dont-want-a-smart-home-i-want-a-smarter-home/">I dont want a “Smart” Home, I want a Smarter Home &raquo;</a>
+    
+  </div>
+</section>
+
+  
+</body>
+</html>
+
+
+
