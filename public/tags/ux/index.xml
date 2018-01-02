@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ux on Black &amp; Light</title>
+    <title>Ux on Blind3y3Design</title>
     <link>/tags/ux/</link>
-    <description>Recent content in Ux on Black &amp; Light</description>
+    <description>Recent content in Ux on Blind3y3Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Fri, 08 Jul 2016 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/ux/index.xml" rel="self" type="application/rss+xml" />
@@ -37,7 +37,7 @@ Guided Introduction Issues When you load up the game you&amp;rsquo;re dropped di
       
       <guid>/2016/06/21/everyone-has-a-hammer-no-one-sees-the-nail/</guid>
       <description>Struggling with UX and Development There was a recent conversation in the UX Community on Slack Designer Hangout about getting developers to follow wireframes from a UX team. I’ve seen this question, and struggles come up hundreds of times in the last couple years.
- My ux team recently has been dealing with front-end developers deciding that they are designers &amp;amp; that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux &amp;amp; usability issues.</description>
+  My ux team recently has been dealing with front-end developers deciding that they are designers &amp;amp; that ux wireframes are just a loose guideline.</description>
     </item>
     
   </channel>

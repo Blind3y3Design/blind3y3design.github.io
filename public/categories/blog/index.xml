@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Black &amp; Light</title>
+    <title>Blog on Blind3y3Design</title>
     <link>/categories/blog/</link>
-    <description>Recent content in Blog on Black &amp; Light</description>
+    <description>Recent content in Blog on Blind3y3Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Fri, 08 Jul 2016 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -37,7 +37,7 @@ Guided Introduction Issues When you load up the game you&amp;rsquo;re dropped di
       
       <guid>/2016/06/21/everyone-has-a-hammer-no-one-sees-the-nail/</guid>
       <description>Struggling with UX and Development There was a recent conversation in the UX Community on Slack Designer Hangout about getting developers to follow wireframes from a UX team. I’ve seen this question, and struggles come up hundreds of times in the last couple years.
- My ux team recently has been dealing with front-end developers deciding that they are designers &amp;amp; that ux wireframes are just a loose guideline. It’s been frustrating, because the development ends up having a lot of ux &amp;amp; usability issues.</description>
+  My ux team recently has been dealing with front-end developers deciding that they are designers &amp;amp; that ux wireframes are just a loose guideline.</description>
     </item>
     
     <item>
@@ -87,7 +87,7 @@ The issue most often brought up is that you can&amp;rsquo;t use what you can&amp
       <pubDate>Sat, 25 Apr 2015 22:40:00 +0000</pubDate>
       
       <guid>/2015/04/25/bridging-the-gap/</guid>
-      <description>&lt;p&gt;##Bridging the ‘Handoff’&lt;/p&gt;
+      <description>&lt;h2 id=&#34;bridging-the-handoff&#34;&gt;Bridging the ‘Handoff’&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://uxreactions.com&#34;&gt;uxreactions.com&lt;/a&gt;
 While I appreciate a lot of what is on the site, I must say; seeing the number of developer complaints make me very sad. I also noticed this trend at a recent meetup I attended. A large number of designers; UX, visual, IxD, voiced a number of complaints about developers. I’ve heard the same from developers about designers. I think this is an artifact of traditional waterfall approaches and the ‘hand off’. If we want to grow as teams and communities I think we need to stop complaining about each other and finding ways to bridge the gap. Sometimes an overly decorative design really does affect performance, and a slow experience is a poor experience.&lt;/p&gt;</description>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Black &amp; Light</title>
+    <title>Programming on Blind3y3Design</title>
     <link>/tags/programming/</link>
-    <description>Recent content in Programming on Black &amp; Light</description>
+    <description>Recent content in Programming on Blind3y3Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 12 May 2015 22:55:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/programming/index.xml" rel="self" type="application/rss+xml" />

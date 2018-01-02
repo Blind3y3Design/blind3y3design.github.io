@@ -1,44 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blind3y3design on Black &amp; Light</title>
+    <title>Blind3y3design on Blind3y3Design</title>
     <link>/tags/blind3y3design/</link>
-    <description>Recent content in Blind3y3design on Black &amp; Light</description>
+    <description>Recent content in Blind3y3design on Blind3y3Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Mon, 11 Jul 2016 23:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/blind3y3design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Backbone Resume</title>
-      <link>/2016/07/11/backbone-resume/</link>
+      <title>SPA Resume project</title>
+      <link>/2016/07/11/resume-project/</link>
       <pubDate>Mon, 11 Jul 2016 23:00:00 +0000</pubDate>
       
-      <guid>/2016/07/11/backbone-resume/</guid>
-      <description>This project was inspired by the JSON Resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
-I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types.</description>
-    </item>
-    
-    <item>
-      <title>Angular Resume</title>
-      <link>/2016/07/06/angular-resume/</link>
-      <pubDate>Wed, 06 Jul 2016 06:00:00 +0000</pubDate>
-      
-      <guid>/2016/07/06/angular-resume/</guid>
-      <description>This project was inspired by the JSON Resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
-I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types.</description>
-    </item>
-    
-    <item>
-      <title>JSON Resume</title>
-      <link>/2016/06/29/json-resume/</link>
-      <pubDate>Wed, 29 Jun 2016 02:45:00 +0000</pubDate>
-      
-      <guid>/2016/06/29/json-resume/</guid>
-      <description>This project was inspired by the JSON Resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
-I decided to find a pre-built html resume template that I thought looked interesting and had an array of different data types.</description>
+      <guid>/2016/07/11/resume-project/</guid>
+      <description>This project was inspired by the JSON resume project. The idea is that you create a standard JSON-based dataset, and then you can easily reuse that data across a multitide of templates without having to re-write your resume each time you wanted to update the look and feel. Any time you need to update any relevant data you can simply update the JSON and that data is accessible anywhere.
+Read more about the JSON resume project here.</description>
     </item>
     
     <item>

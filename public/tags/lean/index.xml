@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lean on Black &amp; Light</title>
+    <title>Lean on Blind3y3Design</title>
     <link>/tags/lean/</link>
-    <description>Recent content in Lean on Black &amp; Light</description>
+    <description>Recent content in Lean on Blind3y3Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2015 22:40:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/lean/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <pubDate>Sat, 25 Apr 2015 22:40:00 +0000</pubDate>
       
       <guid>/2015/04/25/bridging-the-gap/</guid>
-      <description>&lt;p&gt;##Bridging the ‘Handoff’&lt;/p&gt;
+      <description>&lt;h2 id=&#34;bridging-the-handoff&#34;&gt;Bridging the ‘Handoff’&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://uxreactions.com&#34;&gt;uxreactions.com&lt;/a&gt;
 While I appreciate a lot of what is on the site, I must say; seeing the number of developer complaints make me very sad. I also noticed this trend at a recent meetup I attended. A large number of designers; UX, visual, IxD, voiced a number of complaints about developers. I’ve heard the same from developers about designers. I think this is an artifact of traditional waterfall approaches and the ‘hand off’. If we want to grow as teams and communities I think we need to stop complaining about each other and finding ways to bridge the gap. Sometimes an overly decorative design really does affect performance, and a slow experience is a poor experience.&lt;/p&gt;</description>

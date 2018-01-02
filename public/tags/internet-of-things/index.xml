@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Internet of Things on Black &amp; Light</title>
+    <title>Internet of Things on Blind3y3Design</title>
     <link>/tags/internet-of-things/</link>
-    <description>Recent content in Internet of Things on Black &amp; Light</description>
+    <description>Recent content in Internet of Things on Blind3y3Design</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 28 Jun 2016 05:06:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/internet-of-things/index.xml" rel="self" type="application/rss+xml" />

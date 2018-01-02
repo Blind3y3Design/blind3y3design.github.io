@@ -3,23 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/2016/07/11/backbone-resume/</loc>
+    <loc>/service/design-systems/</loc>
+  </url>
+  
+  <url>
+    <loc>/service/ux-accessibility/</loc>
+  </url>
+  
+  <url>
+    <loc>/service/front-end-development/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/2016/07/11/resume-project/</loc>
     <lastmod>2016-07-11T23:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/2016/07/08/pokemon-go-ux/</loc>
     <lastmod>2016-07-08T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2016/07/06/angular-resume/</loc>
-    <lastmod>2016-07-06T06:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2016/06/29/json-resume/</loc>
-    <lastmod>2016-06-29T02:45:00+00:00</lastmod>
   </url>
   
   <url>
@@ -290,7 +296,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2016-07-11T23:00:00+00:00</lastmod>
+    <lastmod>2016-07-08T09:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -303,6 +309,11 @@
   <url>
     <loc>/tags/sensors/</loc>
     <lastmod>2016-06-28T05:06:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/service/</loc>
     <priority>0</priority>
   </url>
   
@@ -350,6 +361,12 @@
   
   <url>
     <loc>/categories/work/</loc>
+    <lastmod>2016-07-11T23:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/work/</loc>
     <lastmod>2016-07-11T23:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
