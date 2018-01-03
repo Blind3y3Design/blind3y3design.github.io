@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Blind3y3Design</title>
+    <link>/service/</link>
+    <description>Recent content in Services on Blind3y3Design</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/service/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design Systems</title>
+      <link>/service/design-systems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/service/design-systems/</guid>
+      <description>&lt;p&gt;I provide design, development, leadership, and guidance to build, improve, extend or maintain a design system from inception.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UX and Accessibility</title>
+      <link>/service/ux-accessibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/service/ux-accessibility/</guid>
+      <description>&lt;p&gt;I design programs to test the usability and clarity of designs. I also audit for accessibility, beyond simple compliance.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Front-End Development</title>
+      <link>/service/front-end-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/service/front-end-development/</guid>
+      <description>&lt;p&gt;No matter the size or scale, I can work with you or your team to build a standards compliant web product.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

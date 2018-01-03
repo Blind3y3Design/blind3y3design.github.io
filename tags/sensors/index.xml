@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sensors on Blind3y3Design</title>
+    <link>/tags/sensors/</link>
+    <description>Recent content in Sensors on Blind3y3Design</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jun 2016 05:06:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/sensors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I dont want a “Smart” Home, I want a Smarter Home</title>
+      <link>/2016/06/28/i-dont-want-a-smart-home-i-want-a-smarter-home/</link>
+      <pubDate>Tue, 28 Jun 2016 05:06:00 +0000</pubDate>
+      
+      <guid>/2016/06/28/i-dont-want-a-smart-home-i-want-a-smarter-home/</guid>
+      <description>Living a simple, usable, connected life Knocki, Amazon Echo, Google Home, Amazon Dash (and Button), the Ikea Smart Kitchen Concept. All of these products and ideas share one core value; making daily tasks available instantly and on demand. Putting what you need where you need it without any additional cognitive load. Each one of these products or concepts takes a different approach to the problem, but they are all essentially based on the idea of allowing you to do a task a little bit easier or faster.</description>
+    </item>
+    
+  </channel>
+</rss>
