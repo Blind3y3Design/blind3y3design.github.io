@@ -24,7 +24,7 @@ This page had to be build from the ground up. The layout was fairly basic. The c
 
 When we build large pages containing a list of products we generally use underscore templates because of their ease of use and flexability. With underscore you define the template inside a script tag. 
 
-{{< highlight html linenos >}}
+{{< highlight html >}}
 <script type="template">
 	//You put your template data here
 	<%= Variable %>

@@ -28,7 +28,7 @@ The piece has a series of sonar sensors built into it so that it can interact wi
 
 Below is part of the code used to create the piece. 
 
-{{< highlight c++ >}}
+{{< highlight "c++" >}}
 #define NR_OF_LIGHTS 6
   int pins[NR_OF_LIGHTS] = { 3, 5, 6, 9, 10, 11 };
   int values[NR_OF_LIGHTS];
