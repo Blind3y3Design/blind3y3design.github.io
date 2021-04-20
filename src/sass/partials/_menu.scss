@@ -1,0 +1,103 @@
+// Headroom library classes
+header {
+    font-size: 1.25rem;
+    opacity: 1;
+    padding: 8px 16px;
+    position:  absolute;
+    top: 0;
+    transition: all $slow-transition;
+    width: 100%;
+    z-index: 10;
+}
+
+.header__inner {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.headroom--unpinned {
+    opacity: 0;
+    top: -75px;
+}
+
+.headroom--pinned {
+    background: $primary-background;
+    border-bottom: 1px solid $color-light-3;
+    position: fixed;
+    top: 0;
+}
+
+.headroom--top {
+    background: 0 0;
+    border-bottom: none;
+}
+
+.home-link {
+    border-radius: 4px;
+    display: block;
+    padding: 4px 8px;
+    transition: background $default-transition;
+
+    &:hover {
+        background: rgba($highlight-color, .5);
+    }
+}
+
+.home-link--disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+.main-nav {
+    margin-left: auto;
+
+    ul {
+        display: flex;;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-left: 8px;
+        
+        @media (min-width: 600px) {
+            margin-left: 16px;
+        }
+    }
+}
+
+.nav__link {
+    display: block;
+    padding: 4px;
+
+    &:after {
+        background: $highlight-color;
+        content: "";
+        height: 4px;
+        display: block;
+        transition: all $slow-transition;
+        width: 0%
+    }
+
+    &:hover {
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.nav__link--active {
+    
+    &:after {
+        background: $highlight-color;
+        content: "";
+        height: 4px;
+        display: block;
+        transition: all $slow-transition;
+        width: 100%
+    }
+}

@@ -1,0 +1,38 @@
+.about {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    padding: 16px;
+
+    @media (min-width: 1024px) {
+        align-items: flex-start;
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+.about__image {
+    margin-bottom: 32px;
+    max-width: 55ch;
+
+    @media (min-width: 1024px) {
+        margin: 0;
+        max-width: 750px;
+        padding: 24px;
+    }
+}
+
+.about__content {
+    border-radius: 4px;
+    max-width: 55ch;
+
+    @media (min-width: 1024px) {
+        margin-left: auto;
+        padding: 24px;
+    }
+
+    p:first-child {
+        margin-top: 0;
+    }
+}

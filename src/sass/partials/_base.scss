@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-background;
+    color: $text-color;
+    font-family: $body-font;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 78px auto 0;
+
+    @media (min-width: 600px) {
+        margin: 55px auto 0;
+    }
+
+    &.blog-post {
+        max-width: 1400px;
+    }
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1.25rem;
+}
+
+p {
+    margin-top: .75rem;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+code:not([class]) {
+    background-color: $secondary-background;
+    border-radius: 2px;
+    font-size: .75rem;
+    font-weight: bold;
+    padding: 2px 4px;
+    vertical-align: middle;
+}
+
+picture {
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+hr {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    border: 0;
+    height: 1px;
+    margin: 48px 0;
+}

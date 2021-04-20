@@ -1,0 +1,49 @@
+---
+layout: layouts/base
+layoutType: home
+---
+
+<section class="intro">
+    {% image "./src/images/profile-image.jpg", "Adam Sedwick" %}
+    <h1 class="intro__title">{{ pageTitle }}</h1>
+</section>
+
+<section class="work">
+    <ul class="work-list work-list--home">
+        {% assign new_posts =  collections.work | reverse %}
+        {% for post in new_posts limit:3 %}
+            <li class="work-preview">
+                <a class="work-preview__link" href="{{ post.url }}">
+                    <div class="work-preview__content">
+                        <h2 class="work-preview__title">{{ post.data.title }}</h2>
+                        <p class="work-preview__meta">Posted on {{ post.data.date | postDate }}</p>
+                        {% if post.data.subtitle %}
+                            <p class="post-preview__subtitle">{{ post.data.subtitle }}</p>
+                        {% endif %}
+                    </div>
+                    {% if post.data.image %}
+                        {% image post.data.image, "", "100vw" %}
+                    {% endif %}
+                </a>
+            </li> 
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="blog-roll">
+    <h2 class="blog-roll__title">Recent Posts</h2>
+    <ul class="post-list post-list--home">
+        {% assign new_posts =  collections.posts | reverse %}
+        {% for post in new_posts limit:3 %}
+            <li class="post-preview">
+                <a class="post-preview__link" href="{{ post.url }}">
+                    <h2 class="post-preview__title">{{ post.data.title }}</h2>
+                    <p class="post-preview__meta">Posted on {{ post.data.date | postDate }}</p>
+                    {% if post.data.subtitle %}
+                        <p class="post-preview__subtitle">{{ post.data.subtitle }}</p>
+                    {% endif %}
+                </a>
+            </li> 
+        {% endfor %}
+    </ul>
+</section>

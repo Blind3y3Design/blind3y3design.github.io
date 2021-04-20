@@ -1,0 +1,19 @@
+<header class="headroom">
+    <div class="header__inner">
+        <a href="/" aria-label="home" class="home-link {% if page.url == "/" %}home-link--disabled{% endif %}">Adam Sedwick</a>
+        <nav class="main-nav">
+            <ul role="navigation">
+                <li>
+                    <a href="/" class="nav__link {% if page.url == "/" %}nav__link--active{% endif %}">Home</a>
+                </li>
+                <li>
+                    <a href="/writing" class="nav__link {% if page.url contains "writing" %}nav__link--active{% endif %}">Writing</a>
+                </li>
+                <li>
+                    <a href="/about" class="nav__link {% if page.url contains "about" %}nav__link--active{% endif %}">About</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
