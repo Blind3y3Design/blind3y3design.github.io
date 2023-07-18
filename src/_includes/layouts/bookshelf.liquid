@@ -1,0 +1,13 @@
+---
+layout: layouts/base
+layoutType: bookshelf
+---
+
+<section class="bookshelf">
+    <h2 class="bookshelf__title">Bookshelf</h2>
+    <ul class="book-list">
+        {% for book in collections.bookshelf reversed %}
+            {% include partials/book %} 
+        {% endfor %}
+    </ul>
+</section>
