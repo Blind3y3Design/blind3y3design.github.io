@@ -2,7 +2,6 @@
   "name": "blind3y3design-eleventy",
   "version": "1.0.0",
   "description": "test repo for new site built on 11ty",
-  "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch src/sass:public/css",
     "build:sass": "sass src/sass:public/css",

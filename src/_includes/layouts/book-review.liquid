@@ -1,0 +1,27 @@
+---
+layout: layouts/base
+layoutType: post
+---
+<div class="book-review">
+    <div class="book-review__header">
+        {% if amazonLink %}
+            <a href="{{ amazonLink }}" target="_blank">
+                {% image bookImage, title %}
+            </a>
+        {% else %}
+            {% image bookImage, title %}
+        {% endif %}
+        <section class="book-review__metadata">
+            <h1 class="book-review__title">{{title}}</h1>
+            <p class="book-review__date">Posted on {{ date | postDate }}</p>
+            <p class="book-review__date">Read on {{ completionDate | postDate }}</p>
+            {% if recommendedBy %}
+                <p class="book-review__date">Recommended by: {{ recommendedBy }}</p>
+            {% endif %}
+            <p class="book-review__read-time">{{content | emojiReadTime}}</p>
+        </section>
+    </div>
+    <section class="book-review__post-content">
+        {{ content }}
+    </section>
+</div>
