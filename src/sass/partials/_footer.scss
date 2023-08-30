@@ -1,57 +1,55 @@
 .footer {
-    box-shadow: 0 0 5px rgba($tertiary-background, .25);
-    padding: 16px 32px;
+    background: var(--footer-background);
+    color: var(--footer-text-color);
+    display: flex;
+    justify-content: center;
+    padding: var(--space-4x);
 }
 
 .footer__inner {
     align-items: center;
     display: flex;
     flex-direction: column-reverse;
+    gap: var(--space-4x);
     justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1400px;
 
     @media (min-width: 600px) {
         flex-direction: row;
+        max-width: 1400px;
+        width: 100%;
     }
 }
 
 .footer__copyright {
-    margin-top: 16px;
-    
-    @media (min-width: 600px) {
-        margin: 0;
-    }
+    margin: 0;
 }
 
 .social-links {
     display: flex;
+    gap: var(--space-2x);
 }
 
 .social-link {
     align-items: center;
-    border-radius: 4px;
+    background: var(--social-link-background);
     display: flex;
-    padding: 10px;
-    transition: background $default-transition;
-
-    & + .social-link {
-        margin-left: 8px;
-    }
+    padding: var(--space-3x);
+    transition: background var(--transition-default);
 
     &:hover,
     &:focus {
-        background: $color-dark-1;
+        background: var(--social-link-background--hover);
     }
 }
 
 .social-link__icon {
-    fill: $color-dark-1;
+    fill: var(--social-link-text-color);
     height: 24px;
-    transition: fill $default-transition;
+    transition: fill var(--transition-default);
     width: 24px;
 
-    .social-link:hover & {
-        fill: $highlight-color;
+    .social-link:hover &,
+    .social-link:focus & {
+        fill: var(--social-link-text-color--hover);
     }
 }

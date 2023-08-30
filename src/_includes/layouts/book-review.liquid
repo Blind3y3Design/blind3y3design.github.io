@@ -2,6 +2,13 @@
 layout: layouts/base
 layoutType: post
 ---
+
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">Book Notes</h1>
+    </div>
+</section>
+
 <div class="book-review">
     <div class="book-review__header">
         {% if amazonLink %}
@@ -12,7 +19,7 @@ layoutType: post
             {% image bookImage, title %}
         {% endif %}
         <section class="book-review__metadata">
-            <h1 class="book-review__title">{{title}}</h1>
+            <h2 class="book-review__title">{{title}}</h2>
             <p class="book-review__date">Posted on {{ date | postDate }}</p>
             <p class="book-review__date">Read on {{ completionDate | postDate }}</p>
             {% if recommendedBy %}

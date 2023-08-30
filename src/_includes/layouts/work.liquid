@@ -2,18 +2,40 @@
 layout: layouts/base
 layoutType: work
 ---
-<div class="blog-post">
-    <section class="blog-post__metadata">
-        <h1 class="blog-post__title">{{title}}</h1>
-        <p class="blog-post__date">Posted on {{ date | postDate }}</p>
-    </section>
-    {% if headerImage %}
-        <section class="blog-post__header-image">
-            {% image headerImage, "", "100vw" %}
-        </section>
-    {% endif %}
-    <section class="blog-post__post-content">
-        {% if image %}{% image image, "" %}{% endif %}
-        {{ content }}
-    </section>
+
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">Work</h1>
+    </div>
+</section>
+
+<div class="work">
+    <div class="work__inner">
+        <ul class="work-list">
+            <!-- TODO: Seperate posts by year -->
+            {% for post in collections.work reversed %}
+                <li class="work-preview">
+                    {% if post.data.exampleLink %}
+                        <a class="work-preview__link" href="{{ post.data.exampleLink }}" target="_blank">
+                            <div class="work-preview__thumbnail">
+                                {% if post.data.image %}
+                                    {% image post.data.image, "" %}
+                                {% endif %}
+                            </div>
+                            <p class="work-preview__title">{{ post.data.title }}</p>
+                        </a>
+                    {% else %}
+                        <div class="work-preview__inner">
+                            <div class="work-preview__thumbnail">
+                                {% if post.data.image %}
+                                    {% image post.data.image, "" %}
+                                {% endif %}
+                            </div>
+                            <p class="work-preview__title">{{ post.data.title }}</p>
+                        </div>
+                    {% endif %}
+                </li> 
+            {% endfor %}
+        </ul>
+    </div>
 </div>

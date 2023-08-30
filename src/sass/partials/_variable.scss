@@ -1,0 +1,63 @@
+:root {
+    --canvas: #fffaf5;
+    --tangerine: #ffba68;
+    --slate: #434345;
+    --dark-blue: #28393e;
+    --light-blue: #425f71;
+    --off-white: #f0f0f0;
+    --white: #ffffff;
+
+    --font-size: 18px;
+    --font-weight: normal;
+    --header-font: 'Open Sans', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+
+    --transition-default: .25s ease-in-out;
+    --transition-slow: .25s ease-in-out;
+
+    --space-base: 4px;
+    --space-1x: calc(var(--space-base) * 1);
+    --space-2x: calc(var(--space-base) * 2);
+    --space-3x: calc(var(--space-base) * 3);
+    --space-4x: calc(var(--space-base) * 4);
+    --space-5x: calc(var(--space-base) * 5);
+    --space-6x: calc(var(--space-base) * 6);
+    --space-7x: calc(var(--space-base) * 7);
+    --space-8x: calc(var(--space-base) * 8);
+
+    --background: var(--canvas);
+    --accent: var(--tangerine);
+    --text-color: var(--slate);
+    --hairline-color: var(--slate);
+
+    --intro-block-background: var(--slate);
+    --intro-block-text-color: var(--white);
+
+    --footer-background: var(--white);
+    --footer-text-color: var(--slate);
+    
+    --social-link-background: transparent;
+    --social-link-background--hover: var(--slate);
+    --social-link-text-color: var(--slate);
+    --social-link-text-color--hover: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--dark-blue);
+        --accent: var(--light-blue);
+        --text-color: var(--off-white);
+        --hairline-color: var(--off-white);
+
+        --intro-block-background: var(--off-white);
+        --intro-block-text-color: var(--slate);
+
+        --footer-background: var(--slate);
+        --footer-text-color: var(--white);
+
+        --social-link-background: transparent;
+        --social-link-background--hover: var(--white);
+        --social-link-text-color: var(--white);
+        --social-link-text-color--hover: var(--slate);
+    }
+}

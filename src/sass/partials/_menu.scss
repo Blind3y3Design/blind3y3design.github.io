@@ -5,7 +5,7 @@ header {
     padding: 8px 16px;
     position:  absolute;
     top: 0;
-    transition: all $slow-transition;
+    transition: all var(--transition-slow);
     width: 100%;
     z-index: 10;
 }
@@ -23,8 +23,8 @@ header {
 }
 
 .headroom--pinned {
-    background: $primary-background;
-    border-bottom: 1px solid $color-light-3;
+    background: var(--background);
+    border-bottom: 1px solid var(--hairline-color);
     position: fixed;
     top: 0;
 }
@@ -35,13 +35,13 @@ header {
 }
 
 .home-link {
-    border-radius: 4px;
     display: block;
     padding: 4px 8px;
-    transition: background $default-transition;
+    transition: all var(--transition-default);
 
     &:hover {
-        background: rgba($highlight-color, .5);
+        background: var(--text-color);
+        color: var(--background);
     }
 }
 
@@ -74,11 +74,11 @@ header {
     padding: 4px;
 
     &:after {
-        background: $highlight-color;
+        background: var(--text-color);
         content: "";
         height: 4px;
         display: block;
-        transition: all $slow-transition;
+        transition: all var(--transition-slow);
         width: 0%
     }
 
@@ -93,11 +93,11 @@ header {
 .nav__link--active {
     
     &:after {
-        background: $highlight-color;
+        background: var(--text-color);
         content: "";
         height: 4px;
         display: block;
-        transition: all $slow-transition;
+        transition: all var(--transition-slow);
         width: 100%
     }
 }

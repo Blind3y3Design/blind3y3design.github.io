@@ -17,13 +17,14 @@
         <header class="headroom">
     <div class="header__inner">
         <a href="/" aria-label="home" class="home-link ">Adam Sedwick</a>
+        <!-- TODO: Convert menu to dropdown nav on mobile devices -->
         <nav class="main-nav">
             <ul role="navigation">
                 <li>
-                    <a href="/" class="nav__link ">Home</a>
+                    <a href="/writing" class="nav__link nav__link--active">Writing</a>
                 </li>
                 <li>
-                    <a href="/writing" class="nav__link nav__link--active">Writing</a>
+                    <a href="/work" class="nav__link ">Work</a>
                 </li>
                 <li>
                     <a href="/about" class="nav__link ">About</a>
@@ -33,6 +34,7 @@
                 </li>
             </ul>
         </nav>
+        <!-- TODO: Add optional theme switcher to force a theme over system preferences -->
     </div>
 </header>
 
@@ -40,14 +42,13 @@
 
         <main class="main-content post the-hamburger-menu-is-not-the-enemy">
             <div class="blog-post">
-    <section class="blog-post__metadata">
+    <section class="blog-post__heading">
         <h1 class="blog-post__title">The Hamburger Menu Is Not The Enemy</h1>
         <p class="blog-post__date">Posted on Aug 11, 2015</p>
         <p class="blog-post__read-time">3 min. read</p>
     </section>
     
     <section class="blog-post__post-content">
-        
         <p>Another anti-hamburger menu article is making it's rounds again. This time from <a href="http://deep.design/the-hamburger-menu/" title="Deep.Design Hamburger Menu">deep.design</a>. A simple google search returns a number of articles about how the design pattern is a &quot;useless tool&quot; and should be avoided at all costs. I'm going to argue that the ideas behind the design pattern are neither useless nor harmful.</p>
 <p>The issue most often brought up is that you can't use what you can't see; and that a user is not likely to go searching for an option they're not even sure exists. While I agree with both of these points they're not the fault of the hamburger menu, they're the fault of poor lazy design. Case in point, the priority+ menu pattern works.</p>
 <p>The issue tends to stem from people not wanting to do the hard work of IA. Pick the thing your users will actually use and display those, when there’s more screen real estate you display more content. The hamburger menu isn’t a catch all. No menu will ever be a catch all. You have to deliberately decide what to show and what to hide.</p>
@@ -75,16 +76,6 @@
                 <svg class="social-link__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4H18C20.2091 4 22 5.79086 22 8V16C22 18.2091 20.2091 20 18 20H6C3.79086 20 2 18.2091 2 16V8C2 5.79086 3.79086 4 6 4ZM6 6C4.89543 6 4 6.89543 4 8V16C4 17.1046 4.89543 18 6 18H18C19.1046 18 20 17.1046 20 16V8C20 6.89543 19.1046 6 18 6H6Z"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.44076 4H18.5592C20.4595 4 22 5.54048 22 7.44076C22 8.9457 21.022 10.276 19.5855 10.7249L13.1931 12.7225C12.4162 12.9653 11.5838 12.9653 10.8069 12.7225L4.41447 10.7249C2.97804 10.276 2 8.9457 2 7.44076C2 5.54048 3.54048 4 5.44076 4ZM5.44076 6C4.64505 6 4 6.64505 4 7.44076C4 8.07093 4.40954 8.62798 5.01102 8.81594L11.4035 10.8136C11.7919 10.935 12.2081 10.935 12.5965 10.8136L18.989 8.81594C19.5905 8.62798 20 8.07093 20 7.44076C20 6.64505 19.3549 6 18.5592 6H5.44076Z"/>
-                </svg>                
-            </a>
-            <a href="https://twitter.com/AdamSedwick" class="social-link social-link--twitter" aria-label="Twitter Link">
-                <svg class="social-link__icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M71.7766 24.1928C71.8273 24.9034 71.8273 25.6142 71.8273 26.3248C71.8273 47.9998 55.33 72.9745 25.1777 72.9745C15.8883 72.9745 7.25891 70.2841 0 65.6142C1.31984 65.7664 2.58875 65.8172 3.95937 65.8172C11.6242 65.8172 18.6802 63.2284 24.3147 58.8122C17.1066 58.6598 11.0659 53.9391 8.98469 47.4416C10 47.5938 11.0152 47.6953 12.0813 47.6953C13.5533 47.6953 15.0255 47.4922 16.3959 47.137C8.88328 45.6141 3.24859 39.0152 3.24859 31.0456V30.8427C5.43125 32.0609 7.96953 32.8223 10.6597 32.9237C6.24344 29.9795 3.35016 24.9542 3.35016 19.2689C3.35016 16.2233 4.16219 13.4314 5.58359 10.9948C13.6547 20.9441 25.7867 27.4414 39.3906 28.1522C39.1369 26.9339 38.9845 25.665 38.9845 24.3959C38.9845 15.3603 46.2942 8 55.3805 8C60.1012 8 64.3652 9.97969 67.3602 13.1777C71.0656 12.467 74.6189 11.0964 77.7663 9.21828C76.5478 13.0255 73.9591 16.2234 70.5581 18.2537C73.8577 17.8986 77.0556 16.9847 79.9997 15.7158C77.7666 18.9644 74.9745 21.8577 71.7766 24.1928Z"/>
-                </svg>  
-            </a>
-            <a href="https://www.instagram.com/adamsedwick/" class="social-link social-link--instagram" aria-label="Instagram Link">
-                <svg class="social-link__icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.0089 19.489C28.6581 19.489 19.5025 28.6467 19.5025 40C19.5025 51.3533 28.6581 60.511 40.0089 60.511C51.3597 60.511 60.5153 51.3533 60.5153 40C60.5153 28.6467 51.3597 19.489 40.0089 19.489ZM40.0089 53.3348C32.6737 53.3348 26.6771 47.3547 26.6771 40C26.6771 32.6453 32.6559 26.6652 40.0089 26.6652C47.362 26.6652 53.3408 32.6453 53.3408 40C53.3408 47.3547 47.3441 53.3348 40.0089 53.3348ZM66.1372 18.65C66.1372 21.3098 63.9955 23.4341 61.3542 23.4341C58.6949 23.4341 56.5711 21.292 56.5711 18.65C56.5711 16.008 58.7128 13.8659 61.3542 13.8659C63.9955 13.8659 66.1372 16.008 66.1372 18.65ZM79.7189 23.5055C79.4155 17.097 77.952 11.4203 73.2582 6.74328C68.5823 2.06627 62.9069 0.602477 56.4997 0.281156C49.8963 -0.0937186 30.1037 -0.0937186 23.5003 0.281156C17.111 0.584626 11.4356 2.04842 6.74177 6.72543C2.04796 11.4024 0.602342 17.0791 0.281093 23.4877C-0.0936977 30.0926 -0.0936977 49.8895 0.281093 56.4945C0.584495 62.903 2.04796 68.5797 6.74177 73.2567C11.4356 77.9337 17.0931 79.3975 23.5003 79.7188C30.1037 80.0937 49.8963 80.0937 56.4997 79.7188C62.9069 79.4154 68.5823 77.9516 73.2582 73.2567C77.9342 68.5797 79.3977 62.903 79.7189 56.4945C80.0937 49.8895 80.0937 30.1105 79.7189 23.5055ZM71.188 63.5814C69.7959 67.0802 67.101 69.7757 63.5851 71.186C58.3201 73.2746 45.8271 72.7926 40.0089 72.7926C34.1907 72.7926 21.6799 73.2567 16.4328 71.186C12.9347 69.7936 10.2398 67.0981 8.82989 63.5814C6.74177 58.3153 7.22365 45.8195 7.22365 40C7.22365 34.1805 6.75962 21.6669 8.82989 16.4186C10.222 12.9198 12.9169 10.2243 16.4328 8.81401C21.6977 6.72543 34.1907 7.20741 40.0089 7.20741C45.8271 7.20741 58.338 6.74328 63.5851 8.81401C67.0831 10.2064 69.778 12.9019 71.188 16.4186C73.2761 21.6847 72.7942 34.1805 72.7942 40C72.7942 45.8195 73.2761 58.3331 71.188 63.5814Z"/>
                 </svg>                
             </a>
             <a href="https://www.linkedin.com/in/blind3y3design" class="social-link social-link--linkedin" aria-label="LinkedIn Link">
