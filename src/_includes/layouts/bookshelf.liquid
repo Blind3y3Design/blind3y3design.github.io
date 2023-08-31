@@ -12,7 +12,7 @@ layoutType: bookshelf
 <div class="bookshelf-content">
     <ul class="book-list">
         {% for book in collections.bookshelf reversed %}
-            {% include partials/book %} 
+            {% include 'partials/book' %} 
         {% endfor %}
     </ul>
 </div>

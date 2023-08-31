@@ -14,14 +14,9 @@ body {
 main {
     align-items: center;
     display: flex;
-    min-height: calc(100vh - calc(78px + 80px));
+    min-height: calc(100vh - 80px);
     flex-direction: column;
-    margin: 78px auto 0;
-
-    @media (min-width: 600px) {
-        margin: 55px auto 0;
-        min-height: calc(100vh - calc(55px + 80px));
-    }
+    margin: 0 auto;
 }
 
 a {

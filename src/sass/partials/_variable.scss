@@ -40,6 +40,11 @@
     --social-link-background--hover: var(--slate);
     --social-link-text-color: var(--slate);
     --social-link-text-color--hover: var(--white);
+
+    --mobile-menu-background: transparent;
+    --mobile-menu-background--hover: var(--slate);
+    --mobile-menu-text-color: var(--slate);
+    --mobile-menu-text-color--hover: var(--white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,5 +64,10 @@
         --social-link-background--hover: var(--white);
         --social-link-text-color: var(--white);
         --social-link-text-color--hover: var(--slate);
+
+        --mobile-menu-background: transparent;
+        --mobile-menu-background--hover: var(--off-white);
+        --mobile-menu-text-color: var(--off-white);
+        --mobile-menu-text-color--hover: var(--slate);
     }
 }

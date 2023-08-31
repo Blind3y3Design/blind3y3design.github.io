@@ -1,13 +1,7 @@
-// Headroom library classes
 header {
     font-size: 1.25rem;
-    opacity: 1;
     padding: 8px 16px;
-    position:  absolute;
-    top: 0;
-    transition: all var(--transition-slow);
     width: 100%;
-    z-index: 10;
 }
 
 .header__inner {
@@ -17,29 +11,13 @@ header {
     max-width: 1400px;
 }
 
-.headroom--unpinned {
-    opacity: 0;
-    top: -75px;
-}
-
-.headroom--pinned {
-    background: var(--background);
-    border-bottom: 1px solid var(--hairline-color);
-    position: fixed;
-    top: 0;
-}
-
-.headroom--top {
-    background: 0 0;
-    border-bottom: none;
-}
-
 .home-link {
     display: block;
     padding: 4px 8px;
     transition: all var(--transition-default);
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
         background: var(--text-color);
         color: var(--background);
     }
@@ -51,26 +29,25 @@ header {
 }
 
 .main-nav {
+    display: none;
     margin-left: auto;
 
+    @media (min-width: 600px) {
+        display: block;
+    }
+
     ul {
-        display: flex;;
+        display: flex;
+        gap: var(--space-2x);
         list-style: none;
         margin: 0;
         padding: 0;
-    }
-
-    li {
-        margin-left: 8px;
-        
-        @media (min-width: 600px) {
-            margin-left: 16px;
-        }
     }
 }
 
 .nav__link {
     display: block;
+    margin-block-end: -4px;
     padding: 4px;
 
     &:after {
@@ -82,7 +59,8 @@ header {
         width: 0%
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
 
         &:after {
             width: 100%;
@@ -99,5 +77,160 @@ header {
         display: block;
         transition: all var(--transition-slow);
         width: 100%
+    }
+}
+
+// Mobile Menu Styles
+.mobile-menu-trigger {
+    align-items: center;
+    background: var(--mobile-menu-background);
+    display: flex;
+    border: none;
+    margin-inline-start: auto;
+    padding: var(--space-3x);
+    transition: background var(--transition-default);
+
+    &:hover,
+    &:focus-visible {
+        background: var(--mobile-menu-background--hover);
+    }
+
+    @media (min-width: 600px) {
+        display: none;
+    }
+}
+
+.mobile-menu-trigger__icon {
+    fill: var(--mobile-menu-text-color);
+    height: 24px;
+    width: 24px;
+
+    .mobile-menu-trigger:hover &,
+    .mobile-menu-trigger:focus-visible & {
+        fill: var(--mobile-menu-text-color--hover);
+    }
+}
+
+.mobile-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+
+    @media (min-width:600px) {
+        display: none;
+    }
+}
+
+.mobile-menu--open {
+    grid-template-rows: 1fr;
+}
+
+.mobile-menu__inner {
+    overflow: hidden;
+}
+
+.mobile-nav {
+    ul {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1x);
+        list-style: none;
+        margin: 0;
+        padding: var(--space-3x) var(--space-2x);
+    }
+}
+
+.mobile-nav__link {
+    display: block;
+    padding: 4px;
+
+    &:after {
+        background: var(--text-color);
+        content: "";
+        height: 4px;
+        display: block;
+        transition: all var(--transition-slow);
+        width: 0%
+    }
+
+    &:hover,
+    &:focus-visible {
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.mobile-nav__link--active {
+    
+    &:after {
+        background: var(--text-color);
+        content: "";
+        height: 4px;
+        display: block;
+        transition: all var(--transition-slow);
+        width: 100%
+    }
+}
+
+// Theme Toggle Styles
+
+.theme-switcher {
+    align-items: center;
+    background: var(--mobile-menu-background);
+    display: flex;
+    border: none;
+    margin-inline-start: var(--space-1x);
+    padding: var(--space-2x);
+    transition: background var(--transition-default);
+
+    &:hover,
+    &:focus-visible {
+        background: var(--mobile-menu-background--hover);
+    }
+}
+
+.theme-switcher__icon {
+    fill: var(--mobile-menu-text-color);
+    height: 16px;
+    width: 16px;
+
+    .theme-switcher:hover &,
+    .theme-switcher:focus-visible & {
+        fill: var(--mobile-menu-text-color--hover);
+    }
+}
+
+.theme-switcher__icon--sun {
+    display: block;
+    
+    @media (prefers-color-scheme: dark) {
+        display: none;
+
+        .light-theme & {
+            display: block;
+        }
+    }
+
+    .dark-theme & {
+        display: none;
+    }
+}
+
+.theme-switcher__icon--moon {
+    display: none;
+
+    @media (prefers-color-scheme: dark) {
+        display: block;
+
+        .light-theme & {
+            display: none;
+        }
+    }
+
+    .light-theme & {
+        display: none;
     }
 }

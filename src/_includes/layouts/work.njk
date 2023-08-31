@@ -11,10 +11,12 @@ layoutType: work
 
 <div class="work">
     <div class="work__inner">
-        <ul class="work-list">
-            <!-- TODO: Seperate posts by year -->
-            {% for post in collections.work reversed %}
-                <li class="work-preview">
+        {% for year, yearPosts in collections.workByYear %}
+            <section class="work-section">
+                <h2 class="work-year">{{ year }}</h2>
+                <ul class="work-list">
+                    {% for post in yearPosts %}
+                        <li class="work-preview">
                     {% if post.data.exampleLink %}
                         <a class="work-preview__link" href="{{ post.data.exampleLink }}" target="_blank">
                             <div class="work-preview__thumbnail">
@@ -35,7 +37,9 @@ layoutType: work
                         </div>
                     {% endif %}
                 </li> 
-            {% endfor %}
-        </ul>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endfor %}
     </div>
 </div>
