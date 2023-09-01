@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Adam Sedwick</title>
+    <title>Rethinking Buttons in a Production Design System | Adam Sedwick</title>
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,11 +22,11 @@
     <body>
         <header>
     <div class="header__inner">
-        <a href="/" aria-label="home" class="home-link home-link--disabled">Adam Sedwick</a>
+        <a href="/" aria-label="home" class="home-link ">Adam Sedwick</a>
         <nav class="main-nav">
             <ul role="navigation">
                 <li>
-                    <a href="/writing" class="nav__link ">Writing</a>
+                    <a href="/writing" class="nav__link nav__link--active">Writing</a>
                 </li>
                 <li>
                     <a href="/work" class="nav__link ">Work</a>
@@ -78,7 +78,7 @@
             <nav class="mobile-nav">
                 <ul role="navigation">
                     <li>
-                        <a href="/writing" class="mobile-nav__link ">Writing</a>
+                        <a href="/writing" class="mobile-nav__link mobile-nav__link--active">Writing</a>
                     </li>
                     <li>
                         <a href="/work" class="mobile-nav__link ">Work</a>
@@ -96,166 +96,74 @@
 </header>
 
 
-        <main class="main-content home home">
-            
-<section class="intro">
-    <div class="intro__inner">
-        <div class="intro__details">
-            <p class="intro__welcome">Hey There,</p>
-            <h1 class="intro__name">I'm Adam Sedwick</h1>
-            <ul class="intro__blocks">
-                <li class="intro__block">Front-End Architect</li>
-                <li class="intro__block">Design Systems Lead</li>
-                <li class="intro__block">Accessibility Advocate</li>
-            </ul>
-        </div>
-        <picture>
-  <source type="image/avif" srcset="/img/a93d2e40-400.avif 400w">
-  <source type="image/webp" srcset="/img/a93d2e40-400.webp 400w">
-  <source type="image/png" srcset="/img/a93d2e40-400.png 400w">
-  <img src="/img/a93d2e40-400.jpeg" width="400" height="500" alt="Adam Sedwick" loading="lazy" decoding="async">
+        <main class="main-content post rethinking-buttons-in-a-production-design-system">
+            <div class="blog-post">
+    <section class="blog-post__heading">
+        <h1 class="blog-post__title">Rethinking Buttons in a Production Design System</h1>
+        <p class="blog-post__date">Posted on Feb 16, 2021</p>
+        <p class="blog-post__read-time">3 min. read</p>
+    </section>
+    
+    
+    
+    
+        <section class="blog-post__header-image ">
+            <picture>
+  <source type="image/avif" srcset="/img/797f955e-2600.avif 2600w" sizes="100vw">
+  <source type="image/webp" srcset="/img/797f955e-2600.webp 2600w" sizes="100vw">
+  <source type="image/png" srcset="/img/797f955e-2600.png 2600w" sizes="100vw">
+  <img src="/img/797f955e-2600.jpeg" width="2600" height="1733" alt="" loading="lazy" decoding="async">
 </picture>
-    </div>
-</section>
+        </section>
+    
+    <section class="blog-post__post-content">
+        <p>After two years of the Comet Design System being used by our teams in product we'd begun to see and hear designers and product owners consider non-system button styles and variations.
+In situations like this you need to make a decision as a system - either become the dreaded design police and &quot;squash creative freedom&quot; or embrace the idea of product inspired variation. We chose the latter.</p>
+<hr/>
+<h2>Embracing external variation</h2>
+<p>Our original button component had two possible colors, two sizes, and three visual variations. All in all it was a pretty standard spread, you had your primary and secondary colors, &quot;default,&quot; ghost, and flat buttons, and the ability to make them smaller with reduced padding.</p>
+<picture>
+  <source type="image/avif" srcset="/img/67685a50-914.avif 914w">
+  <source type="image/webp" srcset="/img/67685a50-914.webp 914w">
+  <source type="image/png" srcset="/img/67685a50-914.png 914w">
+  <img src="/img/67685a50-914.jpeg" width="914" height="116" alt="Primary, Secondary, Ghost, and Flat buttons" loading="lazy" decoding="async">
+</picture>
+<p>This worked fine for a time, but eventually product teams would want a product branded button, or we'd hear concerns about the secondary color looking like a disabled button, causing the ghost variation to become our de facto &quot;secondary button.&quot;</p>
+<p>We also saw some explorations and desire for additional shapes of buttons. Younger audiences showed more interest in bigger, rounder, &quot;softer&quot; buttons, a pill button for example. Specific global callouts or action items could benefit from a FAB - floating action button.</p>
+<p>Using these requests we began the task of internal system variation exploration. One of the key factors in this exploration was defining variation categories and their relationships to each other.</p>
+<hr/>
+<h2>Variation categories</h2>
+<p>Looking at our existing button component it became clear that we didn't not have the ability to have a ghost or flat button using anything other than our primary color. This realization revealed that our button component was quite restrictive in use. You could have a &quot;default&quot; button in two colors, and then a ghost or flat button in one. Our amazing extensible, design system had unintentionally limited our design potential to 4 fairly similar buttons.</p>
+<p>Why could we not have a secondary ghost? Was there logical reasoning behind it or had we simply overlooked it? Could there be the potential of color variation for product branding or creating intentional friction to slow a user when required? The answer to both of these questions is yes of course. Taking stock of our variations allowed us to identify what we call variation categories.</p>
+<p>We identified four core categories to expand our button:</p>
+<ul>
+<li>Color</li>
+<li>Type</li>
+<li>Shape</li>
+<li>Size</li>
+</ul>
+<p>Having these specified categories allows for a more nuanced way of thinking about the variations, a button would have any value from each category to create a custom variation.</p>
+<h3>Color</h3>
+<p>The <em>color</em> category defines what color a button is this may seem simple, but as a system it is important to identify and explore all options because we have made a commitment to inclusive, extensible, and sustainable design. Being able to identify color as a specific category allows us to identify when some variations should be disallowed - a light colored ghost button on a white background for example.</p>
+<picture>
+  <source type="image/avif" srcset="/img/2dc58d41-2400.avif 2400w">
+  <source type="image/webp" srcset="/img/2dc58d41-2400.webp 2400w">
+  <source type="image/png" srcset="/img/2dc58d41-2400.png 2400w">
+  <img src="/img/2dc58d41-2400.jpeg" width="2400" height="522" alt="Left: Light and Dark ghost buttons on White and Dark backgrounds | Right: Primary and Light Ghost buttons on White and Dark backgrounds" loading="lazy" decoding="async">
+</picture>
+<p>We expanded our button color palette to include product branded colors as well as light, dark, success, warning, and danger colors. We also made the decision to allow any button to be any color. This alone expanded the creative possibilities greatly.</p>
+<h3>Type</h3>
+<p>The <em>type</em> category defines the type, or style, of button. In our case we settled on the same three variations we had before; the filled, ghost, and flat types.</p>
+<h3>Shape</h3>
+<p>The <em>shape</em> category defines the shape of the button. What shape your button takes can change the feeling and tone if a design. Our default shape was a rectangle with rounded corners, we expanded upon this shape with a pill for use when a softer aesthetic is desired. We also created an icon-only FAB shape variation for use when we need a global-style callout.</p>
+<h3>Size</h3>
+<p><em>Size</em> is simple enough to think about, is the button normal, small, or large. Smaller buttons may be desired in a denser interface or as actions in a table layout. Larger or expanded buttons may be desired as promotional elements or for younger audiences and those with cognitive or physical difficulties.</p>
+<hr/>
+<p>Now instead of limiting our designs to one of four variations our designers and developers could use and combination of category values to create hundreds of variations to fit their specific needs.</p>
+<p>Header Photo by <a href="https://medium.com/r/?url=https%3A%2F%2Funsplash.com%2F%40siora18%3Futm_source%3Dunsplash%26utm_medium%3Dreferral%26utm_content%3DcreditCopyText">Siora Photography</a> on <a href="https://medium.com/r/?url=https%3A%2F%2Funsplash.com%2F%3Futm_source%3Dunsplash%26utm_medium%3Dreferral%26utm_content%3DcreditCopyText">Unsplash</a></p>
 
-<section class="blog-roll">
-    <div class="blog-roll__inner">
-        <h2 class="blog-roll__title">Latest Posts</h2>
-        <ul class="post-list post-list--home">
-            
-            
-                <li class="post-preview">
-                    <a class="post-preview__link" href="/writing/design-a11y/">
-                        <h2 class="post-preview__title">Be a Design A11y: An Introduction to Accessibility</h2>
-                        
-                        <p class="post-preview__meta">Posted on Sep 1, 2023</p>
-                    </a>
-                </li> 
-            
-                <li class="post-preview">
-                    <a class="post-preview__link" href="/writing/rethinking-buttons-in-a-production-design-system/">
-                        <h2 class="post-preview__title">Rethinking Buttons in a Production Design System</h2>
-                        
-                        <p class="post-preview__meta">Posted on Feb 16, 2021</p>
-                    </a>
-                </li> 
-            
-                <li class="post-preview">
-                    <a class="post-preview__link" href="/writing/extending-css-programmatic-selectors/">
-                        <h2 class="post-preview__title">Extending CSS with Programmatic Selectors</h2>
-                        
-                            <p class="post-preview__subtitle">Powerful CSS tricks beyond the simple class and id selectors</p>
-                        
-                        <p class="post-preview__meta">Posted on Sep 13, 2019</p>
-                    </a>
-                </li> 
-            
-                <li class="post-preview">
-                    <a class="post-preview__link" href="/writing/is-mobile-first-dead/">
-                        <h2 class="post-preview__title">Is “Mobile-First” as an idea dead?</h2>
-                        
-                        <p class="post-preview__meta">Posted on Aug 27, 2019</p>
-                    </a>
-                </li> 
-            
-                <li class="post-preview">
-                    <a class="post-preview__link" href="/writing/Pokemon-Go-UX/">
-                        <h2 class="post-preview__title">The Importance of UX and a Guided Introduction</h2>
-                        
-                            <p class="post-preview__subtitle">A case-study on the user experience of Pokemon Go</p>
-                        
-                        <p class="post-preview__meta">Posted on Jul 8, 2016</p>
-                    </a>
-                </li> 
-            
-                <li class="post-preview">
-                    <a class="post-preview__link" href="/writing/I-dont-want-a-Smart-Home-I-want-a-Smarter-Home/">
-                        <h2 class="post-preview__title">I dont want a “Smart” Home, I want a Smarter Home</h2>
-                        
-                        <p class="post-preview__meta">Posted on Jun 28, 2016</p>
-                    </a>
-                </li> 
-            
-        </ul>
-    </div>
-</section>
-
-<section class="work">
-    <div class="work__inner">
-        <div class="work__heading">
-            <h2 class="work__title">Work</h2>
-            <a href="/work" class="work__view-link">View All</a>
-        </div>
-        <ul class="work-list work-list--home">
-            
-            
-                <li class="work-preview">
-                    <a class="work-preview__link" href="/work/discoveryed-public/">
-                        <div class="work-preview__thumbnail">
-                            
-                                <picture>
-  <source type="image/avif" srcset="/img/7f8a07b1-2449.avif 2449w">
-  <source type="image/webp" srcset="/img/7f8a07b1-2449.webp 2449w">
-  <source type="image/png" srcset="/img/7f8a07b1-2449.png 2449w">
-  <img src="/img/7f8a07b1-2449.jpeg" width="2449" height="1749" alt="" loading="lazy" decoding="async">
-</picture>
-                            
-                        </div>
-                        <p class="work-preview__title">Discovery Education</p>
-                    </a>
-                </li> 
-            
-                <li class="work-preview">
-                    <a class="work-preview__link" href="/work/comet-design-system/">
-                        <div class="work-preview__thumbnail">
-                            
-                                <picture>
-  <source type="image/avif" srcset="/img/af2bb5d7-2449.avif 2449w">
-  <source type="image/webp" srcset="/img/af2bb5d7-2449.webp 2449w">
-  <source type="image/png" srcset="/img/af2bb5d7-2449.png 2449w">
-  <img src="/img/af2bb5d7-2449.jpeg" width="2449" height="1749" alt="" loading="lazy" decoding="async">
-</picture>
-                            
-                        </div>
-                        <p class="work-preview__title">Comet Design System</p>
-                    </a>
-                </li> 
-            
-                <li class="work-preview">
-                    <a class="work-preview__link" href="/work/2016-07-11-resume-project/">
-                        <div class="work-preview__thumbnail">
-                            
-                                <picture>
-  <source type="image/avif" srcset="/img/15f8ceba-2879.avif 2879w">
-  <source type="image/webp" srcset="/img/15f8ceba-2879.webp 2879w">
-  <source type="image/png" srcset="/img/15f8ceba-2879.png 2879w">
-  <img src="/img/15f8ceba-2879.jpeg" width="2879" height="1986" alt="" loading="lazy" decoding="async">
-</picture>
-                            
-                        </div>
-                        <p class="work-preview__title">SPA Resume project</p>
-                    </a>
-                </li> 
-            
-                <li class="work-preview">
-                    <a class="work-preview__link" href="/work/2015-12-31-See-Forever/">
-                        <div class="work-preview__thumbnail">
-                            
-                                <picture>
-  <source type="image/avif" srcset="/img/8a18bf3f-700.avif 700w">
-  <source type="image/webp" srcset="/img/8a18bf3f-700.webp 700w">
-  <source type="image/png" srcset="/img/8a18bf3f-700.png 700w">
-  <img src="/img/8a18bf3f-700.jpeg" width="700" height="372" alt="" loading="lazy" decoding="async">
-</picture>
-                            
-                        </div>
-                        <p class="work-preview__title">See Forever - One World Observatory</p>
-                    </a>
-                </li> 
-            
-        </ul>
-    </div>
-</section>
+    </section>
+</div>
         </main>
         
         <script src="/scripts/headroom.js"></script>

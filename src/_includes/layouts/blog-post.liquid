@@ -9,8 +9,12 @@ layoutType: post
         <p class="blog-post__read-time">{{content | emojiReadTime}}</p>
     </section>
     {% if headerImage %}
-        <section class="blog-post__header-image">
-            {% image headerImage, "", "100vw" %}
+        {% assign headerImageAltText = "" %}
+        {% if headerImageAlt %}
+            {% assign headerImageAltText = headerImageAlt %}
+        {% endif %}
+        <section class="blog-post__header-image {% if headerImageContained %}blog-post__header-image--contained{% endif %}">
+            {% image headerImage, headerImageAltText, "100vw" %}
         </section>
     {% endif %}
     <section class="blog-post__post-content">

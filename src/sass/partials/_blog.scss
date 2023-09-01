@@ -120,13 +120,17 @@
         height: 350px;
         width: 100%;
     }
+
+    &.blog-post__header-image--contained {
+        max-width: 80ch;
+    }
 }
 
 .blog-post__post-content {
     display: flex;
     flex-direction: column;
     max-width: 80ch;
-    padding-block: var(--space-8x);
+    padding-block: 0 var(--space-8x);
 
     @media (max-width: 1024px) {
         padding-inline: var(--space-4x);
@@ -135,5 +139,24 @@
     picture {
         align-self: center;
         margin-top: 16px;
+    }
+
+    .blog-post__header-image + & {
+        padding-block: var(--space-8x);
+    }
+
+    blockquote {
+        border-inline-start: 5px solid var(--text-color);
+        margin: 0;
+        margin-block-start: 0.75rem;
+        padding-inline-start: var(--space-4x);
+
+        * {
+            margin: 0;
+        }
+
+        * + * {
+            margin-block-start: 0.5rem; 
+        }
     }
 }

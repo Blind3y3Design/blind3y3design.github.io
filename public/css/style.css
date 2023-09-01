@@ -636,12 +636,15 @@ header {
   height: 350px;
   width: 100%;
 }
+.blog-post__header-image.blog-post__header-image--contained {
+  max-width: 80ch;
+}
 
 .blog-post__post-content {
   display: flex;
   flex-direction: column;
   max-width: 80ch;
-  padding-block: var(--space-8x);
+  padding-block: 0 var(--space-8x);
 }
 @media (max-width: 1024px) {
   .blog-post__post-content {
@@ -651,6 +654,21 @@ header {
 .blog-post__post-content picture {
   align-self: center;
   margin-top: 16px;
+}
+.blog-post__header-image + .blog-post__post-content {
+  padding-block: var(--space-8x);
+}
+.blog-post__post-content blockquote {
+  border-inline-start: 5px solid var(--text-color);
+  margin: 0;
+  margin-block-start: 0.75rem;
+  padding-inline-start: var(--space-4x);
+}
+.blog-post__post-content blockquote * {
+  margin: 0;
+}
+.blog-post__post-content blockquote * + * {
+  margin-block-start: 0.5rem;
 }
 
 .intro {
