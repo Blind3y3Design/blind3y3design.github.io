@@ -1,4 +1,4 @@
-.light-theme{
+[data-theme='light'] {
     --background: var(--canvas);
     --accent: var(--tangerine);
     --text-color: var(--slate);
@@ -21,7 +21,7 @@
     --mobile-menu-text-color--hover: var(--white);
 }
 
-.dark-theme {
+[data-theme='dark'] {
     --background: var(--dark-blue);
     --accent: var(--light-blue);
     --text-color: var(--off-white);
