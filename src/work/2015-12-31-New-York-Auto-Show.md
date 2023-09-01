@@ -1,6 +1,5 @@
 ---
 date: 2015-12-31T00:00:00Z
-exampleLink: http://www.autoshowny.com/
 image: ./src/images/situation/nyias.jpg
 title: New York International Auto Show 2016
 ---

@@ -57,6 +57,9 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addLiquidShortcode("image", imageShortcode);
     eleventyConfig.addLiquidShortcode("bookImage", bookImageShortcode);
+
+    eleventyConfig.addShortcode("image", imageShortcode);
+    eleventyConfig.addShortcode("bookImage", bookImageShortcode);
     
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
@@ -64,7 +67,41 @@ module.exports = function(eleventyConfig) {
         return DateTime.fromJSDate(dateObj, {
           zone: "America/Chicago",
         }).toLocaleString(DateTime.DATE_MED);
-      });
+    });
+
+    eleventyConfig.addCollection("postsByYear", (collection) => {
+        const posts = collection.getFilteredByTag('posts').reverse();
+        const years = posts.map(post => post.date.getFullYear());
+        const uniqueYears = [...new Set(years)];
+
+        const postsByYear = uniqueYears.reduce((prev, year) => {
+            const filteredPosts = posts.filter(post => post.date.getFullYear() === year);
+
+            return [
+                ...prev,
+                [year, filteredPosts]
+            ]
+        }, []);
+
+        return postsByYear;
+    });
+
+    eleventyConfig.addCollection("workByYear", (collection) => {
+        const work = collection.getFilteredByTag('work').reverse();
+        const years = work.map(post => post.date.getFullYear());
+        const uniqueYears = [...new Set(years)];
+
+        const workByYear = uniqueYears.reduce((prev, year) => {
+            const filteredwork = work.filter(post => post.date.getFullYear() === year);
+
+            return [
+                ...prev,
+                [year, filteredwork]
+            ]
+        }, []);
+
+        return workByYear;
+    });
 
     return {
         dir: {

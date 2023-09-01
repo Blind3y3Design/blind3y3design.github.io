@@ -1,5 +1,6 @@
 ---
 date: 2021-02-15T20:00:00Z
+exampleLink: https://www.discoveryeducation.com/
 title: Discovery Education
 image: ./src/images/discoveryed/dicoveryed-com.jpg
 subtitle: Connecting Students to Curiousity
