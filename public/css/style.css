@@ -430,11 +430,11 @@ header {
   .theme-menu-trigger__icon--sun {
     display: none;
   }
-  .light-theme .theme-menu-trigger__icon--sun {
+  [data-theme=light] .theme-menu-trigger__icon--sun {
     display: block;
   }
 }
-.dark-theme .theme-menu-trigger__icon--sun {
+[data-theme=dark] .theme-menu-trigger__icon--sun {
   display: none;
 }
 
@@ -445,11 +445,11 @@ header {
   .theme-menu-trigger__icon--moon {
     display: block;
   }
-  .light-theme .theme-menu-trigger__icon--moon {
+  [data-theme=light] .theme-menu-trigger__icon--moon {
     display: none;
   }
 }
-.light-theme .theme-menu-trigger__icon--moon {
+[data-theme=light] .theme-menu-trigger__icon--moon {
   display: none;
 }
 
