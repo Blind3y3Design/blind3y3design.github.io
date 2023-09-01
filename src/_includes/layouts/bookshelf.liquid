@@ -3,11 +3,16 @@ layout: layouts/base
 layoutType: bookshelf
 ---
 
-<section class="bookshelf">
-    <h2 class="bookshelf__title">Bookshelf</h2>
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">Bookshelf</h1>
+    </div>
+</section>
+
+<div class="bookshelf-content">
     <ul class="book-list">
         {% for book in collections.bookshelf reversed %}
-            {% include partials/book %} 
+            {% include 'partials/book' %} 
         {% endfor %}
     </ul>
-</section>
+</div>

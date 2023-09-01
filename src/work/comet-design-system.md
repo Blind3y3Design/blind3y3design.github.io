@@ -1,5 +1,6 @@
 ---
 date: 2021-02-15T20:00:00Z
+exampleLink: https://comet.discoveryeducation.com/
 title: Comet Design System
 image: ./src/images/discoveryed/comet-home.jpg
 subtitle: Designing systems for Discovery Education.

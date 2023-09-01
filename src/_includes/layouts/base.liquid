@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include partials/head %}
+    {% include 'partials/head' %}
 
     <body>
-        {% include partials/menu %}
+        {% include 'partials/menu' %}
 
-        <main class="main-content {{ layoutType }} {{ title | slug }}">
+        <main class="main-content {{ layoutType }} {{ title | slugify }}">
             {{content}}
         </main>
         
-        {% include partials/scripts %}
-        {% include partials/footer %}
+        {% include 'partials/scripts' %}
+        {% include 'partials/footer' %}
     </body>
 </html>

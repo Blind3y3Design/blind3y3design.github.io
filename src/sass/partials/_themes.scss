@@ -1,0 +1,45 @@
+[data-theme='light'] {
+    --background: var(--canvas);
+    --accent: var(--tangerine);
+    --text-color: var(--slate);
+    --hairline-color: var(--slate);
+
+    --intro-block-background: var(--slate);
+    --intro-block-text-color: var(--white);
+
+    --footer-background: var(--white);
+    --footer-text-color: var(--slate);
+    
+    --social-link-background: transparent;
+    --social-link-background--hover: var(--slate);
+    --social-link-text-color: var(--slate);
+    --social-link-text-color--hover: var(--white);
+
+    --mobile-menu-background: transparent;
+    --mobile-menu-background--hover: var(--slate);
+    --mobile-menu-text-color: var(--slate);
+    --mobile-menu-text-color--hover: var(--white);
+}
+
+[data-theme='dark'] {
+    --background: var(--dark-blue);
+    --accent: var(--light-blue);
+    --text-color: var(--off-white);
+    --hairline-color: var(--off-white);
+
+    --intro-block-background: var(--off-white);
+    --intro-block-text-color: var(--slate);
+
+    --footer-background: var(--slate);
+    --footer-text-color: var(--white);
+
+    --social-link-background: transparent;
+    --social-link-background--hover: var(--white);
+    --social-link-text-color: var(--white);
+    --social-link-text-color--hover: var(--slate);
+
+    --mobile-menu-background: transparent;
+    --mobile-menu-background--hover: var(--off-white);
+    --mobile-menu-text-color: var(--off-white);
+    --mobile-menu-text-color--hover: var(--slate);
+}

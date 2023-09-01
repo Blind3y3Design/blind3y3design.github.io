@@ -1,39 +1,90 @@
 .intro {
+    container-type: inline-size;
+    container-name: intro;
+
+    background: var(--accent);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.intro__inner {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: 1050px;
-    padding: 0 8px;
+    gap: var(--space-4x);
+    justify-content: center;
+    max-width: 1400px;
+    padding: var(--space-8x);
+    width: 100%;;
 
-    @media (min-width: 600px) {
+    @container intro (min-width: 600px) {
         flex-direction: row;
+        gap: var(--space-8x);
         justify-content: center;
-        padding: 64px 32px;
     }
 
     picture {
-        width: 100%;
+        aspect-ratio: 4/5;
+        display: block;
+        max-height: 500px;
 
-        @media (min-width: 600px) {
+        @container intro (min-width: 768px) {
             flex-shrink: 0;
-            margin-right: 40px;
-            width: 300px;
         }
-    }
-
-    img {
-        border-radius: 50%;
-        box-shadow: $box-shadow-1;
     }
 }
 
-.intro__title {
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    width: 100%;
+.intro__details {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(var(--space-4x), 3cqi, var(--space-8x));
+    justify-content: center;
+    padding: var(--space-2x);
 
-    @media (min-width: 600px) {
-        margin-left: auto;
-        width: clamp(430px, 100%, 600px);
+    @container intro (min-width: 600px) {
+        padding: var(--space-8x);
     }
+}
+
+.intro__welcome {
+    font-size: clamp(2rem, 4cqi, 3rem);
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.intro__name {
+    font-size: clamp(1.5rem, 3.5cqi, 2.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.intro__blocks {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4x);
+    margin: 0;
+    padding: 0;
+
+    @container intro (min-width: 1150px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.intro__block {
+    background: var(--intro-block-background);
+    color: var(--intro-block-text-color);
+    display: block;
+    font-size: clamp(.875rem, 2cqi, 1.125rem);
+    font-weight: bold;
+    min-width: max-content;
+    padding: var(--space-2x);
+    text-align: center;
+    width: 100%;
 }

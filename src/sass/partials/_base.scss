@@ -3,28 +3,24 @@
 }
 
 body {
-    background-color: $primary-background;
-    color: $text-color;
-    font-family: $body-font;
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: var(--body-font);
     font-size: 18px;
     margin: 0;
     padding: 0;
 }
 
 main {
-    margin: 78px auto 0;
-
-    @media (min-width: 600px) {
-        margin: 55px auto 0;
-    }
-
-    &.blog-post {
-        max-width: 1400px;
-    }
+    align-items: center;
+    display: flex;
+    min-height: calc(100vh - 80px);
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 a {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -34,7 +30,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $header-font;
+    font-family: var(--header-font);
 }
 
 h1 {
@@ -70,7 +66,7 @@ p {
 }
 
 code:not([class]) {
-    background-color: $secondary-background;
+    background-color: var(--secondary-background);
     border-radius: 2px;
     font-size: .75rem;
     font-weight: bold;
