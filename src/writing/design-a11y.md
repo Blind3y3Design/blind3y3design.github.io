@@ -26,7 +26,9 @@ The 11 in A11y stands for the 11 letters between the A and Y in the word accessi
 
 As a creator of digital products accessibility should always be a consideration at any stage of the product development cycle. According to the [CDC](https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html), 1 in 4 adults in the US live with some type of disability. On top of this, many accessibility features are not just for disabled individuals, building products with a consideration for accessibility often means that the overall experience will be better for everyone.
 
-{% image "./src/images/design-a11y/ms-persona-spectrum.png", "Graphic of 3 individuals showing the different types of disability. One arm is a permanent disability, injured arm is a temporary disability, and new parent is a situational disability" %}
+<div class="svg-container">
+    {% svg "./src/images/design-a11y/inclusive-design.svg" %}
+</div>
 
 As part of their [Inclusive Design](https://inclusive.microsoft.design/) work, Microsoft has outlined and documented the realities of disability in the modern age. According to the World Health Organization, "Disability is not just a health problem. It is a complex phenomenon, reflecting the
 interaction between features of a person’s body and features of the society in which he or she lives.” Microsoft has represented this in their guidelines with different modalities of disability they call the Persona Spectrum. For example, a person with 1 arm, a person with an arm injury, and a new parent holding a child all fall into the same modality of “has one arm to interact with the product.”
@@ -89,9 +91,8 @@ One of the most common success criterion discussed and cited is that of adequate
 
 As you can see the requirements within the success criterion are very clear and explicitly testable. Any time text appears in an interface, the color of that text should have a contrast ratio of at least 4.5:1. There are of course exceptions to this rule, but those exceptions are also clearly denoted and provided with testable values of their own where applicable.
 
-{{ Image of text on a background that fails }}
+{% image "./src/images/design-a11y/contrast-ratio.png", "Example of two blue hex values and their contrast ratios against white. One failing and one passing." %}
 
-{{ Image of text on a background that passes }}
 
 ## In Summary
 

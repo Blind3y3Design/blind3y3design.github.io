@@ -1,7 +1,8 @@
-const Image = require("@11ty/eleventy-img");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+const fs = require('fs');
+const Image = require("@11ty/eleventy-img");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 async function imageShortcode(src, alt, sizes) {
     let metadata = await Image(src, {
@@ -45,6 +46,18 @@ async function bookImageShortcode(src, alt, sizes) {
         </picture>`;
 }
 
+function getSvgContent(file) {
+    let relativeFilePath = `${file}`;
+    let data = fs.readFileSync(relativeFilePath, 
+    function(err, contents) {
+        if (err) return err
+        return contents
+    });
+
+    return data.toString('utf8');
+}
+ 
+
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -60,6 +73,9 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addShortcode("image", imageShortcode);
     eleventyConfig.addShortcode("bookImage", bookImageShortcode);
+
+    eleventyConfig.addLiquidShortcode("svg", getSvgContent);
+    eleventyConfig.addShortcode("svg", getSvgContent);
     
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 

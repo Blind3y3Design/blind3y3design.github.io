@@ -137,6 +137,10 @@
         padding-inline: var(--space-4x);
     }
 
+    .blog-post__header-image + & {
+        padding-block: var(--space-8x);
+    }
+
     * {
         margin: 0;
         width: 100%;
@@ -156,8 +160,12 @@
         }
     }
 
-    .blog-post__header-image + & {
-        padding-block: var(--space-8x);
+    .svg-container {
+        background: var(--accent);
+    }
+
+    svg {
+        fill: var(--text-color);
     }
 
     blockquote {
