@@ -129,6 +129,7 @@
 .blog-post__post-content {
     display: flex;
     flex-direction: column;
+    gap: var(--space-4x);
     max-width: 80ch;
     padding-block: 0 var(--space-8x);
 
@@ -136,9 +137,23 @@
         padding-inline: var(--space-4x);
     }
 
+    * {
+        margin: 0;
+        width: 100%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        margin-block-start: var(--space-2x);
+    }
+
     picture {
         align-self: center;
-        margin-top: 16px;
+        margin-block-start: var(--space-4x);
+        width: 100%;
+        
+        img {
+            width: 100%;
+        }
     }
 
     .blog-post__header-image + & {
@@ -147,13 +162,7 @@
 
     blockquote {
         border-inline-start: 5px solid var(--text-color);
-        margin: 0;
-        margin-block-start: 0.75rem;
         padding-inline-start: var(--space-4x);
-
-        * {
-            margin: 0;
-        }
 
         * + * {
             margin-block-start: 0.5rem; 
