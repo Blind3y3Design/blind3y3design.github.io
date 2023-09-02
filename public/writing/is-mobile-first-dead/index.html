@@ -104,7 +104,9 @@
         <p class="blog-post__read-time">3 min. read</p>
     </section>
     
-        <section class="blog-post__header-image">
+        
+        
+        <section class="blog-post__header-image ">
             <picture>
   <source type="image/avif" srcset="/img/408c44bc-2400.avif 2400w" sizes="100vw">
   <source type="image/webp" srcset="/img/408c44bc-2400.webp 2400w" sizes="100vw">
@@ -115,7 +117,6 @@
     
     <section class="blog-post__post-content">
         <p>Way back in January of 2016 <a href="https://medium.com/intercom-inside/why-mobile-first-is-outdated-f10a3dc357bd#.o5z9a3npb">Intercom</a> wrote a blog post titled “Why mobile first is outdated”. This post sparked a conversation over on the User Experience slack community <a href="http://designerhangout.co/">Designer Hangout</a>. I’m going to share some of that conversation.</p>
-<hr/>
 <h2>Mobile-First in a Device-Agnostic world</h2>
 <p>The ideas behind mobile-first are relatively new, They only really came about with the advent of smartphones that could reliably access the internet. The iPhone had a large hand in this, and to this day that presence can be felt across the industry.</p>
 <p>A number of companies still use separate mobile and desktop websites, and a lot of those that have moved to “responsive design” may still only think in terms of “desktop”, “tablet”, and “mobile” device sizes, typically with one or two breakpoints for each device. Many designers and developers should be familiar with these numbers: 1024, 768, 414, 375, and 320, these are the most commonly used static breakpoints. 1024 is the width of a landscape iPad, 768 being the portrait view. 414, 375, and 320 are the widths of portrait iPhones, 6(s)+, 6(s), and 4/5(s/c) respectively.</p>
@@ -123,7 +124,6 @@
 <p>How can you guarantee that I’ll have the same or equivalent experiences across all of these devices? You could set up a max-width on the entire site, but then you lose the ability to take advantage of the extra real-estate on larger screens. At the same time, if you stop thinking about devices at a 320 pixel width, i’ll end up with a sub-par experience on any device that falls below that. This is where Device-Agnostic design comes in. Trent Walton has written a <a href="http://trentwalton.com/2014/03/10/device-agnostic/">great article</a> on what it means to be Device-Agnostic.</p>
 <h2>Is the “Mobile” in “Mobile-First” hurting the industry?</h2>
 <p>When most people think mobile first their first thought is of the phone in their pocket. What would this look like on my phone? This is where the term “Mobile-First” does itself a disservice. “Mobile” has an implied connotation, that of a “mobile” phone. This connotation may prevent people from thinking about even smaller devices. The implications of thinking of “mobile” as a wireless, touch-screen device also impact how we think about designing for “mobile” and “desktop”. Touch being one of the bigger features that we take for granted on mobile devices. Often we’ll see layouts better suited to touch on smaller screens. However, there is nothing stopping a larger screen from having touch capability. On the other hand, we often see larger “desktop” layouts with additional flourishes because we assume that people visiting the site on a larger screen have a more stable internet connection; as with touch, there is nothing that says a larger screen has a connection any better than a mobile device, particularly in emerging markets.</p>
-<hr/>
 <h2>Device-Agnostic Performance Focused Design</h2>
 <p>It might not be a catchy buzzword, but essentially what we’re striving towards with “mobile-first” methodologies is a site that is performant across the board, works across all devices; big and small, and provides the user with the information they’re looking for.</p>
 <p>In the end, if no one is willing to use the product, you might as well not have built it.</p>

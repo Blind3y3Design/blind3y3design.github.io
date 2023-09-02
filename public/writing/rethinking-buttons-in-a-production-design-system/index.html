@@ -104,7 +104,9 @@
         <p class="blog-post__read-time">3 min. read</p>
     </section>
     
-        <section class="blog-post__header-image">
+        
+        
+        <section class="blog-post__header-image ">
             <picture>
   <source type="image/avif" srcset="/img/797f955e-2600.avif 2600w" sizes="100vw">
   <source type="image/webp" srcset="/img/797f955e-2600.webp 2600w" sizes="100vw">
@@ -116,7 +118,6 @@
     <section class="blog-post__post-content">
         <p>After two years of the Comet Design System being used by our teams in product we'd begun to see and hear designers and product owners consider non-system button styles and variations.
 In situations like this you need to make a decision as a system - either become the dreaded design police and &quot;squash creative freedom&quot; or embrace the idea of product inspired variation. We chose the latter.</p>
-<hr/>
 <h2>Embracing external variation</h2>
 <p>Our original button component had two possible colors, two sizes, and three visual variations. All in all it was a pretty standard spread, you had your primary and secondary colors, &quot;default,&quot; ghost, and flat buttons, and the ability to make them smaller with reduced padding.</p>
 <picture>
@@ -128,7 +129,6 @@ In situations like this you need to make a decision as a system - either bec
 <p>This worked fine for a time, but eventually product teams would want a product branded button, or we'd hear concerns about the secondary color looking like a disabled button, causing the ghost variation to become our de facto &quot;secondary button.&quot;</p>
 <p>We also saw some explorations and desire for additional shapes of buttons. Younger audiences showed more interest in bigger, rounder, &quot;softer&quot; buttons, a pill button for example. Specific global callouts or action items could benefit from a FAB - floating action button.</p>
 <p>Using these requests we began the task of internal system variation exploration. One of the key factors in this exploration was defining variation categories and their relationships to each other.</p>
-<hr/>
 <h2>Variation categories</h2>
 <p>Looking at our existing button component it became clear that we didn't not have the ability to have a ghost or flat button using anything other than our primary color. This realization revealed that our button component was quite restrictive in use. You could have a &quot;default&quot; button in two colors, and then a ghost or flat button in one. Our amazing extensible, design system had unintentionally limited our design potential to 4 fairly similar buttons.</p>
 <p>Why could we not have a secondary ghost? Was there logical reasoning behind it or had we simply overlooked it? Could there be the potential of color variation for product branding or creating intentional friction to slow a user when required? The answer to both of these questions is yes of course. Taking stock of our variations allowed us to identify what we call variation categories.</p>
@@ -155,7 +155,6 @@ In situations like this you need to make a decision as a system - either bec
 <p>The <em>shape</em> category defines the shape of the button. What shape your button takes can change the feeling and tone if a design. Our default shape was a rectangle with rounded corners, we expanded upon this shape with a pill for use when a softer aesthetic is desired. We also created an icon-only FAB shape variation for use when we need a global-style callout.</p>
 <h3>Size</h3>
 <p><em>Size</em> is simple enough to think about, is the button normal, small, or large. Smaller buttons may be desired in a denser interface or as actions in a table layout. Larger or expanded buttons may be desired as promotional elements or for younger audiences and those with cognitive or physical difficulties.</p>
-<hr/>
 <p>Now instead of limiting our designs to one of four variations our designers and developers could use and combination of category values to create hundreds of variations to fit their specific needs.</p>
 <p>Header Photo by <a href="https://medium.com/r/?url=https%3A%2F%2Funsplash.com%2F%40siora18%3Futm_source%3Dunsplash%26utm_medium%3Dreferral%26utm_content%3DcreditCopyText">Siora Photography</a> on <a href="https://medium.com/r/?url=https%3A%2F%2Funsplash.com%2F%3Futm_source%3Dunsplash%26utm_medium%3Dreferral%26utm_content%3DcreditCopyText">Unsplash</a></p>
 

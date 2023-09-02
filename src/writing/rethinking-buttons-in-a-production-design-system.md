@@ -7,9 +7,6 @@ headerImage: ./src/images/rethinking-buttons/header.jpg
 After two years of the Comet Design System being used by our teams in product we'd begun to see and hear designers and product owners consider non-system button styles and variations.
 In situations like this you need to make a decision as a system - either become the dreaded design police and "squash creative freedom" or embrace the idea of product inspired variation. We chose the latter.
 
-
-<hr/>
-
 ## Embracing external variation
 
 Our original button component had two possible colors, two sizes, and three visual variations. All in all it was a pretty standard spread, you had your primary and secondary colors, "default," ghost, and flat buttons, and the ability to make them smaller with reduced padding.
@@ -21,9 +18,6 @@ This worked fine for a time, but eventually product teams would want a product b
 We also saw some explorations and desire for additional shapes of buttons. Younger audiences showed more interest in bigger, rounder, "softer" buttons, a pill button for example. Specific global callouts or action items could benefit from a FAB - floating action button.
 
 Using these requests we began the task of internal system variation exploration. One of the key factors in this exploration was defining variation categories and their relationships to each other.
-
-
-<hr/>
 
 ## Variation categories
 
@@ -58,9 +52,6 @@ The *shape* category defines the shape of the button. What shape your button tak
 ### Size
 
 *Size* is simple enough to think about, is the button normal, small, or large. Smaller buttons may be desired in a denser interface or as actions in a table layout. Larger or expanded buttons may be desired as promotional elements or for younger audiences and those with cognitive or physical difficulties.
-
-
-<hr/>
 
 Now instead of limiting our designs to one of four variations our designers and developers could use and combination of category values to create hundreds of variations to fit their specific needs.
 

@@ -141,8 +141,6 @@ Thinking in a more programmatic way about how to author styles allows for cleane
 
 Combining this way of thinking with modern build tools available to developers means code can be easily scanned and human-readable speeding up the development process and reducing human error.
 
-<hr/>
-
 Thanks for reading!
 
 If you have any suggestions or ideas, feel free to reach out on Twitter or drop a reply.
