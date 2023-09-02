@@ -4,6 +4,7 @@ title: "Be a Design A11y: An Introduction to Accessibility"
 headerImage: ./src/images/design-a11y/design-a11y-header.png
 headerImageAlt: "A graphic displaying multiple individuals who may present with some form of disability"
 headerImageContained: true
+eleventyExcludeFromCollections: true
 ---
 
 This is an introductory look at Accessibility and how it related to the designing and building of digital products and experiences. The aim of this post is to be a general references for high-level accessibility topics that anyone can use. A basic knowledge of computer literacy and understanding of how digital products are built is assumed.
