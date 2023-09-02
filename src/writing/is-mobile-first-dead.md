@@ -6,8 +6,6 @@ headerImage: ./src/images/mobile-first/mobile-first-header.jpg
 
 Way back in January of 2016 [Intercom](https://medium.com/intercom-inside/why-mobile-first-is-outdated-f10a3dc357bd#.o5z9a3npb) wrote a blog post titled “Why mobile first is outdated”. This post sparked a conversation over on the User Experience slack community [Designer Hangout](http://designerhangout.co/). I’m going to share some of that conversation.
 
-<hr/>
-
 ## Mobile-First in a Device-Agnostic world
 
 The ideas behind mobile-first are relatively new, They only really came about with the advent of smartphones that could reliably access the internet. The iPhone had a large hand in this, and to this day that presence can be felt across the industry.
@@ -21,8 +19,6 @@ How can you guarantee that I’ll have the same or equivalent experiences across
 ## Is the “Mobile” in “Mobile-First” hurting the industry?
 
 When most people think mobile first their first thought is of the phone in their pocket. What would this look like on my phone? This is where the term “Mobile-First” does itself a disservice. “Mobile” has an implied connotation, that of a “mobile” phone. This connotation may prevent people from thinking about even smaller devices. The implications of thinking of “mobile” as a wireless, touch-screen device also impact how we think about designing for “mobile” and “desktop”. Touch being one of the bigger features that we take for granted on mobile devices. Often we’ll see layouts better suited to touch on smaller screens. However, there is nothing stopping a larger screen from having touch capability. On the other hand, we often see larger “desktop” layouts with additional flourishes because we assume that people visiting the site on a larger screen have a more stable internet connection; as with touch, there is nothing that says a larger screen has a connection any better than a mobile device, particularly in emerging markets.
-
-<hr/>
 
 ## Device-Agnostic Performance Focused Design
 

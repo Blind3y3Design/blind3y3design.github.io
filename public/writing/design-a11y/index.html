@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be a Design A11y: An Introduction to Accessibility | Adam Sedwick</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        // if there's a theme id in localstorage, use it on the <html>
+        localStorage.getItem('theme') && 
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+    </script>
+
+    <!-- Prism Syntax Highlighting -->
+    <link rel="stylesheet" href="/css/prism-xonokai.css">
+</head>
+
+    <body>
+        <header>
+    <div class="header__inner">
+        <a href="/" aria-label="home" class="home-link ">Adam Sedwick</a>
+        <nav class="main-nav">
+            <ul role="navigation">
+                <li>
+                    <a href="/writing" class="nav__link nav__link--active">Writing</a>
+                </li>
+                <li>
+                    <a href="/work" class="nav__link ">Work</a>
+                </li>
+                <li>
+                    <a href="/about" class="nav__link ">About</a>
+                </li>
+                <li>
+                    <a href="/bookshelf" class="nav__link ">Bookshelf</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="theme-menu-trigger" aria-label="Open Theme Switcher">
+            <svg class="theme-menu-trigger__icon theme-menu-trigger__icon--sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15ZM12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"/>
+                <path d="M12 3C12.5523 3 13 3.44772 13 4V5C13 5.55228 12.5523 6 12 6C11.4477 6 11 5.55228 11 5V4C11 3.44772 11.4477 3 12 3Z"/>
+                <path d="M12 18C12.5523 18 13 18.4477 13 19V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V19C11 18.4477 11.4477 18 12 18Z"/>
+                <path d="M18 12C18 11.4477 18.4477 11 19 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H19C18.4477 13 18 12.5523 18 12Z"/>
+                <path d="M3 12C3 11.4477 3.44772 11 4 11H5C5.55228 11 6 11.4477 6 12C6 12.5523 5.55228 13 5 13H4C3.44772 13 3 12.5523 3 12Z"/>
+                <path d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L17.7071 7.70711C17.3166 8.09763 16.6834 8.09763 16.2929 7.70711C15.9024 7.31658 15.9024 6.68342 16.2929 6.29289L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                <path d="M5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289Z"/>
+                <path d="M5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L6.29289 16.2929C6.68342 15.9024 7.31658 15.9024 7.70711 16.2929C8.09763 16.6834 8.09763 17.3166 7.70711 17.7071L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071Z"/>
+                <path d="M18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L17.7071 16.2929C17.3166 15.9024 16.6834 15.9024 16.2929 16.2929C15.9024 16.6834 15.9024 17.3166 16.2929 17.7071L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071Z"/>
+            </svg>
+            <svg class="theme-menu-trigger__icon theme-menu-trigger__icon--moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.8423 1.5C18.1656 1.5 18.4676 1.66685 18.6469 1.94463L19.6833 3.54969L21.8072 5.19444C22.0507 5.38301 22.194 5.67895 22.194 5.99324C22.194 6.30752 22.0507 6.60346 21.8072 6.79203L19.6833 8.43678L18.6469 10.0418C18.4676 10.3196 18.1656 10.4865 17.8423 10.4865C17.5189 10.4865 17.217 10.3196 17.0376 10.0418L16.0013 8.43678L13.8773 6.79203C13.6338 6.60346 13.4905 6.30752 13.4905 5.99324C13.4905 5.67895 13.6338 5.38301 13.8773 5.19444L16.0013 3.54969L17.0376 1.94463C17.217 1.66685 17.5189 1.5 17.8423 1.5ZM17.8423 4.29856L17.5187 4.79973C17.4579 4.89392 17.382 4.97674 17.2943 5.04466L16.0693 5.99324L17.2943 6.94181C17.382 7.00973 17.4579 7.09255 17.5187 7.18674L17.8423 7.68791L18.1659 7.18674C18.2267 7.09255 18.3026 7.00973 18.3903 6.94181L19.6152 5.99324L18.3903 5.04466C18.3026 4.97674 18.2267 4.89392 18.1659 4.79973L17.8423 4.29856Z"/>
+                <path d="M8.01863 2.63941C8.01861 2.63959 8.01865 2.63923 8.01863 2.63941L8.01753 2.64947C8.01646 2.65935 8.01476 2.67564 8.01257 2.69804C8.00821 2.74286 8.00194 2.81207 7.99509 2.90328C7.98138 3.08581 7.9654 3.35575 7.95758 3.69398C7.94192 4.372 7.95931 5.31607 8.09086 6.37573C8.35709 8.52036 9.07382 11.0044 10.7896 12.776C12.5181 14.5606 15.1432 15.4871 17.4546 15.9513C18.5929 16.1799 19.6175 16.2891 20.3569 16.3409C20.7259 16.3668 21.0221 16.3782 21.2238 16.3832C21.3246 16.3857 21.4016 16.3866 21.4522 16.3869C21.4775 16.387 21.4962 16.387 21.5079 16.387L21.5201 16.3869L21.5217 16.3869C21.9361 16.3821 22.3079 16.6506 22.4453 17.0544C22.5827 17.4584 22.4554 17.9078 22.1289 18.1717C20.3595 19.6014 17.3735 21.3968 14.1113 22.1462C10.8317 22.8997 7.1319 22.6165 4.21008 19.6437C1.27149 16.6538 1.08245 12.8501 1.95961 9.55261C2.82899 6.28438 4.77503 3.34886 6.39989 1.78783C6.69724 1.50217 7.13578 1.43878 7.49768 1.62916C7.85927 1.81939 8.06733 2.22245 8.01875 2.63837C8.01875 2.63841 8.01876 2.63833 8.01875 2.63837L8.01863 2.63941ZM18.6389 18.1709C18.1568 18.1061 17.6337 18.0217 17.0853 17.9115C14.6503 17.4225 11.5618 16.3974 9.42201 14.188C7.26958 11.9656 6.46272 8.96807 6.17243 6.62961C6.11336 6.15377 6.07498 5.69965 6.05133 5.27772C5.14777 6.61422 4.29968 8.29578 3.82467 10.0815C3.06345 12.9431 3.29045 15.9043 5.56764 18.2213C7.86161 20.5553 10.7964 20.862 13.6912 20.1969C15.483 19.7853 17.2051 19.0092 18.6389 18.1709Z"/>
+            </svg>
+        </button>
+        
+        <button class="mobile-menu-trigger" aria-label="Open Menu">
+            <svg class="mobile-menu-trigger__icon" viewBox="0 0 24 14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1C0 0.447715 0.447715 0 1 0H23C23.5523 0 24 0.447715 24 1C24 1.55228 23.5523 2 23 2H1C0.447715 2 0 1.55228 0 1ZM0 7C0 6.44772 0.447715 6 1 6H23C23.5523 6 24 6.44772 24 7C24 7.55228 23.5523 8 23 8H1C0.447715 8 0 7.55228 0 7ZM1 12C0.447715 12 0 12.4477 0 13C0 13.5523 0.447715 14 1 14H23C23.5523 14 24 13.5523 24 13C24 12.4477 23.5523 12 23 12H1Z"/>
+            </svg>
+        </button>
+        
+    </div>
+
+    <div class="theme-menu">
+        <div class="theme-menu__inner">
+            <button class="theme-menu__button" data-theme-id="light">Light</button>
+            <button class="theme-menu__button" data-theme-id="dark">Dark</button>
+            <button class="theme-menu__button" data-theme-id="">System Default</button>
+        </div>
+    </div>
+    
+    <div class="mobile-menu">
+        <div class="mobile-menu__inner">
+            <nav class="mobile-nav">
+                <ul role="navigation">
+                    <li>
+                        <a href="/writing" class="mobile-nav__link mobile-nav__link--active">Writing</a>
+                    </li>
+                    <li>
+                        <a href="/work" class="mobile-nav__link ">Work</a>
+                    </li>
+                    <li>
+                        <a href="/about" class="mobile-nav__link ">About</a>
+                    </li>
+                    <li>
+                        <a href="/bookshelf" class="mobile-nav__link ">Bookshelf</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+        <main class="main-content post be-a-design-a11y-an-introduction-to-accessibility">
+            <div class="blog-post">
+    <section class="blog-post__heading">
+        <h1 class="blog-post__title">Be a Design A11y: An Introduction to Accessibility</h1>
+        <p class="blog-post__date">Posted on Sep 1, 2023</p>
+        <p class="blog-post__read-time">9 min. read</p>
+    </section>
+    
+        
+        
+            
+        
+        <section class="blog-post__header-image blog-post__header-image--contained">
+            <picture>
+  <source type="image/avif" srcset="/img/38ef76b8-1366.avif 1366w" sizes="100vw">
+  <source type="image/webp" srcset="/img/38ef76b8-1366.webp 1366w" sizes="100vw">
+  <source type="image/png" srcset="/img/38ef76b8-1366.png 1366w" sizes="100vw">
+  <img src="/img/38ef76b8-1366.jpeg" width="1366" height="683" alt="A graphic displaying multiple individuals who may present with some form of disability" loading="lazy" decoding="async">
+</picture>
+        </section>
+    
+    <section class="blog-post__post-content">
+        <p>This is an introductory look at Accessibility and how it related to the designing and building of digital products and experiences. The aim of this post is to be a general references for high-level accessibility topics that anyone can use. A basic knowledge of computer literacy and understanding of how digital products are built is assumed.</p>
+<h2>What Is Accessibility?</h2>
+<p>I think Mozilla puts it best on their page <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is Accessibility</a>.</p>
+<blockquote>
+<p>Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.</p>
+</blockquote>
+<p>Essentially, caring about accessibility and creating accessible digital products means you’re thinking about and putting in the effort to ensure that anyone who wants to experience your product can.</p>
+<h3>What about A11y?</h3>
+<p>You may often see the term A11y when reading about or looking up accessibility. A11y is a numeronym or number-based word for Accessibility. Similar common numeronyms in the tech space would be L10n and I18N for Localization and Internationalization respectively.</p>
+<p>The 11 in A11y stands for the 11 letters between the A and Y in the word accessibility. Due to the fact that the term A11y looks like the word Ally the community often uses the shorter numeronym because we enjoy and encourage the thought that working in accessibility means you’re being an ally to people who need accessibility features and support.</p>
+<h2>Why should I care about Accessibility?</h2>
+<p>As a creator of digital products accessibility should always be a consideration at any stage of the product development cycle. According to the <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">CDC</a>, 1 in 4 adults in the US live with some type of disability. On top of this, many accessibility features are not just for disabled individuals, building products with a consideration for accessibility often means that the overall experience will be better for everyone.</p>
+<div class="svg-container">
+    <svg width="768" height="224" viewBox="0 0 768 224" xmlns="http://www.w3.org/2000/svg">
+<path d="M110.743 79.0777C107.442 79.0777 104.508 77.0624 103.225 74.1311H118.262C116.978 77.0624 114.044 79.0777 110.743 79.0777Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M137.502 59.8553V58.5577C137.502 43.827 124.984 32.1908 110.562 32.1908C96.1304 32.1908 83.622 44.0198 83.622 58.5577V59.8553H83.237V63.8553H83.622V71.5657H87.622V63.8553H91.139V69.1841C91.139 76.499 95.1517 82.785 101.03 86.095C89.5473 89.7617 80.8889 99.7542 79.1664 111.969C70.6134 112.806 64 119.946 64 128.727C64 138.078 71.4992 145.567 80.854 145.567C85.1246 145.567 89.0085 144.007 91.9688 141.42L88.2785 168.285H98.659V191.202H102.659V168.285H118.647V191.202H122.647V168.285H132.831L127.598 128.779V111.505H123.598V129.042L128.267 164.285H92.8655L97.1574 133.041C97.5168 131.666 97.708 130.22 97.708 128.727C97.708 128.661 97.7076 128.595 97.7068 128.528H103.903C104.763 131.391 107.42 133.475 110.562 133.475C113.705 133.475 116.361 131.391 117.221 128.528H123.032V124.528H117.221C116.551 122.299 114.791 120.541 112.56 119.873V100.728C117.577 99.9703 121.538 96.1171 122.448 91.155C132.005 95.5766 138.636 105.244 138.636 116.452V133.857H142.636V116.452C142.636 102.158 133.208 90.0594 120.23 86.0232C126.085 82.6589 129.981 76.3376 129.981 69.1841V63.8553H133.502V71.5657H137.502V63.8553H138.069V59.8553H137.502ZM110.562 36.1908C98.2196 36.1908 87.622 46.347 87.622 58.5577V59.8553H108.56V36.7552H112.56V59.8553H133.502V58.5577C133.502 46.1735 122.914 36.1908 110.562 36.1908ZM108.56 119.875C106.331 120.543 104.573 122.3 103.903 124.528H97.1581C95.4366 118.084 89.8653 113.153 83.1924 112.095C84.658 102.779 90.747 94.9927 99.0388 91.1556C99.9271 95.9956 103.717 99.7805 108.56 100.667V119.875ZM68 128.727C68 122.268 72.6705 116.985 78.8557 116.038C78.8544 116.134 78.8536 116.23 78.8533 116.327C78.8531 116.368 78.853 116.41 78.853 116.452H82.853C82.853 116.333 82.8538 116.213 82.8553 116.094C88.9507 117.196 93.708 122.495 93.708 128.727L93.7079 128.759L93.2303 132.237C91.7179 137.646 86.7826 141.567 80.854 141.567C73.7048 141.567 68 135.865 68 128.727ZM125.981 63.8553H95.139V69.1841C95.139 77.7743 102.113 84.5891 110.56 84.5891C119.163 84.5891 125.981 77.6185 125.981 69.1841V63.8553ZM110.744 96.8638C106.596 96.8638 103.245 93.7495 102.875 89.7142C105.371 88.9819 108.011 88.5891 110.744 88.5891C113.476 88.5891 116.117 88.9818 118.612 89.7137C118.243 93.7493 114.891 96.8638 110.744 96.8638ZM110.562 123.582C108.931 123.582 107.611 124.903 107.611 126.528C107.611 128.154 108.931 129.475 110.562 129.475C112.194 129.475 113.513 128.155 113.513 126.528C113.513 124.903 112.194 123.582 110.562 123.582Z"/>
+<path d="M138.636 150.88V191.201H142.636V150.88H147.972V146.88H142.636V141.368H138.636V146.88H133.118V150.88H138.636Z"/>
+<path d="M83.622 86.5892V76.5127H87.622V86.5892H83.622Z"/>
+<path d="M133.5 76.5127V86.5892H137.5V76.5127H133.5Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M236.274 37.1376C224.18 37.1376 214.285 46.9966 214.285 58.9244V69.0008C214.285 77.7566 219.453 85.2297 226.876 88.7054C213.641 92.5835 203.972 104.808 203.972 119.285V133.743H219.237V191.202H223.237V155.643H249.128V191.202H253.128V108.941H249.128V141.75H223.237V133.743H240.998V129.743H235.157V91.4308C235.392 91.425 235.627 91.4221 235.863 91.4221C251.264 91.4221 263.754 103.903 263.754 119.285V154.095H267.754V119.285C267.754 104.976 258.307 92.8672 245.308 88.8436C252.929 85.3994 258.262 77.7576 258.262 69.0008V58.9244C258.262 46.8016 248.356 37.1376 236.274 37.1376ZM231.157 91.8172C218.784 93.9188 209.185 104.165 208.079 116.834H231.157V91.8172ZM231.157 120.834H207.972V129.743H231.157V120.834ZM236.274 86.7875C227.622 86.7875 220.384 80.7648 218.67 72.6859C221.146 75.5639 224.5 77.8119 228.278 79.133L230.674 79.971L230.928 77.445C230.973 76.9959 231.18 76.5841 231.457 76.2962C231.747 75.9951 231.988 75.9474 232.056 75.9474H240.308C240.505 75.9474 240.726 76.0265 240.948 76.2666C241.18 76.518 241.384 76.926 241.436 77.445L241.68 79.8783L244.017 79.1558C248.021 77.9176 251.396 75.7036 253.835 72.8276C252.045 80.7328 244.846 86.7875 236.274 86.7875ZM254.079 61.3059H254.262V60.9243H218.285V61.3059C218.285 66.8265 222.037 71.9403 227.752 74.6064C227.987 74.2082 228.265 73.844 228.575 73.5222C229.431 72.6326 230.657 71.9474 232.056 71.9474H240.308C242.322 71.9474 243.829 73.1232 244.674 74.6622C250.557 72.1608 254.079 67.0646 254.079 61.3059ZM218.401 56.9243C219.419 48.1444 227.052 41.1376 236.274 41.1376C245.518 41.1376 253.147 48.0121 254.15 56.9243H218.401ZM223.237 145.75V151.643H249.128V145.75H223.237Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M353.15 56.5434C353.15 43.405 365.063 32.9508 378.55 34.9611C387.377 36.2682 394.016 42.9252 396.281 51.0853C397.352 50.2782 398.684 49.7794 400.263 49.7794C402.372 49.7794 404.175 50.6045 405.424 52.0539C406.644 53.4704 407.215 55.3383 407.215 57.2754V82.3754C407.215 83.2811 407.47 83.8379 407.765 84.2147C408.082 84.6206 408.546 84.9415 409.116 85.1843C409.686 85.427 410.283 85.5579 410.756 85.6252C410.988 85.6582 411.178 85.6741 411.303 85.6817C411.365 85.6855 411.41 85.6872 411.436 85.6879L411.458 85.6884L413.449 85.6884V87.6884C413.449 93.0789 409.527 98.4824 403.564 98.4824H401.66C405.164 103.598 407.214 109.787 407.214 116.452V153.827H403.214V116.452C403.214 102.75 393.305 91.3506 380.254 89.0229V138.803H376.254V88.6037C375.945 88.5935 375.634 88.5884 375.322 88.5884C359.921 88.5884 347.431 101.07 347.431 116.452V123.398H341.764L323.754 94.9882L327.132 92.8466L343.431 118.557V116.452C343.431 102.311 352.657 90.3192 365.419 86.1555C358.188 82.5713 353.15 75.1631 353.15 66.6204V56.5434ZM398.418 94.4824H403.564C406.264 94.4824 408.589 92.3392 409.257 89.4125C408.732 89.2927 408.145 89.1186 407.548 88.8642C406.56 88.4429 405.465 87.7676 404.614 86.6792C403.74 85.5617 403.215 84.1262 403.215 82.3754V57.2754C403.215 56.0975 402.869 55.2173 402.393 54.6646C401.945 54.1447 401.272 53.7794 400.263 53.7794C398.651 53.7794 397.129 55.3667 397.129 57.8254V61.6724H397.127V65.8874C397.127 74.3698 392.425 82.3125 385.07 86.1051C390.21 87.7526 394.782 90.6679 398.418 94.4824ZM377.961 38.9175C368.24 37.468 359.564 43.9033 357.576 52.7114H374.755V54.7114C374.755 64.231 382.477 71.9484 392.01 71.9484V72.3389C392.735 70.307 393.127 68.1269 393.127 65.8874V57.2764C393.127 48.2694 386.786 40.2239 377.963 38.9178L377.961 38.9175ZM357.15 66.6204V56.7114H370.848C371.805 66.9498 380.032 75.0734 390.319 75.8822C387.645 80.2605 383.249 83.4624 377.963 84.245L377.961 84.2453C371.703 85.1785 365.877 82.8435 361.991 78.7115C364.571 78.1543 366.748 76.3616 367.805 73.9474H358.766C357.729 71.708 357.15 69.2261 357.15 66.6204Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M392.176 191.202V111.322H388.176V139.37H362.285V113.887H358.285V191.202H362.285V153.262H388.176V191.202H392.176ZM362.285 143.37V149.262H388.176V143.37H362.285Z"/>
+<path d="M327.634 86.7892L337.72 101.812L341.041 99.5826L330.955 84.5596L327.634 86.7892Z"/>
+<path d="M512.543 111.506H525.013V107.506H512.543V111.506Z"/>
+<path d="M525.013 99.0474H512.543V95.0474H525.013V99.0474Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M520.063 32.5734C507.969 32.5734 498.074 42.432 498.074 54.3604V64.4363C498.074 72.3931 502.219 79.253 508.422 83.1031C499.12 85.1196 491.432 91.2955 487.036 99.4794V82.5884H469.449V86.5884H483.036V156.773H483.06C483.735 175.904 499.47 191.202 518.779 191.202C538.097 191.202 553.838 175.89 554.5 156.746L574.301 177.195L583.624 168.098L580.83 165.235L574.381 171.528L554.2 150.688C552.639 139.089 545.505 129.255 535.579 123.964H549.954V119.964H529.398V84.5884H528.813C536.586 81.2073 542.051 73.4849 542.051 64.6193V56.5434H547.003V54.5434C547.003 43.6032 537.19 32.7816 525.057 32.7564L524.399 32.7294C523.977 32.7122 523.409 32.6893 522.823 32.6664C521.685 32.6219 520.389 32.5734 520.063 32.5734ZM487.036 139.062C490.371 132.644 495.598 127.366 501.979 123.964H487.604V119.964H515.138C516.336 119.843 517.55 119.781 518.779 119.781C520.008 119.781 521.223 119.843 522.42 119.964H525.398V85.7504C523.689 86.1786 521.901 86.4063 520.063 86.4063C519.992 86.4063 519.922 86.406 519.851 86.4053H514.401C499.074 86.7583 487.037 99.8908 487.037 115.368V116.834H487.036V139.062ZM487.037 155.492C487.037 147.5 489.997 140.198 494.881 134.62L515.944 155.583L494.966 176.461C490.031 170.871 487.037 163.531 487.037 155.492ZM518.78 152.761L497.7 131.782C502.503 127.518 508.61 124.688 515.349 123.964H522.209C528.948 124.688 535.056 127.518 539.859 131.783L518.78 152.761ZM497.797 179.287L518.78 158.405L539.762 179.287C534.168 184.213 526.823 187.202 518.779 187.202C510.735 187.202 503.39 184.214 497.797 179.287ZM521.615 155.583L542.592 176.46C547.527 170.871 550.521 163.531 550.521 155.492C550.521 147.5 547.562 140.198 542.677 134.621L521.615 155.583ZM517.75 56.5434H517.495V52.5434H517.879V51.9774H521.879V52.5434H542.867C541.764 44.4071 534.123 36.7564 525.014 36.7564H524.973L524.237 36.7261C523.816 36.709 523.25 36.6862 522.667 36.6633C521.466 36.6164 520.287 36.5734 520.063 36.5734C510.151 36.5734 502.074 44.6687 502.074 54.3604V64.4363C502.074 66.3634 502.371 68.2117 502.92 69.9406C510.618 69.7161 516.792 63.9045 517.75 56.5434ZM521.777 56.5434C520.853 65.5212 513.782 72.7891 504.689 73.8216C507.819 78.9512 513.449 82.339 519.871 82.4053H519.879C519.94 82.4059 520.002 82.4063 520.063 82.4063C525.239 82.4063 529.915 80.1988 533.201 76.7091C530.627 76.1493 528.454 74.3582 527.398 71.9474H536.429C537.47 69.7031 538.051 67.2187 538.051 64.6193V56.5434H521.777Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M552.905 182.973C552.905 178.426 556.594 174.743 561.14 174.743C565.687 174.743 569.375 178.426 569.375 182.973C569.375 187.52 565.687 191.202 561.14 191.202C556.594 191.202 552.905 187.52 552.905 182.973ZM561.14 178.743C558.8 178.743 556.905 180.639 556.905 182.973C556.905 185.307 558.8 187.202 561.14 187.202C563.481 187.202 565.375 185.307 565.375 182.973C565.375 180.638 563.481 178.743 561.14 178.743Z"/>
+<path d="M663.996 74.131C665.279 77.0623 668.213 79.0776 671.514 79.0776C674.815 79.0776 677.749 77.0623 679.033 74.131H663.996Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M655.718 32L649.527 38.723V66.6187C649.527 75.2118 654.505 82.5694 661.707 86.1254C648.895 90.2605 639.624 102.276 639.624 116.452V153.827H643.624V116.452C643.624 105.551 649.896 96.108 659.032 91.5305L670.258 100.602H672.772L683.999 91.5305C693.135 96.1081 699.407 105.552 699.407 116.452V134.422H683.985V138.422H703.407V116.452C703.407 102.262 694.116 90.2362 681.285 86.1129C688.512 82.52 693.505 75.0913 693.505 66.6187V38.1249L687.437 32.063L683.586 36.0936L679.585 32.0962L675.55 36.1268L671.483 32.063L667.632 36.0936L663.63 32.0962L659.629 36.0935L655.718 32ZM679.747 89.8233C677.145 89.021 674.381 88.589 671.515 88.589C668.65 88.589 665.885 89.021 663.283 89.8233L671.515 96.4755L679.747 89.8233ZM689.505 53.5959H653.527V66.6187C653.527 76.481 661.592 84.4053 671.516 84.4053C681.428 84.4053 689.505 76.3098 689.505 66.6187V53.5959ZM689.505 39.7828V49.5959H653.527V40.2841L655.772 37.8465L659.563 41.8142L663.63 37.7504L667.698 41.8142L671.549 37.7836L675.55 41.781L679.585 37.7504L683.652 41.8141L687.503 37.7836L689.505 39.7828Z"/>
+<path d="M686.937 123.964C686.937 122.322 685.633 121.017 683.985 121.017V117.017C687.839 117.017 690.937 120.109 690.937 123.964C690.937 127.819 687.839 130.91 683.985 130.91V126.91C685.633 126.91 686.937 125.606 686.937 123.964Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M654.478 106.559V191.202H658.478V158.391H684.553V191.202H688.553V144.315H658.478V106.559H654.478ZM684.553 154.391H658.478V148.315H684.553V154.391Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M666.948 117.017V138.422H683.418V117.017H666.948ZM670.948 134.422V121.017H679.418V134.422H670.948Z"/>
+</svg>
+</div>
+<p>As part of their <a href="https://inclusive.microsoft.design/">Inclusive Design</a> work, Microsoft has outlined and documented the realities of disability in the modern age. According to the World Health Organization, &quot;Disability is not just a health problem. It is a complex phenomenon, reflecting the
+interaction between features of a person’s body and features of the society in which he or she lives.” Microsoft has represented this in their guidelines with different modalities of disability they call the Persona Spectrum. For example, a person with 1 arm, a person with an arm injury, and a new parent holding a child all fall into the same modality of “has one arm to interact with the product.”</p>
+<p>Additionally depending on the market your product serves there are now many laws in different parts of the world that require digital experiences to be accessible. In recent years that has been an increasing trend of digital product and experiences facing litigation for failing to provide accessible experiences, you can find more details in the <a href="https://www.levelaccess.com/blog/web-accessibility-lawsuits-2022-recap-and-what-to-expect-in-2023/">2022 recap report</a> from Level Access.</p>
+<h2>Understanding Accessibility Principles</h2>
+<p>So now that we know what accessibility is, how do we actually go about crafting accessible products and experiences?</p>
+<p>A good place to start is with the 4 principles of accessibility: perceivable, operable, understandable, and robust, often referred to by the acronym POUR. At it’s most basic these are the 4 pillars on which all other guidelines sit.</p>
+<picture>
+  <source type="image/avif" srcset="/img/86ed3e71-1200.avif 1200w">
+  <source type="image/webp" srcset="/img/86ed3e71-1200.webp 1200w">
+  <source type="image/png" srcset="/img/86ed3e71-1200.png 1200w">
+  <img src="/img/86ed3e71-1200.jpeg" width="1200" height="627" alt="Graphic of the POUR accessibility principles: perceivable, operable, understandable, robust" loading="lazy" decoding="async">
+</picture>
+<h3>Perceivable</h3>
+<blockquote>
+<p>Information and user interface components must be presentable to users in ways they can perceive. This means that users must be able to experience the information being presented; it can’t be invisible to any of their senses.</p>
+</blockquote>
+<p>The idea behind the principle of perceivable is that no matter how a user is accessing your product they can experience the content. For a sighted user this is as simple as displaying an image or text on the screen. For a non-sighted or low vision user this would mean adding meaningful alt text to non-text content and ensuring that the text is properly read by a screen-reading tool.</p>
+<h3>Operable</h3>
+<blockquote>
+<p>User interface components and navigation must be operable. This means that users must be able to use the interface and it cannot require interaction that a user cannot perform.</p>
+</blockquote>
+<p>The principle of operable states that, much like perceivable, a user should be able to use an interface, regardless of how they’re using the product. An example of this would be a user being able to navigate through an interface using a keyboard. A control on an interface should not require the user to use a specific input device such as a mouse to interact with it.</p>
+<h3>Understandable</h3>
+<blockquote>
+<p>Information and the operation of user interfaces must be understandable. This means that users must be able to comprehend information as well as how to use the interface.</p>
+</blockquote>
+<p>The understandable principle outlines that a user should not only be able to experience and interact with a product or interface, but that they should understand what they are doing or expected to be doing. The simplest example of ensuring an interface is understandable would be to include instructions and labels with any input or form. On a login form the inputs should be clearly labeled so the user knows which field is for a username and which field is for a password.</p>
+<h3>Robust</h3>
+<blockquote>
+<p>Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. This means as technologies and user agents advance and evolve, content should remain accessible.</p>
+</blockquote>
+<p>Finally, the principle of robust explains that on top of all of the above criteria your product should be able to integrate with or be interpreted by as wide a range of tools as possible. Robust products and experiences not only work in a browser, but properly expose their contents to assistive technologies like screen readers without errors or crashing.</p>
+<h2>Accessibility Guidelines and Standards</h2>
+<p>Putting the principles into practice is easier now than ever before. Thanks to the Web Accessibility Initiative (WAI) of the W3C we have the Web Content Accessibility Guidelines, more commonly known as the <a href="https://www.w3.org/TR/WCAG21/">WCAG</a>. The WCAG is an international standards document that outlines the what and how of specific accessibility features.</p>
+<p>The original document known as WCAG 2.0 was published in 2008 and outlined 12-13 guidelines, which in turn had testable <em>success criterion</em> with the defined levels of A, AA, and AAA. In 2018 the updated WCAG 2.1 was published to expand upon the 2.0 version with 17 additional success criterion. As of the writing of this article there is an additional update, WCAG 2.2 that is scheduled to be published in 2023.</p>
+<h3>Color Contrast Example</h3>
+<p>One of the most common success criterion discussed and cited is that of adequate color contrast.</p>
+<blockquote>
+<p><strong>Success Criterion 1.4.3 Contrast (Minimum)</strong></p>
+<p>(Level AA)</p>
+<p>The visual presentation of <a href="https://www.w3.org/TR/WCAG21/#dfn-text">text</a> and <a href="https://www.w3.org/TR/WCAG21/#dfn-images-of-text">images of text</a> has a <a href="https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio">contrast ratio</a> of at least 4.5:1, except for the following:</p>
+<p><strong>Large Text:</strong> <a href="https://www.w3.org/TR/WCAG21/#dfn-large-scale">Large-scale</a> text and images of large-scale text have a contrast ratio of at least 3:1;</p>
+<p><strong>Incidental:</strong> Text or images of text that are part of an inactive <a href="https://www.w3.org/TR/WCAG21/#dfn-user-interface-components">user interface component</a>, that are <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">pure decoration</a>, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</p>
+<p><strong>Logotypes:</strong> Text that is part of a logo or brand name has no contrast requirement.</p>
+</blockquote>
+<p>As you can see the requirements within the success criterion are very clear and explicitly testable. Any time text appears in an interface, the color of that text should have a contrast ratio of at least 4.5:1. There are of course exceptions to this rule, but those exceptions are also clearly denoted and provided with testable values of their own where applicable.</p>
+<picture>
+  <source type="image/avif" srcset="/img/e3de6423-842.avif 842w">
+  <source type="image/webp" srcset="/img/e3de6423-842.webp 842w">
+  <source type="image/png" srcset="/img/e3de6423-842.png 842w">
+  <img src="/img/e3de6423-842.jpeg" width="842" height="407" alt="Example of two blue hex values and their contrast ratios against white. One failing and one passing." loading="lazy" decoding="async">
+</picture>
+<h2>In Summary</h2>
+<p>Accessibility is the process of ensuring that your digital products and experiences can be used by everyone. Accessibility practices not only improve the web for those with disabilities, but can also enhance the experience for all user by providing clear instructions, descriptions, and wayfinding markers.</p>
+<p>I hope you’ll take what you’ve learned here and join me as an A11y, helping make the web a more inclusive and accessible place for everyone.</p>
+<h2>Additional Resources</h2>
+<p><a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a></p>
+<p><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Introduction to Web Accessibility</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">MDN Accessibility Guides</a></p>
+<p><a href="https://www.levelaccess.com/">Level Access</a></p>
+<p><a href="https://www.a11yproject.com/">The A11y Project</a></p>
+<p><a href="https://abookapart.com/products/accessibility-for-everyone">Accessibility For Everyone</a></p>
+<p><a href="https://download.microsoft.com/download/b/0/d/b0d4bf87-09ce-4417-8f28-d60703d672ed/inclusive_toolkit_manual_final.pdf">Inclusive Toolkit Manual</a></p>
+<p><a href="https://inclusive.microsoft.design/">Microsoft Inclusive Design</a></p>
+
+    </section>
+</div>
+        </main>
+        
+        <script src="/scripts/headroom.js"></script>
+<script src="/scripts/main.js"></script>
+        <footer class="footer">
+    <div class="footer__inner">
+    
+        <p class="footer__copyright">&copy; 2023 Adam Sedwick</p>
+
+        <div class="social-links">
+            <a href="mailto:adam.sedwick@gmail.com" class="social-link social-link--email" aria-label="Email Me">
+                <svg class="social-link__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4H18C20.2091 4 22 5.79086 22 8V16C22 18.2091 20.2091 20 18 20H6C3.79086 20 2 18.2091 2 16V8C2 5.79086 3.79086 4 6 4ZM6 6C4.89543 6 4 6.89543 4 8V16C4 17.1046 4.89543 18 6 18H18C19.1046 18 20 17.1046 20 16V8C20 6.89543 19.1046 6 18 6H6Z"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.44076 4H18.5592C20.4595 4 22 5.54048 22 7.44076C22 8.9457 21.022 10.276 19.5855 10.7249L13.1931 12.7225C12.4162 12.9653 11.5838 12.9653 10.8069 12.7225L4.41447 10.7249C2.97804 10.276 2 8.9457 2 7.44076C2 5.54048 3.54048 4 5.44076 4ZM5.44076 6C4.64505 6 4 6.64505 4 7.44076C4 8.07093 4.40954 8.62798 5.01102 8.81594L11.4035 10.8136C11.7919 10.935 12.2081 10.935 12.5965 10.8136L18.989 8.81594C19.5905 8.62798 20 8.07093 20 7.44076C20 6.64505 19.3549 6 18.5592 6H5.44076Z"/>
+                </svg>                
+            </a>
+            <a href="https://www.linkedin.com/in/blind3y3design" class="social-link social-link--linkedin" aria-label="LinkedIn Link">
+                <svg class="social-link__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+                </svg>              
+            </a>
+            <a href="https://github.com/Blind3y3Design" class="social-link social-link--github" aria-label="Github Link">
+                <svg class="social-link__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997"/>
+                </svg>                
+            </a>
+        </div>
+
+    </div>
+</footer>
+    </body>
+</html>
