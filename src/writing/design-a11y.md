@@ -1,5 +1,5 @@
 ---
-date: 2023-09-01T16:00:00
+date: 2023-09-05T16:00:00
 title: "Be a Design A11y: An Introduction to Accessibility"
 headerImage: ./src/images/design-a11y/design-a11y-header.png
 headerImageAlt: "A graphic displaying multiple individuals who may present with some form of disability"
@@ -7,15 +7,15 @@ headerImageContained: true
 eleventyExcludeFromCollections: true
 ---
 
-This is an introductory look at Accessibility and how it related to the designing and building of digital products and experiences. The aim of this post is to be a general references for high-level accessibility topics that anyone can use. A basic knowledge of computer literacy and understanding of how digital products are built is assumed.
+This is an introductory overview of Accessibility and how it relates to designing and building digital products and experiences. The goal of this post is to provide a general reference for high-level accessibility topics that anyone can use. It is assumed that readers have basic computer literacy and an understanding of how digital products are built.
 
 ## What Is Accessibility?
 
-I think Mozilla puts it best on their page [What is Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility).
+Mozilla's page on [What is Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) puts it best:
 
 > Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.
 
-Essentially, caring about accessibility and creating accessible digital products means you’re thinking about and putting in the effort to ensure that anyone who wants to experience your product can.
+In short, caring about accessibility and creating accessible digital products means you're putting in the effort to ensure that anyone who wants to experience your product can.
 
 ### What about A11y?
 
