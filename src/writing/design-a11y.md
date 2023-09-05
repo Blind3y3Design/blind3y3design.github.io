@@ -11,7 +11,7 @@ This is an introductory overview of Accessibility and how it relates to designin
 
 ## What Is Accessibility?
 
-Mozilla's pabe on [What is Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) puts it best:
+Mozilla's page on [What is Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) puts it best:
 
 > Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.
 
