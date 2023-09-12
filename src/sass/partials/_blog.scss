@@ -115,14 +115,18 @@
 .blog-post__header-image {
     width: 100%;
 
+    &.blog-post__header-image--contained {
+        max-width: 80ch;
+    }
+
     img {
         object-fit: cover;
         height: 350px;
         width: 100%;
     }
 
-    &.blog-post__header-image--contained {
-        max-width: 80ch;
+    svg {
+        fill: var(--text-color);
     }
 }
 

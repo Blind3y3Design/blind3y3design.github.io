@@ -626,13 +626,16 @@ header {
 .blog-post__header-image {
   width: 100%;
 }
+.blog-post__header-image.blog-post__header-image--contained {
+  max-width: 80ch;
+}
 .blog-post__header-image img {
   object-fit: cover;
   height: 350px;
   width: 100%;
 }
-.blog-post__header-image.blog-post__header-image--contained {
-  max-width: 80ch;
+.blog-post__header-image svg {
+  fill: var(--text-color);
 }
 
 .blog-post__post-content {

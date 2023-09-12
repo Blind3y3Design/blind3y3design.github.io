@@ -14,7 +14,11 @@ layoutType: post
             {% assign headerImageAltText = headerImageAlt %}
         {% endif %}
         <section class="blog-post__header-image {% if headerImageContained %}blog-post__header-image--contained{% endif %}">
-            {% image headerImage, headerImageAltText, "100vw" %}
+            {% if headerImage contains "svg" %}
+                {% svg headerImage %}
+            {% else %}
+                {% image headerImage, headerImageAltText, "100vw" %}
+            {% endif %}
         </section>
     {% endif %}
     <section class="blog-post__post-content">
