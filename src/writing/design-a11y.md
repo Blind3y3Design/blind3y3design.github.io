@@ -1,10 +1,9 @@
 ---
 date: 2023-09-05T16:00:00
 title: "Be a Design A11y: An Introduction to Accessibility"
-headerImage: ./src/images/design-a11y/design-a11y-header.png
+headerImage: ./src/images/design-a11y/design-a11y-header.svg
 headerImageAlt: "A graphic displaying multiple individuals who may present with some form of disability"
 headerImageContained: true
-eleventyExcludeFromCollections: true
 ---
 
 This is an introductory overview of Accessibility and how it relates to designing and building digital products and experiences. The goal of this post is to provide a general reference for high-level accessibility topics that anyone can use. It is assumed that readers have basic computer literacy and an understanding of how digital products are built.
@@ -42,7 +41,9 @@ So now that we know what accessibility is, how do we actually go about crafting 
 
 A good place to start is with the 4 principles of accessibility: perceivable, operable, understandable, and robust, often referred to by the acronym POUR. At it’s most basic these are the 4 pillars on which all other guidelines sit.
 
-{% image "./src/images/design-a11y/pour.jpg", "Graphic of the POUR accessibility principles: perceivable, operable, understandable, robust" %}
+<div class="svg-container">
+    {% svg "./src/images/design-a11y/pour.svg" %}
+</div>
 
 ### Perceivable
 
