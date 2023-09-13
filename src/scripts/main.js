@@ -12,6 +12,7 @@ document.querySelector('.mobile-menu-trigger').addEventListener("click", toggleM
 function toggleThemeMenu() {
     const themeMenu = document.querySelector('.theme-menu');
     themeMenu.classList.toggle('theme-menu--open');
+    themeMenu.toggleAttribute('inert');
 }
 
 document.querySelector('.theme-menu-trigger').addEventListener("click", toggleThemeMenu);
