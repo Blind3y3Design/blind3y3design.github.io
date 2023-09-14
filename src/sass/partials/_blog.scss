@@ -61,6 +61,8 @@
     .post-preview__link:focus-visible & {
         text-decoration: underline;
         text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: .2ex;
     }
 }
 
@@ -117,6 +119,7 @@
 
     &.blog-post__header-image--contained {
         max-width: 80ch;
+        padding-inline: var(--space-4x);
     }
 
     img {
