@@ -61,13 +61,26 @@ p {
     }
 }
 
-code:not([class]) {
-    background-color: var(--secondary-background);
-    border-radius: 2px;
-    font-size: .75rem;
-    font-weight: bold;
-    padding: 2px 4px;
-    vertical-align: middle;
+img,
+picture,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+
+code{
+    font-size: 1rem;
+
+    &:not([class]) {
+        font-size: 1em;
+        font-weight: 700;
+        vertical-align: baseline;
+    }
+
+    &[class*="language-"] {
+        font-size: 1rem;
+    }
 }
 
 picture {
