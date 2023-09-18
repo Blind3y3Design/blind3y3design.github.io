@@ -1,5 +1,5 @@
 ---
-date: 2023-09-15T16:00:00
+date: 2023-09-18T16:00:00
 title: "CSS Reset, Normalize, and Base Styles"
 ---
 
