@@ -21,10 +21,6 @@ pre[class*="language-"] {
 	text-shadow: none;
 }
 
-pre > code[class*="language-"] {
-	font-size: 1em;
-}
-
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
 	background: #2a2a2a;
