@@ -1,7 +1,6 @@
 ---
 date: 2023-09-15T16:00:00
 title: "CSS Reset, Normalize, and Base Styles"
-eleventyExcludeFromCollections: true
 ---
 
 Inspired by a conversation between Dave and Chris on the recent shoptalk show [episode 582](https://shoptalkshow.com/582/), I wanted to take a look at the history of CSS resets and see what I could put into a “reset” or “normalize” file that was tailored to my specific sensibilities. 
@@ -26,12 +25,12 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 ```
 
@@ -66,7 +65,7 @@ Starting at the top the very first item in the reset should be familiar to anyon
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 ```
 
@@ -79,7 +78,7 @@ Looking at one last item from this reset:
 ```css
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 ```
 
@@ -97,7 +96,14 @@ Here they are:
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 body,
@@ -108,51 +114,40 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+    margin: 0;
 }
 
 body {
-	color: var(--text-color);
-	font-family: var(--font-family);
-	font-size: 18px;
-	line-height: 1.4;
-	min-height: 100dvh;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.4;
+    min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	&:not([class]) {
-		color: var(--header-color);
-		font-weight: bold;
-		line-height: 1.2;
-	}
+    &:not([class]) {
+        color: var(--header-color);
+        font-weight: bold;
+        line-height: 1.2;
+    }
 }
 
 a:not([class]) {
-	color: var(--link-color);
-	text-decoration-skip-ink: auto;
+    color: var(--link-color);
+    text-decoration-skip-ink: auto;
 }
 
 img,
 picture {
-	max-width: 100%;
-	display: block;
+    max-width: 100%;
+    display: block;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
-}
-
-@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    font: inherit;
 }
 ```

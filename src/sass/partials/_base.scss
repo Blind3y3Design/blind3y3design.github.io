@@ -76,10 +76,6 @@ code{
         font-weight: 700;
         vertical-align: baseline;
     }
-
-    &[class*="language-"] {
-        font-size: 1rem;
-    }
 }
 
 picture {
@@ -95,4 +91,17 @@ hr {
     border: 0;
     height: 1px;
     margin: 48px 0;
+}
+
+// Prism Override
+pre[class*="language-"] code {
+    @media (max-width: 630px) {
+        white-space: inherit;
+    }
+}
+
+code[class*="language-"] {
+    @media (min-width: 630px) {
+        font-size: 1rem;
+    }
 }
