@@ -61,7 +61,12 @@ p {
     }
 }
 
-
+img,
+picture,
+svg {
+	max-width: 100%;
+	display: block;
+}
 
 code{
     font-size: 1rem;

@@ -119,6 +119,7 @@
 
     &.blog-post__header-image--contained {
         max-width: 80ch;
+        padding-inline: var(--space-4x);
     }
 
     img {
