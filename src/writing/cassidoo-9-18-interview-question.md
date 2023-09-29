@@ -1,8 +1,9 @@
 ---
 date: 2023-09-23T18:50:00
 title: "Rendezvous with Cassidoo Newsletter 9/18 Interview Question"
-thoughtStatus: Seedling
-tags: public learning, quick thoughts, cassidoo
+tags: 
+  - public learning
+  - cassidoo
 ---
 
 Here's my answer to the [Sept. 18th Rendezvous with Cassidoo](https://buttondown.email/cassidoo/archive/let-us-remember-that-our-voice-is-a-precious-gift/) newsletter interview question. It was a fun little coding challenge.

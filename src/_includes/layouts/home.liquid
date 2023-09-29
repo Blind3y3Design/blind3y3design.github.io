@@ -27,11 +27,11 @@ layoutType: home
                 <li class="post-preview">
                     <a class="post-preview__link" href="{{ post.url }}">
                         <h2 class="post-preview__title">{{ post.data.title }}</h2>
+                    </a>
                         {% if post.data.subtitle %}
                             <p class="post-preview__subtitle">{{ post.data.subtitle }}</p>
                         {% endif %}
                         <p class="post-preview__meta">Posted on {{ post.data.date | postDate }}</p>
-                    </a>
                 </li> 
             {% endfor %}
         </ul>
@@ -48,14 +48,25 @@ layoutType: home
             {% assign new_posts =  collections.work | reverse %}
             {% for post in new_posts limit:4 %}
                 <li class="work-preview">
-                    <a class="work-preview__link" href="{{ post.url }}">
-                        <div class="work-preview__thumbnail">
-                            {% if post.data.image %}
-                                {% image post.data.image, "" %}
-                            {% endif %}
+                    {% if post.data.exampleLink %}
+                        <a class="work-preview__link" href="{{ post.data.exampleLink }}" target="_blank">
+                            <div class="work-preview__thumbnail">
+                                {% if post.data.image %}
+                                    {% image post.data.image, "" %}
+                                {% endif %}
+                            </div>
+                            <p class="work-preview__title">{{ post.data.title }}</p>
+                        </a>
+                    {% else %}
+                        <div class="work-preview__inner">
+                            <div class="work-preview__thumbnail">
+                                {% if post.data.image %}
+                                    {% image post.data.image, "" %}
+                                {% endif %}
+                            </div>
+                            <p class="work-preview__title">{{ post.data.title }}</p>
                         </div>
-                        <p class="work-preview__title">{{ post.data.title }}</p>
-                    </a>
+                    {% endif %}
                 </li> 
             {% endfor %}
         </ul>

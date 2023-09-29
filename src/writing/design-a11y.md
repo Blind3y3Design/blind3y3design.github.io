@@ -4,8 +4,8 @@ title: "Be a Design A11y: An Introduction to Accessibility"
 headerImage: ./src/images/design-a11y/design-a11y-header.svg
 headerImageAlt: "A graphic displaying multiple individuals who may present with some form of disability"
 headerImageContained: true
-thoughtStatus: Evergreen
-tags: accessibility, essay
+tags: 
+    - accessibility
 ---
 
 This is an introductory overview of Accessibility and how it relates to designing and building digital products and experiences. The goal of this post is to provide a general reference for high-level accessibility topics that anyone can use. It is assumed that readers have basic computer literacy and an understanding of how digital products are built.

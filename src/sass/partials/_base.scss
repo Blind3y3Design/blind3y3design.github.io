@@ -57,7 +57,11 @@ p {
     margin-top: .75rem;
 
     a {
+        color: var(--link-color);
         text-decoration: underline;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: .2ex;
     }
 }
 
