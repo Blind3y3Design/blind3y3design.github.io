@@ -24,4 +24,11 @@ layoutType: post
     <section class="blog-post__post-content">
         {{ content }}
     </section>
+    {% if tags %}
+        <section class="blog-post__tag-list">
+            {% for tag in tags %}
+                <span class="blog-post__tag">{{tag}}{% if not forloop.last %}, {% endif %}</span>
+            {% endfor %}
+        </section>
+    {% endif %}
 </div>
