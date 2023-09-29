@@ -18,11 +18,11 @@ layoutType: writing
                         <li class="post-preview">
                             <a class="post-preview__link" href="{{ post.url }}">
                                 <h3 class="post-preview__title">{{ post.data.title }}</h3>
+                            </a>
                                 {% if post.data.subtitle %}
                                     <p class="post-preview__subtitle">{{ post.data.subtitle }}</p>
                                 {% endif %}
                                 <p class="post-preview__meta">Posted on {{ post.data.date | postDate }}</p>
-                            </a>
                         </li> 
                     {% endfor %}
                 </ul>

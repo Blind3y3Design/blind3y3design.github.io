@@ -1,8 +1,9 @@
 ---
 date: 2023-09-23T18:44:00
 title: "Starting a Digital Garden"
-thoughtStatus: Seedling
-tags: digital gardening, quick thoughts, personal development
+tags: 
+    - digital gardening
+    - personal development
 ---
 
 This idea was inspired by a conversation at the end of the ShopTalk show [Episode 583](https://shoptalkshow.com/583/#t=53:42) with [Maggie Appleton](https://maggieappleton.com/).

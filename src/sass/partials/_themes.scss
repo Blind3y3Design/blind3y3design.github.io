@@ -2,6 +2,7 @@
     --background: var(--canvas);
     --accent: var(--tangerine);
     --text-color: var(--slate);
+    --link-color: var(--umber);
     --hairline-color: var(--slate);
 
     --intro-block-background: var(--slate);
@@ -23,8 +24,9 @@
 
 [data-theme='dark'] {
     --background: var(--dark-blue);
-    --accent: var(--light-blue);
+    --accent: var(--med-blue);
     --text-color: var(--off-white);
+    --link-color: var(--light-blue);
     --hairline-color: var(--off-white);
 
     --intro-block-background: var(--off-white);
