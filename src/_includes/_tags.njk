@@ -1,0 +1,20 @@
+{% macro list(tags) %}
+    {% set tags = tags | real_tags_only %}
+    {% if tags and tags.length > 0 %}
+        <div class="blog-post__tag-list">
+            {% for tag in tags %}
+            {{ one(tag) }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro one(tag) %}
+    {% set aliases = collections.postsByTag[tag].aliases %}
+    {% if collections[tag].length > 1 %}
+        <a href="/writing/tags/{{ tag }}" title="{{ "aka " + aliases | format_tag + ", " if aliases }}{{ collections[tag].length }} posts with this tag" class="blog-post__tag">
+        {{ tag | format_tag }}</a>
+    {% else %}
+        <span class="blog-post__tag orphan" title="Only one post with this tag">{{ tag | format_tag }}</span>
+    {% endif %}
+{% endmacro %}

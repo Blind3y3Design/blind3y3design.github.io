@@ -4,7 +4,7 @@ title: "The Production-Ready Myth"
 tags: 
     - accessibility
     - development
-    - product development
+    - product-development
     - code
     - ai
 ---

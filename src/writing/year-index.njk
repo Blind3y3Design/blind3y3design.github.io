@@ -1,0 +1,28 @@
+---
+layout: layouts/base
+pagination:
+  data: collections.postsByYear
+  size: 1
+  alias: year
+permalink: /writing/{{ year }}/
+override:tags: []
+eleventyComputed:
+  title: "Posts from {{ year }}"
+---
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">{{title}}</h1>
+    </div>
+</section>
+
+{% import "_posts.njk" as posts %}
+
+<div class="blog-roll">
+    <div class="blog-roll__inner">
+            <section class="blog-section">
+                <ul class="post-list post-list--year">
+                    {{ posts.list(collections.postsByYear[ year ], {style: "compact"}) }}
+                </ul>
+            </section>
+    </div>
+</div>

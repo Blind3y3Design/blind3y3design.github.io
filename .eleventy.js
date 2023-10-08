@@ -1,8 +1,9 @@
-const { DateTime } = require("luxon");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const fs = require('fs');
 const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const filters = require("./src/assets/filters.js");
+const tag_aliases = require("./src/data/tag_aliases.json");
 
 async function imageShortcode(src, alt, sizes) {
     let metadata = await Image(src, {
@@ -69,9 +70,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/scripts/");
 
     eleventyConfig.addLiquidShortcode("image", imageShortcode);
-    eleventyConfig.addLiquidShortcode("bookImage", bookImageShortcode);
-
     eleventyConfig.addShortcode("image", imageShortcode);
+    
+    eleventyConfig.addLiquidShortcode("bookImage", bookImageShortcode);
     eleventyConfig.addShortcode("bookImage", bookImageShortcode);
 
     eleventyConfig.addLiquidShortcode("svg", getSvgContent);
@@ -79,13 +80,39 @@ module.exports = function(eleventyConfig) {
     
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-    eleventyConfig.addFilter("postDate", (dateObj) => {
-        return DateTime.fromJSDate(dateObj, {
-          zone: "America/Chicago",
-        }).toLocaleString(DateTime.DATE_MED);
-    });
+    for (let name in filters) {
+		eleventyConfig.addFilter(name, filters[name]);
+	}
 
-    eleventyConfig.addCollection("postsByYear", (collection) => {
+    eleventyConfig.addCollection("postsByTag", (collectionApi) => {
+		const posts = collectionApi.getFilteredByTag("posts");
+		let ret = {};
+
+		for (let post of posts) {
+			for (let tag of post.data.tags) {
+				if (filters.is_real_tag(tag)) {
+					ret[tag] ??= [];
+					ret[tag].push(post);
+				}
+			}
+		}
+
+		// Now sort, and reconstruct the object
+		ret = Object.fromEntries(Object.entries(ret).sort((a, b) => b[1].length - a[1].length));
+
+		// Now add aliases
+		for (let alias in tag_aliases) {
+			let aliasOf = tag_aliases[alias];
+			if (ret[aliasOf]) {
+				ret[aliasOf].aliases ??= [];
+				ret[aliasOf].aliases.push(alias);
+			}
+		}
+
+		return ret;
+	});
+
+    eleventyConfig.addCollection("postsYearList", (collection) => {
         const posts = collection.getFilteredByTag('posts').reverse();
         const years = posts.map(post => post.date.getFullYear());
         const uniqueYears = [...new Set(years)];
@@ -100,6 +127,19 @@ module.exports = function(eleventyConfig) {
         }, []);
 
         return postsByYear;
+    });
+
+    eleventyConfig.addCollection("postsByYear", (collection) => {
+        const posts = collection.getFilteredByTag('posts').reverse();
+        const ret = {};
+
+		for (let post of posts) {
+			let key = post.date.getFullYear();
+			ret[key] ??= [];
+			ret[key].push(post);
+		}
+
+		return ret;
     });
 
     eleventyConfig.addCollection("workByYear", (collection) => {
