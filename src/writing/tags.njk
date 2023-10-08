@@ -1,0 +1,42 @@
+---js
+{
+    layout: "layouts/base",
+	pagination: {
+		data: "collections",
+		size: 1,
+		before: function(paginationData, fullData) {
+			// Filter out orphan tags and fake tags
+			return paginationData.filter(tag => {
+				return !["writing", "all"].includes(tag)
+					&& fullData.collections[tag].length > 1
+					&& !tag.startsWith("postsBy")
+					;
+			});
+		},
+		alias: "tag",
+	},
+	permalink: "/writing/tags/{{ tag }}/",
+	"override:tags": [],
+	eleventyComputed: {
+		title: "{{ collections[ tag ].length | pluralize('post') }} on {{ tag | format_tag }}"
+	}
+}
+---
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">{{title}}</h1>
+    </div>
+</section>
+
+<div class="blog-roll">
+    <div class="blog-roll__inner">
+            <section class="blog-section">
+                <ul class="post-list post-list--tag-page">
+                    {% set taglist = collections[ tag ] | reverse %}
+                    {% set post_style = "compact" %}
+                    {% import "_posts.njk" as posts %}
+                    {{ posts.list(taglist, {style: post_style }) }}
+                </ul>
+            </section>
+    </div>
+</div>

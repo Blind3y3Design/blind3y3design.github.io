@@ -1,0 +1,57 @@
+{% macro one(post, o = {}) %}
+{% if o.style === "compact" %}
+    <li class="post-preview">
+        <a class="post-preview__link" href="{{ post.url }}">
+            <h3 class="post-preview__title">{{ post.data.title }}</h3>
+        </a>
+            {% if post.data.subtitle %}
+                <p class="post-preview__subtitle">{{ post.data.subtitle }}</p>
+            {% endif %}
+            <p class="post-preview__meta">Posted on {{ post.data.date | postDate }}</p>
+    </li>
+{% else %}
+    <article class="post" id="{{ post.fileSlug }}">
+        <header>
+            <h2>
+                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+            </h2>
+            <div class="meta">
+                {{ meta_before(post, o) }}
+            </div>
+        </header>
+        {% set summary = post.data.summary or post.data.page.excerpt %}
+        <div class="summary">
+            {%- if summary -%}
+                {{ summary  | safe}}
+                <p><a href="{{ post.url | url }}" class="call-to-action">Continue reading</a></p>
+            {%- else -%}
+                {{ post.content | safe }}
+            {%- endif -%}
+        </div>
+
+        <footer class="meta">
+            {{ meta_after(post, o) }}
+        </footer>
+    </article>
+{% endif %}
+{% endmacro -%}
+
+{%- macro list(posts, o = {}) %}
+{% for post in posts %}
+	{% if not (post.data.draft or post.data.unlisted) -%}
+        {{ one(post, o) }}
+	{% endif %}
+{% endfor %}
+{% endmacro %}
+
+{% macro meta_before(post, o = {}) %}
+	{% set content = post.content or content %}
+    <p class="blog-post__date">Posted on {{ post.date | postDate }}</p>
+    <p class="blog-post__read-time">{{ content | emojiReadTime }}</p>
+{% endmacro %}
+
+{% macro meta_after(post, o = {}) %}
+	{% import "_tags.njk" as tagsUtil with context %}
+	{% set tags = post.data.tags if post.data else tags %}
+	{{ tagsUtil.list(tags) }}
+{% endmacro %}

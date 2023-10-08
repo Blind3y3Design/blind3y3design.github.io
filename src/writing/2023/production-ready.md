@@ -4,9 +4,9 @@ title: "The Production-Ready Myth"
 tags: 
     - accessibility
     - development
-    - product development
+    - product-development
     - code
-    - ai
+    - AI
 ---
 
 For years now there have been programs, tools and libraries that all claim to deliver on the same promise, delivering to you “Production-Ready” code.
