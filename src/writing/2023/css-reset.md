@@ -3,6 +3,8 @@ date: 2023-09-18T16:00:00
 title: "CSS Reset, Normalize, and Base Styles"
 tags: 
     - css
+    - development
+    - code
 ---
 
 Inspired by a conversation between Dave and Chris on the recent shoptalk show [episode 582](https://shoptalkshow.com/582/), I wanted to take a look at the history of CSS resets and see what I could put into a “reset” or “normalize” file that was tailored to my specific sensibilities. 

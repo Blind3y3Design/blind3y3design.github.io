@@ -1,0 +1,53 @@
+---
+layout: layouts/base
+title: All tags
+permalink: "writing/tags/index.html"
+override:tags: []
+---
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">{{title}}</h1>
+    </div>
+</section>
+
+{% import "_tags.njk" as tags with context %}
+
+<div class="blog-roll">
+    <div class="blog-roll__inner">
+        <section class="blog-section">
+
+            <ol class="tags-index">
+            {% set orphan_count = 0 %}
+            {% for tag, posts in collections.postsByTag %}
+                {% if posts.length > 1 %}
+                    <li>
+                        {{ tags.one(tag) }}
+                        <span class="post-count">({{ posts.length }} posts)</span>
+                    </li>
+                {% else %}
+                    {% set orphan_count = orphan_count + 1 %}
+                {% endif %}
+            {% endfor %}
+            </ol>
+
+            <details class="orphan-tags-list">
+                <summary>
+                    Also {{ orphan_count }} <a href="https://lea.verou.me/blog/2023/rethinking-categorization/">“orphan”</a> tags
+                </summary>
+
+                <p>The following tags are only used by a single post.</p>
+
+                <ol class="tags-index">
+                {% for tag, posts in collections.postsByTag %}
+                    {% if posts.length === 1 %}
+                    <li>
+                        <a class="blog-post__tag" href="{{ posts[0].url }}">{{ tag | format_tag }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ol>
+
+            </details>
+        </section>
+    </div>
+</div>

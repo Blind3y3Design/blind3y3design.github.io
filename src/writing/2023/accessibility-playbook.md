@@ -3,10 +3,10 @@ date: 2023-09-28T18:50:00
 title: "A Playbook for Accessibility"
 tags: 
     - accessibility
-    - ux
-    - ui
+    - UX
+    - UI
     - development
-    - product
+    - product-development
 ---
 
 In my work with Design Systems, accessibility often comes up as a topic. Questions can range from the incredibly basic, "What is accessibility?" to the more complex and nuanced, "Is the language of this modal clear enough?" Part of my job is to help guide the designers, developers, content producers, and product owners on their individual journeys understanding accessibility and how it impacts their work.

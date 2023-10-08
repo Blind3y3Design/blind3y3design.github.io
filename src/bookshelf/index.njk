@@ -1,0 +1,35 @@
+---
+title: "Bookshelf"
+layout: layouts/base
+override:tags: []
+permalink: "/bookshelf/index.html"
+---
+
+<section class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">Bookshelf</h1>
+    </div>
+</section>
+
+{% import "_books.njk" as books %}
+
+<div class="bookshelf-content">
+    <ul class="book-list">
+        {% for book in collections.bookshelf | reverse %}
+            <li class="book-preview">
+                <a class="book-preview__link" href="{{ book.url }}">
+                    {% bookImage book.data.bookImage, book.data.title %}
+                    <h2 class="book-preview__title">{{ book.data.title }}</h2>
+                    <p class="book-preview__subtitle">{{ book.data.subtitle }}</p>
+                    <p class="book-preview__author">{{ book.data.bookAuthor }}</p>
+                    <p class="book-preview__rating">{{ book.data.bookRating }}</p>
+                    <p class="book-preview__meta">{{ book.data.date | postDate }}</p>
+                </a>
+            </li> 
+        {% endfor %}
+
+        {# For some reason this macro is not working #}
+        {# The bookImage shortcode will not load in the macro and causes the entire thing to fail #}
+        {# {{ books.list(collections.bookshelf | reverse) }} #}
+    </ul>
+</div>
