@@ -1,6 +1,8 @@
 ---
 date: 2023-09-02T16:00:00
 title: "Invest in Improvement"
+tags:
+    - personal-development
 ---
 
 I have been reading ["The Making of a Manager"](https://www.juliezhuo.com/book/manager.html) by Julie Zhou over the past few weeks. In chapter 5, titled "Managing Yourself," she emphasizes the importance of taking advantage of formal training opportunities.

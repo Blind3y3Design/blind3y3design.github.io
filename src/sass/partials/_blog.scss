@@ -210,3 +210,16 @@
         text-underline-offset: .2ex;
     }
 }
+
+// 
+// BEGIN TAGS STYLES
+//
+
+.tags-index {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.orphan-tags-list {
+    margin-block-start: var(--space-4x);
+}

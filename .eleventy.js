@@ -69,15 +69,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/css/");
     eleventyConfig.addPassthroughCopy("./src/scripts/");
 
-    eleventyConfig.addLiquidShortcode("image", imageShortcode);
     eleventyConfig.addShortcode("image", imageShortcode);
-    
-    eleventyConfig.addLiquidShortcode("bookImage", bookImageShortcode);
     eleventyConfig.addShortcode("bookImage", bookImageShortcode);
-
-    eleventyConfig.addLiquidShortcode("svg", getSvgContent);
     eleventyConfig.addShortcode("svg", getSvgContent);
-    
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
     for (let name in filters) {

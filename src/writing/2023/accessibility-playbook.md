@@ -3,8 +3,8 @@ date: 2023-09-28T18:50:00
 title: "A Playbook for Accessibility"
 tags: 
     - accessibility
-    - ux
-    - ui
+    - UX
+    - UI
     - development
     - product-development
 ---

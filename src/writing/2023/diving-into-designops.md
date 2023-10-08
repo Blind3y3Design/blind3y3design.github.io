@@ -1,6 +1,10 @@
 ---
 date: 2023-09-12T16:00:00
 title: "Diving into DesignOps"
+tags: 
+    - design
+    - DesignOps
+    - product-development
 ---
 
 Over the last few months I’ve been spending more of my time learning and thinking about how to implement a DesignOps practice across the teams I work with. Large portions of my work with Design Systems already relate to a number of DesignOps ideas and principles: helping teams solve for efficiency, effectiveness, and codifying standards around commonly used patterns so that teams can focus on the hard problems of their individual domain expertise.

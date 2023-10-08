@@ -19,10 +19,10 @@ eleventyComputed:
 
 <div class="blog-roll">
     <div class="blog-roll__inner">
-            <section class="blog-section">
-                <ul class="post-list post-list--year">
-                    {{ posts.list(collections.postsByYear[ year ], {style: "compact"}) }}
-                </ul>
-            </section>
+        <section class="blog-section">
+            <ul class="post-list post-list--year">
+                {{ posts.list(collections.postsByYear[ year ], {style: "compact"}) }}
+            </ul>
+        </section>
     </div>
 </div>

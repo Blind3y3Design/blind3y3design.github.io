@@ -4,6 +4,8 @@ title: "Rendezvous with Cassidoo Newsletter 9/18 Interview Question"
 tags: 
   - public learning
   - cassidoo
+  - development
+  - code
 ---
 
 Here's my answer to the [Sept. 18th Rendezvous with Cassidoo](https://buttondown.email/cassidoo/archive/let-us-remember-that-our-voice-is-a-precious-gift/) newsletter interview question. It was a fun little coding challenge.
