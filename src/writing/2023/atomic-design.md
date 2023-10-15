@@ -1,5 +1,5 @@
 ---
-date: 2023-10-41T18:50:00
+date: 2023-10-14T18:50:00
 title: "Brad Frost on Atomic Design"
 tags: 
     - atomic-design
