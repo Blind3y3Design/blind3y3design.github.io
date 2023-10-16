@@ -4,6 +4,7 @@ const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filters = require("./src/assets/filters.js");
 const tag_aliases = require("./src/data/tag_aliases.json");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 async function imageShortcode(src, alt, sizes) {
     let metadata = await Image(src, {
@@ -63,6 +64,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false });
+    eleventyConfig.addPlugin(pluginRss);
 
     eleventyConfig.addWatchTarget("./src/sass/");
 
