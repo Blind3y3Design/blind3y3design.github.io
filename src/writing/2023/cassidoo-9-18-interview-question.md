@@ -2,7 +2,7 @@
 date: 2023-09-23T18:50:00
 title: "Rendezvous with Cassidoo Newsletter 9/18 Interview Question"
 tags: 
-  - public learning
+  - public-learning
   - cassidoo
   - development
   - code
