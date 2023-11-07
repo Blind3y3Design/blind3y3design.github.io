@@ -182,11 +182,36 @@
     }
 
     blockquote {
-        border-inline-start: 5px solid var(--text-color);
-        padding-inline-start: var(--space-4x);
+        --blockquote-background-color: transprent;
+        --blockquote-border-color: var(--text-color);
+        --blockquote-text-color: var(--text-color);
+        --blockquote-link-color: var(--link-color);
 
-        * + * {
-            margin-block-start: 0.5rem; 
+        background: var(--blockquote-background-color);
+        border-inline-start: 5px solid var(--blockquote-border-color);
+        border-radius: 2px;
+        color: var(--blockquote-text-color);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+        
+        a {
+          color: var(--blockquote-link-color)
+        }
+
+        &:has(cite a[href*="twitter"]) {
+            --blockquote-background-color: #000000;
+            --blockquote-border-color: rgb(29, 155, 240);
+            --blockquote-text-color: #ffffff;
+            --blockquote-link-color: rgb(29, 155, 240);
+        }
+
+        &:has(cite a[href*="mastodon.social"]) {
+            --blockquote-background-color: #282c37;
+            --blockquote-border-color: #6364ff;
+            --blockquote-text-color: #ffffff;
+            --blockquote-link-color: #6364ff;
         }
     }
 }
@@ -222,4 +247,12 @@
 
 .orphan-tags-list {
     margin-block-start: var(--space-4x);
+}
+
+// TODO: Remove once :has() is fully supported in firefox
+// Custom Style to display image if browser detects no support for :has()
+.no-has-support {
+    @supports selector(:has(*)) {
+        display: none;
+    }
 }
