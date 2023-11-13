@@ -17,19 +17,26 @@ permalink: "/bookshelf/index.html"
     <ul class="book-list">
         {% for book in collections.bookshelf | reverse %}
             <li class="book-preview">
-                <a class="book-preview__link" href="{{ book.url }}">
+                <a class="book-preview__amazon-link" href="{{ book.data.amazonLink }}" target="_blank">
                     {% bookImage book.data.bookImage, book.data.title %}
-                    <h2 class="book-preview__title">{{ book.data.title }}</h2>
+                </a>
+                <div class="book-preview__info">
+                    {% if not (book.data.draft or book.data.unlisted) %}
+                        <a class="book-preview__link" href="{{ book.url }}">
+                            <h2 class="book-preview__title">{{ book.data.title }}</h2>
+                        </a>
+                    {% else %}
+                        <h2 class="book-preview__title">{{ book.data.title }}</h2>
+                    {% endif %}
                     <p class="book-preview__subtitle">{{ book.data.subtitle }}</p>
                     <p class="book-preview__author">{{ book.data.bookAuthor }}</p>
                     <p class="book-preview__rating">{{ book.data.bookRating }}</p>
                     <p class="book-preview__meta">{{ book.data.date | postDate }}</p>
-                </a>
-            </li> 
+                </div>
+            </li>
         {% endfor %}
 
-        {# For some reason this macro is not working #}
-        {# The bookImage shortcode will not load in the macro and causes the entire thing to fail #}
+        {# The bookImage async shortcode will not load in the macro and causes the entire thing to fail #}
         {# {{ books.list(collections.bookshelf | reverse) }} #}
     </ul>
 </div>

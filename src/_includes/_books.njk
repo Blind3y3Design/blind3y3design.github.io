@@ -2,18 +2,21 @@
 <li class="book-preview">
     <a class="book-preview__link" href="{{ book.url }}">
         {% bookImage book.data.bookImage, book.data.title %}
+    </a>
+    <div class="book-preview__info">
+
         <h2 class="book-preview__title">{{ book.data.title }}</h2>
         <p class="book-preview__subtitle">{{ book.data.subtitle }}</p>
         <p class="book-preview__author">{{ book.data.bookAuthor }}</p>
         <p class="book-preview__rating">{{ book.data.bookRating }}</p>
         <p class="book-preview__meta">{{ book.data.date | postDate }}</p>
-    </a>
+    </div>
 </li>
 {% endmacro -%}
 
 {%- macro list(books, o = {}) %}
 {% for book in books %}
-	{% if not (book.data.draft or book.data.unlisted) -%}
+	{% if not (book.data.draft or book.data.unlisted) %}
         {{ one(book, o) }}
 	{% endif %}
 {% endfor %}
