@@ -219,12 +219,12 @@ header {
     @media (prefers-color-scheme: dark) {
         display: none;
 
-        [data-theme='light'] & {
+        [data-theme*='light'] & {
             display: block;
         }
     }
 
-    [data-theme='dark'] & {
+    [data-theme*='dark'] & {
         display: none;
     }
 }
@@ -235,12 +235,12 @@ header {
     @media (prefers-color-scheme: dark) {
         display: block;
 
-        [data-theme='light'] & {
+        [data-theme*='light'] & {
             display: none;
         }
     }
 
-    [data-theme='light'] & {
+    [data-theme*='light'] & {
         display: none;
     }
 }

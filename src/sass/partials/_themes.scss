@@ -45,3 +45,27 @@
     --mobile-menu-text-color: var(--off-white);
     --mobile-menu-text-color--hover: var(--slate);
 }
+
+[data-theme='banana'] {
+    --background: var(--dark-banana);
+    --accent: var(--muted-banana);
+    --text-color: var(--off-white);
+    --link-color: var(--banana);
+    --hairline-color: var(--off-white);
+
+    --intro-block-background: var(--off-white);
+    --intro-block-text-color: var(--slate);
+
+    --footer-background: var(--slate);
+    --footer-text-color: var(--white);
+
+    --social-link-background: transparent;
+    --social-link-background--hover: var(--white);
+    --social-link-text-color: var(--white);
+    --social-link-text-color--hover: var(--slate);
+
+    --mobile-menu-background: transparent;
+    --mobile-menu-background--hover: var(--off-white);
+    --mobile-menu-text-color: var(--off-white);
+    --mobile-menu-text-color--hover: var(--slate);
+}
