@@ -225,7 +225,8 @@ header {
     }
 
     [data-theme*='dark'] &,
-    [data-theme='banana'] & {
+    [data-theme='banana'] &,
+    [data-theme='terminal'] & {
         display: none;
     }
 }
@@ -245,7 +246,8 @@ header {
         display: none;
     }
     [data-theme*='dark'] &,
-    [data-theme='banana'] & {
+    [data-theme='banana'] &,
+    [data-theme='terminal'] & {
         display: block;
     }
 }
