@@ -224,7 +224,8 @@ header {
         }
     }
 
-    [data-theme*='dark'] & {
+    [data-theme*='dark'] &,
+    [data-theme='banana'] & {
         display: none;
     }
 }
@@ -242,6 +243,10 @@ header {
 
     [data-theme*='light'] & {
         display: none;
+    }
+    [data-theme*='dark'] &,
+    [data-theme='banana'] & {
+        display: block;
     }
 }
 
