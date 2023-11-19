@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'monaspace-neon';
+	src: url('/fonts/MonaspaceNeon-Regular.woff') format('woff');
+	font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -102,7 +110,8 @@ hr {
     margin: 48px 0;
 }
 
-// Prism Override
+// Prisma Overrides
+
 pre[class*="language-"] code {
     @media (max-width: 630px) {
         white-space: inherit;
@@ -117,4 +126,5 @@ code[class*="language-"] {
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
     border: 1px solid var(--text-color);
+    font-family: 'monaspace-neon', monospace;
 }
