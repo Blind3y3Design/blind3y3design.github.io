@@ -275,6 +275,11 @@ header {
     gap: var(--space-2x);
     justify-content: flex-end;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: end;
+    }
 }
 
 .theme-menu__button {
@@ -292,4 +297,10 @@ header {
         background: var(--mobile-menu-background--hover);
         color: var(--mobile-menu-text-color--hover);
     }
+}
+
+.theme-menu__button--active {
+    background: var(--mobile-menu-background--hover);
+    color: var(--mobile-menu-text-color--hover);
+    pointer-events: none;
 }

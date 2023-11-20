@@ -22,6 +22,30 @@
     --mobile-menu-text-color--hover: var(--white);
 }
 
+[data-theme='bauhaus'] {
+    --background: var(--bauhaus-tan);
+    --accent: var(--bauhaus-yellow);
+    --text-color: var(--black);
+    --link-color: var(--bauhaus-blue);
+    --hairline-color: var(--slate);
+
+    --intro-block-background: var(--black);
+    --intro-block-text-color: var(--white);
+
+    --footer-background: var(--bauhaus-red);
+    --footer-text-color: var(--black);
+    
+    --social-link-background: transparent;
+    --social-link-background--hover: var(--black);
+    --social-link-text-color: var(--black);
+    --social-link-text-color--hover: var(--bauhaus-yellow);
+
+    --mobile-menu-background: transparent;
+    --mobile-menu-background--hover: var(--black);
+    --mobile-menu-text-color: var(--black);
+    --mobile-menu-text-color--hover: var(--bauhaus-yellow);
+}
+
 [data-theme='dark'] {
     --background: var(--dark-blue);
     --accent: var(--med-blue);
