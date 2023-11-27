@@ -43,7 +43,15 @@ class ThemeSwitcher {
         // when clicked, get the theme id and pass it to a function
         Array.from(this.themeSelectBtns).forEach((btn) => {
             const id = btn.dataset.themeId
-            btn.addEventListener('click', () => this.setTheme(id))
+            btn.addEventListener('click', () => {
+                this.setTheme(id),
+                this.setActiveThemeElement(id, btn)
+            })
+
+            // Check active theme and show button as active
+            if (id == this.activeTheme) {
+                btn.classList.add('theme-menu__button--active');
+            }
         })
     }
 
@@ -72,6 +80,19 @@ class ThemeSwitcher {
         if (this.hasLocalStorage) {
             localStorage.setItem("theme", id)
             console.log('stored theme')
+        }
+    }
+
+    setActiveThemeElement(id, btn) {
+        let siblings = btn.parentNode.children;
+        // Remove active state from all buttons
+        Array.from(siblings).forEach((sibling) => {
+            sibling.classList.remove('theme-menu__button--active');
+        });
+
+        // Check active theme and show button as active
+        if (id == this.activeTheme) {
+            btn.classList.add('theme-menu__button--active');
         }
     }
 }
