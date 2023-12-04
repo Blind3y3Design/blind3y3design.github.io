@@ -1,6 +1,6 @@
 ---
 title: "About"
-pageTitle: "About Me"
+pageTitle: "About"
 layout: layouts/about
 ---
 
