@@ -1,0 +1,29 @@
+.page__content {
+  max-width: 80ch;
+  padding-block: 64px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    padding-inline: var(--space-4x);
+  }
+
+  p,
+  ul,
+  li {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  ul {
+    list-style-type: square;
+    display: grid;
+    gap: var(--space-2x);
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2ex;
+  }
+}
