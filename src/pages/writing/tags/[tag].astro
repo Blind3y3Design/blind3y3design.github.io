@@ -1,0 +1,155 @@
+---
+import Layout from "../../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import FormattedTag from "../../../components/FormattedTag.astro";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("writing")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  );
+
+  const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const urlTag = tag.toLowerCase();
+    const filteredPosts = posts.filter((post) => post.data.tags?.includes(tag));
+
+    return {
+      params: { tag: urlTag },
+      props: { tag, posts: filteredPosts },
+    };
+  });
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<Layout
+  title={`Posts tagged with ${tag}`}
+  description={`Posts tagged with ${tag}`}
+>
+  <main>
+    <h1>
+      Posts tagged with <FormattedTag {tag} />
+    </h1>
+    <ul class="post-list">
+    {
+      posts.map((post) => (
+        <li class="post-preview">
+          <a href={`/writing/${post.slug}/`} class="post-preview__link">
+            {post.data.heroImage && (
+              <Picture
+                class="post-preview__image"
+                src={post.data.heroImage}
+                formats={["avif", "webp"]}
+                alt={post.data.title}
+              />
+            )}
+            <div class="post-preview__content">
+              <h4 class="post-preview__title">{post.data.title}</h4>
+              <p class="post-preview__description">{post.data.description}</p>
+              <p class="post-preview__date">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    margin-block-end: 1em;
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+    margin: 0;
+    max-width: 80ch;
+    padding: 0;
+
+    @media (min-width: 600px) {
+      gap: 48px;
+    }
+  .post-preview {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      gap: 24px;
+      grid-template-columns: max-content 1fr;
+    }
+  }
+
+  .post-preview__link {
+    color: var(--body-color);
+    display: grid;
+    gap: 0;
+    text-decoration: none;
+    @media (min-width: 600px) {
+      gap: 8px;
+    }
+    * {
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  .post-preview__image {
+    aspect-ratio: 2/1;
+    border-radius: 12px;
+    grid-column: 1;
+    margin-block-end: 8px;
+    object-fit: cover;
+    object-position: top center;
+
+    @media (min-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  .post-preview__content {
+    display: grid;
+    gap: 0;
+    @media (min-width: 600px) {
+      gap: 8px;
+    }
+  }
+
+  .post-preview__title {
+    color: var(--link-color);
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2ex;
+
+    .post-preview__link:hover & {
+      color: var(--link-color-hover);
+    }
+  }
+
+  .post-preview__description {
+    display: none;
+    margin: 0;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .post-preview__date {
+    margin: 0;
+    color: oklch(var(--white-raw) / 0.6);
+  }
+</style>

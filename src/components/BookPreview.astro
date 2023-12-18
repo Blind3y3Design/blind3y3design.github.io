@@ -1,0 +1,91 @@
+---
+import { Picture } from "astro:assets";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  link: string;
+  image: any;
+  title: string;
+  subtitle?: string;
+  author: string;
+  rating: string;
+  completionDate: Date;
+}
+
+const { link, image, title, subtitle, author, rating, completionDate } =
+  Astro.props;
+---
+
+<li class="book-preview">
+  <a class="book-preview__link" href={link} target="_blank">
+    <Picture
+      class="book-preview__image"
+      src={image}
+      formats={["avif", "webp"]}
+      alt={title}
+    />
+  </a>
+  <div class="book-preview__info">
+    <h2 class="book-preview__title">{title}</h2>
+    {subtitle && <p class="book-preview__subtitle">{subtitle}</p>}
+    <p class="book-preview__author">{author}</p>
+    <p class="book-preview__rating">{rating}</p>
+    <FormattedDate class="book-preview__meta" date={completionDate} />
+  </div>
+</li>
+
+<style>
+  .book-preview {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .book-preview__link {
+    display: block;
+  }
+
+  .book-preview__image {
+    aspect-ratio: 1/1.5;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  .book-preview__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .book-preview__title {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .book-preview__subtitle,
+  .book-preview__author,
+  .book-preview__rating {
+    font-size: 0.875rem;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .book-preview__meta {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+import type { HTMLAttributes } from "astro/types";
+interface Props extends HTMLAttributes<"time"> {
+  date: Date;
+}
+
+const { date, ...props } = Astro.props;
+---
+
+<time datetime={date.toISOString()} {...props}>
+  <span class="day"
+    >{
+      date.toLocaleDateString("en-us", {
+        day: "numeric",
+      })
+    }</span
+  >
+  <span class="month-year"
+    >{
+      date.toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "short",
+      })
+    }</span
+  >
+</time>
+
+<style>
+  time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .day {
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    line-height: 1;
+  }
+</style>

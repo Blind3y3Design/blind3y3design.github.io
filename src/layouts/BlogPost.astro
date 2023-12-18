@@ -1,0 +1,116 @@
+---
+import Layout from "./Base.astro";
+import { Picture } from "astro:assets";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const { title, description, pubDate, updatedDate, heroImage, tags } =
+  Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <article>
+      <div class="hero-image">
+        {
+          heroImage && (
+            <Picture src={heroImage} formats={["avif", "webp"]} alt={title} />
+          )
+        }
+      </div>
+      <div class="title">
+        <div class="date">
+          <FormattedDate date={pubDate} />
+          {
+            updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
+            )
+          }
+        </div>
+        <h1>{title}</h1>
+        <hr />
+      </div>
+      <div class="prose">
+        <slot />
+        {
+          tags && (
+            <ul class="tag-list">
+              {tags.map((tag: string) => (
+                <li class="tag-item">
+                  <a href={`/writing/tags/${tag}`} class="tag">
+                    {tag}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .hero-image {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+  }
+  .hero-image img {
+    aspect-ratio: 2/1;
+    border-radius: 12px;
+    /* box-shadow: var(--box-shadow); */
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .prose {
+    width: 80ch;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 1em;
+  }
+  .title {
+    padding: 1em 0;
+    text-align: center;
+    width: 80ch;
+    max-width: calc(100% - 2rem);
+    margin: 0 auto;
+  }
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+  .date {
+    margin-bottom: 0.5em;
+    color: oklch(var(--white-raw) / 0.6);
+  }
+  .last-updated-on {
+    font-style: italic;
+  }
+
+  .tag-list {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .tag-item {
+    margin: 0;
+  }
+  .tag {
+    margin: 0;
+
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+</style>

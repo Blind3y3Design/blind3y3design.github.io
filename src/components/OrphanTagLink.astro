@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import FormattedTag from "./FormattedTag.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+interface Props extends HTMLAttributes<"a"> {
+  tag: string;
+}
+
+const { tag, ...props } = Astro.props;
+
+const tagPosts = await getCollection("writing", ({ data }) => {
+  return data.tags.includes(tag);
+});
+
+const tagPost: CollectionEntry<"writing"> = tagPosts[0];
+---
+
+<a href=`/writing/${tagPost.slug}` class="tag-link tag-link--orphan" {...props}>
+  <FormattedTag tag={tag} />
+</a>
+
+<style></style>

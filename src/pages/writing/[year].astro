@@ -1,0 +1,171 @@
+---
+import Layout from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { Picture } from "astro:assets";
+import PostDate from "../../components/PostDate.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("writing")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  );
+
+  const postYears = new Map();
+  posts.forEach((post) => {
+    const year = post.data.pubDate.getFullYear();
+
+    if (!postYears.get(year)) {
+      postYears.set(year, []);
+    }
+
+    postYears.get(year).push(post);
+  });
+
+  return [...postYears.entries()].map(([year, posts]) => ({
+    params: { year },
+    props: { posts },
+  }));
+}
+
+const { posts } = Astro.props;
+const { year } = Astro.params;
+---
+
+<Layout title={`Posts from ${year}`} description={`Posts from ${year}`}>
+  <main>
+    <h1>Posts in {year}</h1>
+    <ul class="post-list">
+      {posts.map((post: CollectionEntry<"writing">) => (
+          <li class="post-preview">
+            <div class="post-preview__super-date">
+              <PostDate date={post.data.pubDate} />
+            </div>
+            <a href={`/writing/${post.slug}/`} class="post-preview__link">
+              {post.data.heroImage && (
+                <Picture
+                  class="post-preview__image"
+                  src={post.data.heroImage}
+                  formats={["avif", "webp"]}
+                  alt={post.data.title}
+                />
+              )}
+              <div class="post-preview__content">
+                <h4 class="post-preview__title">{post.data.title}</h4>
+                <p class="post-preview__description">{post.data.description}</p>
+                <p class="post-preview__date">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
+
+<style>
+
+  h1 {
+    margin-block-end: 1em;
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+    margin: 0;
+    max-width: 80ch;
+    padding: 0;
+
+    @media (min-width: 600px) {
+      gap: 48px;
+    }
+  .post-preview {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      gap: 24px;
+      grid-template-columns: max-content 1fr;
+    }
+  }
+
+  .post-preview__super-date {
+    display: none;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .post-preview__link {
+    color: var(--body-color);
+    display: grid;
+    gap: 0;
+    text-decoration: none;
+    @media (min-width: 600px) {
+      gap: 8px;
+    }
+    * {
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  .post-preview__image {
+    aspect-ratio: 2/1;
+    border-radius: 12px;
+    grid-column: 1;
+    margin-block-end: 8px;
+    object-fit: cover;
+    object-position: top center;
+
+    @media (min-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  .post-preview__content {
+    display: grid;
+    gap: 0;
+    @media (min-width: 600px) {
+      gap: 8px;
+    }
+  }
+
+  .post-preview__title {
+    color: var(--link-color);
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2ex;
+
+    .post-preview__link:hover & {
+      color: var(--link-color-hover);
+    }
+  }
+
+  .post-preview__description {
+    display: none;
+    margin: 0;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .post-preview__date {
+    margin: 0;
+    color: oklch(var(--white-raw) / 0.6);
+
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+</style>
