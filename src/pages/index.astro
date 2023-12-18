@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Base.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
@@ -14,7 +13,7 @@ const work = (await getCollection("work"))
   .slice(0, 4);
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Layout title="Homepage">
   <main>
     <section class="home-intro">
       <h1>Hey, I'm Adam Sedwick</h1>

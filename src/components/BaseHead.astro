@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 interface Props {
   title: string;
@@ -49,9 +50,12 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title} | Adam Sedwick</title>
+<title>{title && `${title}  | `}{SITE_TITLE}</title>
 <meta name="title" content=`${title} | Adam Sedwick` />
-<meta name="description" content={description} />
+<meta
+  name="description"
+  content={description ? description : SITE_DESCRIPTION}
+/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
