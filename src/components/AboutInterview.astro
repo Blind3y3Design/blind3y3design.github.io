@@ -1,0 +1,112 @@
+<div class="about__interview">
+  <section class="interview-item">
+    <h2 class="interview__question">
+      What inspired you to pursue a career in design?
+    </h2>
+    <div class="interview__answer">
+      <p>
+        I've always had an interest in designing things, even before I
+        understood what that meant. As a child I would spend hours building with
+        LEGO or taking apart small electronics or machines to see how they
+        worked.
+      </p>
+      <p>
+        In high school I had the opportunity to take a class focused on graphic
+        design and immediately fell in love with the rigidity and structure of
+        Bauhaus design and the International Typographic Style.
+      </p>
+      <p>
+        To this day I will still spend hours putting together massive LEGO sets,
+        and I've gone from disassembling small electronics to creating systems
+        that other people use to create products.
+      </p>
+    </div>
+  </section>
+  <section class="interview-item">
+    <h2 class="interview__question">
+      Describe your job without using the words "design" or "designer."
+    </h2>
+    <div class="interview__answer">
+      <p>
+        I work with a team of expert problem solvers to identify needs and
+        provide smart scalable solutions, removing tedium from other's workloads
+        so they can focus on more interesting challenges.
+      </p>
+    </div>
+  </section>
+  <section class="interview-item">
+    <h2 class="interview__question">
+      What's one piece of design wisdom you would give to new designers?
+    </h2>
+    <div class="interview__answer">
+      <p>
+        Spend time exploring the vast landscape of the field. You don't need to
+        specialize immediately, and may not need to at all.
+      </p>
+      <p>
+        The design field has many paths for a successful career and all to often
+        we hear about the hyperspecialized rockstar who is 10xing their team's
+        output. The reality is that person is able to be successful because they
+        are surrounded by a vast support system of other disciplines and
+        individuals who clear the way so they can be that focused.
+      </p>
+      <p>
+        I for example am a Broken Comb person, I do not have any single hyper
+        specialization, instead I chose to focus on being a generalist who can
+        assist in a multitude of roles. With my career path in Design Systems
+        this is incredibly useful as I have a working knowledge of all the teams
+        I work with on a daily basis, be it design, development, or product
+        management.
+      </p>
+    </div>
+  </section>
+</div>
+
+<style>
+  .about__interview {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    padding-block: 64px;
+    width: 100%;
+
+    @media (max-width: 1400px) {
+      padding-inline: 16px;
+    }
+  }
+
+  .interview-item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  .interview__question {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    max-width: 450px;
+  }
+
+  .interview__answer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: 1200px) {
+      align-self: flex-end;
+    }
+
+    p {
+      margin: 0;
+      max-width: 700px;
+    }
+  }
+</style>

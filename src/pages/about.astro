@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Base.astro";
+import { Picture } from "astro:assets";
+import FormattedDate from "../components/FormattedDate.astro";
+import AboutInterview from "../components/AboutInterview.astro";
+
+const updatedDate = new Date("December 13 2023");
+import heroImage from "../images/about-me.png";
+---
+
+<Layout
+  title="About Me"
+  description="Adam Sedwick is a design systems lead and accessibilit advocate"
+>
+  <main>
+    <article>
+      <div class="hero-image">
+        {
+          heroImage && (
+            <Picture
+              src={heroImage}
+              formats={["avif", "webp"]}
+              alt="Photograph of Adam Sedwick"
+            />
+          )
+        }
+      </div>
+      <div class="prose">
+        <div class="title">
+          <p class="last-updated-on">
+            Last updated on <FormattedDate date={updatedDate} />
+          </p>
+          <h1>About Me</h1>
+          <hr />
+        </div>
+        <p>
+          I lead the <strong>Design Systems</strong> team at <strong
+            >Discovery Education</strong
+          >.
+        </p>
+        <p>
+          Our team focuses on designing and developing the components and
+          systems that are used across all of Discovery Education's properties.
+          Our goal is to ensure that every experience is robust, scalable and
+          accessible.
+        </p>
+        <p>
+          I am also a member of the <a
+            href="https://www.w3.org/community/design-tokens/"
+            >Design Tokens Community Group</a
+          >, working to establish a standard that tools, designers, and
+          developers can all rely on when creating and using design tokens.
+        </p>
+      </div>
+      <AboutInterview />
+    </article>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: calc(100% - 2em);
+    max-width: 100%;
+  }
+  .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+  }
+  .prose {
+    margin: auto;
+    margin-trim: block;
+    max-width: 100%;
+    width: 80ch;
+  }
+  .title {
+    margin-bottom: 1em;
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1;
+  }
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+  .last-updated-on {
+    margin-bottom: 0.5em;
+    color: oklch(var(--white-raw) / 0.6);
+    font-style: italic;
+  }
+</style>

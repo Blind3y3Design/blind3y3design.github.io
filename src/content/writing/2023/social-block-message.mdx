@@ -1,0 +1,126 @@
+---
+pubDate: 2023-11-06T12:00:00-04:00
+title: "Using Block Quotes for Social Embeds"
+description: "Custom styles for block quote elements using the power of the :has selector"
+tags:
+  - code
+  - development
+  - public-learning
+  - social-media
+  - UX
+---
+
+import { Picture } from "astro:assets";
+import twitter from "../../../images/writing/social-block-message/twitter.png";
+import mastodon from "../../../images/writing/social-block-message/mastodon.png";
+
+Back at it again, Chris and Dave on the Shoptalk Show [(ep. 590)](https://shoptalkshow.com/590/) mouth-blogged the idea of having custom block-quote styles based on the location of the source of the quote.
+
+Chris [already wrote](https://chriscoyier.net/2023/11/01/0-kb-social-media-embeds/) about the concept of using a block quote in place of an actual social media embed, but he simply matched the design of the blockquote to his site.
+
+I thought it would be a fun excercise to take their idea through to completion and allow for "custom themes" based on the source of the quoted material.
+
+The basic setup is pretty simple. We start with a `blockquote` with a `cite` child element.
+
+```html
+<blockquote>
+  <p>"Make the common configurable and the uncommon composable"</p>
+  <cite>
+    — Adam Sedwick (<a href="link.to.author">@AdamSedwick</a>) —
+    <a href="link.to.post">Nov 16, 2022</a>
+  </cite>
+</blockquote>
+```
+
+Which results in:
+
+<blockquote>
+  <p>"Make the common configurable and the uncommon composable"</p>
+  <cite>
+    — Adam Sedwick (<a href="#">@AdamSedwick</a>) — <a href="#">Nov 16, 2022</a>
+  </cite>
+</blockquote>
+
+It's a bog-standard blockquote!
+
+Now lets add some magic:
+
+```css
+blockquote {
+  background: var(--blockquote-background-color);
+  border-inline-start: 5px solid var(--blockquote-border-color);
+  color: var(--blockquote-text-color);
+
+  a {
+    color: var(--blockquote-link-color);
+  }
+
+  &:has(cite a[href*="twitter"]) {
+    --blockquote-background-color: #000000;
+    --blockquote-border-color: rgb(29, 155, 240);
+    --blockquote-text-color: #ffffff;
+    --blockquote-link-color: rgb(29, 155, 240);
+  }
+}
+```
+
+And the result:
+
+<blockquote>
+  <p>"Make the common configurable and the uncommon composable"</p>
+  <cite>
+    — Adam Sedwick (<a href="https://twitter.com/AdamSedwick">@AdamSedwick</a>)
+    —{" "}
+    <a href="https://twitter.com/AdamSedwick/status/1592922558403604481">
+      Nov 16, 2022
+    </a>
+  </cite>
+</blockquote>
+
+<figure class="no-has-support">
+  <Picture
+    class="blog-post__image"
+    src={twitter}
+    alt="Blockquote styled with twitter theming"
+  />
+  <figcaption>
+    At the time of publishing `:has()` is still behind a flag in firefox. Here
+    is an image of the blockquote with `:has()` enabled.
+  </figcaption>
+</figure>
+
+Leveraging the same `:has()` selector we could create a theme to match any social network. Here's the same post thing as if from a mastodon instance:
+
+```css
+&:has(cite a[href*="mastodon.social"]) {
+  --blockquote-background-color: #282c37;
+  --blockquote-border-color: #6364ff;
+  --blockquote-text-color: #ffffff;
+  --blockquote-link-color: #6364ff;
+}
+```
+
+<blockquote>
+  <p>"Make the common configurable and the uncommon composable"</p>
+  <cite>
+    — Adam Sedwick (
+    <a href="https://mastodon.social/@AdamSedwick">@AdamSedwick</a>) —{" "}
+    <a href="https://mastodon.social/@AdamSedwick">Nov 16, 2022</a>
+  </cite>
+</blockquote>
+
+<figure class="no-has-support">
+  <Picture
+    class="blog-post__image"
+    src={mastodon}
+    alt="Blockquote styled with mastodon theming"
+  />
+  <figcaption>
+    At the time of publishing `:has()` is still behind a flag in firefox. Here
+    is an image of the blockquote with `:has()` enabled.
+  </figcaption>
+</figure>
+
+Sure, you could load up react, vue, or some other component-based system that accepts or sets a prop based on a passed value, but that's all additional overhead and ultimately more data sent over the wire.
+
+I think it's pretty powerful that we can combine something like `:has()` with the attribute selector to be able to create custom styles based on the contents of an element in native web tech without any additional libraries.
