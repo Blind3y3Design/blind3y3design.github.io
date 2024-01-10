@@ -2,7 +2,7 @@
 pubDate: 2023-12-17T12:00:00-06:00
 title: "Taking off with Astro"
 description: "Rebuilding my website using Astro.build"
-heroImage: ../../../images/writing/astro-takeoff/hero.png
+heroImage: "@images/writing/astro-takeoff/hero.png"
 tags:
   - development
   - design

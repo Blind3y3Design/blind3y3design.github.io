@@ -2,7 +2,7 @@
 pubDate: 2021-02-15
 link: https://comet.discoveryeducation.com/
 title: Comet Design System
-heroImage: ../../images/work/comet-home.jpg
+heroImage: "@images/work/comet-home.jpg"
 description: Designing systems for Discovery Education.
 ---
 

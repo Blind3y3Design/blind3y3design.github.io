@@ -1,8 +1,8 @@
 ---
-import Layout from "../../../layouts/Base.astro";
+import Layout from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
-import TagLink from "../../../components/TagLink.astro";
-import OrphanTagLink from "../../../components/OrphanTagLink.astro";
+import TagLink from "@components/TagLink.astro";
+import OrphanTagLink from "@components/OrphanTagLink.astro";
 
 const posts = (await getCollection("writing")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

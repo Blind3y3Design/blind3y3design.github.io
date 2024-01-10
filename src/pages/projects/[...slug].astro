@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import ProjectPage from "../../layouts/ProjectPage.astro";
+import ProjectPage from "@layouts/ProjectPage.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("projects");

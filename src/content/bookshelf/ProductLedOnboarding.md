@@ -4,7 +4,7 @@ pubDate: 2023-09-15
 title: "Product-Led Onboarding"
 subtitle: "How to turn users into lifelong customers"
 bookAuthor: Ramli John
-bookImage: ../../images/bookshelf/product-led-onboarding.jpg
+bookImage: "@images/bookshelf/product-led-onboarding.jpg"
 bookRating: ★★★★
 amazonLink: https://a.co/d/d0QjOZc
 amazonGuid: "1777717701"

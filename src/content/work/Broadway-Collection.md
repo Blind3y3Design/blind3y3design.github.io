@@ -1,7 +1,7 @@
 ---
 pubDate: 2015-12-31
 link: http://www.broadwaycollection.com/
-heroImage: ../../images/work/broadway-collection.jpg
+heroImage: "@images/work/broadway-collection.jpg"
 title: Broadway Collection
 ---
 

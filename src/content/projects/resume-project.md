@@ -1,7 +1,7 @@
 ---
 pubDate: 2016-07-11
 title: SPA Resume project
-heroImage: ../../images/work/json-resume.jpg
+heroImage: "@images/work/json-resume.jpg"
 description: Leveling up with Single Page Applications and the JSON Resume project
 link: https://github.com/Blind3y3Design/json-resume
 status: archived

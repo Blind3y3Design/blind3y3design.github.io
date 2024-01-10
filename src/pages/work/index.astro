@@ -1,10 +1,10 @@
 ---
-import Layout from "../../layouts/Base.astro";
+import Layout from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
 
 import type { CollectionEntry } from "astro:content";
 import { Picture } from "astro:assets";
-import FormattedDate from "../../components/FormattedDate.astro";
+import FormattedDate from "@components/FormattedDate.astro";
 
 const posts = (await getCollection("work")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

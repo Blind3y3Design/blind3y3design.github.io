@@ -1,6 +1,6 @@
 ---
 pubDate: 2015-12-31
-heroImage: ../../images/work/nyias.jpg
+heroImage: "@images/work/nyias.jpg"
 title: New York International Auto Show 2016
 ---
 

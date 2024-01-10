@@ -2,7 +2,7 @@
 title: "Is 'Mobile-First' as an idea dead?"
 description: "Thoughts on the concept of 'Mobile First'"
 pubDate: 2019-08-27T12:00:00-04:00
-heroImage: "../../../images/writing/mobile-first/mobile-first-header.jpg"
+heroImage: "@images/writing/mobile-first/mobile-first-header.jpg"
 ---
 
 Way back in January of 2016 [Intercom](https://medium.com/intercom-inside/why-mobile-first-is-outdated-f10a3dc357bd#.o5z9a3npb) wrote a blog post titled "Why mobile first is outdated". This post sparked a conversation over on the User Experience slack community [Designer Hangout](http://designerhangout.co/). I’m going to share some of that conversation.

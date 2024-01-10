@@ -2,7 +2,7 @@
 pubDate: 2023-09-15
 link: https://accessibility.blind3y3design.com/
 title: Accessibility Playbook
-heroImage: ../../images/work/accessibility-playbook-home.png
+heroImage: "@images/work/accessibility-playbook-home.png"
 description: A resource manual to create more accessible digital products
 status: active
 ---

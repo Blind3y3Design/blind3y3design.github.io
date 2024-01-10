@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Base.astro";
+import Layout from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import BookPreview from "../components/BookPreview.astro";
+import BookPreview from "@components/BookPreview.astro";
 
 const books = (await getCollection("bookshelf")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

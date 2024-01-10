@@ -2,7 +2,7 @@
 pubDate: 2023-12-09T12:00:00-04:00
 title: "Learning IndieWeb with Apple Annie"
 description: ""
-heroImage: ../../../images/writing/indieweb-apple-annie/hero.png
+heroImage: "@images/writing/indieweb-apple-annie/hero.png"
 tags:
   - development
   - public-learning

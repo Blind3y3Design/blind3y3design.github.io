@@ -1,9 +1,9 @@
 ---
-import Layout from "../../../layouts/Base.astro";
+import Layout from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
-import FormattedDate from "../../../components/FormattedDate.astro";
-import FormattedTag from "../../../components/FormattedTag.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import FormattedTag from "@components/FormattedTag.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("writing")).sort(
