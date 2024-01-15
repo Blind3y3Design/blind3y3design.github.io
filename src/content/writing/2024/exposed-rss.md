@@ -1,0 +1,15 @@
+---
+pubDate: 2024-01-14T12:00:00-04:00
+title: "Chris Coyier - Exposed RSS"
+description: "RSS Autodiscovery"
+tags:
+  - development
+  - RSS
+  - HTML
+---
+
+I doubt he was specifically talking about this blog; but after reading Chris' post I checked and realized that I am one of those sites taht does not auto-expose their RSS feed in the HTML. I've since added the relevant line in my `head` and we should be good to go.
+
+What a week, first I learn how to easily set up import aliases, and now I've got a properly exposed RSS feed. Wondering what I'll learn I'm missing next week.
+
+Read Chris' full article [here](https://chriscoyier.net/2024/01/13/exposed-rss/).

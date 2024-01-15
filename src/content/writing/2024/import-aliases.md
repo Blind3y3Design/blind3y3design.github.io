@@ -12,4 +12,4 @@ One thing I've struggled with on many iterations of this blog is the constant `.
 
 Good news! [Coding in Public](https://www.youtube.com/@CodinginPublic) released a new video today that explained exactly how to set them up (and in Astro no less)!
 
-Go check in out [here](https://www.youtube.com/watch?v=U0P7Kn3GFMQ).
+Go check it out [here](https://www.youtube.com/watch?v=U0P7Kn3GFMQ).
