@@ -1,5 +1,5 @@
 ---
-pubDate: 2024-01-21T12:00:00-04:00
+pubDate: 2024-01-24T12:00:00-04:00
 title: "RSS Renaissance "
 description: "Is it time to bring back the blog roll?"
 tags:
