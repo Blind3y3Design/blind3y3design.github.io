@@ -2,6 +2,7 @@
 import Layout from "./Base.astro";
 import { Picture } from "astro:assets";
 import FormattedDate from "@components/FormattedDate.astro";
+import FormattedTag from "@components/FormattedTag.astro";
 
 const { title, description, pubDate, updatedDate, heroImage, tags } =
   Astro.props;
@@ -45,7 +46,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
                     rel="category tag"
                     class="tag p-category"
                   >
-                    {tag}
+                    <FormattedTag tag={tag} />
                   </a>
                 </li>
               ))}
@@ -84,10 +85,14 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
     margin: auto;
     padding: 1em;
   }
+
+  .hero-image + .title {
+    margin-top: 1em;
+  }
   .title {
-    padding: 1em 0;
+    padding: 0;
     text-align: center;
-    width: 80ch;
+    width: 120ch;
     max-width: calc(100% - 2rem);
     margin: 0 auto;
   }
