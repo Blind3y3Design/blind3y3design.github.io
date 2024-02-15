@@ -11,13 +11,13 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 <Layout title={title} description={description}>
   <main class="h-entry">
     <article>
-      <div class="hero-image">
-        {
-          heroImage && (
+      {
+        heroImage && (
+          <div class="hero-image">
             <Picture src={heroImage} formats={["avif", "webp"]} alt={title} />
-          )
-        }
-      </div>
+          </div>
+        )
+      }
       <div class="title">
         <div class="date">
           <FormattedDate class="dt-published" date={pubDate} />
@@ -58,75 +58,3 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
     <a href={Astro.url} class="u-url hidden"></a>
   </main>
 </Layout>
-
-<style>
-  main {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
-  .hero-image {
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 100%;
-  }
-  .hero-image img {
-    aspect-ratio: 2/1;
-    border-radius: 12px;
-    /* box-shadow: var(--box-shadow); */
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    object-position: top center;
-  }
-  .prose {
-    width: 80ch;
-    max-width: calc(100% - 2em);
-    margin: auto;
-    padding: 1em;
-  }
-
-  .hero-image + .title {
-    margin-top: 1em;
-  }
-  .title {
-    padding: 0;
-    text-align: center;
-    width: 120ch;
-    max-width: calc(100% - 2rem);
-    margin: 0 auto;
-  }
-  .title h1 {
-    margin: 0 0 0.5em 0;
-  }
-  .date {
-    margin-bottom: 0.5em;
-    color: oklch(var(--white-raw) / 0.6);
-  }
-  .last-updated-on {
-    font-style: italic;
-  }
-
-  .tag-list {
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 1rem 0 0;
-    padding: 0;
-  }
-
-  .tag-item {
-    margin: 0;
-  }
-  .tag {
-    margin: 0;
-
-    &:hover {
-      color: var(--link-color);
-    }
-  }
-
-  .hidden {
-    display: none;
-  }
-</style>

@@ -139,10 +139,6 @@ hr {
   border-top: 1px solid var(--body-color);
 }
 
-.prose *:not(:first-child) {
-  margin-top: 1.2em;
-}
-
 .sr-only {
   border: 0;
   padding: 0;
