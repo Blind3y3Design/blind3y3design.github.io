@@ -22,7 +22,8 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
     text-underline-offset: 0ex;
     transition: 0.25s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: var(--gold);
       text-decoration-color: var(--gold);
       text-underline-offset: 0.4ex;

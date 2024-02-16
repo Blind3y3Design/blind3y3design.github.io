@@ -56,7 +56,8 @@ import HeaderLink from './HeaderLink.astro';
     text-underline-offset: 0ex;
     transition: .25s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: var(--gold-dark);
       text-decoration-color: var(--gold-dark);
       text-decoration-thickness: 4px;

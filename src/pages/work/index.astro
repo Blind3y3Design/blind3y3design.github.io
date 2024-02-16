@@ -122,7 +122,8 @@ const { title = "Work", description = "Work I've done throughout my career" } =
     text-decoration-thickness: 2px;
     text-underline-offset: 0.2ex;
 
-    .post-preview__link:hover & {
+    .post-preview__link:hover &,
+    .post-preview__link:focus-visible & {
       color: var(--link-color-hover);
     }
   }

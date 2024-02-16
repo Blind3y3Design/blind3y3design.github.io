@@ -2,9 +2,7 @@
 import Layout from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { Picture } from "astro:assets";
-import PostDate from "@components/PostDate.astro";
-import FormattedDate from "@components/FormattedDate.astro";
+import PostPreview from "@components/post/PostPreview.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("writing")).sort(
@@ -37,28 +35,15 @@ const { year } = Astro.params;
     <h1>Posts in {year}</h1>
     <ul class="post-list">
       {posts.map((post: CollectionEntry<"writing">) => (
-          <li class="post-preview">
-            <div class="post-preview__super-date">
-              <PostDate date={post.data.pubDate} />
-            </div>
-            <a href={`/writing/${post.slug}/`} class="post-preview__link">
-              {post.data.heroImage && (
-                <Picture
-                  class="post-preview__image"
-                  src={post.data.heroImage}
-                  formats={["avif", "webp"]}
-                  alt={post.data.title}
-                />
-              )}
-              <div class="post-preview__content">
-                <h4 class="post-preview__title">{post.data.title}</h4>
-                <p class="post-preview__description">{post.data.description}</p>
-                <p class="post-preview__date">
-                  <FormattedDate date={post.data.pubDate} />
-                </p>
-              </div>
-            </a>
-          </li>
+          <PostPreview
+            description={post.data.description}
+            heroImage={post.data.heroImage}
+            isLinkPost={post.data.tags.includes("link-post")}
+            link={post.slug}
+            pubDate={post.data.pubDate}
+            title={post.data.title}
+            type="full"
+          />
         ))
       }
     </ul>
@@ -146,7 +131,8 @@ const { year } = Astro.params;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.2ex;
 
-    .post-preview__link:hover & {
+    .post-preview__link:hover &,
+    .post-preview__link:focus-visible & {
       color: var(--link-color-hover);
     }
   }

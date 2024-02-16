@@ -1,3 +1,7 @@
+.homepage main {
+  padding: 0 2rem;
+}
+
 main {
   width: 100%;
   max-width: 100%;
@@ -111,7 +115,8 @@ main {
 .tag {
   margin: 0;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: var(--link-color);
   }
 }
@@ -164,7 +169,8 @@ main {
   text-decoration: none;
   transition: all 0.25s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background: var(--link-color-hover);
   }
 }
@@ -188,7 +194,8 @@ main {
     transition: 0.25s ease-in-out;
   }
 
-  &:hover .title h1 {
+  &:hover .title h1,
+  &:focus-visible .title h1 {
     color: var(--link-color-hover);
   }
 }

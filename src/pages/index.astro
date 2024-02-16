@@ -2,7 +2,7 @@
 import Layout from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
-import FormattedDate from "@components/FormattedDate.astro";
+import PostPreview from "@components/post/PostPreview.astro";
 
 const posts = (await getCollection("writing"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -36,14 +36,13 @@ import heroImage from "@images/Funko_Headshot_Square.png";
       <ul class="post-list">
         {
           posts.map((post) => (
-            <li class="post-preview">
-              <a href={`/writing/${post.slug}/`} class="post-preview__link">
-                <p class="post-preview__title">{post.data.title}</p>
-              </a>
-              <p class="post-preview__date">
-                Posted on <FormattedDate date={post.data.pubDate} />
-              </p>
-            </li>
+            <PostPreview
+              link={post.slug}
+              title={post.data.title}
+              pubDate={post.data.pubDate}
+              isLinkPost={post.data.tags.includes("link-post")}
+              type="compact"
+            />
           ))
         }
       </ul>
@@ -128,29 +127,6 @@ import heroImage from "@images/Funko_Headshot_Square.png";
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-
-  .post-preview__link {
-    color: var(--link-color);
-    margin: 0;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0ex;
-    transition: all 0.25s ease-in-out;
-
-    &:hover,
-    &:focus-visible {
-      color: var(--link-color-hover);
-      text-decoration-color: var(--link-color-hover);
-      text-underline-offset: 0.2ex;
-    }
-  }
-
-  .post-preview__date {
-    font-size: var(--font-size-sm);
-    margin: 0;
   }
 
   .work-list {

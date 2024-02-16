@@ -1,0 +1,166 @@
+---
+import { Icon } from "astro-icon";
+import { Picture } from "astro:assets";
+
+import FormattedDate from "@components/FormattedDate.astro";
+import PostDate from "@components/PostDate.astro";
+
+interface Props {
+  description: string;
+  heroImage: ImageMetadata;
+  isLinkPost: Boolean;
+  link: string;
+  pubDate: Date;
+  title: string;
+  type: "full" | "compact";
+}
+
+const { description, heroImage, isLinkPost, link, pubDate, title, type } =
+  Astro.props;
+---
+
+<li class=`post-preview post-preview--${type}`>
+  {
+    type === "full" && (
+      <div class="post-preview__super-date">
+        <PostDate date={pubDate} />
+      </div>
+    )
+  }
+  <div class="post-preview__content">
+    <a href={`/writing/${link}/`} class="post-preview__link">
+      {
+        type === "full" && heroImage && (
+          <Picture
+            class="post-preview__image"
+            src={heroImage}
+            formats={["avif", "webp"]}
+            alt={title}
+          />
+        )
+      }
+      <p class="post-preview__title">
+        {title}
+        {
+          isLinkPost && (
+            <Icon
+              class="post-preview__link-icon"
+              pack="mdi"
+              name="link-variant"
+            />
+          )
+        }
+      </p>
+    </a>
+    {description && <p class="post-preview__description">{description}</p>}
+    <p class="post-preview__date">
+      Posted on <FormattedDate date={pubDate} />
+    </p>
+  </div>
+</li>
+
+<style>
+  .post-preview__link {
+    color: var(--link-color);
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0ex;
+    transition: all 0.25s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--link-color-hover);
+      text-decoration: underline;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.2ex;
+    }
+  }
+
+  .post-preview__title {
+    align-items: center;
+    display: flex;
+    gap: 0.25em;
+  }
+
+  .post-preview__link-icon {
+    height: 1em;
+    width: 1em;
+  }
+
+  .post-preview__date {
+    font-size: var(--font-size-sm);
+    margin: 0;
+  }
+
+  .post-preview__super-date {
+    display: none;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .post-preview__image {
+    aspect-ratio: 2/1;
+    border-radius: 12px;
+    grid-column: 1;
+    margin-block-end: 8px;
+    object-fit: cover;
+    object-position: top center;
+
+    @media (min-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  .post-preview__description {
+    display: none;
+    margin: 0;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .post-preview--full {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      gap: 24px;
+      grid-template-columns: max-content 1fr;
+    }
+
+    .post-preview__link {
+      display: grid;
+      gap: 0;
+      @media (min-width: 600px) {
+        gap: 8px;
+      }
+      * {
+        transition: 0.25s ease-in-out;
+      }
+    }
+
+    .post-preview__title {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .post-preview__date {
+      margin: 0;
+
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+  }
+</style>
