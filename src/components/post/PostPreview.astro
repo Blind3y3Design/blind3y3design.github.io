@@ -6,9 +6,9 @@ import FormattedDate from "@components/FormattedDate.astro";
 import PostDate from "@components/PostDate.astro";
 
 interface Props {
-  description: string;
-  heroImage: ImageMetadata;
-  isLinkPost: Boolean;
+  description?: string;
+  heroImage?: ImageMetadata;
+  isLinkPost?: Boolean;
   link: string;
   pubDate: Date;
   title: string;
