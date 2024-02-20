@@ -48,6 +48,7 @@ main {
     [content-end] minmax(0, var(--breakout-size))
     [breakout-end] minmax(var(--padding-inline), 1fr)
     [full-width-end];
+  margin-block-start: 1em;
 
   > * {
     grid-column: content;
@@ -62,7 +63,7 @@ main {
   }
 
   > *:not(:first-child) {
-    margin-top: 1.2em;
+    margin-block-start: 1.2em;
   }
 
   .aside {
@@ -81,7 +82,7 @@ main {
 }
 
 .hero-image + .title {
-  margin-top: 1em;
+  margin-block-start: 1em;
 }
 .title {
   padding: 0;

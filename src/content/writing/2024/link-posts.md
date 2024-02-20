@@ -4,7 +4,7 @@ title: "Indicating Link Posts"
 description: "Making posts that link to other's work more obvious"
 tags:
   - design
-  - html
+  - HTML
   - css
   - astro
 ---

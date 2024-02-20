@@ -106,7 +106,7 @@ p {
   font-size: var(--font-size-md);
 
   &:not(:first-child) {
-    margin-top: 1em;
+    margin-block-start: 1em;
   }
 }
 
@@ -190,11 +190,16 @@ blockquote {
   color: var(--blockquote-text-color);
   display: flex;
   flex-direction: column;
+  font-size: 0.8em;
   gap: 8px;
   padding: 16px;
 
   a {
     color: var(--blockquote-link-color);
+  }
+
+  * {
+    font-size: inherit;
   }
 
   &:has(cite a[href*="twitter"]) {
