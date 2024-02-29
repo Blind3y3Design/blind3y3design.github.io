@@ -21,6 +21,11 @@ main {
   object-fit: cover;
   object-position: top center;
 }
+
+.about .hero-image img {
+  aspect-ratio: auto;
+}
+
 .prose {
   /* width: 80ch;
   max-width: calc(100% - 2em);
@@ -62,8 +67,12 @@ main {
     grid-column: full-width;
   }
 
-  > *:not(:first-child) {
+  > * + * {
     margin-block-start: 1.2em;
+  }
+
+  > :is(h2, h3, h4, h5, h6) + * {
+    margin-block-start: 0.8em;
   }
 
   .aside {
@@ -161,18 +170,18 @@ main {
 }
 
 .project__link {
-  background: var(--link-color);
   border-radius: 0.25em;
   color: var(--body-background);
   display: inline-block;
+  filter: saturate(20%);
   font-weight: 600;
-  padding: 0.5em 1em;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
+  overflow: hidden;
 
   &:hover,
   &:focus-visible {
-    background: var(--link-color-hover);
+    filter: saturate(100%);
   }
 }
 

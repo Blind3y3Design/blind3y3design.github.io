@@ -50,7 +50,7 @@ main {
   padding: 1em 0;
 
   @media (min-width: 1024px) {
-    padding: 3em 1em;
+    padding: 3em 0;
     max-width: calc(100% - min(10rem, 5vw));
   }
 }
@@ -104,10 +104,6 @@ a:not([class]) {
 
 p {
   font-size: var(--font-size-md);
-
-  &:not(:first-child) {
-    margin-block-start: 1em;
-  }
 }
 
 code,
