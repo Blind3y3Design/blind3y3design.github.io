@@ -1,5 +1,5 @@
 ---
-pubDate: 2024-02-20T12:00:00-04:00
+pubDate: 2024-03-08T12:00:00-04:00
 title: "The Box Model for Design"
 description: "Understanding the box model is key to creating modern and robust web layouts"
 tags:
