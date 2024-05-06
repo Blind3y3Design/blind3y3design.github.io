@@ -1,44 +1,44 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-import { Icon } from "astro-icon";
+import type { HTMLAttributes } from 'astro/types';
+import { Icon } from 'astro-icon';
 
-interface Props extends HTMLAttributes<"a"> {
-  link: string;
-  linkText: string;
+interface Props extends HTMLAttributes<'a'> {
+    link: string;
+    linkText: string;
 }
 
-const { link, linkText = "View Link", ...props } = Astro.props;
+const { link, linkText = 'View Link', ...props } = Astro.props;
 ---
 
 <a href={link} class="post-link" {...props}>
-  {linkText}
-  <Icon class="post-link__icon" pack="mdi" name="link-variant" />
+    {linkText}
+    <Icon class="post-link__icon" pack="mdi" name="link-variant" />
 </a>
 
 <style>
-  .post-link {
-    align-items: center;
-    background: var(--link-color);
-    border-radius: 2px;
-    color: var(--navy);
-    display: flex;
-    gap: 0.25em;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background 0.25s ease-in-out;
-    width: max-content;
+    .post-link {
+        align-items: center;
+        background: var(--link-color);
+        border-radius: 2px;
+        color: var(--navy);
+        display: flex;
+        gap: 0.25em;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background 0.25s ease-in-out;
+        width: max-content;
 
-    &:hover,
-    &:focus-visible {
-      background: var(--link-color-hover);
+        &:hover,
+        &:focus-visible {
+            background: var(--link-color-hover);
+        }
+
+        &:focus-visible {
+        }
     }
 
-    &:focus-visible {
+    .post-link__icon {
+        height: 1em;
+        width: 1em;
     }
-  }
-
-  .post-link__icon {
-    height: 1em;
-    wioth: 1em;
-  }
 </style>
