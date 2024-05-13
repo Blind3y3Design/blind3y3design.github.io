@@ -63,6 +63,68 @@ So began the creation and foundations of **Nebula**!
 A nebula is a distinct luminescent part of interstellar medium, which can consist of ionized, neutral, or molecular hydrogen and also cosmic dust. Nebulae are often star-forming regions, such as in the "Pillars of Creation" in the Eagle Nebula. (an enormous cloud of dust and gas occupying the space between stars and acting as a nursery for new stars)
 </p>
 
-We utilized all necessary understandings, flaws and learnings from the development stages of Comet when beginning Nebula. Without continued support and investment of a system, it can and will become stale which leads to adoption fall off as new needs arise from product teams.
+We utilized all necessary understandings, flaws and learnings from the development stages of Comet when beginning Nebula. Without continued support and investment of a system, it can and will become stale which leads to adoption fall off as new needs arise from product teams. While Comet functioned as it needed being a system, it was missing proper usage and visual guidelines. The “who we are” and how we “feel” as a brand and product.
 
-While Comet functioned well enough, it was missing proper usage and visual guidelines. The “who we are” and how we “feel” as a brand and product. We needed to hone in on our product identity as a separate artifact, helping us stay focused on who we are, while improving the experiences of products for our end users.
+A design system will innately raise the quality floor of the product teams producing experiences, but without a dedicated exploration and experimentation team it can also squash the quality ceiling resulting in a decent, but not a stellar experience or product.
+
+We needed to hone in on our product identity as a separate artifact, helping us stay focused on who we are, while improving the experiences of products for our end users.
+
+## The Foundations
+
+The Design Systems team chose to target and address both product thinking and human centered design goals. Executing key business results, understanding both spectrums of our target audience while co-collaborating and tailoring solutions for each product team needs.
+
+### Color
+
+One of the first things we tackled as a team was an update to our existing color palettes. Taking our learning and process from the Comet system we set out to establish a set of product agnostic palettes. These colors would be used for general interface elements, anything that is not branded or set to a specific product theme.
+
+<div class="breakout">
+
+![Neutral, inteface, and Interactive Color Palettes](@images/work/nebula/colors.png)
+
+</div>
+
+Additionally, each color was tested with our default text color, if the default color did not meet contrast requirements it would be tested with white text. The resulting WCAG compliance levels are listed within the colored badge allowing designers to easily know which text color would be appropriate for use.
+
+### Typography
+
+<div class="breakout">
+
+![Example specimen of Proxima Vara and Mikado-Chan fonts](@images/work/nebula/typography.png)
+
+</div>
+
+Proxima Vara is now our go-to font at Discovery Education, chosen for its accessibility, variety, and impact. While we previously used Proxima Nova as our main system font in the Comet Design System, we've now upgraded to Proxima Vara. This change offers our Product and Print designers more flexibility with weight and slant options, while providing a single file and performance increases for developers.
+
+Mikado-Chan is a custom typeface designed for Discovery Education to align with readability standards in education for both US and UK students. The original Mikado font was crafted by Hannes von Döhren in 2013, we worked with him to expand it by adding additional character sets. We use Mikado-Chan in lessons and resources that teachers can offer to their younger students.
+
+<div class="breakout">
+
+![Glyph adjustment chart for Mikado-Chan creation](@images/work/nebula/mikado-chan.png)
+
+</div>
+
+### Iconography
+
+We refreshed our Iconography, doing away with clutter and redundant icons. Instead of continuing with an increasingly confusing array, we reset from ground zero introducing icons that hold specific purpose or meaning to enhance usability. All updated icons have been crafted in-house by our principal designer Darrell Moore.
+
+<div class="breakout">
+
+![Example of icon offerings in the Nebula Design System](@images/work/nebula/icons.png)
+
+</div>
+
+## Components
+
+Each component is carefully considered with usability, accessibility, and scalability in mind. Buttons, text fields, and other atomic components should be designed to stand alone and combine to form larger, more complex components. It’s essential to consider how each component will adapt to different screen sizes and devices, ensuring a smooth user experience.
+
+<div class="breakout">
+
+![Showcase of input field component specimen](@images/work/nebula/components.png)
+
+</div>
+
+## Credits
+
+I am incredibly proud of my team and the work we've put into the creation of the Nebula Design Systems. There's no way I could have done any of this work without them.
+
+**Creative Director**: Kandice Levero, **Principle Designer**: Darrell Moore, **Sr. Front-End Developer**: Katie O'Connor, and all of our product contributors.
