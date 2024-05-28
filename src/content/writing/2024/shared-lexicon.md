@@ -1,6 +1,6 @@
 ---
 pubDate: 2024-05-26T12:00:00-04:00
-title: "Shared LExicon"
+title: "Shared Lexicon"
 description: ""
 tags:
   - product-development
