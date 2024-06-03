@@ -120,8 +120,10 @@ main {
 }
 
 .tag-item {
+  font-size: 0.8em;
   margin: 0;
 }
+
 .tag {
   margin: 0;
 

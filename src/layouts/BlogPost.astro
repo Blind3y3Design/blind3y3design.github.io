@@ -1,60 +1,67 @@
 ---
-import Layout from "./Base.astro";
-import { Picture } from "astro:assets";
-import FormattedDate from "@components/FormattedDate.astro";
-import FormattedTag from "@components/FormattedTag.astro";
+import Layout from './Base.astro';
+import { Picture } from 'astro:assets';
+import FormattedDate from '@components/FormattedDate.astro';
+import FormattedTag from '@components/FormattedTag.astro';
 
 const { title, description, pubDate, updatedDate, heroImage, tags } =
-  Astro.props;
+    Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <main class="h-entry">
-    <article>
-      {
-        heroImage && (
-          <div class="hero-image">
-            <Picture src={heroImage} formats={["avif", "webp"]} alt={title} />
-          </div>
-        )
-      }
-      <div class="title">
-        <div class="date">
-          <FormattedDate class="dt-published" date={pubDate} />
-          {
-            updatedDate && (
-              <div class="last-updated-on">
-                Last updated on{" "}
-                <FormattedDate class="dt-updated" date={updatedDate} />
-              </div>
-            )
-          }
-        </div>
-        <h1 class="p-name">{title}</h1>
-        <p class="p-summary hidden">{description}</p>
-        <hr />
-      </div>
-      <div class="prose e-content">
-        <slot />
-        {
-          tags && (
-            <ul class="tag-list">
-              {tags.map((tag: string) => (
-                <li class="tag-item">
-                  <a
-                    href={`/writing/tags/${tag}`}
-                    rel="category tag"
-                    class="tag p-category"
-                  >
-                    <FormattedTag tag={tag} />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )
-        }
-      </div>
-    </article>
-    <a href={Astro.url} class="u-url hidden"></a>
-  </main>
+    <main class="h-entry">
+        <article>
+            {
+                heroImage && (
+                    <div class="hero-image">
+                        <Picture
+                            src={heroImage}
+                            formats={['avif', 'webp']}
+                            alt={title}
+                        />
+                    </div>
+                )
+            }
+            <div class="title">
+                <div class="date">
+                    <FormattedDate class="dt-published" date={pubDate} />
+                    {
+                        updatedDate && (
+                            <div class="last-updated-on">
+                                Last updated on{' '}
+                                <FormattedDate
+                                    class="dt-updated"
+                                    date={updatedDate}
+                                />
+                            </div>
+                        )
+                    }
+                </div>
+                <h1 class="p-name">{title}</h1>
+                <p class="p-summary hidden">{description}</p>
+                <hr />
+            </div>
+            <div class="prose e-content">
+                <slot />
+                {
+                    tags && (
+                        <ul class="tag-list">
+                            {tags.map((tag: string) => (
+                                <li class="tag-item">
+                                    <a
+                                        href={`/writing/tags/${tag}`}
+                                        rel="category tag"
+                                        class="tag p-category"
+                                    >
+                                        <FormattedTag tag={tag} />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    )
+                }
+            </div>
+        </article>
+        <a href={Astro.url} class="u-url hidden"></a>
+    </main>
 </Layout>
