@@ -1,188 +1,193 @@
 ---
-import Layout from "@layouts/Base.astro";
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
-import PostPreview from "@components/post/PostPreview.astro";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
+import PostPreview from '@components/post/PostPreview.astro';
 
-const posts = (await getCollection("writing"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 6);
+const posts = (await getCollection('writing'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 6);
 
-const work = (await getCollection("work"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 4);
+const work = (await getCollection('work'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 4);
 
-import heroImage from "@images/Funko_Headshot_Square.png";
+import heroImage from '@images/Funko_Headshot_Square.png';
 ---
 
 <Layout title="Homepage">
-  <main>
-    <section class="home-intro">
-      <Picture
-        class="home-intro__image"
-        src={heroImage}
-        formats={["avif", "webp"]}
-        width={120}
-        alt="Photograph of Adam Sedwick"
-      />
-      <h1>Hey, I'm Adam Sedwick</h1>
-      <p class="bio">
-        I am a software engineer with a focus on front-end architecture, design
-        systems, and accessibilty.
-      </p>
-    </section>
-    <section class="latest-posts">
-      <h2 class="section-title">Latest Posts</h2>
-      <ul class="post-list">
-        {
-          posts.map((post) => (
-            <PostPreview
-              link={post.slug}
-              title={post.data.title}
-              pubDate={post.data.pubDate}
-              isLinkPost={post.data.tags.includes("link-post")}
-              type="compact"
+    <main>
+        <section class="home-intro">
+            <Picture
+                class="home-intro__image"
+                src={heroImage}
+                formats={['avif', 'webp']}
+                width={120}
+                alt="Photograph of Adam Sedwick"
             />
-          ))
-        }
-      </ul>
-    </section>
-    <section class="work">
-      <h2 class="section-title">Work</h2>
-      <ul class="work-list">
-        {
-          work.map((item) => (
-            <li class="work-preview">
-              <a href={`/work/${item.slug}/`} class="work-preview__link">
-                <Picture
-                  class="work-preview__image"
-                  src={item.data.heroImage}
-                  formats={["avif", "webp"]}
-                  alt={item.data.title}
-                />
-                <p class="work-preview__title">{item.data.title}</p>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-  </main>
+            <h1>Hey, I'm Adam Sedwick</h1>
+            <p class="bio">
+                I focus on Product Development, Design Operations, and Design
+                Systems.
+            </p>
+        </section>
+        <section class="latest-posts">
+            <h2 class="section-title">Latest Posts</h2>
+            <ul class="post-list">
+                {
+                    posts.map((post) => (
+                        <PostPreview
+                            link={post.slug}
+                            title={post.data.title}
+                            pubDate={post.data.pubDate}
+                            isLinkPost={post.data.tags.includes('link-post')}
+                            type="compact"
+                        />
+                    ))
+                }
+            </ul>
+        </section>
+        <section class="work">
+            <h2 class="section-title">Work</h2>
+            <ul class="work-list">
+                {
+                    work.map((item) => (
+                        <li class="work-preview">
+                            <a
+                                href={`/work/${item.slug}/`}
+                                class="work-preview__link"
+                            >
+                                <Picture
+                                    class="work-preview__image"
+                                    src={item.data.heroImage}
+                                    formats={['avif', 'webp']}
+                                    alt={item.data.title}
+                                />
+                                <p class="work-preview__title">
+                                    {item.data.title}
+                                </p>
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
+    </main>
 </Layout>
 
 <style>
-  section {
-    margin: 0 auto;
-    max-width: 1400px;
+    section {
+        margin: 0 auto;
+        max-width: 1400px;
 
-    &:not(:first-child) {
-      margin-block-start: 2rem;
-    }
-  }
-
-  .section-title {
-    margin-block-end: 0.5em;
-  }
-
-  .home-intro {
-    display: grid;
-    gap: 1rem;
-    padding: 3rem 0;
-
-    @media (min-width: 768px) {
-      align-items: center;
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto auto;
-      justify-items: start;
-
-      h1,
-      p {
-        grid-column: 2;
-      }
-
-      picture {
-        grid-row: 1/3;
-      }
+        &:not(:first-child) {
+            margin-block-start: 2rem;
+        }
     }
 
-    > * {
-      margin: 0;
+    .section-title {
+        margin-block-end: 0.5em;
     }
 
-    picture {
-      justify-self: center;
+    .home-intro {
+        display: grid;
+        gap: 1rem;
+        padding: 3rem 0;
+
+        @media (min-width: 768px) {
+            align-items: center;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto;
+            justify-items: start;
+
+            h1,
+            p {
+                grid-column: 2;
+            }
+
+            picture {
+                grid-row: 1/3;
+            }
+        }
+
+        > * {
+            margin: 0;
+        }
+
+        picture {
+            justify-self: center;
+        }
+
+        .home-intro__image {
+            border: 5px solid var(--gold);
+            border-radius: 50%;
+        }
     }
 
-    .home-intro__image {
-      border: 5px solid var(--gold);
-      border-radius: 50%;
-    }
-  }
-
-  .post-list {
-    align-items: start;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .work-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    @media (min-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
+    .post-list {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+    .work-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
+    .work-preview {
+        display: flex;
     }
-  }
 
-  .work-preview {
-    display: flex;
-  }
-
-  .work-preview__link {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-decoration: none;
-    width: 100%;
-  }
-
-  .work-preview__image {
-    aspect-ratio: 2/1;
-    border-radius: 4px;
-    grid-column: 1;
-    margin-block-end: 8px;
-    object-fit: cover;
-    object-position: top center;
-  }
-
-  .work-preview__title {
-    color: var(--link-color);
-    margin: 0;
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2ex;
-    transition: all 0.25s ease-in-out;
-
-    .work-preview__link:hover &,
-    .work-preview__link:focus-visible & {
-      color: var(--link-color-hover);
+    .work-preview__link {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-decoration: none;
+        width: 100%;
     }
-  }
+
+    .work-preview__image {
+        aspect-ratio: 2/1;
+        border-radius: 4px;
+        grid-column: 1;
+        margin-block-end: 8px;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .work-preview__title {
+        color: var(--link-color);
+        margin: 0;
+        text-decoration: underline;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2ex;
+        transition: all 0.25s ease-in-out;
+
+        .work-preview__link:hover &,
+        .work-preview__link:focus-visible & {
+            color: var(--link-color-hover);
+        }
+    }
 </style>
