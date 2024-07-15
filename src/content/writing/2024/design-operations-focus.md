@@ -1,5 +1,5 @@
 ---
-pubDate: 2024-07-014T12:00:00-04:00
+pubDate: 2024-07-14T12:00:00-04:00
 title: "Design Operations Focus"
 description: ""
 tags:
