@@ -1,39 +1,39 @@
 ---
-import { Icon } from "astro-icon";
-import type { HTMLAttributes } from "astro/types";
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
 
-type Props = HTMLAttributes<"a">;
+type Props = HTMLAttributes<'a'>;
 
 const { type, href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
 <a
-  href={href}
-  class:list={[className, "social-link", { active: isActive }]}
-  {...props}
+    href={href}
+    class:list={[className, 'social-link', { active: isActive }]}
+    {...props}
 >
-  <Icon class="social-link__icon" pack="mdi" name={type} />
+    <Icon class="social-link__icon" name={`mdi:${type}`} />
 </a>
 
 <style>
-  .social-link {
-    align-items: center;
-    background: transparent;
-    color: var(--body-color);
-    display: flex;
-    padding: 8px;
-    transition: all 0.25s ease-in-out;
+    .social-link {
+        align-items: center;
+        background: transparent;
+        color: var(--body-color);
+        display: flex;
+        padding: 8px;
+        transition: all 0.25s ease-in-out;
 
-    &:hover,
-    &:focus-visible {
-      color: var(--link-color);
+        &:hover,
+        &:focus-visible {
+            color: var(--link-color);
+        }
     }
-  }
-  .social-link__icon {
-    height: 24px;
-    width: 24px;
-  }
+    .social-link__icon {
+        height: 24px;
+        width: 24px;
+    }
 </style>

@@ -1,0 +1,23 @@
+.stack {
+  > * + * {
+    margin-block-start: var(--space-4);
+  }
+}
+
+.stack[data-size="small"] {
+  > * + * {
+    margin-block-start: var(--space-2);
+  }
+}
+
+.stack[data-size="xs"] {
+  > * + * {
+    margin-block-start: var(--space-1);
+  }
+}
+
+.stack[data-size="xxs"] {
+  > * + * {
+    margin-block-start: var(--space-half);
+  }
+}

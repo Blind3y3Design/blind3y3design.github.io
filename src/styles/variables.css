@@ -1,14 +1,18 @@
 :root {
-  /*  */
-  /* Font Variables */
-  /*  */
-  --font-size-sm: clamp(0.98rem, -0.24vw + 1.03rem, 0.84rem);
-  --font-size-base: clamp(1.13rem, 0vw + 1.13rem, 1.13rem);
-  --font-size-md: clamp(1.29rem, 0.37vw + 1.22rem, 1.5rem);
-  --font-size-lg: clamp(1.49rem, 0.93vw + 1.3rem, 2rem);
-  --font-size-xl: clamp(1.71rem, 1.73vw + 1.36rem, 2.66rem);
-  --font-size-xxl: clamp(1.97rem, 2.88vw + 1.39rem, 3.55rem);
-  --font-size-xxxl: clamp(2.26rem, 4.49vw + 1.36rem, 4.73rem);
+  /* 14 */
+  --font-size-sm: clamp(0.8rem, 0.09vi + 0.78rem, 0.875rem);
+  /* 18 */
+  --font-size-base: clamp(1rem, 0.25vi + 0.94rem, 1.13rem);
+  /* 24 */
+  --font-size-md: clamp(1.25rem, 0.5vi + 1.13rem, 1.5rem);
+  /* 32 */
+  --font-size-lg: clamp(1.56rem, 0.87vi + 1.34rem, 2rem);
+  /* 42 */
+  --font-size-xl: clamp(1.95rem, 1.42vi + 1.6rem, 2.66rem);
+  /* 56 */
+  --font-size-xxl: clamp(2.44rem, 2.22vi + 1.89rem, 3.55rem);
+  /* 75 */
+  --font-size-xxxl: clamp(3.05rem, 3.37vi + 2.21rem, 4.73rem);
 
   --heading-font: "Atkinson", sans-serif;
   --body-font: system-ui, sans-serif;
@@ -39,7 +43,7 @@
 
   --accent: var(--gold);
   --accent-dark: var(--gold-dark);
-  --body-background: var(--navy);
+  --body: var(--navy);
   --body-color: var(--white);
   --link-color: var(--gold);
   --link-color-hover: var(--gold-dark);
@@ -47,8 +51,38 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-background: var(--navy);
+    --body: var(--navy);
     --body-color: var(--white);
     --heading-color: var(--gold);
   }
+}
+
+:root {
+  --body: #1d1d1d;
+  --surface-raised: #3c3c3c;
+  --surface-lowered: #181818;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-accent: #1d1d1d;
+  --link-color: var(--text-primary);
+
+  --highlight-color: #ffffff;
+
+  --accent-1: #76dcec;
+  --accent-2: #ed4987;
+  --accent-3: #a2d33c;
+  --accent-4: #ee9c30;
+  --accent-5: #8b79ea;
+  --accent-6: #facb42;
+
+  --space-half: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 16px;
 }

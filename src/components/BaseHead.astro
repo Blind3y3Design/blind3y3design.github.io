@@ -1,18 +1,25 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import "@styles/global.css";
-import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
+import '@styles/reset.css';
+import '@styles/variables.css';
+import '@styles/global.css';
+import '@styles/layouts.css';
+
+import '@styles/composition.css';
+import '@styles/utilities.css';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '@consts';
 
 interface Props {
-  title: string;
-  description: string;
-  image?: string;
+    title: string;
+    description: string;
+    image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -21,35 +28,35 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 <link
-  rel="alternate"
-  type="application/rss+xml"
-  title="Blind3y3Design"
-  href="https://www.blind3y3design.com/rss.xml"
+    rel="alternate"
+    type="application/rss+xml"
+    title="Blind3y3Design"
+    href="https://www.blind3y3design.com/rss.xml"
 />
 
 <!-- Font preloads -->
 <link
-  rel="preload"
-  href="/fonts/MonaspaceNeonVarVF.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/MonaspaceNeonVarVF.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 
 <link
-  rel="preload"
-  href="/fonts/atkinson-regular.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/atkinson-regular.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 
 <link
-  rel="preload"
-  href="/fonts/atkinson-bold.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/atkinson-bold.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 
 <!-- Canonical URL -->
@@ -59,8 +66,8 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <title>{title && `${title}  | `}{SITE_TITLE}</title>
 <meta name="title" content=`${title} | Adam Sedwick` />
 <meta
-  name="description"
-  content={description ? description : SITE_DESCRIPTION}
+    name="description"
+    content={description ? description : SITE_DESCRIPTION}
 />
 
 <!-- Open Graph / Facebook -->
@@ -79,6 +86,6 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 
 <!-- Webmention.io -->
 <link
-  rel="webmention"
-  href="https://webmention.io/www.blind3y3design.com/webmention"
+    rel="webmention"
+    href="https://webmention.io/www.blind3y3design.com/webmention"
 />

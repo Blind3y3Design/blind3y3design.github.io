@@ -44,7 +44,7 @@ Then within the component I'm just conditionally rendering the link icon next to
   {title}
   {
     isLinkPost && (
-      <Icon class="post-preview__link-icon" pack="mdi" name="link-variant" />
+      <Icon class="post-preview__link-icon" name="mdi:link-variant" />
     )
   }
 </p>
@@ -71,7 +71,7 @@ const { link, linkText = "View Link", ...props } = Astro.props;
 
 <a href={link} class="post-link" {...props}>
   {linkText}
-  <Icon class="post-link__icon" pack="mdi" name="link-variant" />
+  <Icon class="post-link__icon" name="mdi:link-variant" />
 </a>;
 ```
 

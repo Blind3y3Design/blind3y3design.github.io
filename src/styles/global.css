@@ -25,7 +25,7 @@
 *:focus-visible {
   outline-offset: 0.25em;
   outline-width: 2px;
-  outline-color: var(--link-color-hover);
+  outline-color: var(--link-color);
   outline-style: solid;
 }
 
@@ -34,7 +34,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: var(--body-background);
+  background: var(--body);
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -46,13 +46,8 @@ body {
 main {
   width: 100%;
   margin: auto;
-  max-width: calc(100% - 2em);
-  padding: 1em 0;
-
-  @media (min-width: 1024px) {
-    padding: 3em 0;
-    max-width: calc(100% - min(10rem, 5vw));
-  }
+  max-width: 1200px;
+  padding: 1rem;
 }
 
 h1,
@@ -65,19 +60,19 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-size-xxxl);
-}
-
-h2 {
   font-size: var(--font-size-xxl);
 }
 
-h3 {
+h2 {
   font-size: var(--font-size-xl);
 }
 
-h4 {
+h3 {
   font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-md);
 }
 
 strong,
@@ -85,25 +80,23 @@ b {
   font-weight: 700;
 }
 
-a {
-  color: var(--body-color);
-}
-
 a:not([class]) {
+  color: var(--link-color);
   text-decoration: underline;
+  text-decoration-color: transparent;
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.2ex;
-  transition: color 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 
   &:hover,
   &:focus-visible {
-    color: var(--link-color);
+    text-decoration-color: var(--link-color);
   }
 }
 
 p {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-base);
 }
 
 code,

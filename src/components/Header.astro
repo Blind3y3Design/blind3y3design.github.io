@@ -1,5 +1,7 @@
 ---
-// import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
+
+import Button from '@components/Button.astro';
 import HeaderLink from './HeaderLink.astro';
 ---
 
@@ -15,16 +17,16 @@ import HeaderLink from './HeaderLink.astro';
       <span class="menu-icon menu-icon-right"></span>
     </button>
     <ul class="main-nav__items">
-      <li class="main-nav__item">
+      <li class="main-nav__item | theme-writing">
         <HeaderLink href="/writing">Writing</HeaderLink>
       </li>
-      <li class="main-nav__item">
+      <li class="main-nav__item | theme-work">
         <HeaderLink href="/work">Work</HeaderLink>
       </li>
-      <li class="main-nav__item">
+      <li class="main-nav__item | theme-projects">
         <HeaderLink href="/projects">Projects</HeaderLink>
       </li>
-      <li class="main-nav__item">
+      <li class="main-nav__item | theme-about">
         <HeaderLink href="/about">About</HeaderLink>
       </li>
       <li class="main-nav__item">
@@ -32,20 +34,32 @@ import HeaderLink from './HeaderLink.astro';
       </li>
     </ul>
   </nav>
+  <Button tag='a' href='/rss.xml' type='icon'>
+    <Icon name="mdi:rss" size="32"/>
+  </Button>
 </header>
 
 <style>
   .nav-header {
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    gap: 16px;
+    grid-template-columns: 1fr auto auto;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem;
     position: relative;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, auto);
+      
+    }
   }
 
   .home-link {
-    color: var(--gold);
+    color: var(--text-primary);
     font-family: var(--body-font);
     font-size: var(--font-size-xl);
     font-weight: 900;
@@ -58,8 +72,8 @@ import HeaderLink from './HeaderLink.astro';
 
     &:hover,
     &:focus-visible {
-      color: var(--gold-dark);
-      text-decoration-color: var(--gold-dark);
+      color: var(--accent-5);
+      text-decoration-color: var(--accent-5);
       text-decoration-thickness: 4px;
       text-underline-offset: 0.2ex;
     }
@@ -67,7 +81,7 @@ import HeaderLink from './HeaderLink.astro';
 
   .main-nav__items {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--space-1);
     margin: 0;
     padding: 0;
 
@@ -75,7 +89,7 @@ import HeaderLink from './HeaderLink.astro';
         display: none;
 
     .main-nav.active & {
-        background: var(--body-background);
+        background: var(--body);
         display: flex;
         flex-direction: column;
         left: 0;

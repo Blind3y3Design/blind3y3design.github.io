@@ -1,0 +1,59 @@
+/* Themes */
+.theme-writing {
+  --link-color: var(--accent-1);
+  --highlight-color: var(--accent-1);
+}
+
+.theme-work {
+  --link-color: var(--accent-2);
+  --highlight-color: var(--accent-2);
+}
+
+.theme-projects {
+  --link-color: var(--accent-3);
+  --highlight-color: var(--accent-3);
+}
+
+.theme-about {
+  --link-color: var(--accent-4);
+  --highlight-color: var(--accent-4);
+}
+
+/* Highlights */
+.block-highlight {
+  background: var(--highlight-color);
+  color: var(--text-accent);
+}
+
+.text-highlight {
+  color: var(--highlight-color);
+}
+
+/* Font Sizes */
+.fs-sm {
+  font-size: var(--font-size-sm);
+}
+
+.fs-base {
+  font-size: var(--font-size-base);
+}
+
+.fs-md {
+  font-size: var(--font-size-md);
+}
+
+.fs-lg {
+  font-size: var(--font-size-lg);
+}
+
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.fs-xxxl {
+  font-size: var(--font-size-xxxl);
+}
