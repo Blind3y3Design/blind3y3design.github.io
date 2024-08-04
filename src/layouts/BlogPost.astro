@@ -29,7 +29,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
                     <FormattedDate class="dt-published" date={pubDate} />
                     {
                         updatedDate && (
-                            <div class="last-updated-on">
+                            <div class="text-italic">
                                 Last updated on{' '}
                                 <FormattedDate
                                     class="dt-updated"
@@ -72,6 +72,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
         gap: 0 var(--space-half);
     }
 
+    /* TODO: Turn Tag li into a component */
     .tag {
         line-height: 1;
 

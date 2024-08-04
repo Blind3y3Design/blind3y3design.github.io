@@ -22,6 +22,7 @@ const work = defineCollection({
     z.object({
       title: z.string(),
       description: z.string().optional(),
+      excerpt: z.string().optional(),
       pubDate: z.coerce.date(),
       heroImage: image().refine((img) => img.width >= 700, {
         message: "Book Image must be at least 700px wide",
