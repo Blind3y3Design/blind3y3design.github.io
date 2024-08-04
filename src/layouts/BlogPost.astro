@@ -9,8 +9,8 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 ---
 
 <Layout title={title} description={description}>
-    <main class="h-entry">
-        <article>
+    <main class="h-entry | theme-writing">
+        <article class="stack">
             {
                 heroImage && (
                     <div class="hero-image">
@@ -22,7 +22,9 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
                     </div>
                 )
             }
-            <div class="title">
+            <div class="title | stack" data-size="xxs">
+                <h1 class="p-name | fs-xl">{title}</h1>
+                <p class="p-summary hidden">{description}</p>
                 <div class="date">
                     <FormattedDate class="dt-published" date={pubDate} />
                     {
@@ -37,23 +39,17 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
                         )
                     }
                 </div>
-                <h1 class="p-name">{title}</h1>
-                <p class="p-summary hidden">{description}</p>
-                <hr />
-            </div>
-            <div class="prose e-content">
-                <slot />
                 {
                     tags && (
                         <ul class="tag-list">
                             {tags.map((tag: string) => (
-                                <li class="tag-item">
+                                <li class="tag | fs-sm">
                                     <a
                                         href={`/writing/tags/${tag}`}
                                         rel="category tag"
                                         class="tag p-category"
                                     >
-                                        <FormattedTag tag={tag} />
+                                        #<FormattedTag tag={tag} />
                                     </a>
                                 </li>
                             ))}
@@ -61,7 +57,40 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
                     )
                 }
             </div>
+            <div class="prose | text-cap-width | e-content">
+                <slot />
+            </div>
         </article>
         <a href={Astro.url} class="u-url hidden"></a>
     </main>
 </Layout>
+
+<style>
+    .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 var(--space-half);
+    }
+
+    .tag {
+        line-height: 1;
+
+        a {
+            color: var(--text-secondary);
+            display: block;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.2ex;
+            transition: 0.25s ease-in-out;
+            white-space: nowrap;
+            width: min-content;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration-color: var(--link-color);
+            }
+        }
+    }
+</style>

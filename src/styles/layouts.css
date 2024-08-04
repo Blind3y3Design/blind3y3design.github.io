@@ -17,13 +17,7 @@
   aspect-ratio: auto;
 }
 
-.prose {
-  /* width: 80ch;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 1em; */
-
-  /* Test run CSS grid content and breakout styles */
+/* .prose {
   --padding-inline: 2rem;
   --content-max-width: 60ch;
   --breakout-max-width: 72ch;
@@ -79,25 +73,8 @@
     padding: 0.75em;
     border-radius: 0.5em;
   }
-}
-
-/* .hero-image + .title {
-  margin-block-start: 1em;
-}
-.title {
-  padding: 0;
-  text-align: center;
-  width: 120ch;
-  max-width: calc(100% - 2rem);
-  margin: 0 auto;
-}
-.title h1 {
-  margin: 0 0 0.5em 0;
 } */
-.date {
-  margin-bottom: 0.5em;
-  color: oklch(var(--white-raw) / 0.6);
-}
+
 .last-updated-on {
   font-style: italic;
 }
