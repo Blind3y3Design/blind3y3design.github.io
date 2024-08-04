@@ -1,9 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { Picture } from 'astro:assets';
+import MarkdownIt from 'markdown-it';
 
 import FormattedDate from '@components/FormattedDate.astro';
-import PostDate from '@components/PostDate.astro';
+import FormattedTag from '@components/FormattedTag.astro';
 
 interface Props {
     description?: string;
@@ -12,56 +13,69 @@ interface Props {
     link: string;
     pubDate: Date;
     title: string;
-    type: 'full' | 'compact';
+    tags: string[];
 }
 
-const { description, heroImage, isLinkPost, link, pubDate, title, type } =
+const { description, heroImage, isLinkPost, link, pubDate, title, tags } =
     Astro.props;
+
+const parser = new MarkdownIt();
+
+const createExcerpt = (text) => {
+    return parser
+        .render(text)
+        .split('\n')
+        .slice(0, 6)
+        .map((str) => {
+            return str.replace(/(<([^>]+)>)/gi, '').split('\n');
+        })
+        .flat()
+        .join(' ');
+};
+
+const excerpt = createExcerpt(description).substring(0, 300);
 ---
 
-<li class=`post-preview post-preview--${type}`>
+<li class="post-preview | stack" data-size="xxs">
+    <a href={`/writing/${link}/`} class="link | stack" data-size="xs">
+        {
+            heroImage && (
+                <Picture
+                    class="image"
+                    src={heroImage}
+                    formats={['avif', 'webp']}
+                    alt={title}
+                />
+            )
+        }
+        <p class="title | fs-md">
+            {title}
+            {isLinkPost && <Icon class="link-icon" name="mdi:link-variant" />}
+        </p>
+    </a>
+    <p class="date | fs-sm">
+        Posted on <FormattedDate date={pubDate} />
+    </p>
+    {description && <p class="description">{excerpt}</p>}
     {
-        type === 'full' && (
-            <div class="post-preview__super-date">
-                <PostDate date={pubDate} />
-            </div>
+        tags && (
+            <ul class="tag-list">
+                {tags.map((tag: string) => (
+                    <li class="tag | fs-sm">
+                        <a href={`/writing/tags/${tag}`}>
+                            #<FormattedTag tag={tag} />
+                        </a>
+                    </li>
+                ))}
+            </ul>
         )
     }
-    <div class="post-preview__content">
-        <a href={`/writing/${link}/`} class="post-preview__link">
-            {
-                type === 'full' && heroImage && (
-                    <Picture
-                        class="post-preview__image"
-                        src={heroImage}
-                        formats={['avif', 'webp']}
-                        alt={title}
-                    />
-                )
-            }
-            <p class="post-preview__title">
-                {title}
-                {
-                    isLinkPost && (
-                        <Icon
-                            class="post-preview__link-icon"
-                            name="mdi:link-variant"
-                        />
-                    )
-                }
-            </p>
-        </a>
-        {description && <p class="post-preview__description">{description}</p>}
-        <p class="post-preview__date">
-            Posted on <FormattedDate date={pubDate} />
-        </p>
-    </div>
 </li>
 
 <style>
-    .post-preview__link {
+    .link {
         color: var(--link-color);
-        margin: 0;
+
         text-decoration: underline;
         text-decoration-color: transparent;
         text-decoration-skip-ink: auto;
@@ -71,39 +85,30 @@ const { description, heroImage, isLinkPost, link, pubDate, title, type } =
 
         &:hover,
         &:focus-visible {
-            color: var(--link-color-hover);
             text-decoration: underline;
+            text-decoration-color: var(--link-color);
             text-decoration-skip-ink: auto;
             text-decoration-thickness: 2px;
             text-underline-offset: 0.2ex;
         }
     }
 
-    .post-preview__title {
-        align-items: center;
+    .title {
+        align-items: first baseline;
         display: flex;
-        gap: 0.25em;
+        gap: var(--space-half);
     }
 
-    .post-preview__link-icon {
-        height: 1em;
-        width: 1em;
+    .link-icon {
+        height: 0.75em;
+        width: 0.75em;
     }
 
-    .post-preview__date {
-        font-size: var(--font-size-sm);
-        margin: 0;
+    .date {
+        color: var(--text-secondary);
     }
 
-    .post-preview__super-date {
-        display: none;
-
-        @media (min-width: 600px) {
-            display: block;
-        }
-    }
-
-    .post-preview__image {
+    .image {
         aspect-ratio: 2/1;
         border-radius: 12px;
         grid-column: 1;
@@ -116,49 +121,33 @@ const { description, heroImage, isLinkPost, link, pubDate, title, type } =
         }
     }
 
-    .post-preview__description {
-        display: none;
-        margin: 0;
-
-        @media (min-width: 600px) {
-            display: block;
-        }
+    .description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
     }
 
-    .post-preview--full {
-        display: grid;
-        gap: 8px;
-        grid-template-columns: 1fr;
-        text-decoration: none;
-        width: 100%;
+    .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 var(--space-half);
+    }
 
-        @media (min-width: 600px) {
-            gap: 24px;
-            grid-template-columns: max-content 1fr;
-        }
+    .tag {
+        line-height: 1;
 
-        .post-preview__link {
-            display: grid;
-            gap: 0;
-            @media (min-width: 600px) {
-                gap: 8px;
-            }
-            * {
-                transition: 0.25s ease-in-out;
-            }
-        }
+        a {
+            color: var(--text-secondary);
+            display: block;
+            text-decoration-color: transparent;
+            transition: all 0.25s ease-in-out;
+            white-space: nowrap;
+            width: min-content;
 
-        .post-preview__title {
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .post-preview__date {
-            margin: 0;
-
-            @media (min-width: 600px) {
-                display: none;
+            &:hover,
+            &:focus-visible {
+                text-decoration-color: var(--link-color);
             }
         }
     }

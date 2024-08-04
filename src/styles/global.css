@@ -38,7 +38,7 @@ body {
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: var(--body-color);
+  color: var(--text-primary);
   font-size: 20px;
   line-height: 1.7;
 }
@@ -134,7 +134,7 @@ pre {
 
 hr {
   border: none;
-  border-top: 1px solid var(--body-color);
+  border-top: 1px solid var(--text-primary);
 }
 
 .sr-only {
@@ -169,8 +169,8 @@ hr {
 
 blockquote {
   --blockquote-background-color: transprent;
-  --blockquote-border-color: var(--text-color, var(--body-color));
-  --blockquote-text-color: var(--text-color, var(--body-color));
+  --blockquote-border-color: var(--text-color, var(--text-primary));
+  --blockquote-text-color: var(--text-color, var(--text-primary));
   --blockquote-link-color: var(--link-color, var(--gold));
 
   background: var(--blockquote-background-color);

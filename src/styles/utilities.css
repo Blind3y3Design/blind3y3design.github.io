@@ -57,3 +57,11 @@
 .fs-xxxl {
   font-size: var(--font-size-xxxl);
 }
+
+/* Text Utilities */
+.text-cap-width {
+  max-width: 800px;
+}
+.text-secondary {
+  color: var(--text-secondary);
+}

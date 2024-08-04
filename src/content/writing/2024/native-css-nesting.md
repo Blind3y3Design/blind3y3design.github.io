@@ -108,8 +108,8 @@ Another useful pattern is applying additional styles based on the contents of an
 ```css
 blockquote {
   --blockquote-background-color: transprent;
-  --blockquote-border-color: var(--text-color, var(--body-color));
-  --blockquote-text-color: var(--text-color, var(--body-color));
+  --blockquote-border-color: var(--text-color, var(--text-primary));
+  --blockquote-text-color: var(--text-color, var(--text-primary));
   --blockquote-link-color: var(--link-color, var(--gold));
 
   background: var(--blockquote-background-color);
