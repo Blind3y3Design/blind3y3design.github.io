@@ -110,15 +110,9 @@ const excerpt = createExcerpt(description).substring(0, 300);
 
     .image {
         aspect-ratio: 2/1;
-        border-radius: 12px;
-        grid-column: 1;
-        margin-block-end: 8px;
+        border-radius: var(--border-radius-s);
         object-fit: cover;
         object-position: top center;
-
-        @media (min-width: 600px) {
-            margin: 0;
-        }
     }
 
     .description {

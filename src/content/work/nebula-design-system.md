@@ -1,9 +1,9 @@
 ---
 pubDate: 2023-05-13
-# link: https://accessibility.blind3y3design.com/
 title: Nebula Design System
 heroImage: "@images/work/nebula/design-system-overview.png"
 description: Reworking Discovery Education's Design System from the Ground Up
+excerpt: "The Nebula Design System was created for Discovery Education's digital product experiences. It consists of visual language guidelines, vue components, and Figma assets. The system provides a premium solution for designers and developers with a focus on usability and accessibility for educators and students."
 ---
 
 ## Responsibilities

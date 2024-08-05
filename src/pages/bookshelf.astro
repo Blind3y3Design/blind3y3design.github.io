@@ -1,119 +1,122 @@
 ---
-import Layout from "@layouts/Base.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import BookPreview from "@components/BookPreview.astro";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BookPreview from '@components/BookPreview.astro';
 
-const books = (await getCollection("bookshelf")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const books = (await getCollection('bookshelf')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const bookYears = new Map();
 const years: number[] = [];
 
 books.forEach((book) => {
-  const year = book.data.pubDate.getFullYear();
+    const year = book.data.pubDate.getFullYear();
 
-  if (!bookYears.get(year)) {
-    years.push(year);
-    bookYears.set(year, []);
-  }
+    if (!bookYears.get(year)) {
+        years.push(year);
+        bookYears.set(year, []);
+    }
 
-  bookYears.get(year).push(book);
+    bookYears.get(year).push(book);
 });
 
-const { title = "Bookshelf", description = "A list of books I've read" } =
-  Astro.props;
+const { title = 'Bookshelf', description = "A list of books I've read" } =
+    Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <main>
-    <div class="title">
-      <h1>{title}</h1>
-      <hr />
-    </div>
-    <div class="bookshelf-content">
-      {
-        years.map((year) => {
-          const yearBooks = bookYears.get(year);
+    <main>
+        <div class="title">
+            <h1>{title}</h1>
+        </div>
+        <div class="bookshelf-content">
+            {
+                years.map((year) => {
+                    const yearBooks = bookYears.get(year);
 
-          return (
-            <section class="year">
-              <h2 class="year__title">{year.toString()}</h2>
-              <ul class="book-list">
-                {yearBooks.map((book: CollectionEntry<"bookshelf">) => (
-                  // Some day maybe, use amazon images instead of local images
-                  // https://images-na.ssl-images-amazon.com/images/P/${book.data.amazonGuid}.jpg
-                  // Example:
-                  // https://images-na.ssl-images-amazon.com/images/P/B094PVB97X.jpg
-                  <BookPreview
-                    link={book.data.amazonLink}
-                    image={book.data.bookImage}
-                    title={book.data.title}
-                    subtitle={book.data.subtitle}
-                    author={book.data.bookAuthor}
-                    rating={book.data.bookRating}
-                    completionDate={book.data.completionDate}
-                  />
-                ))}
-              </ul>
-            </section>
-          );
-        })
-      }
-    </div>
-  </main>
+                    return (
+                        <section class="year">
+                            <h2 class="year__title">{year.toString()}</h2>
+                            <ul class="book-list">
+                                {yearBooks.map(
+                                    (book: CollectionEntry<'bookshelf'>) => (
+                                        // Some day maybe, use amazon images instead of local images
+                                        // https://images-na.ssl-images-amazon.com/images/P/${book.data.amazonGuid}.jpg
+                                        // Example:
+                                        // https://images-na.ssl-images-amazon.com/images/P/B094PVB97X.jpg
+                                        <BookPreview
+                                            link={book.data.amazonLink}
+                                            image={book.data.bookImage}
+                                            title={book.data.title}
+                                            subtitle={book.data.subtitle}
+                                            author={book.data.bookAuthor}
+                                            rating={book.data.bookRating}
+                                            completionDate={
+                                                book.data.completionDate
+                                            }
+                                        />
+                                    )
+                                )}
+                            </ul>
+                        </section>
+                    );
+                })
+            }
+        </div>
+    </main>
 </Layout>
 
 <style>
-  main {
-    width: 100%;
-  }
-
-  .title {
-    margin-bottom: 1em;
-    padding: 1em 0;
-    text-align: center;
-    line-height: 1;
-  }
-
-  .title h1 {
-    margin: 0 0 0.5em 0;
-  }
-
-  .bookshelf-content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 100%;
-  }
-
-  .year {
-    width: 100%;
-  }
-
-  .year__title {
-    margin: 0;
-
-    .year:not(:first-of-type) & {
-      margin-block-start: 0.5em;
+    main {
+        width: 100%;
     }
-  }
 
-  .book-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin: 0;
-    max-width: 100%;
-    padding: 0;
-    width: 100%;
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
     }
-  }
+
+    .title h1 {
+        margin: 0 0 0.5em 0;
+    }
+
+    .bookshelf-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1400px;
+        width: 100%;
+    }
+
+    .year {
+        width: 100%;
+    }
+
+    .year__title {
+        margin: 0;
+
+        .year:not(:first-of-type) & {
+            margin-block-start: 0.5em;
+        }
+    }
+
+    .book-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+        }
+    }
 </style>

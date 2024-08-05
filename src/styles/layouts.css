@@ -113,23 +113,3 @@
   display: grid;
   grid-template-columns: 1fr;
 }
-
-/* Work Page */
-
-.site-link {
-  text-decoration: none;
-
-  .title h1 {
-    color: var(--link-color);
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2ex;
-    transition: 0.25s ease-in-out;
-  }
-
-  &:hover .title h1,
-  &:focus-visible .title h1 {
-    color: var(--link-color-hover);
-  }
-}

@@ -14,7 +14,7 @@ const { link, image, title, description, theme, type } = Astro.props;
 ---
 
 <section class={`callout block-highlight | theme-${theme} ${type}`}>
-    <a href={`/work/${link}/`} class="callout-link">
+    <a href={link} class="callout-link">
         <Picture
             class="callout-image"
             src={image}
