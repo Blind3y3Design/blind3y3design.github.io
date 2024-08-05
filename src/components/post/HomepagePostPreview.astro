@@ -10,7 +10,7 @@ interface Props {
     title: string;
     pubDate: Date;
     isLinkPost?: Boolean;
-    description?: string;
+    description: string;
     tags: string[];
 }
 
@@ -18,7 +18,7 @@ const { description, isLinkPost, link, pubDate, title, tags } = Astro.props;
 
 const parser = new MarkdownIt();
 
-const createExcerpt = (text) => {
+const createExcerpt = (text: string) => {
     return parser
         .render(text)
         .split('\n')

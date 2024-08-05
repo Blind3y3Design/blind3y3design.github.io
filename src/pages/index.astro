@@ -39,44 +39,48 @@ import heroImage from '@images/Funko_Headshot_Square.png';
                     <a href="/about">about me</a>
                 </h2>
                 <p class="bio hidden" data-length="less">
-                    <strong>Adam Sedwick</strong> is a design and product
-                    operations lead at <a
-                        href="https://www.discoveryeducation.com/"
+                    <strong>Adam Sedwick</strong> is a design and product operations
+                    lead at <a href="https://www.discoveryeducation.com/"
                         >Discovery Education</a
                     >.
                 </p>
                 <p class="bio" data-length="default">
-                    <strong>Adam Sedwick</strong> is a design and product
-                    operations lead at <a
-                        href="https://www.discoveryeducation.com/"
+                    <strong>Adam Sedwick</strong> is a design and product operations
+                    lead at <a href="https://www.discoveryeducation.com/"
                         >Discovery Education</a
-                    > with over a decade of experience designing, building, and
-                    managing digital products and design systems.
+                    > with over a decade of experience designing, building, and managing
+                    digital products and design systems.
                 </p>
                 <p class="bio hidden" data-length="more">
-                    <strong>Adam Sedwick</strong> is a design and product
-                    operations lead at <a
-                        href="https://www.discoveryeducation.com/"
+                    <strong>Adam Sedwick</strong> is a design and product operations
+                    lead at <a href="https://www.discoveryeducation.com/"
                         >Discovery Education</a
-                    > with over a decade of experience designing, building, and
-                    managing digital products and design systems. He is also an
-                    active member of the <a
-                        href="https://www.w3.org/community/design-tokens/"
+                    > with over a decade of experience designing, building, and managing
+                    digital products and design systems. He is also an active member
+                    of the <a href="https://www.w3.org/community/design-tokens/"
                         >Design Token Community Group</a
                     > working to define a standardized spec for design tokens.
                 </p>
                 <div class="about-button-group">
-                    <Button tag="button" type="text" data-about-length="less">
+                    <Button
+                        tag="button"
+                        buttonType="text"
+                        data-about-length="less"
+                    >
                         Less
                     </Button>
                     <Button
                         tag="button"
-                        type="text"
+                        buttonType="text"
                         data-about-length="default"
                     >
                         Default
                     </Button>
-                    <Button tag="button" type="text" data-about-length="more">
+                    <Button
+                        tag="button"
+                        buttonType="text"
+                        data-about-length="more"
+                    >
                         More
                     </Button>
                 </div>
@@ -169,7 +173,7 @@ import heroImage from '@images/Funko_Headshot_Square.png';
         '.about-modifier'
     ) as HTMLElement;
 
-    const handleAboutClick = (e) => {
+    const handleAboutClick = (e: any) => {
         // Change text in about header
         const modifierAttr = e.target.dataset.aboutLength;
         if (modifierAttr === 'default') {

@@ -7,17 +7,14 @@ import Button from '@components/Button.astro';
 type Props = HTMLAttributes<'a'>;
 
 const { type, href, class: className, ...props } = Astro.props;
-
-const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
 <Button
     tag="a"
     href={href}
     class:list={[className, 'social-link']}
-    type="icon"
+    buttonType="icon"
     {...props}
 >
-    <Icon name={`mdi:${type}`} size="24" />
+    <Icon name={`mdi:${type}`} size={24} />
 </Button>

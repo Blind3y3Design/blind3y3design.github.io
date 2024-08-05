@@ -6,13 +6,14 @@ type Tag = 'a' | 'button';
 type Props<TagGeneric extends Tag> = {
     tag: TagGeneric;
     variant?: 'primary' | 'secondary';
-    type: 'icon' | 'text';
+    buttonType: 'icon' | 'text';
     classList?: string[];
 } & Polymorphic<{ as: TagGeneric }>;
 
 const {
     tag: Tag,
     variant = 'primary',
+    buttonType,
     classList = [],
     href,
     type = 'button',
@@ -39,7 +40,7 @@ const allAttributes = { ...baseAttributes, ...attributeBasedOnTag };
 const { classes, ...attributes } = allAttributes;
 ---
 
-<Tag class:list={[classes]} data-type={type} {...attributes}>
+<Tag class:list={[classes]} data-type={buttonType} {...attributes}>
     <slot />
 </Tag>
 

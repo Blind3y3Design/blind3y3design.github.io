@@ -7,7 +7,7 @@ import FormattedDate from '@components/FormattedDate.astro';
 import FormattedTag from '@components/FormattedTag.astro';
 
 interface Props {
-    description?: string;
+    description: string;
     heroImage?: ImageMetadata;
     isLinkPost?: Boolean;
     link: string;
@@ -21,7 +21,7 @@ const { description, heroImage, isLinkPost, link, pubDate, title, tags } =
 
 const parser = new MarkdownIt();
 
-const createExcerpt = (text) => {
+const createExcerpt = (text: string) => {
     return parser
         .render(text)
         .split('\n')
