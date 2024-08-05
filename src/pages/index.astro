@@ -2,6 +2,8 @@
 import Layout from '@layouts/Base.astro';
 import { getCollection, getEntry } from 'astro:content';
 import { Picture } from 'astro:assets';
+
+import Button from '@components/Button.astro';
 import HomepagePostPreview from '@components/post/HomepagePostPreview.astro';
 import Callout from '@components/Callout.astro';
 
@@ -64,9 +66,19 @@ import heroImage from '@images/Funko_Headshot_Square.png';
                     > working to define a standardized spec for design tokens.
                 </p>
                 <div class="about-button-group">
-                    <button data-about-length="less">Less</button>
-                    <button data-about-length="default">Default</button>
-                    <button data-about-length="more">More</button>
+                    <Button tag="button" type="text" data-about-length="less">
+                        Less
+                    </Button>
+                    <Button
+                        tag="button"
+                        type="text"
+                        data-about-length="default"
+                    >
+                        Default
+                    </Button>
+                    <Button tag="button" type="text" data-about-length="more">
+                        More
+                    </Button>
                 </div>
             </div>
         </section>
@@ -122,7 +134,13 @@ import heroImage from '@images/Funko_Headshot_Square.png';
     .about-me {
         align-items: center;
         display: flex;
+        flex-direction: column;
         gap: var(--space-4);
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
         picture {
             border-radius: var(--border-radius-m);
             width: 100%;

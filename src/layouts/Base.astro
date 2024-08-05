@@ -11,13 +11,6 @@ const { title, description } = Astro.props;
 <html lang="en">
     <BaseHead title={title} description={description} />
     <body class={title.toLowerCase()}>
-        <div class="construction-header">
-            <p>
-                I'm currently rebuilding my site using
-                <a href="https://astro.build/" target="_blank"> Astro</a>.
-                Please bear with me as it comes together.
-            </p>
-        </div>
         <Header />
         <slot />
         <Footer />
