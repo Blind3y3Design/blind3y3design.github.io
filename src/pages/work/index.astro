@@ -1,135 +1,109 @@
 ---
-import Layout from "@layouts/Base.astro";
-import { getCollection } from "astro:content";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
 
-import type { CollectionEntry } from "astro:content";
-import { Picture } from "astro:assets";
-import FormattedDate from "@components/FormattedDate.astro";
+import type { CollectionEntry } from 'astro:content';
+import { Picture } from 'astro:assets';
+import FormattedDate from '@components/FormattedDate.astro';
 
-const posts = (await getCollection("work")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection('work')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const postYears = new Map();
-const years: number[] = [];
-
-posts.forEach((post) => {
-  const year = post.data.pubDate.getFullYear();
-
-  if (!postYears.get(year)) {
-    years.push(year);
-    postYears.set(year, []);
-  }
-
-  postYears.get(year).push(post);
-});
-
-const { title = "Work", description = "Work I've done throughout my career" } =
-  Astro.props;
+const { title = 'Work', description = "Work I've done throughout my career" } =
+    Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <main>
-    <h1 class="title">{title}</h1>
-    {
-      years.map((year) => {
-        const yearPosts = postYears.get(year);
-        return (
-          <section class="year">
-            <h2 class="year__title">{year.toString()}</h2>
-            <ul class="post-list">
-              {yearPosts.map((post: CollectionEntry<"work">) => (
-                <li class="post-preview">
-                  <a href={`/work/${post.slug}/`} class="post-preview__link">
-                    <Picture
-                      class="post-preview__image"
-                      src={post.data.heroImage}
-                      formats={["avif", "webp"]}
-                      alt={post.data.title}
-                    />
-                    <h4 class="post-preview__title">{post.data.title}</h4>
-                    <p class="post-preview__date">
-                      <FormattedDate date={post.data.pubDate} />
-                    </p>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        );
-      })
-    }
-  </main>
+    <main class="stack | theme-work">
+        <div class="page-intro | stack" data-size="xs">
+            <h1 class="title">{title}</h1>
+            <p class="fs-md text-secondary text-cap-width">
+                I've been lucky to work on a diverse range of projects,
+                including international and multi-lingual marketing campaigns,
+                e-commerce experiences, education-focused products, and design
+                systems.
+            </p>
+        </div>
+        <ul class="post-list | flow-grid">
+            {posts.map(
+                (post: CollectionEntry<'work'>) => (
+                    <li class="work-preview | stack" data-size="xxs">
+                        <a
+                            href={`/work/${post.slug}/`}
+                            class="link"
+                            tabindex="-1"
+                        >
+                            <Picture
+                                class="image"
+                                src={post.data.heroImage}
+                                formats={['avif', 'webp']}
+                                alt={post.data.title}
+                            />
+                        </a>
+                        <a href={`/work/${post.slug}/`} class="link">
+                            <p class="title | fs-md">{post.data.title}</p>
+                        </a>
+                        <p class="date | fs-sm">
+                            <FormattedDate date={post.data.pubDate} />
+                        </p>
+                        {post.data.excerpt && (
+                            <p class="excerpt">{post.data.excerpt}</p>
+                        )}
+                    </li>
+                )
+            )}
+        </ul>
+    </main>
 </Layout>
 
 <style>
-  .title {
-    margin: 0 0 0.5em 0;
-  }
-  .year {
-    display: grid;
-    gap: 2rem;
+    .link {
+        color: var(--link-color);
+        display: block;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0ex;
+        transition: all 0.25s ease-in-out;
 
-    &:not(:first-child) {
-      margin-block-start: 2.5rem;
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+            text-decoration-color: var(--link-color);
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.2ex;
+        }
     }
-  }
-  .post-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    max-width: 100%;
-    padding: 0;
-    width: 100%;
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    .title {
+        align-items: first baseline;
+        display: flex;
+        gap: var(--space-half);
     }
-  }
-  .post-preview__link {
-    color: var(--body-color);
-    display: grid;
-    gap: 0;
-    text-decoration: none;
-    @media (min-width: 600px) {
-      gap: 8px;
+
+    .link-icon {
+        height: 0.75em;
+        width: 0.75em;
     }
-    * {
-      transition: 0.25s ease-in-out;
+
+    .date {
+        color: var(--text-secondary);
     }
-  }
 
-  .post-preview__image {
-    aspect-ratio: 2/1;
-    border-radius: 12px;
-    grid-column: 1;
-    margin-block-end: 8px;
-    object-fit: cover;
-    object-position: top center;
-
-    @media (min-width: 600px) {
-      margin: 0;
+    .image {
+        aspect-ratio: 2/1;
+        border-radius: var(--border-radius-s);
+        object-fit: cover;
+        object-position: top center;
     }
-  }
 
-  .post-preview__title {
-    color: var(--link-color);
-    margin: 0;
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2ex;
-
-    .post-preview__link:hover &,
-    .post-preview__link:focus-visible & {
-      color: var(--link-color-hover);
+    .excerpt {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
     }
-  }
-
-  .post-preview__date {
-    margin: 0;
-    color: oklch(var(--white-raw) / 0.6);
-  }
 </style>

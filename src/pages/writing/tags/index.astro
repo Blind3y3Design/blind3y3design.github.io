@@ -1,76 +1,91 @@
 ---
-import Layout from "@layouts/Base.astro";
-import { getCollection } from "astro:content";
-import TagLink from "@components/TagLink.astro";
-import OrphanTagLink from "@components/OrphanTagLink.astro";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import TagLink from '@components/TagLink.astro';
+import OrphanTagLink from '@components/OrphanTagLink.astro';
 
-const posts = (await getCollection("writing")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection('writing')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 // const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
 interface uniqueTags {
-  [key: string]: {
-    count: number;
-    title: string;
-  };
+    [key: string]: {
+        count: number;
+        title: string;
+    };
 }
 
 let uniqueTags: uniqueTags = {};
 
 posts.forEach((post) => {
-  if (post.data.tags) {
-    post.data.tags.forEach((tag) => {
-      if (uniqueTags.hasOwnProperty(tag)) {
-        uniqueTags[tag].count += 1;
-      } else {
-        uniqueTags[tag] = {
-          title: tag,
-          count: 1,
-        };
-      }
-    });
-  }
+    if (post.data.tags) {
+        post.data.tags.forEach((tag) => {
+            if (uniqueTags.hasOwnProperty(tag)) {
+                uniqueTags[tag].count += 1;
+            } else {
+                uniqueTags[tag] = {
+                    title: tag,
+                    count: 1,
+                };
+            }
+        });
+    }
 });
 
 const orphanTags = Object.values(uniqueTags).filter((tag) => tag.count <= 1);
 const soretdOrphanTags = Object.values(orphanTags).sort((a, b) =>
-  a.title.localeCompare(b.title),
+    a.title.localeCompare(b.title)
 );
 const filteredTags = Object.values(uniqueTags).filter((tag) => tag.count > 1);
 const sortedUniqueTags = Object.values(filteredTags).sort(
-  (a, b) => b.count - a.count,
+    (a, b) => b.count - a.count
 );
 ---
 
 <Layout
-  title="All Tags"
-  description="A list of all the tags used in my writing"
+    title="All Tags"
+    description="A list of all the tags used in my writing"
 >
-  <main>
-    <h1>All Tags</h1>
+    <main class="stack | theme-writing">
+        <h1>All Tags</h1>
 
-    <ul>
-      {
-        sortedUniqueTags.map((tag) => (
-          <li>
-            <TagLink tag={tag.title} count={tag.count} />
-          </li>
-        ))
-      }
-    </ul>
+        <ul class="stack" data-size="xxs">
+            {
+                sortedUniqueTags.map((tag) => (
+                    <li>
+                        <TagLink tag={tag.title} count={tag.count} />
+                    </li>
+                ))
+            }
+        </ul>
 
-    <p>Orphan Tags (Tags with only 1 post)</p>
+        <h2>
+            Orphan Tags <span class="text-secondary"
+                >(Tags with only 1 post)</span
+            >
+        </h2>
 
-    <ul>
-      {
-        soretdOrphanTags.map((tag) => (
-          <li>
-            <OrphanTagLink tag={tag.title} />
-          </li>
-        ))
-      }
-    </ul>
-  </main>
+        <ul class="stack" data-size="xxs">
+            {
+                soretdOrphanTags.map((tag) => (
+                    <li>
+                        <OrphanTagLink tag={tag.title} />
+                    </li>
+                ))
+            }
+        </ul>
+    </main>
 </Layout>
+
+<style>
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+</style>

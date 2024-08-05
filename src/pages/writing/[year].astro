@@ -1,29 +1,29 @@
 ---
-import Layout from "@layouts/Base.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import PostPreview from "@components/post/PostPreview.astro";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import PostPreview from '@components/post/PostPreview.astro';
 
 export async function getStaticPaths() {
-  const posts = (await getCollection("writing")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-  );
+    const posts = (await getCollection('writing')).sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    );
 
-  const postYears = new Map();
-  posts.forEach((post) => {
-    const year = post.data.pubDate.getFullYear();
+    const postYears = new Map();
+    posts.forEach((post) => {
+        const year = post.data.pubDate.getFullYear();
 
-    if (!postYears.get(year)) {
-      postYears.set(year, []);
-    }
+        if (!postYears.get(year)) {
+            postYears.set(year, []);
+        }
 
-    postYears.get(year).push(post);
-  });
+        postYears.get(year).push(post);
+    });
 
-  return [...postYears.entries()].map(([year, posts]) => ({
-    params: { year },
-    props: { posts },
-  }));
+    return [...postYears.entries()].map(([year, posts]) => ({
+        params: { year },
+        props: { posts },
+    }));
 }
 
 const { posts } = Astro.props;
@@ -31,127 +31,22 @@ const { year } = Astro.params;
 ---
 
 <Layout title={`Posts from ${year}`} description={`Posts from ${year}`}>
-  <main>
-    <h1>Posts in {year}</h1>
-    <ul class="post-list">
-      {posts.map((post: CollectionEntry<"writing">) => (
-          <PostPreview
-            description={post.data.description}
-            heroImage={post.data.heroImage}
-            isLinkPost={post.data.tags.includes("link-post")}
-            link={post.slug}
-            pubDate={post.data.pubDate}
-            title={post.data.title}
-            type="full"
-          />
-        ))
-      }
-    </ul>
-  </main>
+    <main class="stack | theme-writing">
+        <h1>Writing from {year}</h1>
+        <ul class="post-list | flow-grid">
+            {posts.map(
+                    (post: CollectionEntry<'writing'>) => (
+                    <PostPreview
+                        description={post.body}
+                        heroImage={post.data.heroImage}
+                        isLinkPost={post.data.tags.includes('link-post')}
+                        link={post.slug}
+                        pubDate={post.data.pubDate}
+                        title={post.data.title}
+                        tags={post.data.tags}
+                    />
+                )
+            )}
+        </ul>
+    </main>
 </Layout>
-
-<style>
-
-  h1 {
-    margin-block-end: 1em;
-  }
-
-  .post-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style-type: none;
-    margin: 0;
-    max-width: 80ch;
-    padding: 0;
-
-    @media (min-width: 600px) {
-      gap: 48px;
-    }
-  .post-preview {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: 1fr;
-    text-decoration: none;
-    width: 100%;
-
-    @media (min-width: 600px) {
-      gap: 24px;
-      grid-template-columns: max-content 1fr;
-    }
-  }
-
-  .post-preview__super-date {
-    display: none;
-
-    @media (min-width: 600px) {
-      display: block;
-    }
-  }
-
-  .post-preview__link {
-    color: var(--body-color);
-    display: grid;
-    gap: 0;
-    text-decoration: none;
-    @media (min-width: 600px) {
-      gap: 8px;
-    }
-    * {
-      transition: 0.25s ease-in-out;
-    }
-  }
-
-  .post-preview__image {
-    aspect-ratio: 2/1;
-    border-radius: 12px;
-    grid-column: 1;
-    margin-block-end: 8px;
-    object-fit: cover;
-    object-position: top center;
-
-    @media (min-width: 600px) {
-      margin: 0;
-    }
-  }
-
-  .post-preview__content {
-    display: grid;
-    gap: 0;
-    @media (min-width: 600px) {
-      gap: 8px;
-    }
-  }
-
-  .post-preview__title {
-    color: var(--link-color);
-    margin: 0;
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2ex;
-
-    .post-preview__link:hover &,
-    .post-preview__link:focus-visible & {
-      color: var(--link-color-hover);
-    }
-  }
-
-  .post-preview__description {
-    display: none;
-    margin: 0;
-
-    @media (min-width: 600px) {
-      display: block;
-    }
-  }
-
-  .post-preview__date {
-    margin: 0;
-    color: oklch(var(--white-raw) / 0.6);
-
-    @media (min-width: 600px) {
-      display: none;
-    }
-  }
-</style>

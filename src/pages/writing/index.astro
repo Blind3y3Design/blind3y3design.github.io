@@ -1,86 +1,69 @@
 ---
-import Layout from "@layouts/Base.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import PostPreview from "@components/post/PostPreview.astro";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import PostPreview from '@components/post/PostPreview.astro';
 
-const posts = (await getCollection("writing")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection('writing')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const postYears = new Map();
 const years: number[] = [];
 
 posts.forEach((post) => {
-  const year = post.data.pubDate.getFullYear();
+    const year = post.data.pubDate.getFullYear();
 
-  if (!postYears.get(year)) {
-    years.push(year);
-    postYears.set(year, []);
-  }
+    if (!postYears.get(year)) {
+        years.push(year);
+        postYears.set(year, []);
+    }
 
-  postYears.get(year).push(post);
+    postYears.get(year).push(post);
 });
 
 const {
-  title = "Writing",
-  description = "Personal Blog for Adam Sedwick, design systems lead and accessibility advocate",
+    title = 'Writing',
+    description = 'Personal Blog for Adam Sedwick, design systems lead and accessibility advocate',
 } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <main>
-    <h1 class="title">{title}</h1>
-    {
-      years.map((year) => {
-        const yearPosts = postYears.get(year);
-        return (
-          <section class="year">
-            <h2 class="year__title">{year.toString()}</h2>
-            <ul class="post-list">
-              {yearPosts.map((post: CollectionEntry<"writing">) => (
-                <PostPreview
-                  description={post.data.description}
-                  heroImage={post.data.heroImage}
-                  isLinkPost={post.data.tags.includes("link-post")}
-                  link={post.slug}
-                  pubDate={post.data.pubDate}
-                  title={post.data.title}
-                  type="full"
-                />
-              ))}
-            </ul>
-          </section>
-        );
-      })
-    }
-  </main>
+    <main class="stack | theme-writing">
+        <div class="page-intro | stack" data-size="xs">
+            <h1 class="title">{title}</h1>
+            <p class="fs-md text-secondary text-cap-width">
+                With over a decade working on the design and development of
+                digital products I've learned a lot. I tend to write about
+                things I find interesting or problems I've encountered.
+            </p>
+        </div>
+        {
+            years.map((year) => {
+                const yearPosts = postYears.get(year);
+                return (
+                    <section class="year | stack" data-size="small">
+                        <h2 class="year__title">{year.toString()}</h2>
+                        <ul class="post-list | flow-grid">
+                            {yearPosts.map(
+                                (post: CollectionEntry<'writing'>) => (
+                                    <PostPreview
+                                        description={post.body}
+                                        heroImage={post.data.heroImage}
+                                        isLinkPost={post.data.tags.includes(
+                                            'link-post'
+                                        )}
+                                        link={post.slug}
+                                        pubDate={post.data.pubDate}
+                                        title={post.data.title}
+                                        tags={post.data.tags}
+                                    />
+                                )
+                            )}
+                        </ul>
+                    </section>
+                );
+            })
+        }
+    </main>
 </Layout>
-
-<style>
-  .title {
-    margin: 0 0 0.5em 0;
-  }
-  .year {
-    display: grid;
-    gap: 32px;
-    max-width: 80ch;
-
-    &:not(:first-child) {
-      margin-block-start: 2.5rem;
-    }
-  }
-
-  .post-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    @media (min-width: 600px) {
-      gap: 48px;
-    }
-  }
-</style>

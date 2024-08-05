@@ -2,6 +2,7 @@
 pubDate: 2015-12-31
 heroImage: "@images/work/nyias.jpg"
 title: New York International Auto Show 2016
+excerpt: "The goal with the New York International Auto Show site for 2016 was to present an experience as modern and sleek as the cars that were being presented."
 ---
 
 The goal with the New York International Auto Show site for 2016 was to present an experience as modern and sleek as the cars that were being presented.

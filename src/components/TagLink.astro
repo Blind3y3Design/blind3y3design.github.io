@@ -1,18 +1,33 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-import FormattedTag from "./FormattedTag.astro";
+import type { HTMLAttributes } from 'astro/types';
+import FormattedTag from './FormattedTag.astro';
 
-interface Props extends HTMLAttributes<"a"> {
-  tag: string;
-  count: number;
+interface Props extends HTMLAttributes<'a'> {
+    tag: string;
+    count: number;
 }
 
 const { tag, count, ...props } = Astro.props;
 ---
 
 <a href=`/writing/tags/${tag}` class="tag-link" {...props}>
-  <FormattedTag tag={tag} />
+    #<FormattedTag tag={tag} />
 </a>
  ({count})
 
-<style></style>
+<style>
+    .tag-link {
+        color: var(--text-primary);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2ex;
+        transition: 0.25s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration-color: var(--link-color);
+        }
+    }
+</style>

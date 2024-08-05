@@ -38,7 +38,7 @@ It's common to see some version of the `* { box-sizing: border-box}` style on we
 
 The default styling mode for HTML elements is `content-box`. The content box does not take the padding or border of an element into account when sizing itself. Under the `content-box` model we need to manually account for padding and border when sizing an element.
 
-<p class="breakout aside">
+<p class="aside">
 Due to the nature of the web, and the desire to maintain backwards compatibility the default model used by elements is not likely to change any time soon.
 </p>
 

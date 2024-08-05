@@ -15,13 +15,11 @@ Thankfully that's relatively easy to do, and I wanted to share how I went about 
 
 The first step was going through my old posts and adding a new `tag` that I've named `link-post`. By using a tag I get a couple of things for free. I've already got tags displayed on the bottom of each page, and 'tag' specific routes on this site.
 
-<p class="breakout aside">
+<p class="aside">
 One of the other major benefits of using tags is that in the future, if I want to create a nicer page that shows all of the link posts I could just filter my writing collection to find all posts with the link-post tag. Additionally, I could also filter out any post containing that tag from my main writing feed. I don't see a major reason to do that at this time, but it's nice to have the options available.
 </p>
 
 The next order of business was to indicate what posts are link posts on my post lists, again tags coming in handy for this. I'd been meaning to clean up some of my old migrated site architecture and code so I ended up creating a component for my post previews. While grabbing post data and passing it ot the component I pass a simple `.includes` check to a boolean prop indicating whether or not the post is a link post based on the tags on the post.
-
-<div class="breakout">
 
 ```astro
 <PostPreview
@@ -33,28 +31,20 @@ The next order of business was to indicate what posts are link posts on my post 
 />
 ```
 
-</div>
-
 Then within the component I'm just conditionally rendering the link icon next to the title if the boolean value is true.
-
-<div class="breakout">
 
 ```astro
 <p class="post-preview__title">
   {title}
   {
     isLinkPost && (
-      <Icon class="post-preview__link-icon" pack="mdi" name="link-variant" />
+      <Icon class="post-preview__link-icon" name="mdi:link-variant" />
     )
   }
 </p>
 ```
 
-</div>
-
 The last link in the chain was create a small astro component that I can use on these posts to create an obvious CTA linking back to the main source.
-
-<div class="breakout">
 
 ```astro
 ---
@@ -71,11 +61,9 @@ const { link, linkText = "View Link", ...props } = Astro.props;
 
 <a href={link} class="post-link" {...props}>
   {linkText}
-  <Icon class="post-link__icon" pack="mdi" name="link-variant" />
+  <Icon class="post-link__icon" name="mdi:link-variant" />
 </a>;
 ```
-
-</div>
 
 Super basic stuff going on here. I'm just extending the base `a` element with a couple of props so that I can reuse this bit of code in mdx files without needing to manually copy and pase it. This component outputs a simple button styled link onto the page.
 

@@ -1,0 +1,95 @@
+/* Themes */
+.theme-writing {
+  --link-color: var(--accent-1);
+  --highlight-color: var(--accent-1);
+}
+
+.theme-work {
+  --link-color: var(--accent-2);
+  --highlight-color: var(--accent-2);
+}
+
+.theme-projects {
+  --link-color: var(--accent-3);
+  --highlight-color: var(--accent-3);
+}
+
+.theme-about {
+  --link-color: var(--accent-4);
+  --highlight-color: var(--accent-4);
+}
+
+/* Highlights */
+.block-highlight {
+  background: var(--highlight-color);
+  color: var(--text-accent);
+}
+
+.text-highlight {
+  color: var(--highlight-color);
+}
+
+/* Font Sizes */
+.fs-sm {
+  font-size: var(--font-size-sm);
+}
+
+.fs-base {
+  font-size: var(--font-size-base);
+}
+
+.fs-md {
+  font-size: var(--font-size-md);
+}
+
+.fs-lg {
+  font-size: var(--font-size-lg);
+}
+
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.fs-xxxl {
+  font-size: var(--font-size-xxxl);
+}
+
+/* Text Utilities */
+.text-cap-width {
+  max-width: 800px;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+/* General Utilities */
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px 1px 1px 1px);
+  /* maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
+}
