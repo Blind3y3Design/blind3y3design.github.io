@@ -2,6 +2,8 @@
 import { Icon } from 'astro-icon/components';
 import type { HTMLAttributes } from 'astro/types';
 
+import Button from '@components/Button.astro';
+
 type Props = HTMLAttributes<'a'>;
 
 const { type, href, class: className, ...props } = Astro.props;
@@ -10,30 +12,12 @@ const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
-<a
+<Button
+    tag="a"
     href={href}
-    class:list={[className, 'social-link', { active: isActive }]}
+    class:list={[className, 'social-link']}
+    type="icon"
     {...props}
 >
-    <Icon class="social-link__icon" name={`mdi:${type}`} />
-</a>
-
-<style>
-    .social-link {
-        align-items: center;
-        background: transparent;
-        color: var(--text-primary);
-        display: flex;
-        padding: 8px;
-        transition: all 0.25s ease-in-out;
-
-        &:hover,
-        &:focus-visible {
-            color: var(--link-color);
-        }
-    }
-    .social-link__icon {
-        height: 24px;
-        width: 24px;
-    }
-</style>
+    <Icon name={`mdi:${type}`} size="24" />
+</Button>
