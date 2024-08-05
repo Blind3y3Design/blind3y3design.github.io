@@ -33,9 +33,9 @@ const { year } = Astro.params;
 <Layout title={`Posts from ${year}`} description={`Posts from ${year}`}>
     <main class="stack | theme-writing">
         <h1>Writing from {year}</h1>
-        <ul class="post-list">
+        <ul class="post-list | flow-grid">
             {posts.map(
-              (post: CollectionEntry<'writing'>) => (
+                    (post: CollectionEntry<'writing'>) => (
                     <PostPreview
                         description={post.body}
                         heroImage={post.data.heroImage}
@@ -46,8 +46,7 @@ const { year } = Astro.params;
                         tags={post.data.tags}
                     />
                 )
-              )}
+            )}
         </ul>
     </main>
 </Layout>
-

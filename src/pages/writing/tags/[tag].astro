@@ -37,7 +37,7 @@ const { tag, posts } = Astro.props;
                 {tag}
             />
         </h1>
-        <ul class="post-list">
+        <ul class="post-list | flow-grid">
             {
                 posts.map((post) => (
                     <PostPreview

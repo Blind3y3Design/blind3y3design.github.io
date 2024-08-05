@@ -44,7 +44,7 @@ const {
                 return (
                     <section class="year | stack" data-size="small">
                         <h2 class="year__title">{year.toString()}</h2>
-                        <ul class="post-list">
+                        <ul class="post-list | flow-grid">
                             {yearPosts.map(
                                 (post: CollectionEntry<'writing'>) => (
                                     <PostPreview

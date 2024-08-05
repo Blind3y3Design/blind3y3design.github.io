@@ -50,24 +50,23 @@
   }
 }
 
-/* post-list provides the compositional layout of post-cards in a grid */
-/* TODO: Create generic grid composition classes */
-.post-list {
-  display: grid;
-  gap: var(--space-4) var(--space-2);
-  grid-template-columns: repeat(3, 1fr);
-  list-style-type: none;
-  margin-block-end: 0;
-  padding: 0;
-}
-
 .flow-grid {
+  --repeat-count: 3;
+
   display: grid;
   gap: var(--space-4) var(--space-2);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   list-style-type: none;
   margin-block-end: 0;
   padding: 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(var(--repeat-count), 1fr);
+  }
+
+  &[data-repeat="5"] {
+    --repeat-count: 5;
+  }
 }
 
 /* TODO: Create generic 'flow' classes for horizontal flex compositions */

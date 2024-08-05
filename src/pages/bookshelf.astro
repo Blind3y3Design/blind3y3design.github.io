@@ -22,24 +22,31 @@ books.forEach((book) => {
     bookYears.get(year).push(book);
 });
 
-const { title = 'Bookshelf', description = "A list of books I've read" } =
-    Astro.props;
+const {
+    title = 'Bookshelf',
+    description = "A catalog of books I've read over the years",
+} = Astro.props;
 ---
 
 <Layout title={title} description={description}>
-    <main>
-        <div class="title">
-            <h1>{title}</h1>
+    <main class="stack">
+        <div class="page-intro | stack" data-size="xs">
+            <h1 class="title">Bookshelf</h1>
+            <p class="about-bio | fs-md text-cap-width">
+                A catalog of books I've read over the years
+            </p>
         </div>
-        <div class="bookshelf-content">
+        <div class="bookshelf-content | stack" data-size="small">
             {
                 years.map((year) => {
                     const yearBooks = bookYears.get(year);
 
                     return (
-                        <section class="year">
-                            <h2 class="year__title">{year.toString()}</h2>
-                            <ul class="book-list">
+                        <section class="year | stack" data-size="small">
+                            <h2 class="year-title | block-highlight | fs-md">
+                                {year.toString()}
+                            </h2>
+                            <ul class="book-list | flow-grid" data-repeat="5">
                                 {yearBooks.map(
                                     (book: CollectionEntry<'bookshelf'>) => (
                                         // Some day maybe, use amazon images instead of local images
@@ -69,54 +76,36 @@ const { title = 'Bookshelf', description = "A list of books I've read" } =
 </Layout>
 
 <style>
-    main {
-        width: 100%;
-    }
-
-    .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-    }
-
-    .title h1 {
-        margin: 0 0 0.5em 0;
-    }
-
-    .bookshelf-content {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1400px;
-        width: 100%;
-    }
-
     .year {
-        width: 100%;
-    }
+        --highlight-color: var(--surface-raised);
 
-    .year__title {
-        margin: 0;
+        &:first-of-type {
+            --highlight-color: var(--accent-1);
+        }
 
-        .year:not(:first-of-type) & {
-            margin-block-start: 0.5em;
+        &:nth-of-type(2) {
+            --highlight-color: var(--accent-2);
+        }
+
+        &:nth-of-type(3) {
+            --highlight-color: var(--accent-3);
+        }
+
+        &:nth-of-type(4) {
+            --highlight-color: var(--accent-4);
+        }
+
+        &:nth-of-type(n + 5) {
+            .highlight-year {
+                color: var(--text-priamry);
+            }
         }
     }
 
-    .book-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin: 0;
-        max-width: 100%;
-        padding: 0;
-        width: 100%;
-
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-        }
+    .year-title {
+        border-radius: var(--border-radius-s);
+        display: block;
+        padding: var(--space-half) var(--space-1);
+        width: max-content;
     }
 </style>

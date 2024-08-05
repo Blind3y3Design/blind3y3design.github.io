@@ -25,11 +25,15 @@ const { title = 'Work', description = "Work I've done throughout my career" } =
                 systems.
             </p>
         </div>
-        <ul class="post-list">
+        <ul class="post-list | flow-grid">
             {posts.map(
-                    (post: CollectionEntry<'work'>) => (
+                (post: CollectionEntry<'work'>) => (
                     <li class="work-preview | stack" data-size="xxs">
-                        <a href={`/work/${post.slug}/`} class="link" tabindex="-1">
+                        <a
+                            href={`/work/${post.slug}/`}
+                            class="link"
+                            tabindex="-1"
+                        >
                             <Picture
                                 class="image"
                                 src={post.data.heroImage}
@@ -43,7 +47,9 @@ const { title = 'Work', description = "Work I've done throughout my career" } =
                         <p class="date | fs-sm">
                             <FormattedDate date={post.data.pubDate} />
                         </p>
-                        {post.data.excerpt && <p class="excerpt">{post.data.excerpt}</p>}
+                        {post.data.excerpt && (
+                            <p class="excerpt">{post.data.excerpt}</p>
+                        )}
                     </li>
                 )
             )}
