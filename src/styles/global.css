@@ -82,7 +82,6 @@ b {
 
 a:not([class]) {
   color: var(--link-color);
-  display: inline-block;
   text-decoration: underline;
   text-decoration-color: transparent;
   text-decoration-skip-ink: auto;

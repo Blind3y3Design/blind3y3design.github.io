@@ -5,14 +5,14 @@ import type { CollectionEntry } from 'astro:content';
 import BookPreview from '@components/BookPreview.astro';
 
 const books = (await getCollection('bookshelf')).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a, b) => b.data.completionDate.valueOf() - a.data.completionDate.valueOf()
 );
 
 const bookYears = new Map();
 const years: number[] = [];
 
 books.forEach((book) => {
-    const year = book.data.pubDate.getFullYear();
+    const year = book.data.completionDate.getFullYear();
 
     if (!bookYears.get(year)) {
         years.push(year);
