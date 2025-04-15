@@ -30,7 +30,9 @@ const createExcerpt = (text: string) => {
         .join(' ');
 };
 
-const excerpt = `${createExcerpt(description).substring(0, 140)}...`;
+const excerpt = isLinkPost
+    ? `${createExcerpt(description).substring(60, 200)}...`
+    : `${createExcerpt(description).substring(0, 140)}...`;
 ---
 
 <li class="post-preview | stack" data-size="xxs">
