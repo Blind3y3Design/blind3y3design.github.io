@@ -1,0 +1,147 @@
+---
+import ContactForm from '@components/ContactForm.astro';
+---
+
+<section class="contact-footer content-container">
+    <div class="contact-footer__inner content-container__inner">
+        <div class="contact-footer__content">
+            <h2 class="contact-footer__title">
+                Let's Create Something
+                <span class="text-accent-3">Extraordinary Together</span>
+            </h2>
+            <p class="contact-footer__subtitle">
+                Ready to elevate your product's design and strategy? I'm
+                available for senior leadership roles and strategic consulting.
+            </p>
+            <div class="contact-footer__links">
+                <div class="contact-footer__connect-links">
+                    <p class="contact-footer__link-header">Connect</p>
+                    <ul class="contact-footer_link-list">
+                        <li class="contact-footer__link-item">
+                            <a
+                                href="https://www.linkedin.com/in/adamsedwick/"
+                                class="contact-footer__link">LinkedIn</a
+                            >
+                        </li>
+                        <li class="contact-footer__link-item">
+                            <a
+                                href="https://bsky.app/profile/asedwick.bsky.social"
+                                class="contact-footer__link">Bluesky</a
+                            >
+                        </li>
+                        <li class="contact-footer__link-item">
+                            <a
+                                href="https://x.com/AdamSedwick"
+                                class="contact-footer__link">X</a
+                            >
+                        </li>
+                        <li class="contact-footer__link-item">
+                            <a
+                                href="https://github.com/Blind3y3Design"
+                                class="contact-footer__link">Github</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-footer__resource-links">
+                    <p class="contact-footer__link-header">Resources</p>
+                    <ul class="contact-footer_link-list">
+                        <li class="contact-footer__link-item">
+                            <a href="/work" class="contact-footer__link"
+                                >Case Studies</a
+                            >
+                        </li>
+                        <li class="contact-footer__link-item">
+                            <a href="/about" class="contact-footer__link"
+                                >Design Process</a
+                            >
+                        </li>
+                        <li class="contact-footer__link-item">
+                            <a href="/speaking" class="contact-footer__link"
+                                >Speaking</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ContactForm />
+    </div>
+</section>
+
+<style>
+    .contact-footer__inner {
+        align-items: center;
+        display: flex;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .contact-footer__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        width: 100%;
+    }
+
+    .contact-footer__title {
+        font-size: 32px;
+
+        span {
+            display: block;
+        }
+    }
+
+    .contact-footer__subtitle {
+        color: var(--color-text-secondary);
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .contact-footer__links {
+        border-top: 1px solid var(--color-white);
+        display: flex;
+        gap: var(--space-3);
+        padding-top: var(--space-2);
+    }
+
+    .contact-footer__connect-links,
+    .contact-footer__resource-links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        width: 100%;
+    }
+
+    .contact-footer__link-header {
+        color: var(--color-text-primary);
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .contact-footer_link-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-footer__link {
+        color: var(--color-text-secondary);
+        font-size: 14px;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0ex;
+        transition: 0.25s ease-in-out;
+
+        &:hover {
+            color: var(--color-accent-3);
+            text-decoration-color: var(--color-accent-3);
+            text-underline-offset: 0.4ex;
+        }
+    }
+</style>

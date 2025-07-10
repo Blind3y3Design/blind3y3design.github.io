@@ -1,0 +1,77 @@
+---
+import Calendar from '@images/svg/calendar.svg';
+import Badge from '@components/Badge.astro';
+---
+
+<a href="/link-to-blog-post" class="blog-post-card">
+    <div class="blog-post-card__post-date">
+        <Calendar class="blog-post-card__post-date-icon" />
+        <span class="blog-post-card__post-date-text">Apr 15, 2025</span>
+    </div>
+    <div class="blog-post-card__badges">
+        <Badge color="accent-1">Resist</Badge>
+        <Badge color="accent-1">STEM</Badge>
+        <Badge color="accent-1">Public Learning</Badge>
+        <Badge color="accent-1">Link Post</Badge>
+    </div>
+    <div class="blog-post-card__title">Showcasing Creativity</div>
+    <div class="blog-post-card__description">
+        Created brand identity, marketing materials, and website for an internal
+        event at Discovery Education, allowing creative teams to showcase their
+        work.
+    </div>
+</a>
+
+<style>
+    .blog-post-card {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--color-accent-1);
+        }
+    }
+
+    .blog-post-card__post-date {
+        align-items: center;
+        color: var(--color-text-secondary);
+        display: flex;
+        gap: var(--space-1);
+        font-size: 14px;
+    }
+
+    .blog-post-card__post-date-icon {
+        fill: var(--color-text-secondary);
+        height: 14px;
+        width: 14px;
+    }
+
+    .blog-post-card__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-1);
+    }
+
+    .blog-post-card__title {
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.25s ease-in-out;
+
+        .blog-post-card:hover & {
+            color: var(--color-accent-1);
+        }
+    }
+
+    .blog-post-card__description {
+        color: var(--color-text-secondary);
+        font-size: 18px;
+        margin: 0;
+    }
+</style>

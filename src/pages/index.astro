@@ -1,172 +1,28 @@
 ---
-import Layout from "../layouts/Base.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
-import FormattedDate from "../components/FormattedDate.astro";
+import Layout from '../layouts/Base.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import HomeHero from '../components/Home/HomeHero.astro';
+import DesignPhilosophy from '@/components/DesignPhilosophy.astro';
+import HomeCaseStudies from '@/components/Home/HomeCaseStudies.astro';
+import HomePosts from '@/components/Home/HomePosts.astro';
 
-const posts = (await getCollection("writing"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 6);
+const posts = (await getCollection('writing'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 6);
 
-const work = (await getCollection("work"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 4);
+const work = (await getCollection('work'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 4);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <main>
-    <section class="home-intro">
-      <h1>Hey, I'm Adam Sedwick</h1>
-      <p class="bio">
-        I am a software engineer with a focus on front-end architecture, design
-        systems, and accessibilty.
-      </p>
-    </section>
-    <section class="latest-posts">
-      <h2 class="section-title">Latest Posts</h2>
-      <ul class="post-list">
-        {
-          posts.map((post) => (
-            <li class="post-preview">
-              <a href={`/writing/${post.slug}/`} class="post-preview__link">
-                <p class="post-preview__title">{post.data.title}</p>
-              </a>
-              <p class="post-preview__date">
-                Posted on <FormattedDate date={post.data.pubDate} />
-              </p>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-    <section class="work">
-      <h2 class="section-title">Work</h2>
-      <ul class="work-list">
-        {
-          work.map((item) => (
-            <li class="work-preview">
-              <a href={`/work/${item.slug}/`} class="work-preview__link">
-                <Picture
-                  class="work-preview__image"
-                  src={item.data.heroImage}
-                  formats={["avif", "webp"]}
-                  alt={item.data.title}
-                />
-                <p class="work-preview__title">{item.data.title}</p>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-  </main>
+    <main>
+        <HomeHero />
+        <DesignPhilosophy />
+        <HomeCaseStudies />
+        <HomePosts />
+    </main>
 </Layout>
 
-<style>
-  section {
-    margin: 0 auto;
-    max-width: 1400px;
-
-    &:not(:first-child) {
-      margin-block-start: 2rem;
-    }
-  }
-
-  .section-title {
-    margin-block-end: 0.5em;
-  }
-
-  .home-intro {
-    padding: 3rem 0;
-  }
-
-  .post-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .post-preview__link {
-    color: var(--link-color);
-    margin: 0;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0ex;
-    transition: all 0.25s ease-in-out;
-
-    &:hover,
-    &:focus-visible {
-      color: var(--link-color-hover);
-      text-decoration-color: var(--link-color-hover);
-      text-underline-offset: 0.2ex;
-    }
-  }
-
-  .post-preview__date {
-    font-size: var(--font-size-sm);
-    margin: 0;
-  }
-
-  .work-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    @media (min-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  .work-preview {
-    display: flex;
-  }
-
-  .work-preview__link {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-decoration: none;
-    width: 100%;
-  }
-
-  .work-preview__image {
-    aspect-ratio: 2/1;
-    border-radius: 4px;
-    grid-column: 1;
-    margin-block-end: 8px;
-    object-fit: cover;
-    object-position: top center;
-  }
-
-  .work-preview__title {
-    color: var(--link-color);
-    margin: 0;
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2ex;
-    transition: all 0.25s ease-in-out;
-
-    .work-preview__link:hover &,
-    .work-preview__link:focus-visible & {
-      color: var(--link-color-hover);
-    }
-  }
-</style>
+<style></style>

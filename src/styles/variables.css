@@ -1,7 +1,5 @@
 :root {
-  /*  */
-  /* Font Variables */
-  /*  */
+  /* Font  */
   --font-size-sm: clamp(0.98rem, -0.24vw + 1.03rem, 0.84rem);
   --font-size-base: clamp(1.13rem, 0vw + 1.13rem, 1.13rem);
   --font-size-md: clamp(1.29rem, 0.37vw + 1.22rem, 1.5rem);
@@ -10,45 +8,38 @@
   --font-size-xxl: clamp(1.97rem, 2.88vw + 1.39rem, 3.55rem);
   --font-size-xxxl: clamp(2.26rem, 4.49vw + 1.36rem, 4.73rem);
 
-  --heading-font: "Atkinson", sans-serif;
   --body-font: system-ui, sans-serif;
-  --serif-font: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-  --mono-font: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-    "DejaVu Sans Mono", monospace;
+  --mono-font: "monaspace-neon" ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
-  /*  */
-  /* Color Variables */
-  /*  */
+  /* Color */
+  --color-body: #1d1d1d;
+  --color-white: #ffffff;
 
-  --white-raw: 87.17% 0.009 258.34;
-  --white: oklch(var(--white-raw));
+  --color-surface-1: #212121;
+  --color-surface-2: #2e2e2e;
+  --color-surface-3: #3c3c3c;
 
-  --navy: oklch(20.43% 0.0592 249.46);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-accent: #1d1d1d;
 
-  --gold: oklch(85.61% 0.1821 82.85);
-  --gold-dark: oklch(56.77% 0.1345 82.85);
+  --color-accent-1: #76dcec;
+  --color-accent-2: #ed4987;
+  --color-accent-3: #a2d33c;
+  --color-accent-4: #ee9c30;
+  --color-accent-5: #8b79ea;
+  --color-accent-6: #facb42;
 
-  /* TODO: Remove these and replace with branded tokens */
-  --gray: 96, 115, 159;
-  --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
-    0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  /* Space */
+  --space-half: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
 
-  /*  */
-  /* Semantic Variables */
-  /*  */
-
-  --accent: var(--gold);
-  --accent-dark: var(--gold-dark);
-  --body-background: var(--navy);
-  --body-color: var(--white);
-  --link-color: var(--gold);
-  --link-color-hover: var(--gold-dark);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-background: var(--navy);
-    --body-color: var(--white);
-    --heading-color: var(--gold);
-  }
+  /* Border Radius */
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 16px;
 }

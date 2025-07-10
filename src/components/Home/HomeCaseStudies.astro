@@ -1,0 +1,47 @@
+---
+import SectionHeader from '@components/SectionHeader.astro';
+import CaseStudyCard from '@components/CaseStudyCard.astro';
+import { getCollection } from 'astro:content';
+
+// const work = (await getCollection('work'))
+//     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+//     .slice(0, 3);
+---
+
+<section class="home-case-studies content-container">
+    <div class="home-case-studies__inner content-container__inner">
+        <SectionHeader
+            title="Case Studies"
+            subtitle="Explore how strategic design thinking and user-centered solutions have driven measurable business outcomes across diverse industries."
+            sectionheaderlink="/work"
+            sectionheaderlinktext="View All Work"
+            sectionaccentcolor="accent-2"
+        />
+        <div class="home-case-studies__row">
+            <!-- {work.map((post) => (
+                <CaseStudyCard />
+            ))} -->
+
+            <CaseStudyCard />
+            <CaseStudyCard />
+            <CaseStudyCard />
+        </div>
+    </div>
+</section>
+
+<style>
+    .home-case-studies__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .home-case-studies__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+</style>

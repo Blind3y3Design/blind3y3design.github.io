@@ -1,0 +1,144 @@
+---
+import ResultsArrow from '@images/svg/results-arrow.svg';
+import Badge from '@components/Badge.astro';
+---
+
+<a href="/link-to-case-study" class="case-study-card">
+    <div class="case-study-card__thumbnail">
+        <!-- 16:9 image -->
+    </div>
+    <div class="case-study-card__content">
+        <div class="case-study-card__label">Event Branding</div>
+        <div class="case-study-card__title">Showcasing Creativity</div>
+        <div class="case-study-card__description">
+            Created brand identity, marketing materials, and website for an
+            internal event at Discovery Education, allowing creative teams to
+            showcase their work.
+        </div>
+        <div class="case-study-card__results">
+            <p class="case-study-card__results-header">
+                <ResultsArrow class="results-header__icon" />
+                <span class="results-header__text">Key Results</span>
+            </p>
+            <ul class="case-study-card__results-list">
+                <li class="case-study-card__result-item">
+                    <span class="case-study-card__result-text">
+                        Develop and Launch Brand Identity
+                    </span>
+                </li>
+                <li class="case-study-card__result-item">
+                    <span class="case-study-card__result-text">
+                        60% Employee Engagement
+                    </span>
+                </li>
+                <li class="case-study-card__result-item">
+                    <span class="case-study-card__result-text">
+                        Increased Employee Satisfaction
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="case-study-card__badges">
+            <Badge color="accent-2">Brand Identity</Badge>
+            <Badge color="accent-2">Web Design</Badge>
+            <Badge color="accent-2">Event Coordination</Badge>
+        </div>
+    </div>
+</a>
+
+<style>
+    .case-study-card {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--color-accent-2);
+        }
+    }
+
+    .case-study-card__thumbnail {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+
+    .case-study-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+    }
+
+    .case-study-card__label {
+        color: var(--color-text-secondary);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .case-study-card__title {
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.25s ease-in-out;
+
+        .case-study-card:hover & {
+            color: var(--color-accent-2);
+        }
+    }
+
+    .case-study-card__description {
+        color: var(--color-text-secondary);
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .case-study-card__results {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    .case-study-card__results-header {
+        align-items: center;
+        display: flex;
+        gap: var(--space-1);
+    }
+
+    .results-header__icon {
+        height: 16px;
+        width: 16px;
+        fill: var(--color-text-secondary);
+    }
+
+    .results-header__text {
+        font-size: 14px;
+        color: var(--color-text-secondary);
+    }
+
+    .case-study-card__results-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .case-study-card__result-item {
+        background: var(--color-surface-3);
+        border-radius: var(--border-radius-s);
+        color: var(--color-text-primary);
+        font-size: 14px;
+        margin: 0;
+        padding: var(--space-half) var(--space-1);
+    }
+
+    .case-study-card__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-1);
+    }
+</style>

@@ -1,0 +1,111 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'a'> {
+    color:
+        | 'white'
+        | 'accent-1'
+        | 'accent-2'
+        | 'accent-3'
+        | 'accent-4'
+        | 'accent-5';
+    size?: 's' | 'm' | 'l';
+    style: 'fill' | 'ghost';
+}
+
+const {
+    href,
+    class: className,
+    color,
+    size = 'm',
+    style,
+    ...props
+} = Astro.props;
+---
+
+<a
+    href={href}
+    class:list={[
+        className,
+        'link-button',
+        `link-button--${color}`,
+        `link-button--${size}`,
+        `link-button--${style}`,
+    ]}
+    {...props}
+>
+    <slot />
+</a>
+<style>
+    .link-button {
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: var(--border-radius-m);
+        display: flex;
+        font-size: 1.125rem;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .link-button--m {
+        padding: var(--space-1) var(--space-2);
+    }
+
+    .link-button--l {
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .link-button--fill {
+        background: var(--button--color);
+        color: var(--color-text-accent);
+
+        &:hover,
+        &:focus-visible {
+            background: color-mix(
+                in srgb,
+                var(--button--color),
+                transparent 15%
+            );
+        }
+    }
+
+    .link-button--ghost {
+        background: transparent;
+        color: var(--button--color);
+        border-color: var(--button--color);
+
+        &:hover,
+        &:focus-visible {
+            background: color-mix(
+                in srgb,
+                transparent,
+                var(--button--color) 15%
+            );
+        }
+    }
+
+    .link-button--white {
+        --button--color: var(--color-white);
+    }
+
+    .link-button--accent-1 {
+        --button--color: var(--color-accent-1);
+    }
+
+    .link-button--accent-2 {
+        --button--color: var(--color-accent-2);
+    }
+
+    .link-button--accent-3 {
+        --button--color: var(--color-accent-3);
+    }
+
+    .link-button--accent-4 {
+        --button--color: var(--color-accent-4);
+    }
+
+    .link-button--accent-5 {
+        --button--color: var(--color-accent-5);
+    }
+</style>

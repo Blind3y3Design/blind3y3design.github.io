@@ -1,0 +1,226 @@
+---
+import Brain from '@images/svg/brain.svg';
+import Target from '@images/svg/target.svg';
+import Lightbulb from '@images/svg/lightbulb.svg';
+import Lightning from '@images/svg/lightning.svg';
+import Heart from '@images/svg/heart.svg';
+import Users from '@images/svg/users.svg';
+import Badge from '@components/Badge.astro';
+---
+
+<section class="design-philosophy content-container">
+    <div class="design-philosophy__inner content-container__inner">
+        <div class="design-philosophy__header">
+            <h2 class="design-philosophy__title">Design Philosophy</h2>
+            <p class="design-philosophy__subtitle">
+                My approach combines strategic thinking with hands-on execution,
+                ensuring every design decision drives both user satisfaction and
+                business growth.
+            </p>
+        </div>
+        <div class="design-philosophy__cards">
+            <div class="philosophy-card">
+                <p class="philosophy-card__header">
+                    <span class="philosophy-card__icon-wrapper">
+                        <Brain class="philosophy-card__icon" />
+                    </span>
+                     Human-Centered Design
+                </p>
+                <p class="philosophy-card__content">
+                    Every decision starts with understanding user needs,
+                    behaviors, and pain points.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <p class="philosophy-card__header">
+                    <span class="philosophy-card__icon-wrapper">
+                        <Target class="philosophy-card__icon" />
+                    </span>
+                     Business Impact Focus
+                </p>
+                <p class="philosophy-card__content">
+                    Design solutions that directly contribute to measurable
+                    business outcomes.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <p class="philosophy-card__header">
+                    <span class="philosophy-card__icon-wrapper">
+                        <Lightning class="philosophy-card__icon" />
+                    </span>
+                     Iterative Innovation
+                </p>
+                <p class="philosophy-card__content">
+                    Rapid prototyping and testing to validate ideas before full
+                    implementation.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <p class="philosophy-card__header">
+                    <span class="philosophy-card__icon-wrapper">
+                        <Users class="philosophy-card__icon" />
+                    </span>
+                     Collaborative Leadership
+                </p>
+                <p class="philosophy-card__content">
+                    Building bridges between design, engineering, and product
+                    teams.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <p class="philosophy-card__header">
+                    <span class="philosophy-card__icon-wrapper">
+                        <Heart class="philosophy-card__icon" />
+                    </span>
+                     Inclusive Accessibility
+                </p>
+                <p class="philosophy-card__content">
+                    Creating experiences that work for everyone, regardless of
+                    ability.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <p class="philosophy-card__header">
+                    <span class="philosophy-card__icon-wrapper">
+                        <Lightbulb class="philosophy-card__icon" />
+                    </span>
+                     Systems Thinking
+                </p>
+                <p class="philosophy-card__content">
+                    Designing scalable solutions that evolve with product
+                    growth.
+                </p>
+            </div>
+        </div>
+        <div class="design-philosophy__callout">
+            <div class="philosophy-callout__content">
+                <div class="philosophy-callout__title">
+                    From Startup Speed to Enterprise Scale
+                </div>
+                <div class="philosophy-callout__description">
+                    I've navigated the unique challenges of both fast-moving
+                    startups and complex enterprise environments. This dual
+                    perspective allows me to balance innovation with stability,
+                    ensuring designs that are both industry-leading and
+                    reliable.
+                </div>
+                <div class="philosophy-callout__badges">
+                    <Badge>Startup Agility</Badge>
+                    <Badge>Enterprise Standards</Badge>
+                    <Badge>Scalable Systems</Badge>
+                    <Badge>Risk Management</Badge>
+                </div>
+            </div>
+            <div class="philosophy-callout__graphic"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .design-philosophy {
+        background: var(--color-surface-1);
+    }
+
+    .design-philosophy__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .design-philosophy__header {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+        text-align: center;
+        max-width: 880px;
+    }
+
+    .design-philosophy__title {
+        font-size: 48px;
+    }
+
+    .design-philosophy__subtitle {
+        color: var(--color-text-secondary);
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .design-philosophy__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+
+    .philosophy-card {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-2);
+    }
+
+    .philosophy-card__header {
+        align-items: center;
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        gap: var(--space-1);
+    }
+
+    .philosophy-card__icon-wrapper {
+        background: var(--color-surface-3);
+        border-radius: var(--border-radius-s);
+        padding: var(--space-1);
+    }
+
+    .philosophy-card__icon {
+        fill: var(--color-accent-4);
+        height: 24px;
+        width: 24px;
+    }
+
+    .philosophy-card__content {
+        color: var(--color-text-secondary);
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .design-philosophy__callout {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        gap: var(--space-4);
+        padding: var(--space-4);
+    }
+
+    .philosophy-callout__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .philosophy-callout__title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .philosophy-callout__description {
+        color: var(--color-text-secondary);
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .philosophy-callout__badges {
+        display: flex;
+        gap: var(--space-2);
+    }
+
+    .philosophy-callout__graphic {
+        max-width: 300px;
+        width: 100%;
+    }
+</style>

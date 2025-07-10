@@ -23,9 +23,7 @@ const work = defineCollection({
       title: z.string(),
       description: z.string().optional(),
       pubDate: z.coerce.date(),
-      heroImage: image().refine((img) => img.width >= 700, {
-        message: "Book Image must be at least 700px wide",
-      }),
+      heroImage: image(),
       link: z.string().optional(),
     }),
 });
@@ -39,9 +37,7 @@ const projects = defineCollection({
       description: z.string().optional(),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
-      heroImage: image().refine((img) => img.width >= 700, {
-        message: "Book Image must be at least 700px wide",
-      }),
+      heroImage: image(),
       link: z.string().optional(),
       status: z.string(),
     }),
@@ -57,9 +53,7 @@ const bookshelf = defineCollection({
       pubDate: z.coerce.date(),
       completionDate: z.coerce.date(),
       bookAuthor: z.string(),
-      bookImage: image().refine((img) => img.width >= 600, {
-        message: "Book Image must be at least 600px wide",
-      }),
+      bookImage: image(),
       bookRating: z.string(),
       amazonLink: z.string(),
       amazonGuid: z.string().optional(),

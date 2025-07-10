@@ -1,0 +1,109 @@
+---
+import ArrowRight from '@images/svg/arrow-right.svg';
+
+interface Props {
+    title: string;
+    subtitle: string;
+    sectionheaderlink?: string;
+    sectionheaderlinktext?: string;
+    sectionaccentcolor:
+        | 'accent-1'
+        | 'accent-2'
+        | 'accent-3'
+        | 'accent-4'
+        | 'accent-5';
+}
+
+const {
+    sectionheaderlink,
+    title,
+    subtitle,
+    sectionheaderlinktext,
+    sectionaccentcolor,
+} = Astro.props;
+---
+
+<div class="section-header">
+    <div class="section-header__inner">
+        <div class="section-header__content">
+            <h2 class="section__title">{title}</h2>
+            <p class="section__subtitle">
+                {subtitle}
+            </p>
+        </div>
+        {
+            sectionheaderlink && (
+                <a href={sectionheaderlink} class="section-header__link">
+                    <span class="section-header__link-text">
+                        {sectionheaderlinktext}
+                    </span>
+                    <ArrowRight class="section-header__link-icon" />
+                </a>
+            )
+        }
+    </div>
+</div>
+
+<style
+    define:vars={{
+        'section-accent-color': `var(--color-${sectionaccentcolor})`,
+    }}
+>
+    .section-header {
+        container: section-header / inline-size;
+        width: 100%;
+    }
+
+    .section-header__inner {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+        width: 100%;
+
+        @container (min-width: 900px) {
+            align-items: flex-end;
+            flex-direction: row;
+            gap: var(--space-3);
+            justify-content: space-between;
+        }
+    }
+
+    .section__title {
+        font-size: 48px;
+    }
+
+    .section__subtitle {
+        color: var(--color-text-secondary);
+        font-size: 24px;
+        margin: 0;
+        max-width: 800px;
+    }
+
+    .section-header__link {
+        align-items: baseline;
+        color: var(--section-accent-color);
+        display: flex;
+        flex-shrink: 0;
+        gap: var(--space-1);
+        justify-content: center;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0ex;
+        transition: 0.25s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration-color: var(--section-accent-color);
+            text-underline-offset: 0.4ex;
+        }
+    }
+
+    .section-header__link-icon {
+        fill: var(--section-accent-color);
+        height: 12px;
+        width: 12px;
+    }
+</style>

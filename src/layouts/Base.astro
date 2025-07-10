@@ -1,38 +1,42 @@
 ---
-import "../styles/reset.css";
-import "../styles/variables.css";
-import "../styles/global.css";
+import '../styles/reset.css';
+import '../styles/variables.css';
+import '../styles/global.css';
+import '../styles/compositions.css';
+import '../styles/utilities.css';
 
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import ContactFooter from '../components/ContactFooter.astro';
+import LegalFooter from '../components/LegalFooter.astro';
 
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <BaseHead title={title} description={description} />
-  <body>
-    <div class="construction-header">
-      <p>
-        I'm currently rebuilding my site using
-        <a href="https://astro.build/" target="_blank"> Astro</a>. Please bear
-        with me as it comes together.
-      </p>
-    </div>
-    <Header />
-    <slot />
-    <Footer />
-    <script>
-      // Global Scripts here
-    </script>
-    <style>
-      .construction-header {
-        background: #141c1f;
-        padding: 1rem;
-        text-align: center;
-      }
-    </style>
-  </body>
+    <BaseHead title={title} description={description} />
+    <body>
+        <div class="construction-header">
+            <p>
+                I'm currently rebuilding my site using
+                <a href="https://astro.build/" target="_blank"> Astro</a>.
+                Please bear with me as it comes together.
+            </p>
+        </div>
+        <Header />
+        <slot />
+        <ContactFooter />
+        <LegalFooter />
+        <script>
+            // Global Scripts here
+        </script>
+        <style>
+            .construction-header {
+                background: #141c1f;
+                padding: 1rem;
+                text-align: center;
+            }
+        </style>
+    </body>
 </html>

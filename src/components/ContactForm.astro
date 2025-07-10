@@ -1,0 +1,139 @@
+---
+import Email from '@images/svg/email.svg';
+---
+
+<div class="contact-form">
+    <form method="POST" id="form">
+        <input
+            type="hidden"
+            name="access_key"
+            value="98ddddb9-caaa-471b-9409-fe57cc3d0e95"
+        />
+
+        <input
+            type="text"
+            name="name"
+            class="contact-form__input"
+            placeholder="John Doe"
+        />
+        <input
+            type="email"
+            name="email"
+            class="contact-form__input"
+            required
+            placeholder="John.Doe@example.com"
+        />
+        <textarea
+            name="message"
+            class="contact-form__input"
+            required
+            placeholder="Your message here..."></textarea>
+        <button type="submit" class="contact-form__button">
+            <Email />
+            <span>Get In Touch</span>
+        </button>
+        <div id="result"></div>
+    </form>
+</div>
+
+<script is:inline>
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function (e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = 'Please wait...';
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+            body: json,
+        })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                result.innerHTML = 'Something went wrong!';
+            })
+            .then(function () {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = 'none';
+                }, 3000);
+            });
+    });
+</script>
+
+<style>
+    .contact-form {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        max-width: 450px;
+        padding: var(--space-3);
+        width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+            width: 100%;
+        }
+    }
+
+    .contact-form__input {
+        background: var(--color-surface-3);
+        border: transparent;
+        border-radius: var(--border-radius-s);
+        color: var(--color-text-primary);
+        font-size: 14px;
+        padding: var(--space-1) var(--space-2);
+        width: 100%;
+    }
+
+    .contact-form__button {
+        align-items: center;
+        background-color: var(--color-accent-3);
+        border: transparent;
+        border-radius: var(--border-radius-m);
+        color: var(--color-text-accent);
+        cursor: pointer;
+        display: flex;
+        font-size: 18px;
+        font-weight: 600;
+        gap: var(--space-1);
+        justify-content: center;
+        padding: var(--space-1) var(--space-2);
+        transition: background-color 0.3s ease;
+        width: 100%;
+
+        &:hover {
+            background-color: color-mix(
+                in srgb,
+                var(--color-accent-3),
+                transparent 15%
+            );
+        }
+
+        svg {
+            fill: var(--color-text-accent);
+            height: 18px;
+            width: 18px;
+        }
+    }
+</style>
