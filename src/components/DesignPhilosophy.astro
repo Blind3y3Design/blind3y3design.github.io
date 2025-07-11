@@ -149,7 +149,7 @@ import Badge from '@components/Badge.astro';
 
     .design-philosophy__cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
         gap: var(--space-3);
         width: 100%;
     }

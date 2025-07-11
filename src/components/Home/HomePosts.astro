@@ -1,11 +1,11 @@
 ---
 import SectionHeader from '../SectionHeader.astro';
 import BlogPostCard from '@components/BlogPostCard.astro';
-// import { getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 
-// const posts = (await getCollection('writing'))
-//     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-//     .slice(0, 6);
+const posts = (await getCollection('writing'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 3);
 ---
 
 <section class="home-posts content-container">
@@ -19,13 +19,18 @@ import BlogPostCard from '@components/BlogPostCard.astro';
         />
 
         <div class="home-blog-posts__row">
-            <!-- {posts.map((post) => (
-                <BlogPostCard />
-            ))} -->
-
-            <BlogPostCard />
-            <BlogPostCard />
-            <BlogPostCard />
+            {
+                posts.map((post) => (
+                    <BlogPostCard
+                        link={post.slug}
+                        pubDate={post.data.pubDate}
+                        tags={post.data.tags}
+                        title={post.data.title}
+                        description={post.body}
+                        isLinkPost={post.data.tags.includes('link-post')}
+                    />
+                ))
+            }
         </div>
     </div>
 </section>
@@ -45,7 +50,7 @@ import BlogPostCard from '@components/BlogPostCard.astro';
 
     .home-blog-posts__row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
         gap: var(--space-3);
         width: 100%;
     }

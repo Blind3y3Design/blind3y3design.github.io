@@ -1,8 +1,9 @@
 ---
-pubDate: 2015-12-31
-heroImage: "@images/work/nyias.jpg"
+image: "@images/work/nyias.jpg"
+label: Event Marketing
 title: New York International Auto Show 2016
-excerpt: "The goal with the New York International Auto Show site for 2016 was to present an experience as modern and sleek as the cars that were being presented."
+description: Media showcase and ticket sales for the premier auto show in NYC.
+pubDate: 2015-12-31
 ---
 
 The goal with the New York International Auto Show site for 2016 was to present an experience as modern and sleek as the cars that were being presented.

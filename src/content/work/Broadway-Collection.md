@@ -1,9 +1,9 @@
 ---
-pubDate: 2015-12-31
-link: http://www.broadwaycollection.com/
-heroImage: "@images/work/broadway-collection.jpg"
+image: "@images/work/broadway-collection.jpg"
+label: Entertainment Retail
 title: Broadway Collection
-excerpt: "The Broadway Collection site came with a unique set of problems we had to solve. First and foremost they had to be a neutral party in relation to all of the shows they feature on their site. Secondly, the site is translated into 5 different languages and is updated through a CMS."
+description: One-stop-shop solution for visitors in NYC looking to purchase show tickets.
+pubDate: 2015-12-31
 ---
 
 The Broadway Collection site came with a unique set of problems we had to solve. First and foremost they had to be a neutral party in relation to all of the shows they feature on their site. Secondly, the site is translated into 5 different languages and is updated through a CMS.

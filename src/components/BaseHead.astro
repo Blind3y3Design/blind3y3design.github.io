@@ -64,8 +64,8 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title && `${title}  | `}{SITE_TITLE}</title>
-<meta name="title" content=`${title}` />
+<title>{title ? `${title} | Adam Sedwick` : SITE_TITLE}</title>
+<meta name="title" content={title ? `${title} | Adam Sedwick` : SITE_TITLE} />
 <meta
     name="description"
     content={description ? description : SITE_DESCRIPTION}

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import LinkButton from '@components/LinkButton.astro';
 
-import heroImage from '@images/headshot.png';
+import heroImage from '@images/colorado-woods.jpg';
 ---
 
 <section class="home-hero content-container">
@@ -49,9 +49,10 @@ import heroImage from '@images/headshot.png';
             <Image
                 src={heroImage}
                 alt="Headshot of Adam Sedwick"
-                layout="constrained"
                 width={550}
                 height={550}
+                layout="constrained"
+                position="right"
             />
         </div>
     </div>

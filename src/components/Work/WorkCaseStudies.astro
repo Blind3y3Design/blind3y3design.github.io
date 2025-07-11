@@ -6,34 +6,41 @@ import { getEntry } from 'astro:content';
 const Create = await getEntry('caseStudies', 'create');
 const Nebula = await getEntry('caseStudies', 'nebula-design-system');
 const CareerConnect = await getEntry('caseStudies', 'career-connect');
+const Techbook = await getEntry('caseStudies', 'techbook');
+const DiscoveryExperience = await getEntry(
+    'caseStudies',
+    'discovery-experience'
+);
 ---
 
-<section class="home-case-studies content-container">
-    <div class="home-case-studies__inner content-container__inner">
+<section class="work-case-studies content-container">
+    <div class="work-case-studies__inner content-container__inner">
         <SectionHeader
             title="Case Studies"
             subtitle="Explore how strategic design thinking and user-centered solutions have driven measurable business outcomes across diverse industries."
-            sectionheaderlink="/work"
-            sectionheaderlinktext="View All Work"
             sectionaccentcolor="accent-2"
         />
-        <div class="home-case-studies__row">
-            <!-- {work.map((post) => (
-                <CaseStudyCard />
-            ))} -->
 
-            <CaseStudyCard link={Create.slug} data={Create.data} />
-            <CaseStudyCard link={Nebula.slug} data={Nebula.data} />
+        <div class="work-case-studies__row">
+            <CaseStudyCard link={Create.slug} data={Create.data} featureLeft />
+            <CaseStudyCard link={Nebula.slug} data={Nebula.data} featureRight />
             <CaseStudyCard
                 link={CareerConnect.slug}
                 data={CareerConnect.data}
+            />
+            <CaseStudyCard link={Techbook.slug} data={Techbook.data} />
+            <CaseStudyCard
+                link={DiscoveryExperience.slug}
+                data={DiscoveryExperience.data}
+                <
+                div
             />
         </div>
     </div>
 </section>
 
 <style>
-    .home-case-studies__inner {
+    .work-case-studies__inner {
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -41,7 +48,7 @@ const CareerConnect = await getEntry('caseStudies', 'career-connect');
         justify-content: center;
     }
 
-    .home-case-studies__row {
+    .work-case-studies__row {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
         gap: var(--space-3);

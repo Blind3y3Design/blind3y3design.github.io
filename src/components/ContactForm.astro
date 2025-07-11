@@ -84,10 +84,12 @@ import Email from '@images/svg/email.svg';
         border: 1px solid var(--color-white);
         border-radius: var(--border-radius-l);
         display: flex;
-        max-width: 450px;
         padding: var(--space-3);
         width: 100%;
 
+        @container (min-width: 920px) {
+            max-width: 450px;
+        }
         form {
             display: flex;
             flex-direction: column;

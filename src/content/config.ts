@@ -34,27 +34,11 @@ const work = defineCollection({
   // Type-check frontmatter using a schema
   schema: ({ image }) =>
     z.object({
+      image: image(),
+      label: z.string(),
       title: z.string(),
-      description: z.string().optional(),
-      excerpt: z.string().optional(),
+      description: z.string(),
       pubDate: z.coerce.date(),
-      heroImage: image(),
-      link: z.string().optional(),
-    }),
-});
-
-const projects = defineCollection({
-  type: "content",
-  // Type-check frontmatter using a schema
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      description: z.string().optional(),
-      pubDate: z.coerce.date(),
-      updatedDate: z.coerce.date().optional(),
-      heroImage: image(),
-      link: z.string().optional(),
-      status: z.string(),
     }),
 });
 
@@ -76,4 +60,4 @@ const bookshelf = defineCollection({
     }),
 });
 
-export const collections = { writing, work, projects, bookshelf, caseStudies };
+export const collections = { writing, work, bookshelf, caseStudies };

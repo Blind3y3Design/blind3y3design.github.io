@@ -13,12 +13,21 @@ interface Props {
         badges: string[];
     };
     link: string;
+    featureLeft?: boolean;
+    featureRight?: boolean;
 }
 
-const { data, link } = Astro.props;
+const { data, link, featureLeft, featureRight } = Astro.props;
 ---
 
-<a href={`/case-studies/${link}`} class="case-study-card">
+<a
+    href={`/case-studies/${link}`}
+    class:list={[
+        'case-study-card',
+        featureLeft ? 'case-study-card--feature-left' : '',
+        featureRight ? 'case-study-card--feature-right' : '',
+    ]}
+>
     <Image
         src={data.image}
         alt={data.title}
@@ -70,6 +79,31 @@ const { data, link } = Astro.props;
         &:hover,
         &:focus-visible {
             border-color: var(--color-accent-2);
+        }
+    }
+
+    @container (min-width: 800px) {
+        .case-study-card--feature-left {
+            flex-direction: row;
+            grid-column: 1 / -1;
+
+            .case-study-card__thumbnail {
+                object-fit: cover;
+            }
+            .case-study-card__content {
+                flex-shrink: 1.5;
+            }
+        }
+        .case-study-card--feature-right {
+            flex-direction: row-reverse;
+            grid-column: 1 / -1;
+
+            .case-study-card__thumbnail {
+                object-fit: cover;
+            }
+            .case-study-card__content {
+                flex-shrink: 1.5;
+            }
         }
     }
 

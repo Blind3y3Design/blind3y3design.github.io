@@ -1,9 +1,16 @@
 ---
-pubDate: 2023-05-13
-title: Nebula Design System
-heroImage: "@images/work/nebula/design-system-overview.png"
-description: Reworking Discovery Education's Design System from the Ground Up
-excerpt: "The Nebula Design System was created for Discovery Education's digital product experiences. It consists of visual language guidelines, vue components, and Figma assets. The system provides a premium solution for designers and developers with a focus on usability and accessibility for educators and students."
+image: "@images/case-studies/de-experience.png"
+label: Enterprise Ed-Tech
+title: Discovery Education Experience
+description: Product overhaul of the Discovery Education platform, unifying multiple existing products and features under a single cohesive product offering.
+results:
+  - Launch a Unified Product Offering
+  - 15% MAU Uplift
+  - 27% Increased ARR
+badges:
+  - Product Design
+  - User Research
+  - Systems Design
 ---
 
 ## Responsibilities

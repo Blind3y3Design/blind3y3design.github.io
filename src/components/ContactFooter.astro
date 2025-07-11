@@ -73,8 +73,13 @@ import ContactForm from '@components/ContactForm.astro';
     .contact-footer__inner {
         align-items: center;
         display: flex;
+        flex-direction: column-reverse;
         gap: var(--space-4);
         justify-content: center;
+
+        @container (min-width: 920px) {
+            flex-direction: row;
+        }
     }
 
     .contact-footer__content {

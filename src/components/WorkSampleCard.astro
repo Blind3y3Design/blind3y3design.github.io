@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    data: {
+        image: ImageMetadata;
+        label: string;
+        title: string;
+        description: string;
+    };
+}
+
+const { data } = Astro.props;
+---
+
+<div class="work-sample-card">
+    <Image
+        src={data.image}
+        alt={data.title}
+        class="work-sample-card__thumbnail"
+    />
+    <div class="work-sample-card__content">
+        <div class="work-sample-card__label">{data.label}</div>
+        <div class="work-sample-card__title">{data.title}</div>
+        <div class="work-sample-card__description">
+            {data.description}
+        </div>
+    </div>
+</div>
+
+<style>
+    .work-sample-card {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .work-sample-card__thumbnail {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .work-sample-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+    }
+
+    .work-sample-card__label {
+        color: var(--color-text-secondary);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .work-sample-card__title {
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .work-sample-card__description {
+        color: var(--color-text-secondary);
+        font-size: 18px;
+        margin: 0;
+    }
+</style>

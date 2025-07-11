@@ -1,10 +1,9 @@
 ---
-pubDate: 2023-09-15
-link: https://accessibility.blind3y3design.com/
+image: "@images/work/accessibility-playbook-home.png"
+label: Reference Documentation
 title: Accessibility Playbook
-heroImage: "@images/work/accessibility-playbook-home.png"
-description: A resource manual to create more accessible digital products
-status: active
+description: A reference manual for team about common accessibility topics.
+pubDate: 2023-09-15
 ---
 
 In my work with Design Systems, accessibility often comes up as a topic. Questions can range from the incredibly basic, "What is accessibility?" to the more complex and nuanced, "Is the language of this modal clear enough?" Part of my job is to help guide the designers, developers, content producers, and product owners on their individual journies understanding accessibility and how it impacts their work.
