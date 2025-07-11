@@ -11,6 +11,7 @@ interface Props extends HTMLAttributes<'a'> {
         | 'accent-5';
     size?: 's' | 'm' | 'l';
     style: 'fill' | 'ghost';
+    iconOnly?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
     color,
     size = 'm',
     style,
+    iconOnly = false,
     ...props
 } = Astro.props;
 ---
@@ -31,6 +33,7 @@ const {
         `link-button--${color}`,
         `link-button--${size}`,
         `link-button--${style}`,
+        iconOnly ? 'link-button--icon-only' : '',
     ]}
     {...props}
 >
@@ -50,10 +53,18 @@ const {
 
     .link-button--m {
         padding: var(--space-1) var(--space-2);
+
+        &.link-button--icon-only {
+            padding: var(--space-1);
+        }
     }
 
     .link-button--l {
         padding: var(--space-2) var(--space-3);
+
+        &.link-button--icon-only {
+            padding: var(--space-2);
+        }
     }
 
     .link-button--fill {

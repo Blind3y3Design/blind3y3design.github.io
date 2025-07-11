@@ -1,5 +1,4 @@
 ---
-import SocialLink from './SocialLink.astro';
 const today = new Date();
 ---
 
@@ -8,24 +7,6 @@ const today = new Date();
         <p class="footer__copyright">
             &copy; {today.getFullYear()} Adam Sedwick
         </p>
-
-        <div class="social-links">
-            <SocialLink
-                type="email"
-                href="mailto:adam.sedwick@gmail.com"
-                aria-label="Email Me"
-            />
-            <SocialLink
-                type="linkedin"
-                href="https://www.linkedin.com/in/blind3y3design"
-                aria-label="LinkedIn Link"
-            />
-            <SocialLink
-                type="github"
-                href="https://github.com/Blind3y3Design"
-                aria-label="Github Link"
-            />
-        </div>
     </div>
 </footer>
 

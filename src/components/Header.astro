@@ -1,163 +1,166 @@
 ---
 import { Icon } from 'astro-icon/components';
-import Button from '@components/Button.astro';
+import LinkButton from '@components/LinkButton.astro';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="nav-header">
-  <a href="/" class="home-link">
-    <!-- <Icon class="home-logo" name="logo" /> -->
-    Adam Sedwick
-  </a>
-  <nav class="main-nav">
-    <button class="menu-button">
-      <span class="menu-icon menu-icon-left"></span>
-      <span class="menu-icon"></span>
-      <span class="menu-icon menu-icon-right"></span>
-    </button>
-    <ul class="main-nav__items">
-      <li class="main-nav__item">
-        <HeaderLink href="/work">Work</HeaderLink>
-      </li>
-      <li class="main-nav__item">
-        <HeaderLink href="/about">About</HeaderLink>
-      </li>
-      <li class="main-nav__item">
-        <HeaderLink href="/writing">Writing</HeaderLink>
-      </li>
-      <li class="main-nav__item">
-        <HeaderLink href="#contact">Contact</HeaderLink>
-      </li>
-      <!-- <li class="main-nav__item">
+    <a href="/" class="home-link">
+        <!-- <Icon class="home-logo" name="logo" /> -->
+         Adam Sedwick
+    </a>
+    <nav class="main-nav">
+        <button class="menu-button">
+            <span class="menu-icon menu-icon-left"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon menu-icon-right"></span>
+        </button>
+        <ul class="main-nav__items">
+            <li class="main-nav__item text-accent-2">
+                <HeaderLink href="/work">Work</HeaderLink>
+            </li>
+            <li class="main-nav__item text-accent-4">
+                <HeaderLink href="/about">About</HeaderLink>
+            </li>
+            <li class="main-nav__item text-accent-1">
+                <HeaderLink href="/writing">Writing</HeaderLink>
+            </li>
+            <li class="main-nav__item text-accent-3">
+                <HeaderLink href="#contact">Contact</HeaderLink>
+            </li>
+            <!-- <li class="main-nav__item">
         <HeaderLink href="/bookshelf">Bookshelf</HeaderLink>
       </li> -->
-    </ul>
-  </nav>
-  <Button tag='a' href='/rss.xml' buttonType='icon'>
-    <Icon name="mdi:rss" size={32}/>
-  </Button>
+        </ul>
+    </nav>
+    <LinkButton href="/rss.xml" color="white" style="ghost" iconOnly>
+        <Icon name="mdi:rss" size={32} />
+    </LinkButton>
 </header>
 
 <style>
-  .nav-header {
-    align-items: center;
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 1fr auto auto;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 1rem;
-    position: relative;
-    margin: auto;
-    max-width: 1200px;
-    width: 100%;
+    .nav-header {
+        align-items: center;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr auto auto;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 1rem;
+        position: relative;
+        margin: auto;
+        max-width: 1200px;
+        width: 100%;
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, auto);
-      
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, auto);
+        }
     }
-  }
 
-  .home-link {
-    color: var(--text-primary);
-    font-family: var(--body-font);
-    font-size: var(--font-size-xl);
-    font-weight: 900;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0ex;
-    transition: .25s ease-in-out;
+    .home-link {
+        color: var(--color-text-primary);
+        font-size: var(--font-size-xl);
+        font-weight: 900;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0ex;
+        transition: 0.25s ease-in-out;
 
-    &:hover,
-    &:focus-visible {
-      color: var(--accent-5);
-      text-decoration-color: var(--accent-5);
-      text-decoration-thickness: 4px;
-      text-underline-offset: 0.2ex;
+        &:hover,
+        &:focus-visible {
+            color: var(--color-accent-5);
+            text-decoration-color: var(--color-accent-5);
+            text-decoration-thickness: 4px;
+            text-underline-offset: 0.2ex;
+        }
     }
-  }
 
-  .main-nav__items {
-    display: flex;
-    gap: var(--space-1);
-    margin: 0;
-    padding: 0;
+    .main-nav__items {
+        display: flex;
+        gap: var(--space-1);
+        margin: 0;
+        padding: 0;
 
-    @media (max-width: 767px) {
-        display: none;
+        @media (max-width: 767px) {
+            display: none;
 
-    .main-nav.active & {
-        background: var(--body);
+            .main-nav.active & {
+                background: var(--color-body);
+                display: flex;
+                flex-direction: column;
+                left: 0;
+                padding: 1rem;
+                position: absolute;
+                top: calc(100% + 8px);
+                width: 100%;
+                z-index: 1;
+            }
+        }
+    }
+
+    .main-nav__item {
+        list-style: none;
+    }
+
+    .menu-button {
+        --size: 30px;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
-        left: 0;
-        padding: 1rem;
-        position: absolute;
-        top: calc(100% + 8px);
-        width: 100%;
-        z-index: 1;
+        gap: 4px;
+        height: var(--size);
+        justify-content: center;
+        padding: 0;
+        width: var(--size);
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
-}
-  }
+    .menu-icon {
+        height: 2px;
+        width: var(--size, 30px);
+        display: block;
+        background-color: var(--color-accent-6);
+        transition:
+            transform 0.2s ease,
+            background-color 0.5s ease;
 
-  .main-nav__item {
-    list-style: none;
-  }
-
-  .menu-button {
-    --size: 30px;
-
-    background: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: var(--size);
-    justify-content: center;
-    padding: 0
-    width: var(--size);
-    @media (min-width: 768px) {
-      display: none;
+        .main-nav.active & {
+            background-color: var(--color-text-primary);
+            transform: translateX(0px) rotate(-45deg);
+        }
     }
-  }
-  .menu-icon {
-    height: 2px;
-    width: var(--size, 30px);
-    display: block;
-    background-color: var(--text-primary);
-    transition:
-      transform 0.2s ease,
-      background-color 0.5s ease;
+    .menu-icon-left {
+        width: calc(var(--size) / 2);
 
-      .main-nav.active & {
-        transform: translateX(0px) rotate(-45deg);
-      }
-  }
-  .menu-icon-left {
-    width: calc(var(--size) / 2);
-
-    .main-nav.active & {
-        transform: translateX(1px) rotate(45deg);
+        .main-nav.active & {
+            background-color: var(--color-text-primary);
+            transform: translateX(1px) rotate(45deg);
+        }
     }
-  }
-  .menu-icon-right {
-    align-self: flex-end;
-    width: calc(var(--size) / 2);
+    .menu-icon-right {
+        align-self: flex-end;
+        width: calc(var(--size) / 2);
 
-    .main-nav.active & {
-        transform: translateX(-2px) rotate(45deg);
+        .main-nav.active & {
+            background-color: var(--color-text-primary);
+            transform: translateX(-2px) rotate(45deg);
+        }
     }
-  }
-
 </style>
 
 <script>
-  const menuButton: HTMLElement = document.querySelector(".menu-button") as HTMLElement;
-  const nav: HTMLElement = document.querySelector(".main-nav") as HTMLElement;
-  menuButton.onclick = () => {
-    nav.classList.toggle("active");
-  };
+    const menuButton: HTMLElement = document.querySelector(
+        '.menu-button'
+    ) as HTMLElement;
+    const nav: HTMLElement = document.querySelector('.main-nav') as HTMLElement;
+    menuButton.onclick = () => {
+        nav.classList.toggle('active');
+    };
 </script>
