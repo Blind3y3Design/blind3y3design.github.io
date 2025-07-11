@@ -10,10 +10,6 @@ import HomePosts from '@/components/Home/HomePosts.astro';
 const posts = (await getCollection('writing'))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .slice(0, 6);
-
-const work = (await getCollection('work'))
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-    .slice(0, 4);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>

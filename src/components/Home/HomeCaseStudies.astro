@@ -1,11 +1,11 @@
 ---
 import SectionHeader from '@components/SectionHeader.astro';
 import CaseStudyCard from '@components/CaseStudyCard.astro';
-import { getCollection } from 'astro:content';
+import { getEntry } from 'astro:content';
 
-// const work = (await getCollection('work'))
-//     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-//     .slice(0, 3);
+const Create = await getEntry('caseStudies', 'create');
+const Nebula = await getEntry('caseStudies', 'nebula-design-system');
+const CareerConnect = await getEntry('caseStudies', 'career-connect');
 ---
 
 <section class="home-case-studies content-container">
@@ -22,9 +22,12 @@ import { getCollection } from 'astro:content';
                 <CaseStudyCard />
             ))} -->
 
-            <CaseStudyCard />
-            <CaseStudyCard />
-            <CaseStudyCard />
+            <CaseStudyCard link={Create.slug} data={Create.data} />
+            <CaseStudyCard link={Nebula.slug} data={Nebula.data} />
+            <CaseStudyCard
+                link={CareerConnect.slug}
+                data={CareerConnect.data}
+            />
         </div>
     </div>
 </section>

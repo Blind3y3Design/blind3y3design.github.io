@@ -1,19 +1,34 @@
 ---
+import { Image } from 'astro:assets';
 import ResultsArrow from '@images/svg/results-arrow.svg';
 import Badge from '@components/Badge.astro';
+
+interface Props {
+    data: {
+        image: ImageMetadata;
+        label: string;
+        title: string;
+        description: string;
+        results: string[];
+        badges: string[];
+    };
+    link: string;
+}
+
+const { data, link } = Astro.props;
 ---
 
-<a href="/link-to-case-study" class="case-study-card">
-    <div class="case-study-card__thumbnail">
-        <!-- 16:9 image -->
-    </div>
+<a href={`/case-studies/${link}`} class="case-study-card">
+    <Image
+        src={data.image}
+        alt={data.title}
+        class="case-study-card__thumbnail"
+    />
     <div class="case-study-card__content">
-        <div class="case-study-card__label">Event Branding</div>
-        <div class="case-study-card__title">Showcasing Creativity</div>
+        <div class="case-study-card__label">{data.label}</div>
+        <div class="case-study-card__title">{data.title}</div>
         <div class="case-study-card__description">
-            Created brand identity, marketing materials, and website for an
-            internal event at Discovery Education, allowing creative teams to
-            showcase their work.
+            {data.description}
         </div>
         <div class="case-study-card__results">
             <p class="case-study-card__results-header">
@@ -21,27 +36,23 @@ import Badge from '@components/Badge.astro';
                 <span class="results-header__text">Key Results</span>
             </p>
             <ul class="case-study-card__results-list">
-                <li class="case-study-card__result-item">
-                    <span class="case-study-card__result-text">
-                        Develop and Launch Brand Identity
-                    </span>
-                </li>
-                <li class="case-study-card__result-item">
-                    <span class="case-study-card__result-text">
-                        60% Employee Engagement
-                    </span>
-                </li>
-                <li class="case-study-card__result-item">
-                    <span class="case-study-card__result-text">
-                        Increased Employee Satisfaction
-                    </span>
-                </li>
+                {
+                    data.results.map((result) => (
+                        <li class="case-study-card__result-item">
+                            <span class="case-study-card__result-text">
+                                {result}
+                            </span>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
         <div class="case-study-card__badges">
-            <Badge color="accent-2">Brand Identity</Badge>
-            <Badge color="accent-2">Web Design</Badge>
-            <Badge color="accent-2">Event Coordination</Badge>
+            {
+                data.badges.map((badge) => (
+                    <Badge color="accent-2">{badge}</Badge>
+                ))
+            }
         </div>
     </div>
 </a>
@@ -52,6 +63,7 @@ import Badge from '@components/Badge.astro';
         border-radius: var(--border-radius-l);
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         text-decoration: none;
         transition: all 0.25s ease-in-out;
 
