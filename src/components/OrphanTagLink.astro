@@ -1,24 +1,39 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-import FormattedTag from "./FormattedTag.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+import type { HTMLAttributes } from 'astro/types';
+import FormattedTag from './FormattedTag.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
-interface Props extends HTMLAttributes<"a"> {
-  tag: string;
+interface Props extends HTMLAttributes<'a'> {
+    tag: string;
 }
 
 const { tag, ...props } = Astro.props;
 
-const tagPosts = await getCollection("writing", ({ data }) => {
-  return data.tags.includes(tag);
+const tagPosts = await getCollection('writing', ({ data }) => {
+    return data.tags.includes(tag);
 });
 
-const tagPost: CollectionEntry<"writing"> = tagPosts[0];
+const tagPost: CollectionEntry<'writing'> = tagPosts[0];
 ---
 
 <a href=`/writing/${tagPost.slug}` class="tag-link tag-link--orphan" {...props}>
-  <FormattedTag tag={tag} />
+    #<FormattedTag tag={tag} />
 </a>
 
-<style></style>
+<style>
+    .tag-link {
+        color: var(--text-primary);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2ex;
+        transition: 0.25s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration-color: var(--link-color);
+        }
+    }
+</style>

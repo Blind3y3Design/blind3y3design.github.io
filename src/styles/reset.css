@@ -7,7 +7,7 @@
 * {
   line-height: calc(1em + 0.5rem);
 
-  :is(p, h1, h2, h3, h4, h5, h6d) {
+  :is(p, h1, h2, h3, h4, h5, h6) {
     margin: 0;
     overflow-wrap: break-word;
   }
@@ -16,6 +16,10 @@
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
 }
 
 img,

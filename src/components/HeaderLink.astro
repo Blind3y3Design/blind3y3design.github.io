@@ -1,37 +1,37 @@
 ---
-import type { HTMLAttributes } from "astro/types";
+import type { HTMLAttributes } from 'astro/types';
 
-type Props = HTMLAttributes<"a">;
+type Props = HTMLAttributes<'a'>;
 
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
-  <slot />
+    <slot />
 </a>
 <style>
-  a {
-    display: inline-block;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0ex;
-    transition: 0.25s ease-in-out;
+    a {
+        display: inline-block;
+        padding: var(--space-half) var(--space-1);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0ex;
+        transition: 0.25s ease-in-out;
 
-    &:hover {
-      color: var(--gold);
-      text-decoration-color: var(--gold);
-      text-underline-offset: 0.4ex;
+        &:hover,
+        &:focus-visible {
+            text-decoration-color: var(--link-color);
+            text-underline-offset: 0.4ex;
+        }
     }
-  }
-  a.active {
-    font-weight: bolder;
-    color: var(--gold-dark);
-    text-decoration-color: var(--gold-dark);
-    text-underline-offset: 0.4ex;
-  }
+    a.active {
+        background: var(--highlight-color);
+        border-radius: var(--border-radius-s);
+        color: var(--text-accent);
+    }
 </style>

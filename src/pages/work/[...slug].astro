@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import WorkPage from "../../layouts/WorkPage.astro";
+import WorkPage from "@layouts/WorkPage.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("work");

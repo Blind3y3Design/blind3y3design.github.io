@@ -4,7 +4,7 @@ pubDate: 2023-10-08
 title: "Think Again"
 subtitle: "The Power of Knowing What You Don't Know"
 bookAuthor: Adam Grant
-bookImage: ../../images/bookshelf/think-again.jpg
+bookImage: "@images/bookshelf/think-again.jpg"
 bookRating: ★★★★
 amazonLink: https://a.co/d/148l0y6
 amazonGuid: "1984878107"

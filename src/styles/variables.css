@@ -1,12 +1,18 @@
 :root {
-  /* Font  */
-  --font-size-sm: clamp(0.98rem, -0.24vw + 1.03rem, 0.84rem);
-  --font-size-base: clamp(1.13rem, 0vw + 1.13rem, 1.13rem);
-  --font-size-md: clamp(1.29rem, 0.37vw + 1.22rem, 1.5rem);
-  --font-size-lg: clamp(1.49rem, 0.93vw + 1.3rem, 2rem);
-  --font-size-xl: clamp(1.71rem, 1.73vw + 1.36rem, 2.66rem);
-  --font-size-xxl: clamp(1.97rem, 2.88vw + 1.39rem, 3.55rem);
-  --font-size-xxxl: clamp(2.26rem, 4.49vw + 1.36rem, 4.73rem);
+  /* 14 */
+  --font-size-sm: clamp(0.8rem, 0.09vi + 0.78rem, 0.875rem);
+  /* 18 */
+  --font-size-base: clamp(1rem, 0.25vi + 0.94rem, 1.13rem);
+  /* 24 */
+  --font-size-md: clamp(1.25rem, 0.5vi + 1.13rem, 1.5rem);
+  /* 32 */
+  --font-size-lg: clamp(1.56rem, 0.87vi + 1.34rem, 2rem);
+  /* 42 */
+  --font-size-xl: clamp(1.95rem, 1.42vi + 1.6rem, 2.66rem);
+  /* 56 */
+  --font-size-xxl: clamp(2.44rem, 2.22vi + 1.89rem, 3.55rem);
+  /* 75 */
+  --font-size-xxxl: clamp(3.05rem, 3.37vi + 2.21rem, 4.73rem);
 
   --body-font: system-ui, sans-serif;
   --mono-font: "monaspace-neon" ui-monospace, "Cascadia Code", "Source Code Pro",

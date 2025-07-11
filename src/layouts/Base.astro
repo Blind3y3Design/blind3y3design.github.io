@@ -1,14 +1,9 @@
 ---
-import '../styles/reset.css';
-import '../styles/variables.css';
-import '../styles/global.css';
-import '../styles/compositions.css';
-import '../styles/utilities.css';
-
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import ContactFooter from '../components/ContactFooter.astro';
-import LegalFooter from '../components/LegalFooter.astro';
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import ContactFooter from '@components/ContactFooter.astro';
+import LegalFooter from '@components/LegalFooter.astro';
+import HCard from '@components/HCard.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -16,7 +11,7 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
     <BaseHead title={title} description={description} />
-    <body>
+    <body class={title.toLowerCase()}>
         <Header />
         <slot />
         <ContactFooter />
@@ -31,5 +26,6 @@ const { title, description } = Astro.props;
                 text-align: center;
             }
         </style>
+        <HCard />
     </body>
 </html>

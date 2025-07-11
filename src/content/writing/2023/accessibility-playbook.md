@@ -2,7 +2,7 @@
 pubDate: 2023-09-28T12:00:00-04:00
 title: "A Playbook for Accessibility"
 description: "A playbook for designers, developers, and product owners on their journey of accessibility"
-heroImage: ../../../images/writing/accessibility-playbook/hero.png
+heroImage: "@images/writing/accessibility-playbook/hero.png"
 tags:
   - accessibility
   - design

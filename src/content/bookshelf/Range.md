@@ -4,7 +4,7 @@ pubDate: 2023-07-17
 title: "Range"
 subtitle: "Why Generalists Triumph in a Specialized World"
 bookAuthor: David Epstein
-bookImage: ../../images/bookshelf/range.jpg
+bookImage: "@images/bookshelf/range.jpg"
 bookRating: ★★★★★
 amazonLink: https://a.co/d/0KppJ37
 amazonGuid: "0735214506"

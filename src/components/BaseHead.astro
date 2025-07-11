@@ -1,7 +1,16 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
+import '@styles/reset.css';
+import '@styles/variables.css';
+import '@styles/global.css';
+import '@styles/layouts.css';
+
+import '@styles/compositions.css';
+import '@styles/utilities.css';
+import '@styles/blocks.css';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '@consts';
 
 interface Props {
     title: string;
@@ -19,6 +28,12 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+<link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Blind3y3Design"
+    href="https://www.blind3y3design.com/rss.xml"
+/>
 
 <!-- Font preloads -->
 <link
@@ -49,9 +64,12 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
+<title>{title && `${title}  | `}{SITE_TITLE}</title>
 <meta name="title" content=`${title}` />
-<meta name="description" content={description} />
+<meta
+    name="description"
+    content={description ? description : SITE_DESCRIPTION}
+/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -66,3 +84,9 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Webmention.io -->
+<link
+    rel="webmention"
+    href="https://webmention.io/www.blind3y3design.com/webmention"
+/>

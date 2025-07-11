@@ -22,6 +22,7 @@ const work = defineCollection({
     z.object({
       title: z.string(),
       description: z.string().optional(),
+      excerpt: z.string().optional(),
       pubDate: z.coerce.date(),
       heroImage: image(),
       link: z.string().optional(),

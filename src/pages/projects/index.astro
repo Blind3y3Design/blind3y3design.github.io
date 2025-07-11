@@ -1,97 +1,92 @@
 ---
-import Layout from "../../layouts/Base.astro";
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
-import FormattedDate from "../../components/FormattedDate.astro";
+import Layout from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
+import FormattedDate from '@components/FormattedDate.astro';
 
-const projects = (await getCollection("projects")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const projects = (await getCollection('projects')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const { title = "Projects", description = "Projects I've created" } =
-  Astro.props;
+const { title = 'Projects', description = "Projects I've created" } =
+    Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <main>
-    <h1 class="title">{title}</h1>
-    <div class="projects">
-      {
-        projects.map((project) => (
-          <article class="project">
-            <a href={`/projects/${project.slug}/`} class="project__link">
-              <Picture
-                src={project.data.heroImage}
-                formats={["avif", "webp"]}
-                alt={project.data.title}
-              />
-            </a>
-            <h2 class="project__title">{project.data.title}</h2>
-            <div class="project__metadata">
-              <p class="project__date">
-                <FormattedDate date={project.data.pubDate} />
-              </p>
-              <p class="project__status">{project.data.status}</p>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-  </main>
+    <main class="stack | theme-projects">
+        <div class="page-intro | stack" data-size="xs">
+            <h1 class="title">{title}</h1>
+            <!-- TODO: Write copy for project section -->
+            <!-- <p class="fs-md text-secondary text-cap-width">
+            I've been lucky to work on a diverse range of projects,
+            including international and multi-lingual marketing campaigns,
+            e-commerce experiences, education-focused products, and design
+            systems.
+        </p> -->
+        </div>
+        <div class="projects | flow-grid">
+            {
+                projects.map((project) => (
+                    <article class="project | stack" data-size="xxs">
+                        <a href={`/projects/${project.slug}/`} class="link">
+                            <Picture
+                                class="image"
+                                src={project.data.heroImage}
+                                formats={['avif', 'webp']}
+                                alt={project.data.title}
+                            />
+                        </a>
+                        <a href={`/projects/${project.slug}/`} class="link">
+                            <p class="title | fs-md">{project.data.title}</p>
+                        </a>
+                        <div class="metadata">
+                            <p class="date | fs-sm">
+                                <FormattedDate date={project.data.pubDate} />
+                            </p>
+                            <p class="status">{project.data.status}</p>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+    </main>
 </Layout>
 
 <style>
-  main {
-    width: 100%;
-  }
+    .link {
+        color: var(--link-color);
+        display: block;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0ex;
+        transition: all 0.25s ease-in-out;
 
-  .title {
-    margin: 0 0 0.5em 0;
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    max-width: 100%;
-    padding: 0;
-    width: 100%;
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(
-        auto-fill,
-        minmax(calc(20rem - 1.5rem), 1fr)
-      );
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+            text-decoration-color: var(--link-color);
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.2ex;
+        }
     }
-  }
 
-  .project {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .project__title {
-    font-size: var(--font-size-md);
-  }
-
-  .project__metadata {
-    align-items: center;
-    display: flex;
-    gap: 0.5rem;
-
-    * {
-      font-size: var(--font-size-sm);
-      margin: 0;
+    .title {
+        align-items: first baseline;
+        display: flex;
+        gap: var(--space-half);
     }
-  }
 
-  .project__status {
-    background: hsl(0 0% 0% / 0.75);
-    border-radius: 2px;
-    padding: 4px 8px;
-    text-transform: capitalize;
-  }
+    .date {
+        color: var(--text-secondary);
+    }
+
+    .image {
+        aspect-ratio: 2/1;
+        border-radius: var(--border-radius-s);
+        object-fit: cover;
+        object-position: top center;
+    }
 </style>

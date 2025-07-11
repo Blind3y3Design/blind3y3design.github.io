@@ -1,9 +1,10 @@
 ---
 pubDate: 2015-12-31
 link: https://oneworldobservatory.com/
-heroImage: ../../images/work/owo.jpg
+heroImage: "@images/work/owo.jpg"
 title: One World Observatory
 description: See Forever at the One World Observatory in New York City.
+excerpt: "Some of the biggest challenges that we encountered when working on this site came from the fact that observatory is a government entity, and because of this we had to meet additional security and usability benchmarks."
 ---
 
 One World Observatory is located on the top levels of the One World Trade building. Our goal with this project was to give a sense of presence to the site.

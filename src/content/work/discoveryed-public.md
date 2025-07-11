@@ -2,8 +2,9 @@
 pubDate: 2021-02-15
 link: https://www.discoveryeducation.com/
 title: Discovery Education
-heroImage: ../../images/work/dicoveryed-com.jpg
+heroImage: "@images/work/dicoveryed-com.jpg"
 description: Connecting Students to Curiousity
+excerpt: "Discovery Education's dotcom site is the public face of the company and the product."
 ---
 
 Discovery Education's dotcom site is the public face of the company and the product.

@@ -1,93 +1,154 @@
 ---
-import Layout from "../layouts/Base.astro";
-import { Picture } from "astro:assets";
-import FormattedDate from "../components/FormattedDate.astro";
-import AboutInterview from "../components/AboutInterview.astro";
+import Layout from '@layouts/Base.astro';
+// import { Picture } from 'astro:assets';
+// import FormattedDate from '@components/FormattedDate.astro';
+// import AboutInterview from '@components/AboutInterview.astro';
 
-const updatedDate = new Date("December 13 2023");
-import heroImage from "../images/about-me.png";
+// import heroImage from '@images/Funko_Headshot.png';
 ---
 
 <Layout
-  title="About Me"
-  description="Adam Sedwick is a design systems lead and accessibilit advocate"
+    title="About Me"
+    description="Adam Sedwick is a design systems lead and accessibilit advocate"
 >
-  <main>
-    <article>
-      <div class="hero-image">
-        {
-          heroImage && (
-            <Picture
-              src={heroImage}
-              formats={["avif", "webp"]}
-              alt="Photograph of Adam Sedwick"
-            />
-          )
-        }
-      </div>
-      <div class="prose">
-        <div class="title">
-          <p class="last-updated-on">
-            Last updated on <FormattedDate date={updatedDate} />
-          </p>
-          <h1>About Me</h1>
-          <hr />
+    <main class="stack | theme-about">
+        <div class="page-intro | stack" data-size="xs">
+            <h1 class="title">About Me</h1>
+            <p class="about-bio | fs-md text-cap-width">
+                I'm Adam Sedwick a design and product operations lead at <a
+                    href="https://www.discoveryeducation.com/"
+                    >Discovery Education</a
+                > and an active member of the <a
+                    href="https://www.w3.org/community/design-tokens/"
+                    >Design Token Community Group
+                </a> working to define a standardized spec for design tokens. I like
+                building complex systems and teaching others. I live in Clarksville,
+                Tn.
+            </p>
         </div>
-        <p>
-          I lead the <strong>Design Systems</strong> team at <strong
-            >Discovery Education</strong
-          >.
-        </p>
-        <p>
-          Our team focuses on designing and developing the components and
-          systems that are used across all of Discovery Education's properties.
-          Our goal is to ensure that every experience is robust, scalable and
-          accessible.
-        </p>
-        <p>
-          I am also a member of the <a
-            href="https://www.w3.org/community/design-tokens/"
-            >Design Tokens Community Group</a
-          >, working to establish a standard that tools, designers, and
-          developers can all rely on when creating and using design tokens.
-        </p>
-      </div>
-      <AboutInterview />
-    </article>
-  </main>
+        <div class="uses-promo | stack" data-size="small">
+            <h2 class="fs-md">Curious what I use?</h2>
+            <p>
+                Check out my <a href="/uses">/uses</a> page for a breakdown of the
+                tools I use to get work done
+            </p>
+        </div>
+        <div class="highlights | stack" data-size="small">
+            <h2 class="fs-lg">Highlights</h2>
+            <div class="highlight | stack" data-size="small">
+                <h3 class="highlight-year | block-highlight">2024</h3>
+                <ul class="highlight-list | stack" data-size="xs">
+                    <li class="highlight-item">
+                        Changed roles to lead design and product operations at
+                        Discovery Education
+                    </li>
+                    <li class="highlight-item">
+                        Attended Config 2024 in person
+                    </li>
+                </ul>
+            </div>
+            <div class="highlight | stack" data-size="small">
+                <h3 class="highlight-year | block-highlight">2023</h3>
+                <ul class="highlight-list | stack" data-size="xs">
+                    <li class="highlight-item">
+                        <a
+                            href="https://www.designsystemspodcast.com/episodes/episode/791d8bf0/75-adam-sedwick-senior-product-manager-harnessing-the-power-of-design-systems-to-unify-your-team"
+                            >Design Systems Podcast</a
+                        > with Chris Strahl to discuss how design systems can be
+                        used to unify and empower product teams
+                    </li>
+                    <li class="highlight-item">
+                        Lead the design systems team at Discovery Education in
+                        the creation and release of our new design system Nebula
+                    </li>
+                </ul>
+            </div>
+            <div class="highlight | stack" data-size="small">
+                <h3 class="highlight-year | block-highlight">2020</h3>
+                <ul class="highlight-list | stack" data-size="xs">
+                    <li class="highlight-item">
+                        Transitioned into a full-time product management role
+                        for our design systems team
+                    </li>
+                </ul>
+            </div>
+            <div class="highlight | stack" data-size="small">
+                <h3 class="highlight-year | block-highlight">2019</h3>
+                <ul class="highlight-list | stack" data-size="xs">
+                    <li class="highlight-item">
+                        Joined the Design Token Community Group as a member
+                        focused on evangelism and education
+                    </li>
+                </ul>
+            </div>
+            <div class="highlight | stack" data-size="small">
+                <h3 class="highlight-year | block-highlight">2018</h3>
+                <ul class="highlight-list | stack" data-size="xs">
+                    <li class="highlight-item">
+                        Took over leadership of the design systems practice at
+                        Discovery Education
+                    </li>
+                </ul>
+            </div>
+            <div class="highlight | stack" data-size="small">
+                <h3 class="highlight-year | block-highlight">2016</h3>
+                <ul class="highlight-list | stack" data-size="xs">
+                    <li class="highlight-item">
+                        Joined Discovery Education as a Front-End Developer
+                        focusing on their design systems.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
 </Layout>
 
 <style>
-  main {
-    width: calc(100% - 2em);
-    max-width: 100%;
-  }
-  .hero-image {
-    width: 100%;
-  }
-  .hero-image img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 0.75rem;
-  }
-  .prose {
-    margin: auto;
-    margin-trim: block;
-    max-width: 100%;
-    width: 80ch;
-  }
-  .title {
-    margin-bottom: 1em;
-    padding: 1em 0;
-    text-align: center;
-    line-height: 1;
-  }
-  .title h1 {
-    margin: 0 0 0.5em 0;
-  }
-  .last-updated-on {
-    margin-bottom: 0.5em;
-    color: oklch(var(--white-raw) / 0.6);
-    font-style: italic;
-  }
+    .uses-promo {
+        background: var(--surface-raised);
+        border-radius: var(--border-radius-m);
+        padding: var(--space-2);
+    }
+
+    .highlight {
+        --highlight-color: var(--surface-raised);
+
+        &:first-of-type {
+            --highlight-color: var(--accent-1);
+        }
+
+        &:nth-of-type(2) {
+            --highlight-color: var(--accent-2);
+        }
+
+        &:nth-of-type(3) {
+            --highlight-color: var(--accent-3);
+        }
+
+        &:nth-of-type(4) {
+            --highlight-color: var(--accent-4);
+        }
+
+        &:nth-of-type(n + 5) {
+            .highlight-year {
+                color: var(--text-priamry);
+            }
+        }
+    }
+
+    .highlight-year {
+        border-radius: var(--border-radius-s);
+        display: block;
+        padding: var(--space-half) var(--space-1);
+        width: max-content;
+    }
+
+    .highlight-list {
+        margin-block-end: 0;
+        padding-inline-start: var(--space-2);
+    }
+
+    .highlight-item {
+        list-style: none;
+    }
 </style>

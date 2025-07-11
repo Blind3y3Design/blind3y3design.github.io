@@ -2,7 +2,7 @@
 pubDate: 2019-09-13T12:00:00-04:00
 title: "Extending CSS with Programmatic Selectors"
 description: "Powerful CSS tricks beyond the simple class and id selectors"
-heroImage: "../../../images/writing/extending-css/header.jpg"
+heroImage: "@images/writing/extending-css/header.jpg"
 ---
 
 There are many powerful tricks in CSS that allow developers to apply styles in more nuanced ways than a simple class or id. The goal of this article is to introduce developers to some of the more obscure and nuanced selectors and how they can be used to apply styles in a more programmatic way.

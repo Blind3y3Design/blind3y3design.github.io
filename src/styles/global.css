@@ -22,6 +22,13 @@
   font-weight: normal;
 }
 
+*:focus-visible {
+  outline-offset: 0.25em;
+  outline-width: 2px;
+  outline-color: var(--link-color);
+  outline-style: solid;
+}
+
 body {
   font-family: var(--body-font);
   margin: 0;
@@ -41,19 +48,19 @@ main {
 }
 
 h1 {
-  font-size: var(--font-size-xxxl);
-}
-
-h2 {
   font-size: var(--font-size-xxl);
 }
 
-h3 {
+h2 {
   font-size: var(--font-size-xl);
 }
 
-h4 {
+h3 {
   font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-md);
 }
 
 strong,
@@ -66,23 +73,22 @@ a {
 }
 
 a:not([class]) {
+  color: var(--link-color);
   text-decoration: underline;
+  text-decoration-color: transparent;
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.2ex;
   transition: 0.25s ease-in-out;
 
-  &:hover {
-    color: var(--link-color);
+  &:hover,
+  &:focus-visible {
+    text-decoration-color: var(--link-color);
   }
 }
 
 p {
-  font-size: var(--font-size-md);
-
-  &:not(:first-child) {
-    margin-top: 1em;
-  }
+  font-size: var(--font-size-base);
 }
 
 code,
@@ -112,75 +118,8 @@ pre {
 }
 
 pre {
-  padding: 1.5em;
   border-radius: 8px;
+  font-size: 1rem;
+  padding: 0.75em;
   white-space: pre-wrap;
-}
-
-.prose *:not(:first-child) {
-  margin-top: 1.2em;
-}
-
-.sr-only {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-  /* modern browsers, clip-path works inwards from each corner */
-  clip-path: inset(50%);
-  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-  white-space: nowrap;
-}
-
-.blog-post__image {
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Styles for social-block-message post */
-.no-has-support {
-  @supports selector(:has(*)) {
-    display: none;
-  }
-}
-
-blockquote {
-  --blockquote-background-color: transprent;
-  --blockquote-border-color: var(--text-color, var(--body-color));
-  --blockquote-text-color: var(--text-color, var(--body-color));
-  --blockquote-link-color: var(--link-color, var(--gold));
-
-  background: var(--blockquote-background-color);
-  border-inline-start: 5px solid var(--blockquote-border-color);
-  border-radius: 2px;
-  color: var(--blockquote-text-color);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px;
-
-  a {
-    color: var(--blockquote-link-color);
-  }
-
-  &:has(cite a[href*="twitter"]) {
-    --blockquote-background-color: #000000;
-    --blockquote-border-color: rgb(29, 155, 240);
-    --blockquote-text-color: #ffffff;
-    --blockquote-link-color: rgb(29, 155, 240);
-  }
-
-  &:has(cite a[href*="mastodon.social"]) {
-    --blockquote-background-color: #282c37;
-    --blockquote-border-color: #6364ff;
-    --blockquote-text-color: #ffffff;
-    --blockquote-link-color: #6364ff;
-  }
 }
