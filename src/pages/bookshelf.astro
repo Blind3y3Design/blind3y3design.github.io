@@ -2,6 +2,7 @@
 import Layout from '@layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import SectionHeader from '@components/SectionHeader.astro';
 import BookPreview from '@components/BookPreview.astro';
 
 const books = (await getCollection('bookshelf')).sort(
@@ -29,53 +30,74 @@ const {
 ---
 
 <Layout title={title} description={description}>
-    <main class="stack">
-        <div class="page-intro | stack" data-size="xs">
-            <h1 class="title">Bookshelf</h1>
-            <p class="about-bio | fs-md text-cap-width">
-                A catalog of books I've read over the years
-            </p>
-        </div>
-        <div class="bookshelf-content | stack" data-size="small">
-            {
-                years.map((year) => {
-                    const yearBooks = bookYears.get(year);
+    <main>
+        <section class="bookshelf content-container">
+            <div class="bookshelf__inner content-container__inner">
+                <SectionHeader
+                    title="Bookshelf"
+                    subtitle=" A catalog of books I've read over the years"
+                    sectionaccentcolor="accent-5"
+                />
+                <div class="bookshelf-content | stack" data-size="small">
+                    {
+                        years.map((year) => {
+                            const yearBooks = bookYears.get(year);
 
-                    return (
-                        <section class="year | stack" data-size="small">
-                            <h2 class="year-title | block-highlight | fs-md">
-                                {year.toString()}
-                            </h2>
-                            <ul class="book-list | flow-grid" data-repeat="5">
-                                {yearBooks.map(
-                                    (book: CollectionEntry<'bookshelf'>) => (
-                                        // Some day maybe, use amazon images instead of local images
-                                        // https://images-na.ssl-images-amazon.com/images/P/${book.data.amazonGuid}.jpg
-                                        // Example:
-                                        // https://images-na.ssl-images-amazon.com/images/P/B094PVB97X.jpg
-                                        <BookPreview
-                                            link={book.data.amazonLink}
-                                            image={book.data.bookImage}
-                                            title={book.data.title}
-                                            subtitle={book.data.subtitle}
-                                            author={book.data.bookAuthor}
-                                            rating={book.data.bookRating}
-                                            completionDate={
-                                                book.data.completionDate
-                                            }
-                                        />
-                                    )
-                                )}
-                            </ul>
-                        </section>
-                    );
-                })
-            }
-        </div>
+                            return (
+                                <section class="year | stack" data-size="small">
+                                    <h2 class="year-title | block-highlight | fs-md">
+                                        {year.toString()}
+                                    </h2>
+                                    <ul
+                                        class="book-list | flow-grid"
+                                        data-repeat="5"
+                                    >
+                                        {yearBooks.map(
+                                            (
+                                                book: CollectionEntry<'bookshelf'>
+                                            ) => (
+                                                // Some day maybe, use amazon images instead of local images
+                                                // https://images-na.ssl-images-amazon.com/images/P/${book.data.amazonGuid}.jpg
+                                                // Example:
+                                                // https://images-na.ssl-images-amazon.com/images/P/B094PVB97X.jpg
+                                                <BookPreview
+                                                    link={book.data.amazonLink}
+                                                    image={book.data.bookImage}
+                                                    title={book.data.title}
+                                                    subtitle={
+                                                        book.data.subtitle
+                                                    }
+                                                    author={
+                                                        book.data.bookAuthor
+                                                    }
+                                                    rating={
+                                                        book.data.bookRating
+                                                    }
+                                                    completionDate={
+                                                        book.data.completionDate
+                                                    }
+                                                />
+                                            )
+                                        )}
+                                    </ul>
+                                </section>
+                            );
+                        })
+                    }
+                </div>
+            </div>
+        </section>
     </main>
 </Layout>
 
 <style>
+    .bookshelf__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
     .year {
         --highlight-color: var(--surface-raised);
 
