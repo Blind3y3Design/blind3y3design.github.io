@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  padding: var(--space-4) 64px;
+  padding: 64px var(--space-4);
 }
 
 .content-container__inner {

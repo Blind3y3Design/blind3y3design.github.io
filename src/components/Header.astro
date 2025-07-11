@@ -16,20 +16,20 @@ import HeaderLink from './HeaderLink.astro';
     </button>
     <ul class="main-nav__items">
       <li class="main-nav__item">
-        <HeaderLink href="/writing">Writing</HeaderLink>
-      </li>
-      <li class="main-nav__item">
         <HeaderLink href="/work">Work</HeaderLink>
-      </li>
-      <li class="main-nav__item">
-        <HeaderLink href="/projects">Projects</HeaderLink>
       </li>
       <li class="main-nav__item">
         <HeaderLink href="/about">About</HeaderLink>
       </li>
       <li class="main-nav__item">
-        <HeaderLink href="/bookshelf">Bookshelf</HeaderLink>
+        <HeaderLink href="/writing">Writing</HeaderLink>
       </li>
+      <li class="main-nav__item">
+        <HeaderLink href="#contact">Contact</HeaderLink>
+      </li>
+      <!-- <li class="main-nav__item">
+        <HeaderLink href="/bookshelf">Bookshelf</HeaderLink>
+      </li> -->
     </ul>
   </nav>
 </header>
@@ -40,6 +40,8 @@ import HeaderLink from './HeaderLink.astro';
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
     padding: 1rem;
     position: relative;
   }
