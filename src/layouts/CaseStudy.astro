@@ -1,23 +1,43 @@
 ---
 import Layout from './Base.astro';
 import { Picture } from 'astro:assets';
-import FormattedDate from '@components/FormattedDate.astro';
 
 const { title, description, image } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
-    <main class="theme-work">
-        <article class="stack">
-            <div class="hero-image">
-                <Picture src={image} formats={['avif', 'webp']} alt={title} />
+    <main>
+        <section class="case-study content-container">
+            <div class="case-study__inner content-container__inner">
+                <article class="stack">
+                    <div class="hero-image">
+                        <Picture
+                            src={image}
+                            formats={['avif', 'webp']}
+                            alt={title}
+                        />
+                    </div>
+                    <div class="title | stack" data-size="xxs">
+                        <h1 class="p-name case-study__title">{title}</h1>
+                    </div>
+                    <div class="prose | text-cap-width">
+                        <slot />
+                    </div>
+                </article>
             </div>
-            <div class="title | stack" data-size="xxs">
-                <h1 class="p-name | fs-xl">{title}</h1>
-            </div>
-            <div class="prose | text-cap-width">
-                <slot />
-            </div>
-        </article>
+        </section>
     </main>
 </Layout>
+
+<style>
+    .hero-image {
+        align-items: center;
+        border-radius: var(--border-radius-l);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .case-study__title {
+        font-size: 48px;
+    }
+</style>

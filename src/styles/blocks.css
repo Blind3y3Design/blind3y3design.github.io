@@ -7,9 +7,9 @@
 
 blockquote {
   --blockquote-background-color: transprent;
-  --blockquote-border-color: var(--text-color, var(--text-primary));
-  --blockquote-text-color: var(--text-color, var(--text-primary));
-  --blockquote-link-color: var(--link-color, var(--gold));
+  --blockquote-border-color: var(--color-white);
+  --blockquote-text-color: var(--color-text-primary);
+  --blockquote-link-color: var(--color-accent-1);
 
   background: var(--blockquote-background-color);
   border-inline-start: 5px solid var(--blockquote-border-color);

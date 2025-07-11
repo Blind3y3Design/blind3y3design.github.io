@@ -18,22 +18,23 @@ const { link, linkText = 'View Link', ...props } = Astro.props;
 <style>
     .post-link {
         align-items: center;
-        background: var(--link-color);
-        border-radius: 2px;
-        color: var(--navy);
+        background: var(--color-accent-1);
+        border-radius: var(--border-radius-m);
+        color: var(--color-text-accent);
         display: flex;
         gap: 0.25em;
-        padding: 8px 16px;
+        padding: var(--space-1) var(--space-2);
         text-decoration: none;
         transition: background 0.25s ease-in-out;
         width: max-content;
 
         &:hover,
         &:focus-visible {
-            background: var(--link-color-hover);
-        }
-
-        &:focus-visible {
+            background: color-mix(
+                in srgb,
+                var(--color-accent-1),
+                transparent 15%
+            );
         }
     }
 

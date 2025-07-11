@@ -25,7 +25,6 @@
 *:focus-visible {
   outline-offset: 0.25em;
   outline-width: 2px;
-  outline-color: var(--link-color);
   outline-style: solid;
 }
 
@@ -73,7 +72,7 @@ a {
 }
 
 a:not([class]) {
-  color: var(--link-color);
+  color: var(--color-accent-1);
   text-decoration: underline;
   text-decoration-color: transparent;
   text-decoration-skip-ink: auto;
@@ -83,7 +82,7 @@ a:not([class]) {
 
   &:hover,
   &:focus-visible {
-    text-decoration-color: var(--link-color);
+    text-decoration-color: var(--color-accent-1);
   }
 }
 

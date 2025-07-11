@@ -1,195 +1,122 @@
 ---
 import Layout from '@layouts/Base.astro';
+import SectionHeader from '@components/SectionHeader.astro';
 ---
 
 <Layout
-    title="About Me"
-    description="Adam Sedwick is a design systems lead and accessibilit advocate"
+    title="Uses"
+    description="The hardware, software, and other miscellanea I use to get work done"
 >
-    <main class="stack | theme-about">
-        <div class="page-intro | stack" data-size="xs">
-            <h1 class="title">Uses</h1>
-            <p class="about-bio | fs-md text-cap-width">
-                The hardware, software, and other miscellanea I use to get work
-                done
-            </p>
-        </div>
-        <div class="highlights | stack" data-size="small">
-            <div class="highlight | stack" data-size="small">
-                <h2 class="highlight-year | block-highlight | fs-lg">
-                    Development
-                </h2>
-                <ul class="highlight-list | stack" data-size="xs">
-                    <li class="highlight-item">
-                        Visual Studio Code is my editor of choice
-                    </li>
-                    <li class="highlight-item">
-                        Monokai Pro's Octogon theme. Monokai inspired the
-                        current theme of this site
-                    </li>
-                    <li class="highlight-item">
-                        Github's own Monaspace Neon. With code ligatures
-                    </li>
-                    <li class="highlight-item">
-                        I still daily drive Firefox. Test driving Arc and using
-                        chrome to play with new web features
-                    </li>
-                    <li class="highlight-item">
-                        I'm an unashamed user of the VSCode Terminal. If I need
-                        a standalone iTerm2 with OhMyZsh is on hand
-                    </li>
+    <main>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <SectionHeader
+                    title="Uses"
+                    subtitle="The tools and technologies I use to get work done."
+                    sectionaccentcolor="accent-4"
+                />
+            </div>
+        </section>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <h2 class="section-title">Development</h2>
+                <ul class="uses-list">
+                    <li>Visual Studio Code, Exploring Zed and Cursor</li>
+                    <li>Monokai Pro's Octogon theme</li>
+                    <li>Github's Monaspace Neon with code ligature</li>
+                    <li>Firefox for their dev tools</li>
                 </ul>
             </div>
-            <div class="highlight | stack" data-size="small">
-                <h2 class="highlight-year | block-highlight | fs-lg">Design</h2>
-                <ul class="highlight-list | stack" data-size="xs">
-                    <li class="highlight-item">
-                        Figma feels like an obvious answer here
+        </section>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <h2 class="section-title">Design</h2>
+                <ul class="uses-list">
+                    <li>Figma</li>
+                    <li>
+                        Testing Lovable, v0, and Mocha for AI design enablement
                     </li>
-                    <li class="highlight-item">
-                        SuperTidy is a must, though the Figma AI tools might
-                        replace this plugin
+                    <li>
+                        Dovetail for collecting and synthesizing user research
                     </li>
-                    <li class="highlight-item">
-                        Nathan Curtis' amazing Spec plugin for quick and easy
-                        component references
-                    </li>
-                    <li class="highlight-item">
-                        Able for checking color and contrast accessibility
-                    </li>
+                    <li>Pendo and Looker for data and analytics</li>
                 </ul>
             </div>
-            <div class="highlight | stack" data-size="small">
-                <h2 class="highlight-year | block-highlight | fs-lg">
-                    Productivity
-                </h2>
-                <ul class="highlight-list | stack" data-size="xs">
-                    <li class="highlight-item">
-                        Notion for writing. Documentation, proposals, blog
-                        posts, notes, it all goes here
-                    </li>
-                    <li class="highlight-item">
-                        Raycast for launching applications and other quick tasks
-                    </li>
-                    <li class="highlight-item">
-                        Spotify for music. The AI DJ is decent
-                    </li>
-                    <li class="highlight-item">Overcast for podcasts</li>
+        </section>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <h2 class="section-title">Productivity</h2>
+                <ul class="uses-list">
+                    <li>Notion for note-taking and organization</li>
+                    <li>Trello and Jira for project management</li>
+                    <li>Slack for team communication</li>
+                    <li>Raycast and PowerToys for productivity enhancements</li>
                 </ul>
             </div>
-            <div class="highlight | stack" data-size="small">
-                <h2 class="highlight-year | block-highlight | fs-lg">
-                    On My Desk
-                </h2>
-                <ul class="highlight-list | stack" data-size="xs">
-                    <li class="highlight-item">
-                        The desk itself is an UPLIFT v2. I like the added
-                        stability of the commercial model, and I don't have to
-                        worry about putting too much weight on the desk
-                    </li>
-                    <li class="highlight-item">
-                        Spend all day sitting in an Autonomous ErgoChair Pro. It
-                        does the job
-                    </li>
-                    <li class="highlight-item">
-                        32” primary and 27” secondary monitors, 1440p 144hz
-                    </li>
-                    <li class="highlight-item">
-                        Blue Yeti mounted on a Fifine low-profile arm for audio
-                    </li>
-                    <li class="highlight-item">
-                        Sony a6400 with an 18-105 going into a Camlink 4k for
-                        video
-                    </li>
-                    <li class="highlight-item">
-                        A stockpile of notebooks and the Uniball One pen
-                    </li>
+        </section>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <h2 class="section-title">On My Desk</h2>
+                <ul class="uses-list">
+                    <li>Uplift v2 commercial standing desk</li>
+                    <li>Autonomous Ergochair Pro</li>
+                    <li>Keychron K4 and Aula F75 Keyboards</li>
+                    <li>3 monitor setup, 32” and two 27”</li>
+                    <li>Shure MV7+ love ease of usb-c for on-the-go setups</li>
+                    <li>Sony a6400</li>
+                    <li>Uniball One pens</li>
                 </ul>
             </div>
-            <div class="highlight | stack" data-size="small">
-                <h2 class="highlight-year | block-highlight | fs-lg">
-                    Hardware
-                </h2>
-                <ul class="highlight-list | stack" data-size="xs">
-                    <li class="highlight-item">
-                        Custom Ryzen 5800x PC with a 3060
-                    </li>
-                    <li class="highlight-item">2016 Macbook Pro</li>
-                    <li class="highlight-item">iPad Air</li>
-                    <li class="highlight-item">MX Master 2S</li>
-                    <li class="highlight-item">
-                        Keychron K4 with the Hyekit Marshmallow kepcaps
-                    </li>
+        </section>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <h2 class="section-title">Hardware</h2>
+                <ul class="uses-list">
+                    <li>Custom Windows PC</li>
+                    <li>M3 MacBook Air</li>
+                    <li>M1 iPad Air</li>
                 </ul>
             </div>
-            <div class="highlight | stack" data-size="small">
-                <h2 class="highlight-year | block-highlight | fs-lg">Travel</h2>
-                <ul class="highlight-list | stack" data-size="xs">
-                    <li class="highlight-item">
-                        Either the Ruvalino Diaper Backpack or a Peak Design bag
-                        depending on whether I'm out with the kiddo or not
+        </section>
+        <section class="uses-section content-container">
+            <div class="uses-section__inner content-container__inner">
+                <h2 class="section-title">Travel</h2>
+                <ul class="uses-list">
+                    <li>LTT store Commuter backpack</li>
+                    <li>
+                        Assorted pocket notebooks (A5 or smaller), the size is
+                        perfect for quick notes
                     </li>
-                    <li class="highlight-item">
-                        Field Notes and a Uniball One pen. Still can't beat the
-                        pocketability of these little notebooks
-                    </li>
-                    <li class="highlight-item">
-                        NuPHY Air 75 for click-clacks on the go
-                    </li>
+                    <li>NuPHY Air 75 for click-clacks on the go</li>
                 </ul>
             </div>
-        </div>
+        </section>
     </main>
+
+    <style>
+        .uses-section:nth-child(even) {
+            background-color: var(--color-surface-1);
+        }
+        .uses-section__inner {
+            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            justify-content: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+        }
+
+        .uses-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+            font-size: 24px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </Layout>
-
-<style>
-    .about-bio {
-        a {
-            display: inline;
-        }
-    }
-
-    .uses-promo {
-        background: var(--surface-raised);
-        border-radius: var(--border-radius-m);
-        padding: var(--space-2);
-    }
-
-    .highlight {
-        --highlight-color: var(--surface-raised);
-
-        &:first-of-type {
-            --highlight-color: var(--accent-1);
-        }
-
-        &:nth-of-type(2) {
-            --highlight-color: var(--accent-2);
-        }
-
-        &:nth-of-type(3) {
-            --highlight-color: var(--accent-3);
-        }
-
-        &:nth-of-type(4) {
-            --highlight-color: var(--accent-4);
-        }
-
-        &:nth-of-type(n + 5) {
-            .highlight-year {
-                color: var(--text-priamry);
-            }
-        }
-    }
-
-    .highlight-year {
-        border-radius: var(--border-radius-s);
-        display: block;
-        padding: var(--space-half) var(--space-1);
-        width: max-content;
-    }
-
-    .highlight-list {
-        margin-block-end: 0;
-        padding-inline-start: var(--space-4);
-    }
-</style>
