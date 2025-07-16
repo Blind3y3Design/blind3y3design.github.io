@@ -41,7 +41,7 @@ const { year } = Astro.params;
                 />
                 <ul class="post-list">
                     {
-                        posts.map((post) => (
+                        posts.map((post: any) => (
                             <BlogPostCard
                                 link={post.slug}
                                 pubDate={post.data.pubDate}

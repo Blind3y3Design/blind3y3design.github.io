@@ -22,17 +22,45 @@ const DiscoveryExperience = await getEntry(
         />
 
         <div class="work-case-studies__row">
-            <CaseStudyCard link={Create.slug} data={Create.data} featureLeft />
-            <CaseStudyCard link={Nebula.slug} data={Nebula.data} featureRight />
-            <CaseStudyCard
-                link={CareerConnect.slug}
-                data={CareerConnect.data}
-            />
-            <CaseStudyCard link={Techbook.slug} data={Techbook.data} />
-            <CaseStudyCard
-                link={DiscoveryExperience.slug}
-                data={DiscoveryExperience.data}
-            />
+            {
+                Create && (
+                    <CaseStudyCard
+                        link={Create.slug}
+                        data={Create.data}
+                        featureLeft
+                    />
+                )
+            }
+            {
+                Nebula && (
+                    <CaseStudyCard
+                        link={Nebula.slug}
+                        data={Nebula.data}
+                        featureRight
+                    />
+                )
+            }
+            {
+                CareerConnect && (
+                    <CaseStudyCard
+                        link={CareerConnect.slug}
+                        data={CareerConnect.data}
+                    />
+                )
+            }
+            {
+                Techbook && (
+                    <CaseStudyCard link={Techbook.slug} data={Techbook.data} />
+                )
+            }
+            {
+                DiscoveryExperience && (
+                    <CaseStudyCard
+                        link={DiscoveryExperience.slug}
+                        data={DiscoveryExperience.data}
+                    />
+                )
+            }
         </div>
     </div>
 </section>

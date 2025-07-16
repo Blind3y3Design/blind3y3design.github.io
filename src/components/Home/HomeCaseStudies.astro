@@ -22,12 +22,16 @@ const CareerConnect = await getEntry('caseStudies', 'career-connect');
                 <CaseStudyCard />
             ))} -->
 
-            <CaseStudyCard link={Create.slug} data={Create.data} />
-            <CaseStudyCard link={Nebula.slug} data={Nebula.data} />
-            <CaseStudyCard
-                link={CareerConnect.slug}
-                data={CareerConnect.data}
-            />
+            {Create && <CaseStudyCard link={Create.slug} data={Create.data} />}
+            {Nebula && <CaseStudyCard link={Nebula.slug} data={Nebula.data} />}
+            {
+                CareerConnect && (
+                    <CaseStudyCard
+                        link={CareerConnect.slug}
+                        data={CareerConnect.data}
+                    />
+                )
+            }
         </div>
     </div>
 </section>
