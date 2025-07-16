@@ -1,0 +1,81 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'span'> {
+    color?:
+        | 'default'
+        | 'accent-1'
+        | 'accent-2'
+        | 'accent-3'
+        | 'accent-4'
+        | 'accent-5';
+}
+
+const { class: className, color = 'default', ...props } = Astro.props;
+---
+
+<span class:list={[className, 'badge', `badge--${color}`]} {...props}>
+    <slot />
+</span>
+<style>
+    .badge {
+        align-items: center;
+        background: var(--badge-background);
+        border-radius: var(--border-radius-s);
+        color: var(--badge--color);
+        display: flex;
+        font-size: 12px;
+        justify-content: center;
+        padding: var(--space-half) var(--space-1);
+    }
+
+    .badge--default {
+        --badge--color: var(--color-text-secondary);
+        --badge-background: var(--color-surface-3);
+    }
+
+    .badge--accent-1 {
+        --badge--color: var(--color-accent-1);
+        --badge-background: color-mix(
+            in srgb,
+            var(--color-accent-1),
+            transparent 90%
+        );
+    }
+
+    .badge--accent-2 {
+        --badge--color: var(--color-accent-2);
+        --badge-background: color-mix(
+            in srgb,
+            var(--color-accent-2),
+            transparent 90%
+        );
+    }
+
+    .badge--accent-3 {
+        --badge--color: var(--color-accent-3);
+        --badge-background: color-mix(
+            in srgb,
+            var(--color-accent-3),
+            transparent 90%
+        );
+    }
+
+    .badge--accent-4 {
+        --badge--color: var(--color-accent-4);
+        --badge-background: color-mix(
+            in srgb,
+            var(--color-accent-4),
+            transparent 90%
+        );
+    }
+
+    .badge--accent-5 {
+        --badge--color: var(--color-accent-5);
+        --badge-background: color-mix(
+            in srgb,
+            var(--color-accent-5),
+            transparent 90%
+        );
+    }
+</style>

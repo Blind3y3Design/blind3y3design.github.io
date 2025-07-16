@@ -14,36 +14,37 @@
   /* 75 */
   --font-size-xxxl: clamp(3.05rem, 3.37vi + 2.21rem, 4.73rem);
 
-  --heading-font: "Atkinson", sans-serif;
   --body-font: system-ui, sans-serif;
-  --serif-font: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-  --mono-font: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-    "DejaVu Sans Mono", monospace;
+  --mono-font: "monaspace-neon" ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
-  --body: #1d1d1d;
-  --surface-raised: #3c3c3c;
-  --surface-lowered: #181818;
+  /* Color */
+  --color-body: #1d1d1d;
+  --color-white: #ffffff;
 
-  --text-primary: #ffffff;
-  --text-secondary: #b3b3b3;
-  --text-accent: #1d1d1d;
-  --link-color: var(--text-primary);
+  --color-surface-1: #212121;
+  --color-surface-2: #2e2e2e;
+  --color-surface-3: #3c3c3c;
 
-  --highlight-color: #ffffff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-accent: #1d1d1d;
 
-  --accent-1: #76dcec;
-  --accent-2: #ed4987;
-  --accent-3: #a2d33c;
-  --accent-4: #ee9c30;
-  --accent-5: #8b79ea;
-  --accent-6: #facb42;
+  --color-accent-1: #76dcec;
+  --color-accent-2: #ed4987;
+  --color-accent-3: #a2d33c;
+  --color-accent-4: #ee9c30;
+  --color-accent-5: #8b79ea;
+  --color-accent-6: #facb42;
 
+  /* Space */
   --space-half: 4px;
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
   --space-4: 32px;
 
+  /* Border Radius */
   --border-radius-s: 4px;
   --border-radius-m: 8px;
   --border-radius-l: 16px;

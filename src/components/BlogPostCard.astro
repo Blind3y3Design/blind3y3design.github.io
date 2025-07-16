@@ -1,0 +1,117 @@
+---
+import Calendar from '@images/svg/calendar.svg';
+import Badge from '@components/Badge.astro';
+import MarkdownIt from 'markdown-it';
+
+import FormattedDate from '@components/FormattedDate.astro';
+import FormattedTag from '@components/FormattedTag.astro';
+
+interface Props {
+    link: string;
+    pubDate: Date;
+    tags: string[];
+    title: string;
+    description: string;
+    isLinkPost?: Boolean;
+}
+
+const { link, pubDate, tags, title, description, isLinkPost } = Astro.props;
+
+const parser = new MarkdownIt();
+
+const createExcerpt = (text: string) => {
+    return parser
+        .render(text)
+        .split('\n')
+        .slice(0, 6)
+        .map((str: string) => {
+            return str.replace(/(<([^>]+)>)/gi, '').split('\n');
+        })
+        .flat()
+        .join(' ');
+};
+
+const excerpt = isLinkPost
+    ? createExcerpt(description).substring(60, 360)
+    : createExcerpt(description).substring(0, 300);
+---
+
+<a href={`/writing/${link}/`} class="blog-post-card">
+    <div class="blog-post-card__post-date">
+        <Calendar class="blog-post-card__post-date-icon" />
+        <span class="blog-post-card__post-date-text"
+            ><FormattedDate date={pubDate} /></span
+        >
+    </div>
+    <div class="blog-post-card__badges">
+        {
+            tags.map((tag) => (
+                <Badge color="accent-1">
+                    <FormattedTag tag={tag} />
+                </Badge>
+            ))
+        }
+    </div>
+    <div class="blog-post-card__title">{title}</div>
+    <div class="blog-post-card__description">
+        {excerpt}
+    </div>
+</a>
+
+<style>
+    .blog-post-card {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--color-accent-1);
+        }
+    }
+
+    .blog-post-card__post-date {
+        align-items: center;
+        color: var(--color-text-secondary);
+        display: flex;
+        gap: var(--space-1);
+        font-size: 14px;
+    }
+
+    .blog-post-card__post-date-icon {
+        fill: var(--color-text-secondary);
+        height: 14px;
+        width: 14px;
+    }
+
+    .blog-post-card__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-1);
+    }
+
+    .blog-post-card__title {
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.25s ease-in-out;
+
+        .blog-post-card:hover & {
+            color: var(--color-accent-1);
+        }
+    }
+
+    .blog-post-card__description {
+        color: var(--color-text-secondary);
+        display: -webkit-box;
+        font-size: 18px;
+        margin: 0;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+    }
+</style>

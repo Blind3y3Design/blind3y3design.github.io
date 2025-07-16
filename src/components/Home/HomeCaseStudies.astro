@@ -1,0 +1,50 @@
+---
+import SectionHeader from '@components/SectionHeader.astro';
+import CaseStudyCard from '@components/CaseStudyCard.astro';
+import { getEntry } from 'astro:content';
+
+const Create = await getEntry('caseStudies', 'create');
+const Nebula = await getEntry('caseStudies', 'nebula-design-system');
+const CareerConnect = await getEntry('caseStudies', 'career-connect');
+---
+
+<section class="home-case-studies content-container">
+    <div class="home-case-studies__inner content-container__inner">
+        <SectionHeader
+            title="Case Studies"
+            subtitle="Explore how strategic design thinking and user-centered solutions have driven measurable business outcomes across diverse industries."
+            sectionheaderlink="/work"
+            sectionheaderlinktext="View All Work"
+            sectionaccentcolor="accent-2"
+        />
+        <div class="home-case-studies__row">
+            <!-- {work.map((post) => (
+                <CaseStudyCard />
+            ))} -->
+
+            <CaseStudyCard link={Create.slug} data={Create.data} />
+            <CaseStudyCard link={Nebula.slug} data={Nebula.data} />
+            <CaseStudyCard
+                link={CareerConnect.slug}
+                data={CareerConnect.data}
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .home-case-studies__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .home-case-studies__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+</style>

@@ -1,7 +1,8 @@
 ---
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
+import ContactFooter from '@components/ContactFooter.astro';
+import LegalFooter from '@components/LegalFooter.astro';
 import HCard from '@components/HCard.astro';
 
 const { title, description } = Astro.props;
@@ -13,7 +14,8 @@ const { title, description } = Astro.props;
     <body class={title.toLowerCase()}>
         <Header />
         <slot />
-        <Footer />
+        <ContactFooter />
+        <LegalFooter />
         <script>
             // Global Scripts here
         </script>

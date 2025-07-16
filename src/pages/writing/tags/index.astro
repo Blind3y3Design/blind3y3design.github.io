@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import SectionHeader from '@components/SectionHeader.astro';
 import TagLink from '@components/TagLink.astro';
 import OrphanTagLink from '@components/OrphanTagLink.astro';
 
@@ -48,38 +49,54 @@ const sortedUniqueTags = Object.values(filteredTags).sort(
     title="All Tags"
     description="A list of all the tags used in my writing"
 >
-    <main class="stack | theme-writing">
-        <h1>All Tags</h1>
-
-        <ul class="stack" data-size="xxs">
-            {
-                sortedUniqueTags.map((tag) => (
-                    <li>
-                        <TagLink tag={tag.title} count={tag.count} />
-                    </li>
-                ))
-            }
-        </ul>
-
-        <h2>
-            Orphan Tags <span class="text-secondary"
-                >(Tags with only 1 post)</span
-            >
-        </h2>
-
-        <ul class="stack" data-size="xxs">
-            {
-                soretdOrphanTags.map((tag) => (
-                    <li>
-                        <OrphanTagLink tag={tag.title} />
-                    </li>
-                ))
-            }
-        </ul>
+    <main>
+        <section class="blog-posts content-container">
+            <div class="blog-posts__inner content-container__inner">
+                <SectionHeader
+                    title="Tags with Multiple Posts"
+                    subtitle=""
+                    sectionaccentcolor="accent-1"
+                />
+                <ul class="stack" data-size="xxs">
+                    {
+                        sortedUniqueTags.map((tag) => (
+                            <li>
+                                <TagLink tag={tag.title} count={tag.count} />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </section>
+        <section class="blog-posts content-container">
+            <div class="blog-posts__inner content-container__inner">
+                <SectionHeader
+                    title="Orphan Tags"
+                    subtitle="Tags with only 1 post"
+                    sectionaccentcolor="accent-1"
+                />
+                <ul class="stack" data-size="xxs">
+                    {
+                        soretdOrphanTags.map((tag) => (
+                            <li>
+                                <OrphanTagLink tag={tag.title} />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </section>
     </main>
 </Layout>
 
 <style>
+    .blog-posts__inner {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
     ul {
         margin: 0;
         padding: 0;

@@ -2,7 +2,8 @@
 import Layout from '@layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import PostPreview from '@components/post/PostPreview.astro';
+import SectionHeader from '@components/SectionHeader.astro';
+import BlogPostCard from '@components/BlogPostCard.astro';
 
 const posts = (await getCollection('writing')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -29,41 +30,71 @@ const {
 ---
 
 <Layout title={title} description={description}>
-    <main class="stack | theme-writing">
-        <div class="page-intro | stack" data-size="xs">
-            <h1 class="title">{title}</h1>
-            <p class="fs-md text-secondary text-cap-width">
-                With over a decade working on the design and development of
-                digital products I've learned a lot. I tend to write about
-                things I find interesting or problems I've encountered.
-            </p>
-        </div>
-        {
-            years.map((year) => {
-                const yearPosts = postYears.get(year);
-                return (
-                    <section class="year | stack" data-size="small">
-                        <h2 class="year__title">{year.toString()}</h2>
-                        <ul class="post-list | flow-grid">
-                            {yearPosts.map(
-                                (post: CollectionEntry<'writing'>) => (
-                                    <PostPreview
-                                        description={post.body}
-                                        heroImage={post.data.heroImage}
-                                        isLinkPost={post.data.tags.includes(
-                                            'link-post'
-                                        )}
-                                        link={post.slug}
-                                        pubDate={post.data.pubDate}
-                                        title={post.data.title}
-                                        tags={post.data.tags}
-                                    />
-                                )
-                            )}
-                        </ul>
-                    </section>
-                );
-            })
-        }
+    <main>
+        <section class="blog-posts content-container">
+            <div class="blog-posts__inner content-container__inner">
+                <SectionHeader
+                    title="Latest Insights"
+                    subtitle="With over a decade working on the design and development of digital products I've learned a lot. I tend to write about things I find interesting or problems I've encountered."
+                    sectionaccentcolor="accent-1"
+                />
+                {
+                    years.map((year) => {
+                        const yearPosts = postYears.get(year);
+                        return (
+                            <section class="year">
+                                <h2 class="year__title">{year.toString()}</h2>
+                                <ul class="post-list">
+                                    {yearPosts.map(
+                                        (post: CollectionEntry<'writing'>) => (
+                                            <BlogPostCard
+                                                link={post.slug}
+                                                pubDate={post.data.pubDate}
+                                                tags={post.data.tags}
+                                                title={post.data.title}
+                                                description={post.body}
+                                                isLinkPost={post.data.tags.includes(
+                                                    'link-post'
+                                                )}
+                                            />
+                                        )
+                                    )}
+                                </ul>
+                            </section>
+                        );
+                    })
+                }
+            </div>
+        </section>
     </main>
 </Layout>
+
+<style>
+    .blog-posts__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .year {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        width: 100%;
+    }
+
+    .year__title {
+        font-size: 32px;
+    }
+
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-2);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+</style>

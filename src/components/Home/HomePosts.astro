@@ -1,0 +1,57 @@
+---
+import SectionHeader from '../SectionHeader.astro';
+import BlogPostCard from '@components/BlogPostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('writing'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 3);
+---
+
+<section class="home-posts content-container">
+    <div class="home-posts__inner content-container__inner">
+        <SectionHeader
+            title="Latest Insights"
+            subtitle="Thoughts on design leadership, product strategy, and the evolving landscape of digital experiences."
+            sectionheaderlink="/writing"
+            sectionheaderlinktext="View All Posts"
+            sectionaccentcolor="accent-1"
+        />
+
+        <div class="home-blog-posts__row">
+            {
+                posts.map((post) => (
+                    <BlogPostCard
+                        link={post.slug}
+                        pubDate={post.data.pubDate}
+                        tags={post.data.tags}
+                        title={post.data.title}
+                        description={post.body}
+                        isLinkPost={post.data.tags.includes('link-post')}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .home-posts {
+        background: var(--color-surface-1);
+    }
+
+    .home-posts__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .home-blog-posts__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+</style>

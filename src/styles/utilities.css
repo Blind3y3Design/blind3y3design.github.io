@@ -1,77 +1,23 @@
-/* Themes */
-.theme-writing {
-  --link-color: var(--accent-1);
-  --highlight-color: var(--accent-1);
+.text-accent-1 {
+  color: var(--color-accent-1);
 }
 
-.theme-work {
-  --link-color: var(--accent-2);
-  --highlight-color: var(--accent-2);
+.text-accent-2 {
+  color: var(--color-accent-2);
 }
 
-.theme-projects {
-  --link-color: var(--accent-3);
-  --highlight-color: var(--accent-3);
+.text-accent-3 {
+  color: var(--color-accent-3);
 }
 
-.theme-about {
-  --link-color: var(--accent-4);
-  --highlight-color: var(--accent-4);
+.text-accent-4 {
+  color: var(--color-accent-4);
 }
 
-/* Highlights */
-.block-highlight {
-  background: var(--highlight-color);
-  color: var(--text-accent);
+.text-accent-5 {
+  color: var(--color-accent-5);
 }
 
-.text-highlight {
-  color: var(--highlight-color);
-}
-
-/* Font Sizes */
-.fs-sm {
-  font-size: var(--font-size-sm);
-}
-
-.fs-base {
-  font-size: var(--font-size-base);
-}
-
-.fs-md {
-  font-size: var(--font-size-md);
-}
-
-.fs-lg {
-  font-size: var(--font-size-lg);
-}
-
-.fs-xl {
-  font-size: var(--font-size-xl);
-}
-
-.fs-xxl {
-  font-size: var(--font-size-xxl);
-}
-
-.fs-xxxl {
-  font-size: var(--font-size-xxxl);
-}
-
-/* Text Utilities */
-.text-cap-width {
-  max-width: 800px;
-}
-
-.text-secondary {
-  color: var(--text-secondary);
-}
-
-.text-italic {
-  font-style: italic;
-}
-
-/* General Utilities */
 .hidden {
   display: none;
 }
