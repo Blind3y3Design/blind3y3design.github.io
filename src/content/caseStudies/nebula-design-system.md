@@ -1,5 +1,5 @@
 ---
-image: "@images/work/nebula/design-system-overview.png"
+image: "@images/case-studies/nebula/design-system-overview.png"
 label: Enterprise Ed-Tech
 title: Design System Refresh
 description: Led a team through the redesign of the design systems for Discovery Education, refreshing branding across products and updating the support capabilities.
@@ -20,7 +20,7 @@ As the Design Systems Lead at Discovery Education it is my job to drive the visi
 
 Each iteration of the design system has been conducted based on user research and testing to validate design decisions and continuously improve the design system. We establish and maintain strong working partnerships with consuming products to understand their needs and ensure components are tested on implementation in actual end-user products.
 
-![We are fueled by the belief that every brand has a unique voice, and our mission is to amplify it through thoughtful design and strategic vision.](@images/work/nebula/blue-victor-bg.png)
+![We are fueled by the belief that every brand has a unique voice, and our mission is to amplify it through thoughtful design and strategic vision.](@images/case-studies/nebula/blue-victor-bg.png)
 
 ## The Existing System
 
@@ -32,7 +32,7 @@ At the start of this work consuming product teams were already utilizing our for
 - The UI and UX patterns were largely inconsistent, causing a disjointed user experience on the platform.
 - While Discovery Education served as a singular experience for both Teachers and Students, new theming and composability features could allow for a tailored experience based on individual user roles and needs.
 
-![Composition of over 10 different versions of a single interface element](@images/work/nebula/comet-problems.png)
+![Composition of over 10 different versions of a single interface element](@images/case-studies/nebula/comet-problems.png)
 
 ### The First Hurdle
 
@@ -44,7 +44,7 @@ In a similar vein, if we chose to abandon the old system and create a new one fr
 
 This is where our creative director Kandice Levero chimed in with a real-world analogy that we would cement as our mental model moving forward for both the design, development, and adoption of this work.
 
-![Aerial photograph of the construction if a new Ise shrine next to an old one](@images/work/nebula/ise-shrine.png)
+![Aerial photograph of the construction if a new Ise shrine next to an old one](@images/case-studies/nebula/ise-shrine.png)
 
 To an outsider the Ise Jingu grand shrine in Japan seems to be an eternal structure that evades the eroding effects of time. Those who are familiar with the structure and the special process around it understand that in reality the shrine is torn down and rebuilt every 20 years. A major part of this process is the construction of the new structure, while continuing to use and care for the existing one, even knowing that it will ultimately be torn down and destroyed.
 
@@ -72,31 +72,31 @@ The Design Systems team chose to target and address both product thinking and hu
 
 One of the first things we tackled as a team was an update to our existing color palettes. Taking our learning and process from the Comet system we set out to establish a set of product agnostic palettes. These colors would be used for general interface elements, anything that is not branded or set to a specific product theme.
 
-![Neutral, inteface, and Interactive Color Palettes](@images/work/nebula/colors.png)
+![Neutral, inteface, and Interactive Color Palettes](@images/case-studies/nebula/colors.png)
 
 Additionally, each color was tested with our default text color, if the default color did not meet contrast requirements it would be tested with white text. The resulting WCAG compliance levels are listed within the colored badge allowing designers to easily know which text color would be appropriate for use.
 
 ### Typography
 
-![Example specimen of Proxima Vara and Mikado-Chan fonts](@images/work/nebula/typography.png)
+![Example specimen of Proxima Vara and Mikado-Chan fonts](@images/case-studies/nebula/typography.png)
 
 Proxima Vara is now our go-to font at Discovery Education, chosen for its accessibility, variety, and impact. While we previously used Proxima Nova as our main system font in the Comet Design System, we've now upgraded to Proxima Vara. This change offers our Product and Print designers more flexibility with weight and slant options, while providing a single file and performance increases for developers.
 
 Mikado-Chan is a custom typeface designed for Discovery Education to align with readability standards in education for both US and UK students. The original Mikado font was crafted by Hannes von Döhren in 2013, we worked with him to expand it by adding additional character sets. We use Mikado-Chan in lessons and resources that teachers can offer to their younger students.
 
-![Glyph adjustment chart for Mikado-Chan creation](@images/work/nebula/mikado-chan.png)
+![Glyph adjustment chart for Mikado-Chan creation](@images/case-studies/nebula/mikado-chan.png)
 
 ### Iconography
 
 We refreshed our Iconography, doing away with clutter and redundant icons. Instead of continuing with an increasingly confusing array, we reset from ground zero introducing icons that hold specific purpose or meaning to enhance usability. All updated icons have been crafted in-house by our principal designer Darrell Moore.
 
-![Example of icon offerings in the Nebula Design System](@images/work/nebula/icons.png)
+![Example of icon offerings in the Nebula Design System](@images/case-studies/nebula/icons.png)
 
 ## Components
 
 Each component is carefully considered with usability, accessibility, and scalability in mind. Buttons, text fields, and other atomic components should be designed to stand alone and combine to form larger, more complex components. It’s essential to consider how each component will adapt to different screen sizes and devices, ensuring a smooth user experience.
 
-![Showcase of input field component specimen](@images/work/nebula/components.png)
+![Showcase of input field component specimen](@images/case-studies/nebula/components.png)
 
 ## Credits
 
