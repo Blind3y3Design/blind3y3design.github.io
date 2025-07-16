@@ -86,7 +86,8 @@ a:not([class]) {
   }
 }
 
-p {
+p,
+li {
   font-size: var(--font-size-base);
 }
 
