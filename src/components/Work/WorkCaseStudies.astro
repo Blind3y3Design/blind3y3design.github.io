@@ -1,0 +1,83 @@
+---
+import SectionHeader from '@components/SectionHeader.astro';
+import CaseStudyCard from '@components/CaseStudyCard.astro';
+import { getEntry } from 'astro:content';
+
+const Create = await getEntry('caseStudies', 'create');
+const Nebula = await getEntry('caseStudies', 'nebula-design-system');
+const CareerConnect = await getEntry('caseStudies', 'career-connect');
+const Techbook = await getEntry('caseStudies', 'techbook');
+const DiscoveryExperience = await getEntry(
+    'caseStudies',
+    'discovery-experience'
+);
+---
+
+<section class="work-case-studies content-container">
+    <div class="work-case-studies__inner content-container__inner">
+        <SectionHeader
+            title="Case Studies"
+            subtitle="Explore how strategic design thinking and user-centered solutions have driven measurable business outcomes across diverse industries."
+            sectionaccentcolor="accent-2"
+        />
+
+        <div class="work-case-studies__row">
+            {
+                Create && (
+                    <CaseStudyCard
+                        link={Create.slug}
+                        data={Create.data}
+                        featureLeft
+                    />
+                )
+            }
+            {
+                Nebula && (
+                    <CaseStudyCard
+                        link={Nebula.slug}
+                        data={Nebula.data}
+                        featureRight
+                    />
+                )
+            }
+            {
+                CareerConnect && (
+                    <CaseStudyCard
+                        link={CareerConnect.slug}
+                        data={CareerConnect.data}
+                    />
+                )
+            }
+            {
+                Techbook && (
+                    <CaseStudyCard link={Techbook.slug} data={Techbook.data} />
+                )
+            }
+            {
+                DiscoveryExperience && (
+                    <CaseStudyCard
+                        link={DiscoveryExperience.slug}
+                        data={DiscoveryExperience.data}
+                    />
+                )
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .work-case-studies__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .work-case-studies__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+</style>

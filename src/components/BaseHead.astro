@@ -6,7 +6,7 @@ import '@styles/variables.css';
 import '@styles/global.css';
 import '@styles/layouts.css';
 
-import '@styles/composition.css';
+import '@styles/compositions.css';
 import '@styles/utilities.css';
 import '@styles/blocks.css';
 
@@ -64,8 +64,8 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title && `${title}  | `}{SITE_TITLE}</title>
-<meta name="title" content=`${title} | Adam Sedwick` />
+<title>{title ? `${title} | Adam Sedwick` : SITE_TITLE}</title>
+<meta name="title" content={title ? `${title} | Adam Sedwick` : SITE_TITLE} />
 <meta
     name="description"
     content={description ? description : SITE_DESCRIPTION}

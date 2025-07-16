@@ -14,6 +14,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 </a>
 <style>
     a {
+        color: inherit;
         display: inline-block;
         padding: var(--space-half) var(--space-1);
         text-decoration: underline;
@@ -25,13 +26,13 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 
         &:hover,
         &:focus-visible {
-            text-decoration-color: var(--link-color);
+            text-decoration-color: currentColor;
             text-underline-offset: 0.4ex;
         }
     }
     a.active {
-        background: var(--highlight-color);
-        border-radius: var(--border-radius-s);
-        color: var(--text-accent);
+        text-decoration-color: currentColor;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 0.4ex;
     }
 </style>

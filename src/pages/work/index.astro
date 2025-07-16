@@ -1,109 +1,15 @@
 ---
 import Layout from '@layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import WorkCaseStudies from '@/components/Work/WorkCaseStudies.astro';
+import WorkSamples from '@/components/Work/WorkSamples.astro';
 
-import type { CollectionEntry } from 'astro:content';
-import { Picture } from 'astro:assets';
-import FormattedDate from '@components/FormattedDate.astro';
-
-const posts = (await getCollection('work')).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-const { title = 'Work', description = "Work I've done throughout my career" } =
+const { title = 'Work', description = 'Case Studies and Work Samples' } =
     Astro.props;
 ---
 
 <Layout title={title} description={description}>
-    <main class="stack | theme-work">
-        <div class="page-intro | stack" data-size="xs">
-            <h1 class="title">{title}</h1>
-            <p class="fs-md text-secondary text-cap-width">
-                I've been lucky to work on a diverse range of projects,
-                including international and multi-lingual marketing campaigns,
-                e-commerce experiences, education-focused products, and design
-                systems.
-            </p>
-        </div>
-        <ul class="post-list | flow-grid">
-            {posts.map(
-                (post: CollectionEntry<'work'>) => (
-                    <li class="work-preview | stack" data-size="xxs">
-                        <a
-                            href={`/work/${post.slug}/`}
-                            class="link"
-                            tabindex="-1"
-                        >
-                            <Picture
-                                class="image"
-                                src={post.data.heroImage}
-                                formats={['avif', 'webp']}
-                                alt={post.data.title}
-                            />
-                        </a>
-                        <a href={`/work/${post.slug}/`} class="link">
-                            <p class="title | fs-md">{post.data.title}</p>
-                        </a>
-                        <p class="date | fs-sm">
-                            <FormattedDate date={post.data.pubDate} />
-                        </p>
-                        {post.data.excerpt && (
-                            <p class="excerpt">{post.data.excerpt}</p>
-                        )}
-                    </li>
-                )
-            )}
-        </ul>
+    <main>
+        <WorkCaseStudies />
+        <WorkSamples />
     </main>
 </Layout>
-
-<style>
-    .link {
-        color: var(--link-color);
-        display: block;
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        text-decoration-skip-ink: auto;
-        text-decoration-thickness: 2px;
-        text-underline-offset: 0ex;
-        transition: all 0.25s ease-in-out;
-
-        &:hover,
-        &:focus-visible {
-            text-decoration: underline;
-            text-decoration-color: var(--link-color);
-            text-decoration-skip-ink: auto;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 0.2ex;
-        }
-    }
-
-    .title {
-        align-items: first baseline;
-        display: flex;
-        gap: var(--space-half);
-    }
-
-    .link-icon {
-        height: 0.75em;
-        width: 0.75em;
-    }
-
-    .date {
-        color: var(--text-secondary);
-    }
-
-    .image {
-        aspect-ratio: 2/1;
-        border-radius: var(--border-radius-s);
-        object-fit: cover;
-        object-position: top center;
-    }
-
-    .excerpt {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-    }
-</style>

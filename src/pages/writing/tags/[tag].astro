@@ -1,8 +1,8 @@
 ---
 import Layout from '@layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import FormattedTag from '@components/FormattedTag.astro';
-import PostPreview from '@components/post/PostPreview.astro';
+import SectionHeader from '@components/SectionHeader.astro';
+import BlogPostCard from '@components/BlogPostCard.astro';
 
 export async function getStaticPaths() {
     const posts = (await getCollection('writing')).sort(
@@ -31,26 +31,42 @@ const { tag, posts } = Astro.props;
     title={`Posts tagged with ${tag}`}
     description={`Posts tagged with ${tag}`}
 >
-    <main class="stack | theme-writing">
-        <h1>
-            Writing <span class="text-secondary">tagged with</span> #<FormattedTag
-                {tag}
-            />
-        </h1>
-        <ul class="post-list | flow-grid">
-            {
-                posts.map((post) => (
-                    <PostPreview
-                        description={post.body}
-                        heroImage={post.data.heroImage}
-                        isLinkPost={post.data.tags.includes('link-post')}
-                        link={post.slug}
-                        pubDate={post.data.pubDate}
-                        title={post.data.title}
-                        tags={post.data.tags}
-                    />
-                ))
-            }
-        </ul>
+    <main>
+        <section class="blog-posts content-container">
+            <div class="blog-posts__inner content-container__inner">
+                <SectionHeader
+                    title={`Posts tagged with ${tag}`}
+                    subtitle=""
+                    sectionaccentcolor="accent-1"
+                />
+                <ul class="post-list">
+                    {
+                        posts.map((post) => (
+                            <BlogPostCard
+                                link={post.slug}
+                                pubDate={post.data.pubDate}
+                                tags={post.data.tags}
+                                title={post.data.title}
+                                description={post.body}
+                                isLinkPost={post.data.tags.includes(
+                                    'link-post'
+                                )}
+                            />
+                        ))
+                    }
+                </ul>
+            </div>
+        </section>
     </main>
 </Layout>
+
+<style>
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-2);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+</style>

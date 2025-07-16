@@ -1,0 +1,40 @@
+---
+import SectionHeader from '@components/SectionHeader.astro';
+import WorkSampleCard from '@components/WorkSampleCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('work')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<section class="work-samples content-container">
+    <div class="work-samples__inner content-container__inner">
+        <SectionHeader
+            title="Work Samples"
+            subtitle="I've been lucky to work on a diverse range of projects, including international and multi-lingual marketing campaigns, e-commerce experiences, education-focused products, and design systems."
+            sectionaccentcolor="accent-2"
+        />
+
+        <div class="work-samples__row">
+            {posts.map((post) => <WorkSampleCard data={post.data} />)}
+        </div>
+    </div>
+</section>
+
+<style>
+    .work-samples__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .work-samples__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+</style>

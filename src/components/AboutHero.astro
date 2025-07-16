@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+
+import heroImage from '@images/headshot.png';
+---
+
+<section class="about-hero content-container">
+    <div class="about-hero__inner content-container__inner">
+        <div class="about-hero__content">
+            <h1 class="about-hero__title">
+                Driving Business Outcomes
+                <span class="text-accent-4">Through Design Excellence</span>
+            </h1>
+            <p class="about-hero__subtitle">
+                With over 15 years of experience, I've helped product teams
+                achieve success from enterprise organizations to innovative
+                startups, consistently delivering creative solutions that
+                achieve business objectives and create lasting customer impact.
+            </p>
+            <p class="about-hero__subtitle">
+                My approach combines strategic thinking with hands-on execution,
+                ensuring every decision is backed by data and aligned with
+                measurable business outcomes. I specialize in transforming
+                complex challenges into effective, user-centered solutions.
+            </p>
+        </div>
+        <div class="about-hero__image">
+            <Image
+                src={heroImage}
+                alt="Headshot of Adam Sedwick"
+                layout="constrained"
+                width={550}
+                height={550}
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-hero__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-3);
+        justify-content: center;
+    }
+
+    .about-hero__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        max-width: 700px;
+    }
+
+    .about-hero__title {
+        font-size: 48px;
+        font-weight: bold;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    .about-hero__subtitle {
+        font-size: 24px;
+        margin: 0;
+        color: var(--color-text-secondary);
+    }
+
+    .about-hero__image {
+        align-items: center;
+        aspect-ratio: 1;
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        max-width: 550px;
+        overflow: hidden;
+        width: 100%;
+    }
+</style>

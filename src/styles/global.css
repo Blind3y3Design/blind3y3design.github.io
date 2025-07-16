@@ -25,7 +25,6 @@
 *:focus-visible {
   outline-offset: 0.25em;
   outline-width: 2px;
-  outline-color: var(--link-color);
   outline-style: solid;
 }
 
@@ -34,29 +33,17 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: var(--body);
+  background: var(--color-body);
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   font-size: 20px;
   line-height: 1.7;
 }
 
 main {
   width: 100%;
-  margin: auto;
-  max-width: 1200px;
-  padding: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--heading-font);
 }
 
 h1 {
@@ -80,8 +67,12 @@ b {
   font-weight: 700;
 }
 
+a {
+  color: var(--color-text-primary);
+}
+
 a:not([class]) {
-  color: var(--link-color);
+  color: var(--color-accent-1);
   text-decoration: underline;
   text-decoration-color: transparent;
   text-decoration-skip-ink: auto;
@@ -91,17 +82,18 @@ a:not([class]) {
 
   &:hover,
   &:focus-visible {
-    text-decoration-color: var(--link-color);
+    text-decoration-color: var(--color-accent-1);
   }
 }
 
-p {
+p,
+li {
   font-size: var(--font-size-base);
 }
 
 code,
 pre {
-  font-family: "monaspace-neon", monospace;
+  font-family: var(--mono-font);
   font-variation-settings:
     "wght" 400,
     "wdth" 100,
