@@ -20,7 +20,18 @@ interface Props {
 const { data, link, featureLeft, featureRight } = Astro.props;
 ---
 
-<article class="case-study-card">
+<a
+    href={`/case-studies/${link}`}
+    class:list={[
+        'case-study-card',
+        featureLeft
+            ? 'case-study-card--feature case-study-card--feature-left'
+            : '',
+        featureRight
+            ? 'case-study-card--feature case-study-card--feature-right'
+            : '',
+    ]}
+>
     <Image
         src={data.image}
         alt={data.title}
@@ -57,7 +68,7 @@ const { data, link, featureLeft, featureRight } = Astro.props;
             }
         </div>
     </div>
-</article>
+</a>
 
 <style>
     .case-study-card {

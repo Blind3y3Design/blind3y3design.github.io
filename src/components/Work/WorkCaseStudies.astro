@@ -1,6 +1,7 @@
 ---
 import SectionHeader from '@components/SectionHeader.astro';
 import CaseStudyCard from '@components/CaseStudyCard.astro';
+import CaseStudyFeature from '@components/CaseStudyFeature.astro';
 import { getEntry } from 'astro:content';
 
 const Create = await getEntry('caseStudies', 'create');
@@ -24,7 +25,7 @@ const DiscoveryExperience = await getEntry(
         <div class="work-case-studies__row">
             {
                 Create && (
-                    <CaseStudyCard
+                    <CaseStudyFeature
                         link={Create.slug}
                         data={Create.data}
                         featureLeft
@@ -33,7 +34,7 @@ const DiscoveryExperience = await getEntry(
             }
             {
                 Nebula && (
-                    <CaseStudyCard
+                    <CaseStudyFeature
                         link={Nebula.slug}
                         data={Nebula.data}
                         featureRight
