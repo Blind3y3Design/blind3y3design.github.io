@@ -24,8 +24,12 @@ const { data, link, featureLeft, featureRight } = Astro.props;
     href={`/case-studies/${link}`}
     class:list={[
         'case-study-card',
-        featureLeft ? 'case-study-card--feature-left' : '',
-        featureRight ? 'case-study-card--feature-right' : '',
+        featureLeft
+            ? 'case-study-card--feature case-study-card--feature-left'
+            : '',
+        featureRight
+            ? 'case-study-card--feature case-study-card--feature-right'
+            : '',
     ]}
 >
     <Image
@@ -83,27 +87,18 @@ const { data, link, featureLeft, featureRight } = Astro.props;
     }
 
     @container (min-width: 800px) {
-        .case-study-card--feature-left {
-            flex-direction: row;
+        .case-study-card--feature {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
             grid-column: 1 / -1;
 
-            .case-study-card__thumbnail {
+            img {
+                height: 100%;
                 object-fit: cover;
-            }
-            .case-study-card__content {
-                flex-shrink: 1.5;
             }
         }
         .case-study-card--feature-right {
-            flex-direction: row-reverse;
-            grid-column: 1 / -1;
-
-            .case-study-card__thumbnail {
-                object-fit: cover;
-            }
-            .case-study-card__content {
-                flex-shrink: 1.5;
-            }
+            direction: rtl;
         }
     }
 
