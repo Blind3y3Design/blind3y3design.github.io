@@ -51,7 +51,7 @@ const presentations = defineCollection({
       title: z.string(),
       description: z.string(),
       pubDate: z.coerce.date(),
-      link: z.string().optional(),
+      link: z.string(),
     }),
 });
 
