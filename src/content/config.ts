@@ -42,6 +42,19 @@ const work = defineCollection({
     }),
 });
 
+const presentations = defineCollection({
+  type: "content",
+  // Type-check frontmatter using a schema
+  schema: ({ image }) =>
+    z.object({
+      image: image(),
+      title: z.string(),
+      description: z.string(),
+      pubDate: z.coerce.date(),
+      link: z.string().optional(),
+    }),
+});
+
 const bookshelf = defineCollection({
   type: "content",
   // Type-check frontmatter using a schema
@@ -60,4 +73,10 @@ const bookshelf = defineCollection({
     }),
 });
 
-export const collections = { writing, work, bookshelf, caseStudies };
+export const collections = {
+  writing,
+  work,
+  bookshelf,
+  caseStudies,
+  presentations,
+};
