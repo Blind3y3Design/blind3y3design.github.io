@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    data: {
+        image: ImageMetadata;
+        title: string;
+        description: string;
+        link: string;
+    };
+}
+
+const { data } = Astro.props;
+---
+
+<a href={data.link} class="presentation-card" target="_blank">
+    <Image
+        src={data.image}
+        alt={data.title}
+        class="presentation-card__thumbnail"
+    />
+    <div class="presentation-card__content">
+        <p class="presentation-card__title">{data.title}</p>
+        <p class="presentation-card__description">
+            {data.description}
+        </p>
+    </div>
+</a>
+
+<style>
+    .presentation-card {
+        border: 1px solid var(--color-white);
+        border-radius: var(--border-radius-l);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            border-color: var(--color-accent-5);
+        }
+    }
+
+    .presentation-card__thumbnail {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .presentation-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+    }
+
+    .presentation-card__title {
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.25s ease-in-out;
+
+        .presentation-card:hover & {
+            color: var(--color-accent-5);
+        }
+    }
+
+    .presentation-card__description {
+        color: var(--color-text-secondary);
+        font-size: 18px;
+        margin: 0;
+    }
+</style>

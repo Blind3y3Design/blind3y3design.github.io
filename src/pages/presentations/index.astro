@@ -1,0 +1,50 @@
+---
+import Layout from '@layouts/Base.astro';
+import SectionHeader from '@components/SectionHeader.astro';
+import PresentationCard from '@components/PresentationCard.astro';
+import { getCollection } from 'astro:content';
+
+const {
+    title = 'Presentations',
+    description = 'A collection of presentations',
+} = Astro.props;
+
+const posts = (await getCollection('presentations')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout title={title} description={description}>
+    <main>
+        <section class="presentations content-container">
+            <div class="presentations__inner content-container__inner">
+                <SectionHeader
+                    title="Presentations"
+                    subtitle="Over the years, I've shared my knowledge and insights through various presentations at conferences, meetups, and workshops. Here are some highlights."
+                    sectionaccentcolor="accent-5"
+                />
+
+                <div class="presentations__row">
+                    {posts.map((post) => <PresentationCard data={post.data} />)}
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .presentations__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        justify-content: center;
+    }
+
+    .presentations__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        gap: var(--space-3);
+        width: 100%;
+    }
+</style>
